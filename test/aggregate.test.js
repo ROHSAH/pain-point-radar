@@ -1,0 +1,85 @@
+import { test } from "node:test";
+import assert from "node:assert/strict";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import { aggregate, docWeight } from "../src/aggregate.js";
+import { dedupe } from "../src/collect.js";
+import { normalizeResult } from "../src/classify.js";
+import { renderCsv, renderMarkdown } from "../src/report.js";
+import { readJsonl, readJson, makeDoc } from "../src/util.js";
+
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const taxonomy = readJson(path.join(root, "config/taxonomy.json"));
+const docs = readJsonl(path.join(root, "test/fixtures/docs.jsonl"));
+const classified = readJsonl(path.join(root, "test/fixtures/classified.jsonl"));
+
+test("docWeight dampens engagement logarithmically", () => {
+  assert.equal(docWeight({ engagement: { score: 0, comments: 0 } }), 1);
+  assert.ok(Math.abs(docWeight({ engagement: { score: 999, comments: 0 } }) - 4) < 1e-9);
+});
+
+test("aggregate ranks by weighted volume and splits regions", () => {
+  const agg = aggregate({ docs, classified, taxonomy });
+  assert.deepEqual(Object.keys(agg).sort(), ["all", "europe", "india", "us"]);
+  assert.equal(agg.india.pain_points[0].category, "trust_greenwashing"); // two modest mentions (2.68 + 2.20) outrank one viral post (3.71)
+  assert.equal(agg.us.relevant_docs, 4);
+  assert.equal(agg.us.total_docs, 5);
+  const ranks = agg.all.pain_points.map((p) => p.weighted_volume);
+  assert.deepEqual(ranks, [...ranks].sort((a, b) => b - a));
+});
+
+test("a document counts once per category", () => {
+  const c = [{ id: "reddit:t3_u1", relevant: true, region: "us", pain_points: [
+    { category: "trust_greenwashing", sub_issue: "a", severity: 2, quote: "x" },
+    { category: "trust_greenwashing", sub_issue: "b", severity: 4, quote: "y" }] }];
+  const agg = aggregate({ docs, classified: c, taxonomy });
+  assert.equal(agg.us.pain_points[0].mentions, 1);
+  assert.equal(agg.us.pain_points[0].avg_severity, 3);
+});
+
+test("themes map sub-issues together", () => {
+  const themes = { collection_reliability: { map: { "bin collection missed for weeks": "Missed pickups", "hauler skipped recycling pickup": "Missed pickups", "dry waste not collected": "Missed pickups" } } };
+  const agg = aggregate({ docs, classified, themes, taxonomy });
+  const p = agg.all.pain_points.find((x) => x.category === "collection_reliability");
+  assert.equal(p.themes[0].theme, "Missed pickups");
+  assert.equal(p.themes[0].mentions, 3);
+});
+
+test("dedupe drops repeated ids and copy-pasted text", () => {
+  const a = makeDoc({ source: "x", nativeId: "1", regionHint: "us", query: "q", url: "u", text: "Recycling was missed AGAIN!!", channel: "social" });
+  const b = makeDoc({ source: "x", nativeId: "2", regionHint: "us", query: "q", url: "u", text: "recycling was missed again", channel: "social" });
+  const c = makeDoc({ source: "x", nativeId: "1", regionHint: "us", query: "q", url: "u", text: "different", channel: "social" });
+  assert.equal(dedupe([a, b, c]).length, 1);
+});
+
+test("normalizeResult clamps fields and falls back to region hint", () => {
+  const doc = { id: "d", region_hint: "india" };
+  const r = normalizeResult({ id: "d", relevant: true, region: "unknown", country: "", pain_points: [{ category: "made_up", sub_issue: " Kabadiwala Cheats ", severity: 9, quote: "q" }] }, doc, taxonomy);
+  assert.equal(r.region, "india");
+  assert.equal(r.pain_points[0].category, "other");
+  assert.equal(r.pain_points[0].severity, 5);
+  assert.equal(r.pain_points[0].sub_issue, "kabadiwala cheats");
+  const irrelevant = normalizeResult({ id: "d", relevant: false, region: "uk", pain_points: [{ category: "fees_cost", sub_issue: "x", severity: 1, quote: "" }] }, doc, taxonomy);
+  assert.equal(irrelevant.region, "europe");
+  assert.equal(irrelevant.pain_points.length, 0);
+});
+
+test("reports render", () => {
+  const agg = aggregate({ docs, classified, taxonomy });
+  const md = renderMarkdown(agg);
+  assert.match(md, /## India - top/);
+  const csv = renderCsv(agg).trim().split("\n");
+  assert.equal(csv[0].split(",")[0], "region");
+  assert.ok(csv.length > 5);
+});
+
+test("keyword classifier labels typical searches", async () => {
+  const { classifyByRules } = await import("../src/ruleClassifier.js");
+  const mk = (text, region_hint = "us") => ({ id: "t", source: "google_suggest", region_hint, text, title: "" });
+  assert.equal(classifyByRules(mk("where to recycle batteries near me")).pain_points[0].sub_issue, "nowhere to take it: batteries");
+  assert.equal(classifyByRules(mk("is recycling a scam")).pain_points[0].category, "trust_greenwashing");
+  assert.equal(classifyByRules(mk("kabadiwala scrap price per kg", "india")).persona, "scrap_seller");
+  assert.equal(classifyByRules(mk("recycling bin with lid")).relevant, false);
+  assert.equal(classifyByRules(mk("bin collection problems birmingham", "india")).region, "europe");
+  assert.equal(classifyByRules(mk("deposit protection scheme complaint", "europe")).pain_points.some((p) => p.category === "deposit_return"), false);
+});
