@@ -1,6 +1,6 @@
 # EV charging: customer pain points - India, Europe, US
 
-_Generated 2026-11-01 15:53 UTC_
+_Generated 2026-11-01 16:03 UTC_
 
 ## Coverage
 
@@ -15,7 +15,7 @@ _Generated 2026-11-01 15:53 UTC_
 
 | # | Pain point | Mentions | Weighted volume | % of relevant | Avg severity | Channel mix | Top themes |
 |---:|---|---:|---:|---:|---:|---|---|
-| 1 | **Confusing information & rules** | 301 | 537.87 | 37.0% | 1 | search 301 | confusing information & rules (301) |
+| 1 | **How-to questions & confusing rules** | 301 | 537.87 | 37.0% | 1 | search 301 | how-to questions & confusing rules (301) |
 | 2 | **Price, fees & hidden charges** | 301 | 536.94 | 37.0% | 1 | search 301 | price, fees & hidden charges (301) |
 | 3 | **Availability & access** | 117 | 213.19 | 14.4% | 1 | search 117 | availability & access (117) |
 | 4 | **Customer support** | 56 | 103.2 | 6.9% | 1 | search 56 | customer support (56) |
@@ -29,7 +29,7 @@ _Generated 2026-11-01 15:53 UTC_
 | # | Pain point | Mentions | Weighted volume | % of relevant | Avg severity | Channel mix | Top themes |
 |---:|---|---:|---:|---:|---:|---|---|
 | 1 | **Price, fees & hidden charges** | 130 | 233.15 | 52.2% | 1 | search 130 | price, fees & hidden charges (130) |
-| 2 | **Confusing information & rules** | 80 | 143.93 | 32.1% | 1 | search 80 | confusing information & rules (80) |
+| 2 | **How-to questions & confusing rules** | 80 | 143.93 | 32.1% | 1 | search 80 | how-to questions & confusing rules (80) |
 | 3 | **Availability & access** | 29 | 51.86 | 11.6% | 1 | search 29 | availability & access (29) |
 | 4 | **Customer support** | 25 | 46.6 | 10.0% | 1 | search 25 | customer support (25) |
 | 5 | **Quality & reliability** | 14 | 25.63 | 5.6% | 1 | search 14 | quality & reliability (14) |
@@ -44,7 +44,7 @@ _Generated 2026-11-01 15:53 UTC_
 - "search: "ev charging station cost in india"" - [google_suggest](https://www.google.com/search?q=ev%20charging%20station%20cost%20in%20india&gl=in&hl=en)
 - "search: "ev charger cost in india"" - [google_suggest](https://www.google.com/search?q=ev%20charger%20cost%20in%20india&gl=in&hl=en)
 
-**2. Confusing information & rules**
+**2. How-to questions & confusing rules**
 
 - "search: "how to ev charging stations work"" - [google_suggest](https://www.google.com/search?q=how%20to%20ev%20charging%20stations%20work&gl=in&hl=en)
 - "search: "ev charging station rules"" - [google_suggest](https://www.google.com/search?q=ev%20charging%20station%20rules&gl=in&hl=en)
@@ -85,7 +85,7 @@ _Generated 2026-11-01 15:53 UTC_
 
 | # | Pain point | Mentions | Weighted volume | % of relevant | Avg severity | Channel mix | Top themes |
 |---:|---|---:|---:|---:|---:|---|---|
-| 1 | **Confusing information & rules** | 95 | 169.3 | 37.5% | 1 | search 95 | confusing information & rules (95) |
+| 1 | **How-to questions & confusing rules** | 95 | 169.3 | 37.5% | 1 | search 95 | how-to questions & confusing rules (95) |
 | 2 | **Price, fees & hidden charges** | 90 | 160.33 | 35.6% | 1 | search 90 | price, fees & hidden charges (90) |
 | 3 | **Availability & access** | 32 | 59.5 | 12.6% | 1 | search 32 | availability & access (32) |
 | 4 | **Quality & reliability** | 20 | 36 | 7.9% | 1 | search 20 | quality & reliability (20) |
@@ -96,7 +96,7 @@ _Generated 2026-11-01 15:53 UTC_
 
 <details><summary>Voice of customer - example quotes</summary>
 
-**1. Confusing information & rules**
+**1. How-to questions & confusing rules**
 
 - "search: "how to ev charging stations work"" - [google_suggest](https://www.google.com/search?q=how%20to%20ev%20charging%20stations%20work&gl=gb&hl=en)
 - "search: "can i open ev charging station"" - [google_suggest](https://www.google.com/search?q=can%20i%20open%20ev%20charging%20station&gl=gb&hl=en)
@@ -148,7 +148,7 @@ _Generated 2026-11-01 15:53 UTC_
 
 | # | Pain point | Mentions | Weighted volume | % of relevant | Avg severity | Channel mix | Top themes |
 |---:|---|---:|---:|---:|---:|---|---|
-| 1 | **Confusing information & rules** | 126 | 224.65 | 40.5% | 1 | search 126 | confusing information & rules (126) |
+| 1 | **How-to questions & confusing rules** | 126 | 224.65 | 40.5% | 1 | search 126 | how-to questions & confusing rules (126) |
 | 2 | **Price, fees & hidden charges** | 81 | 143.46 | 26.0% | 1 | search 81 | price, fees & hidden charges (81) |
 | 3 | **Availability & access** | 56 | 101.82 | 18.0% | 1 | search 56 | availability & access (56) |
 | 4 | **Quality & reliability** | 22 | 38.66 | 7.1% | 1 | search 22 | quality & reliability (22) |
@@ -159,7 +159,7 @@ _Generated 2026-11-01 15:53 UTC_
 
 <details><summary>Voice of customer - example quotes</summary>
 
-**1. Confusing information & rules**
+**1. How-to questions & confusing rules**
 
 - "search: "how to ev charging stations work"" - [google_suggest](https://www.google.com/search?q=how%20to%20ev%20charging%20stations%20work&gl=us&hl=en)
 - "search: "can i open ev charging station"" - [google_suggest](https://www.google.com/search?q=can%20i%20open%20ev%20charging%20station&gl=us&hl=en)

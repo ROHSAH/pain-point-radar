@@ -1,0 +1,30 @@
+{
+  "id": "banking-payments",
+  "label": "Banking & payments",
+  "description": "Bank accounts, debit and credit cards, UPI and digital payments, money transfers and payment apps.",
+  "context_keywords": [
+    "\\bbank",
+    "account",
+    "\\bcard\\b",
+    "credit card",
+    "debit",
+    "\\bupi\\b",
+    "paytm",
+    "phonepe",
+    "gpay|google pay",
+    "neft|imps|rtgs",
+    "\\batm\\b",
+    "transfer",
+    "revolut",
+    "monzo",
+    "barclays",
+    "chase",
+    "wells fargo",
+    "paypal",
+    "venmo",
+    "zelle",
+    "cash app"
+  ],
+  "irrelevant_keywords": [],
+  "subreddit_query": "bank OR UPI OR \"credit card\" OR payment OR transfer"
+}

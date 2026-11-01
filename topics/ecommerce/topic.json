@@ -1,0 +1,27 @@
+{
+  "id": "ecommerce",
+  "label": "Online shopping",
+  "description": "Buying from online marketplaces and stores: orders, delivery, returns, refunds, fake or wrong products and sellers.",
+  "context_keywords": [
+    "amazon",
+    "flipkart",
+    "meesho",
+    "myntra",
+    "ajio",
+    "nykaa",
+    "\\border\\b",
+    "deliver",
+    "return",
+    "refund",
+    "seller",
+    "ebay",
+    "temu",
+    "shein",
+    "walmart",
+    "etsy",
+    "parcel",
+    "package"
+  ],
+  "irrelevant_keywords": [],
+  "subreddit_query": "order OR delivery OR return OR refund OR seller"
+}

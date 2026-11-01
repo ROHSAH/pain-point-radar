@@ -1,0 +1,123 @@
+{
+  "_comment": "Template - replace the example subreddits and queries with ones specific to this topic.",
+  "india": {
+    "label": "India",
+    "google": {
+      "gl": "in",
+      "hl": "en"
+    },
+    "youtube": {
+      "regionCode": "IN"
+    },
+    "brave": {
+      "country": "IN"
+    },
+    "subreddits": [
+      "personalfinanceindia",
+      "IndiaInvestments",
+      "india",
+      "CarsIndia"
+    ],
+    "queries": [
+      "health insurance claim rejected",
+      "star health claim",
+      "cashless denied",
+      "lic policy mis selling"
+    ],
+    "suggest_seeds": [
+      "health insurance claim",
+      "star health",
+      "lic policy",
+      "car insurance",
+      "term insurance"
+    ],
+    "web_queries": [
+      "health insurance claim rejected complaint",
+      "star health claim complaint",
+      "cashless denied complaint"
+    ],
+    "x_queries": [
+      "(\"health insurance claim\" OR \"star health\" OR \"lic policy\") (complaint OR problem OR worst OR scam) -is:retweet"
+    ]
+  },
+  "europe": {
+    "label": "Europe (UK + EU)",
+    "google": {
+      "gl": "gb",
+      "hl": "en"
+    },
+    "youtube": {
+      "regionCode": "GB"
+    },
+    "brave": {
+      "country": "GB"
+    },
+    "subreddits": [
+      "UKPersonalFinance",
+      "AskUK",
+      "LegalAdviceUK",
+      "CarTalkUK"
+    ],
+    "queries": [
+      "car insurance premium increase",
+      "home insurance claim rejected",
+      "travel insurance claim",
+      "insurance ombudsman"
+    ],
+    "suggest_seeds": [
+      "car insurance",
+      "home insurance",
+      "aviva claim",
+      "travel insurance",
+      "insurance premium"
+    ],
+    "web_queries": [
+      "car insurance premium increase complaint",
+      "home insurance claim rejected complaint",
+      "travel insurance claim complaint"
+    ],
+    "x_queries": [
+      "(\"car insurance\" OR \"home insurance\" OR \"aviva claim\") (complaint OR problem OR worst OR scam) -is:retweet"
+    ]
+  },
+  "us": {
+    "label": "United States",
+    "google": {
+      "gl": "us",
+      "hl": "en"
+    },
+    "youtube": {
+      "regionCode": "US"
+    },
+    "brave": {
+      "country": "US"
+    },
+    "subreddits": [
+      "Insurance",
+      "personalfinance",
+      "HealthInsurance",
+      "legaladvice"
+    ],
+    "queries": [
+      "insurance claim denied",
+      "car insurance went up",
+      "health insurance denied",
+      "state farm claim"
+    ],
+    "suggest_seeds": [
+      "health insurance",
+      "car insurance",
+      "geico",
+      "state farm",
+      "insurance claim denied"
+    ],
+    "web_queries": [
+      "insurance claim denied complaint",
+      "car insurance went up complaint",
+      "health insurance denied complaint"
+    ],
+    "x_queries": [
+      "(\"health insurance\" OR \"car insurance\" OR \"geico\") (complaint OR problem OR worst OR scam) -is:retweet"
+    ]
+  }
+}

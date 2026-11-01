@@ -1,0 +1,124 @@
+{
+  "_comment": "Template - replace the example subreddits and queries with ones specific to this topic.",
+  "india": {
+    "label": "India",
+    "google": {
+      "gl": "in",
+      "hl": "en"
+    },
+    "youtube": {
+      "regionCode": "IN"
+    },
+    "brave": {
+      "country": "IN"
+    },
+    "subreddits": [
+      "india",
+      "IndiaTravel",
+      "bangalore",
+      "delhi"
+    ],
+    "queries": [
+      "indigo delay",
+      "air india refund",
+      "lost baggage indigo",
+      "flight cancelled refund"
+    ],
+    "suggest_seeds": [
+      "indigo flight",
+      "air india",
+      "flight cancelled",
+      "airport",
+      "baggage"
+    ],
+    "web_queries": [
+      "indigo delay complaint",
+      "air india refund complaint",
+      "lost baggage indigo complaint"
+    ],
+    "x_queries": [
+      "(\"indigo flight\" OR \"air india\" OR \"flight cancelled\") (complaint OR problem OR worst OR scam) -is:retweet"
+    ]
+  },
+  "europe": {
+    "label": "Europe (UK + EU)",
+    "google": {
+      "gl": "gb",
+      "hl": "en"
+    },
+    "youtube": {
+      "regionCode": "GB"
+    },
+    "brave": {
+      "country": "GB"
+    },
+    "subreddits": [
+      "AskUK",
+      "travel",
+      "unitedkingdom",
+      "germany"
+    ],
+    "queries": [
+      "ryanair compensation",
+      "easyjet cancelled",
+      "british airways lost luggage",
+      "flight delay compensation"
+    ],
+    "suggest_seeds": [
+      "ryanair",
+      "easyjet",
+      "british airways",
+      "flight delay compensation",
+      "lufthansa"
+    ],
+    "web_queries": [
+      "ryanair compensation complaint",
+      "easyjet cancelled complaint",
+      "british airways lost luggage complaint"
+    ],
+    "x_queries": [
+      "(\"ryanair\" OR \"easyjet\" OR \"british airways\") (complaint OR problem OR worst OR scam) -is:retweet"
+    ]
+  },
+  "us": {
+    "label": "United States",
+    "google": {
+      "gl": "us",
+      "hl": "en"
+    },
+    "youtube": {
+      "regionCode": "US"
+    },
+    "brave": {
+      "country": "US"
+    },
+    "subreddits": [
+      "delta",
+      "unitedairlines",
+      "americanairlines",
+      "travel",
+      "flying"
+    ],
+    "queries": [
+      "flight cancelled refund",
+      "lost luggage",
+      "delta delay",
+      "united rebooking"
+    ],
+    "suggest_seeds": [
+      "delta",
+      "united airlines",
+      "american airlines",
+      "flight cancelled",
+      "southwest"
+    ],
+    "web_queries": [
+      "flight cancelled refund complaint",
+      "lost luggage complaint",
+      "delta delay complaint"
+    ],
+    "x_queries": [
+      "(\"delta\" OR \"united airlines\" OR \"american airlines\") (complaint OR problem OR worst OR scam) -is:retweet"
+    ]
+  }
+}

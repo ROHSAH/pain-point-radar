@@ -1,0 +1,28 @@
+{
+  "id": "air-travel",
+  "label": "Air travel",
+  "description": "Flying: delays and cancellations, refunds and compensation, baggage, airports, check-in and airline customer service.",
+  "context_keywords": [
+    "flight",
+    "airline",
+    "airport",
+    "indigo",
+    "air india",
+    "akasa",
+    "ryanair",
+    "easyjet",
+    "british airways",
+    "lufthansa",
+    "\\bklm\\b",
+    "delta",
+    "united airlines",
+    "american airlines",
+    "southwest",
+    "baggage",
+    "luggage",
+    "boarding",
+    "check-?in"
+  ],
+  "irrelevant_keywords": [],
+  "subreddit_query": "flight OR airline OR airport OR baggage"
+}

@@ -1,0 +1,139 @@
+{
+  "_comment": "Topic-specific categories first, then generic ones. The keyword classifier uses the first matches.",
+  "categories": [
+    {
+      "id": "appointments_access",
+      "name": "Getting appointments & referrals",
+      "description": "Can't get a GP or specialist appointment, long waiting lists, referrals.",
+      "keywords": [
+        "appointment|\\bgp\\b|waiting list|referral|specialist|8am|dentist"
+      ]
+    },
+    {
+      "id": "medical_bills",
+      "name": "Medical bills & surprise costs",
+      "description": "High or surprise bills, out-of-network charges, hospital overcharging.",
+      "keywords": [
+        "medical bill|hospital bill|surprise bill|out of network|itemi[sz]ed|overcharg|cost of"
+      ]
+    },
+    {
+      "id": "price_cost",
+      "name": "Price, fees & hidden charges",
+      "description": "Too expensive, price rises, surge pricing, hidden fees, not worth the money.",
+      "keywords": [
+        "\\b(price|prices|cost|costs|expensive|overpriced|fee|fees|charges?|surge|hidden|not worth|rip ?off)\\b"
+      ]
+    },
+    {
+      "id": "quality_reliability",
+      "name": "Quality & reliability",
+      "description": "Product or service breaks, fails, is defective, inconsistent or does not work as promised.",
+      "keywords": [
+        "\\b(broken|not working|doesn'?t work|stopped working|fault|faulty|defect|failed|failure|keeps (crashing|failing)|poor quality|bad quality)\\b"
+      ]
+    },
+    {
+      "id": "availability_access",
+      "name": "Availability & access",
+      "description": "Not available nearby, out of stock, no coverage, long distances, closed or full.",
+      "keywords": [
+        "near me|where (to|can i)|\\b(not available|unavailable|out of stock|no (service|coverage|stations?|options?)|closed|full|sold out)\\b"
+      ]
+    },
+    {
+      "id": "speed_wait",
+      "name": "Delays & waiting",
+      "description": "Late delivery, long queues or wait times, slow service, missed appointments.",
+      "keywords": [
+        "\\b(late|delay|delayed|waiting|wait time|queue|slow|took (hours|days|weeks)|never (arrived|came)|missed)\\b"
+      ]
+    },
+    {
+      "id": "customer_support",
+      "name": "Customer support",
+      "description": "Hard to reach support, complaints ignored, unhelpful agents, no accountability.",
+      "keywords": [
+        "\\b(customer (service|care|support)|helpline|complain|complaint|no response|ignored|chatbot|contact number|phone number)\\b"
+      ]
+    },
+    {
+      "id": "refunds_billing",
+      "name": "Refunds, billing & payments",
+      "description": "Refund refused or slow, double charges, payment failures, billing errors, cancellation trouble.",
+      "keywords": [
+        "\\b(refund|refunds|charged twice|double charged|overcharged|billing error|wrong bill|payment failed|cancel|cancellation|chargeback)\\b"
+      ]
+    },
+    {
+      "id": "digital_experience",
+      "name": "App, website & digital",
+      "description": "App or website bugs, login problems, confusing UX, booking or tracking not working.",
+      "keywords": [
+        "\\b(app|website|login|log in|sign in|otp|update|tracking|booking|portal)\\b"
+      ]
+    },
+    {
+      "id": "trust_safety",
+      "name": "Trust, scams & safety",
+      "description": "Fraud, scams, misleading claims, data or personal safety concerns.",
+      "keywords": [
+        "\\b(scam|fraud|fake|cheat|cheated|misleading|unsafe|danger|dangerous|safety|privacy|data leak)\\b"
+      ]
+    },
+    {
+      "id": "information_rules",
+      "name": "How-to questions & confusing rules",
+      "description": "Unclear rules, eligibility, instructions or terms; people unsure how things work.",
+      "keywords": [
+        "^(how (do|to|does|can)|can (i|you)|is it|what (is|are)|which)\\b|\\b(rules|eligib|terms|confus|explained)\\b"
+      ]
+    },
+    {
+      "id": "other",
+      "name": "Other",
+      "description": "Clear customer pain point that does not fit any category above.",
+      "keywords": []
+    }
+  ],
+  "personas": [
+    {
+      "id": "first_time_user",
+      "name": "First-time / new user",
+      "description": "Trying the product or service for the first time; unfamiliar with how it works.",
+      "keywords": [
+        "\\b(first time|new to|beginner|just (bought|started|signed up))\\b"
+      ]
+    },
+    {
+      "id": "regular_user",
+      "name": "Regular user",
+      "description": "Uses it often and compares with past experience.",
+      "keywords": [
+        "\\b(every (day|week)|always use|regular|daily|for years)\\b"
+      ]
+    },
+    {
+      "id": "budget_conscious",
+      "name": "Budget-conscious customer",
+      "description": "Price-sensitive; talks mainly about cost and value.",
+      "keywords": [
+        "\\b(cheap|cheapest|budget|afford|save money|discount)\\b"
+      ]
+    },
+    {
+      "id": "small_business",
+      "name": "Small business / professional user",
+      "description": "Uses it for work or a business.",
+      "keywords": [
+        "\\b(my (business|shop|store|restaurant|company|clients?)|for work|b2b|fleet)\\b"
+      ]
+    },
+    {
+      "id": "general_citizen",
+      "name": "General customer",
+      "description": "Persona cannot be inferred.",
+      "keywords": []
+    }
+  ]
+}

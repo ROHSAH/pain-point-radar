@@ -46,7 +46,7 @@
       "name": "Refunds, billing & payments",
       "description": "Refund refused or slow, double charges, payment failures, billing errors, cancellation trouble.",
       "keywords": [
-        "\\b(refund|refunds|charged twice|double charged|overcharged|billing|bill|payment failed|cancel|cancellation|chargeback)\\b"
+        "\\b(refund|refunds|charged twice|double charged|overcharged|billing error|wrong bill|payment failed|cancel|cancellation|chargeback)\\b"
       ]
     },
     {
@@ -67,7 +67,7 @@
     },
     {
       "id": "information_rules",
-      "name": "Confusing information & rules",
+      "name": "How-to questions & confusing rules",
       "description": "Unclear rules, eligibility, instructions or terms; people unsure how things work.",
       "keywords": [
         "^(how (do|to|does|can)|can (i|you)|is it|what (is|are)|which)\\b|\\b(rules|eligib|terms|confus|explained)\\b"

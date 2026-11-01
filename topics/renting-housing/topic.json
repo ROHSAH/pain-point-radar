@@ -1,0 +1,27 @@
+{
+  "id": "renting-housing",
+  "label": "Renting & housing",
+  "description": "Renting a flat or house: landlords and letting agents, deposits, repairs, rent increases, brokers and evictions.",
+  "context_keywords": [
+    "\\brent",
+    "landlord",
+    "tenant",
+    "lease",
+    "deposit",
+    "\\bflat\\b",
+    "apartment",
+    "broker",
+    "letting agent",
+    "evict",
+    "property manager",
+    "nobroker",
+    "magicbricks",
+    "rightmove",
+    "zillow",
+    "housing",
+    "mould|mold",
+    "damp"
+  ],
+  "irrelevant_keywords": [],
+  "subreddit_query": "landlord OR rent OR tenant OR deposit OR lease"
+}

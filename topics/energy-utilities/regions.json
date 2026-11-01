@@ -1,0 +1,142 @@
+{
+  "_comment": "Template - replace the example subreddits and queries with ones specific to this topic.",
+  "india": {
+    "label": "India",
+    "google": {
+      "gl": "in",
+      "hl": "en"
+    },
+    "youtube": {
+      "regionCode": "IN"
+    },
+    "brave": {
+      "country": "IN"
+    },
+    "subreddits": [
+      "india",
+      "bangalore",
+      "mumbai",
+      "delhi",
+      "hyderabad",
+      "solar"
+    ],
+    "queries": [
+      "electricity bill too high",
+      "power cut daily",
+      "smart meter problem",
+      "rooftop solar subsidy"
+    ],
+    "suggest_seeds": [
+      "electricity bill",
+      "power cut",
+      "bescom",
+      "tata power",
+      "solar panel subsidy",
+      "smart meter"
+    ],
+    "web_queries": [
+      "electricity bill too high complaint",
+      "power cut daily complaint",
+      "smart meter problem complaint"
+    ],
+    "x_queries": [
+      "(\"electricity bill\" OR \"power cut\" OR \"bescom\") (complaint OR problem OR worst OR scam) -is:retweet"
+    ]
+  },
+  "europe": {
+    "label": "Europe (UK + EU)",
+    "google": {
+      "gl": "gb",
+      "hl": "en"
+    },
+    "youtube": {
+      "regionCode": "GB"
+    },
+    "brave": {
+      "country": "GB"
+    },
+    "subreddits": [
+      "UKPersonalFinance",
+      "AskUK",
+      "OctopusEnergy",
+      "unitedkingdom",
+      "germany",
+      "ireland"
+    ],
+    "queries": [
+      "energy bill too high",
+      "smart meter not working",
+      "british gas complaint",
+      "switching energy supplier"
+    ],
+    "suggest_seeds": [
+      "energy bill",
+      "smart meter",
+      "octopus energy",
+      "british gas",
+      "energy price cap",
+      "solar panels"
+    ],
+    "web_queries": [
+      "energy bill too high complaint",
+      "smart meter not working complaint",
+      "british gas complaint complaint"
+    ],
+    "x_queries": [
+      "(\"energy bill\" OR \"smart meter\" OR \"octopus energy\") (complaint OR problem OR worst OR scam) -is:retweet"
+    ],
+    "google_extra": [
+      {
+        "gl": "de",
+        "hl": "de",
+        "seeds": [
+          "stromrechnung",
+          "stromanbieter"
+        ]
+      }
+    ]
+  },
+  "us": {
+    "label": "United States",
+    "google": {
+      "gl": "us",
+      "hl": "en"
+    },
+    "youtube": {
+      "regionCode": "US"
+    },
+    "brave": {
+      "country": "US"
+    },
+    "subreddits": [
+      "energy",
+      "solar",
+      "personalfinance",
+      "bayarea",
+      "texas",
+      "homeowners"
+    ],
+    "queries": [
+      "electric bill doubled",
+      "power outage again",
+      "solar panel company",
+      "pg&e rates"
+    ],
+    "suggest_seeds": [
+      "electric bill",
+      "power outage",
+      "pg&e",
+      "duke energy",
+      "solar panels",
+      "con ed"
+    ],
+    "web_queries": [
+      "electric bill doubled complaint",
+      "power outage again complaint",
+      "solar panel company complaint"
+    ],
+    "x_queries": [
+      "(\"electric bill\" OR \"power outage\" OR \"pg&e\") (complaint OR problem OR worst OR scam) -is:retweet"
+    ]
+  }
+}

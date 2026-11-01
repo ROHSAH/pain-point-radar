@@ -1,0 +1,125 @@
+{
+  "_comment": "Template - replace the example subreddits and queries with ones specific to this topic.",
+  "india": {
+    "label": "India",
+    "google": {
+      "gl": "in",
+      "hl": "en"
+    },
+    "youtube": {
+      "regionCode": "IN"
+    },
+    "brave": {
+      "country": "IN"
+    },
+    "subreddits": [
+      "india",
+      "bangalore",
+      "mumbai",
+      "delhi",
+      "LegalAdviceIndia"
+    ],
+    "queries": [
+      "flipkart fake product",
+      "amazon refund not received",
+      "meesho return",
+      "order not delivered"
+    ],
+    "suggest_seeds": [
+      "amazon order",
+      "flipkart",
+      "meesho",
+      "myntra return",
+      "amazon refund"
+    ],
+    "web_queries": [
+      "flipkart fake product complaint",
+      "amazon refund not received complaint",
+      "meesho return complaint"
+    ],
+    "x_queries": [
+      "(\"amazon order\" OR \"flipkart\" OR \"meesho\") (complaint OR problem OR worst OR scam) -is:retweet"
+    ]
+  },
+  "europe": {
+    "label": "Europe (UK + EU)",
+    "google": {
+      "gl": "gb",
+      "hl": "en"
+    },
+    "youtube": {
+      "regionCode": "GB"
+    },
+    "brave": {
+      "country": "GB"
+    },
+    "subreddits": [
+      "AskUK",
+      "LegalAdviceUK",
+      "unitedkingdom",
+      "amazonprime"
+    ],
+    "queries": [
+      "amazon parcel not delivered",
+      "temu refund",
+      "ebay seller scam",
+      "shein return"
+    ],
+    "suggest_seeds": [
+      "amazon uk",
+      "ebay",
+      "temu",
+      "shein",
+      "royal mail parcel"
+    ],
+    "web_queries": [
+      "amazon parcel not delivered complaint",
+      "temu refund complaint",
+      "ebay seller scam complaint"
+    ],
+    "x_queries": [
+      "(\"amazon uk\" OR \"ebay\" OR \"temu\") (complaint OR problem OR worst OR scam) -is:retweet"
+    ]
+  },
+  "us": {
+    "label": "United States",
+    "google": {
+      "gl": "us",
+      "hl": "en"
+    },
+    "youtube": {
+      "regionCode": "US"
+    },
+    "brave": {
+      "country": "US"
+    },
+    "subreddits": [
+      "amazon",
+      "AmazonPrime",
+      "Temu",
+      "legaladvice",
+      "Flipping"
+    ],
+    "queries": [
+      "package marked delivered not received",
+      "amazon return refund",
+      "temu scam",
+      "walmart order cancelled"
+    ],
+    "suggest_seeds": [
+      "amazon order",
+      "walmart order",
+      "temu",
+      "shein",
+      "ebay"
+    ],
+    "web_queries": [
+      "package marked delivered not received complaint",
+      "amazon return refund complaint",
+      "temu scam complaint"
+    ],
+    "x_queries": [
+      "(\"amazon order\" OR \"walmart order\" OR \"temu\") (complaint OR problem OR worst OR scam) -is:retweet"
+    ]
+  }
+}

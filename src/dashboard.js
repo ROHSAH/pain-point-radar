@@ -105,7 +105,7 @@ section.card { background: var(--surface); border: 1px solid var(--rule); border
 .card-head { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: baseline; justify-content: space-between; }
 .card-head p { margin: 2px 0 0; color: var(--ink-2); font-size: 13px; max-width: 70ch; }
 .controls { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font-size: 13px; color: var(--ink-2); }
-.grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 520px), 1fr)); gap: 20px; }
+.grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 520px), 1fr)); gap: 20px; align-items: start; }
 /* ranked bars */
 .bars { display: grid; gap: 6px; }
 .bar { display: grid; grid-template-columns: minmax(120px, 260px) 1fr auto; gap: 12px; align-items: center; padding: 3px 4px; border-radius: 6px; cursor: pointer; }
@@ -245,7 +245,7 @@ a { color: var(--accent-ink); }
 
   // ---------- header
   const ALL_SOURCES = ["reddit", "x", "youtube", "google_suggest", "web"];
-  $("eyebrow").textContent = "Customer pain points · " + D.topics.map((t) => t.label).join(" · ") + " · India · Europe · US";
+  $("eyebrow").textContent = "Customer pain points · " + (D.topics.length > 4 ? D.topics.length + " topics" : D.topics.map((t) => t.label).join(" · ")) + " · India · Europe · US";
   $("meta").textContent = ROWS.length.toLocaleString() + " pain-point mentions from " + D.totalDocs.toLocaleString() + " collected documents. Generated " + D.generatedAt.slice(0, 16).replace("T", " ") + " UTC" + (D.dateRange ? ", posts dated " + D.dateRange[0] + " to " + D.dateRange[1] : "") + ".";
   $("sources").innerHTML = ALL_SOURCES.map((s) => {
     const n = D.docsBySource[s] || 0;
@@ -268,8 +268,7 @@ a { color: var(--accent-ink); }
     fillSelect(F.r, "r", "All regions", inTopic); fillSelect(F.p, "p", "All personas", inTopic); fillSelect(F.k, "k", "All pain points", inTopic);
     fillSelect(F.src, "src", "All sources", inTopic); fillSelect(F.ch, "ch", "All channels", inTopic);
   }
-  fillSelect(F.tp, "tp", D.topics.length > 1 ? "All topics" : "All topics (1)", ROWS);
-  if (D.topics.length > 1) F.tp.value = D.topics[0].label; // a topic's own categories make more sense than a cross-topic mix
+  fillSelect(F.tp, "tp", "All topics", ROWS);
   fillAll();
   F.tp.addEventListener("input", fillAll);
   const controls = [...Object.values(F), $("f-sev"), $("f-q")];
@@ -331,8 +330,8 @@ a { color: var(--accent-ink); }
 
   // ---------- pivots ("club the data by any two parameters")
   const PIVOTS = [
-    { el: "pv1", title: "Club by: pain point × region", rows: "k", cols: "r", metric: "n" },
-    { el: "pv2", title: "Club by: pain point × persona", rows: "k", cols: "p", metric: "n" },
+    D.topics.length > 1 ? { el: "pv1", rows: "k", cols: "tp", metric: "n" } : { el: "pv1", rows: "k", cols: "r", metric: "n" },
+    D.topics.length > 1 ? { el: "pv2", rows: "tp", cols: "r", metric: "n" } : { el: "pv2", rows: "k", cols: "p", metric: "n" },
   ];
   PIVOTS.forEach((pv, i) => {
     try { Object.assign(pv, JSON.parse(store.get("pivot" + i) || "{}")); } catch {}
@@ -352,7 +351,7 @@ a { color: var(--accent-ink); }
     const t = $(pv.el + "-t");
     if (!rows.length) { t.innerHTML = '<tr><td class="empty">No mentions match these filters.</td></tr>'; return; }
     const rk = group(rows, pv.rows).sort((a, b) => b.n - a.n).slice(0, 20).map((g) => g.key);
-    const ck = group(rows, pv.cols).sort((a, b) => b.n - a.n).slice(0, 10).map((g) => g.key);
+    const ck = group(rows, pv.cols).sort((a, b) => b.n - a.n).slice(0, 14).map((g) => g.key);
     const cell = {}, colTot = {}, rowTot = {};
     for (const r of rows) {
       const a = r[pv.rows], b = r[pv.cols];

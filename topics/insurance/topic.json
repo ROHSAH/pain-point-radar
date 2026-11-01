@@ -1,0 +1,27 @@
+{
+  "id": "insurance",
+  "label": "Insurance",
+  "description": "Health, motor, home, travel and life insurance: buying policies, premiums, claims and settlement.",
+  "context_keywords": [
+    "insurance",
+    "insurer",
+    "\\bpolicy\\b",
+    "\\bclaim",
+    "premium",
+    "\\blic\\b",
+    "star health",
+    "hdfc ergo",
+    "icici lombard",
+    "aviva",
+    "admiral",
+    "geico",
+    "state farm",
+    "progressive",
+    "cashless",
+    "\\btpa\\b",
+    "deductible",
+    "copay"
+  ],
+  "irrelevant_keywords": [],
+  "subreddit_query": "insurance OR claim OR premium OR policy"
+}

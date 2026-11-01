@@ -1,0 +1,129 @@
+{
+  "_comment": "Template - replace the example subreddits and queries with ones specific to this topic.",
+  "india": {
+    "label": "India",
+    "google": {
+      "gl": "in",
+      "hl": "en"
+    },
+    "youtube": {
+      "regionCode": "IN"
+    },
+    "brave": {
+      "country": "IN"
+    },
+    "subreddits": [
+      "personalfinanceindia",
+      "IndiaInvestments",
+      "india",
+      "CreditCardsIndia",
+      "bangalore"
+    ],
+    "queries": [
+      "loan recovery agent harassment",
+      "personal loan rejected",
+      "cibil score low",
+      "loan app scam"
+    ],
+    "suggest_seeds": [
+      "personal loan",
+      "home loan",
+      "cibil score",
+      "loan app",
+      "emi",
+      "gold loan"
+    ],
+    "web_queries": [
+      "loan recovery agent harassment complaint",
+      "personal loan rejected complaint",
+      "cibil score low complaint"
+    ],
+    "x_queries": [
+      "(\"personal loan\" OR \"home loan\" OR \"cibil score\") (complaint OR problem OR worst OR scam) -is:retweet"
+    ]
+  },
+  "europe": {
+    "label": "Europe (UK + EU)",
+    "google": {
+      "gl": "gb",
+      "hl": "en"
+    },
+    "youtube": {
+      "regionCode": "GB"
+    },
+    "brave": {
+      "country": "GB"
+    },
+    "subreddits": [
+      "UKPersonalFinance",
+      "HousingUK",
+      "eupersonalfinance",
+      "AskUK"
+    ],
+    "queries": [
+      "mortgage rejected",
+      "klarna debt collection",
+      "credit score wrong",
+      "remortgage rates"
+    ],
+    "suggest_seeds": [
+      "mortgage",
+      "personal loan",
+      "credit score uk",
+      "klarna",
+      "remortgage",
+      "debt collection"
+    ],
+    "web_queries": [
+      "mortgage rejected complaint",
+      "klarna debt collection complaint",
+      "credit score wrong complaint"
+    ],
+    "x_queries": [
+      "(\"mortgage\" OR \"personal loan\" OR \"credit score uk\") (complaint OR problem OR worst OR scam) -is:retweet"
+    ]
+  },
+  "us": {
+    "label": "United States",
+    "google": {
+      "gl": "us",
+      "hl": "en"
+    },
+    "youtube": {
+      "regionCode": "US"
+    },
+    "brave": {
+      "country": "US"
+    },
+    "subreddits": [
+      "personalfinance",
+      "StudentLoans",
+      "FirstTimeHomeBuyer",
+      "Mortgages",
+      "povertyfinance",
+      "Debt"
+    ],
+    "queries": [
+      "student loan servicer",
+      "mortgage denied",
+      "debt collector calls",
+      "credit score dropped"
+    ],
+    "suggest_seeds": [
+      "mortgage",
+      "personal loan",
+      "student loan",
+      "credit score",
+      "refinance",
+      "afterpay"
+    ],
+    "web_queries": [
+      "student loan servicer complaint",
+      "mortgage denied complaint",
+      "debt collector calls complaint"
+    ],
+    "x_queries": [
+      "(\"mortgage\" OR \"personal loan\" OR \"student loan\") (complaint OR problem OR worst OR scam) -is:retweet"
+    ]
+  }
+}

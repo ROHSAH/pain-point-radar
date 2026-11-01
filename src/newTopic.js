@@ -15,20 +15,20 @@ const LOCALES = {
 };
 
 // Categories that fit most consumer products and services. Keywords drive the no-key classifier.
-const GENERIC_CATEGORIES = [
+export const GENERIC_CATEGORIES = [
   ["price_cost", "Price, fees & hidden charges", "Too expensive, price rises, surge pricing, hidden fees, not worth the money.", ["\\b(price|prices|cost|costs|expensive|overpriced|fee|fees|charges?|surge|hidden|not worth|rip ?off)\\b"]],
   ["quality_reliability", "Quality & reliability", "Product or service breaks, fails, is defective, inconsistent or does not work as promised.", ["\\b(broken|not working|doesn'?t work|stopped working|fault|faulty|defect|failed|failure|keeps (crashing|failing)|poor quality|bad quality)\\b"]],
   ["availability_access", "Availability & access", "Not available nearby, out of stock, no coverage, long distances, closed or full.", ["near me|where (to|can i)|\\b(not available|unavailable|out of stock|no (service|coverage|stations?|options?)|closed|full|sold out)\\b"]],
   ["speed_wait", "Delays & waiting", "Late delivery, long queues or wait times, slow service, missed appointments.", ["\\b(late|delay|delayed|waiting|wait time|queue|slow|took (hours|days|weeks)|never (arrived|came)|missed)\\b"]],
   ["customer_support", "Customer support", "Hard to reach support, complaints ignored, unhelpful agents, no accountability.", ["\\b(customer (service|care|support)|helpline|complain|complaint|no response|ignored|chatbot|contact number|phone number)\\b"]],
-  ["refunds_billing", "Refunds, billing & payments", "Refund refused or slow, double charges, payment failures, billing errors, cancellation trouble.", ["\\b(refund|refunds|charged twice|double charged|overcharged|billing|bill|payment failed|cancel|cancellation|chargeback)\\b"]],
+  ["refunds_billing", "Refunds, billing & payments", "Refund refused or slow, double charges, payment failures, billing errors, cancellation trouble.", ["\\b(refund|refunds|charged twice|double charged|overcharged|billing error|wrong bill|payment failed|cancel|cancellation|chargeback)\\b"]],
   ["digital_experience", "App, website & digital", "App or website bugs, login problems, confusing UX, booking or tracking not working.", ["\\b(app|website|login|log in|sign in|otp|update|tracking|booking|portal)\\b"]],
   ["trust_safety", "Trust, scams & safety", "Fraud, scams, misleading claims, data or personal safety concerns.", ["\\b(scam|fraud|fake|cheat|cheated|misleading|unsafe|danger|dangerous|safety|privacy|data leak)\\b"]],
-  ["information_rules", "Confusing information & rules", "Unclear rules, eligibility, instructions or terms; people unsure how things work.", ["^(how (do|to|does|can)|can (i|you)|is it|what (is|are)|which)\\b|\\b(rules|eligib|terms|confus|explained)\\b"]],
+  ["information_rules", "How-to questions & confusing rules", "Unclear rules, eligibility, instructions or terms; people unsure how things work.", ["^(how (do|to|does|can)|can (i|you)|is it|what (is|are)|which)\\b|\\b(rules|eligib|terms|confus|explained)\\b"]],
   ["other", "Other", "Clear customer pain point that does not fit any category above.", []],
 ];
 
-const GENERIC_PERSONAS = [
+export const GENERIC_PERSONAS = [
   ["first_time_user", "First-time / new user", "Trying the product or service for the first time; unfamiliar with how it works.", ["\\b(first time|new to|beginner|just (bought|started|signed up))\\b"]],
   ["regular_user", "Regular user", "Uses it often and compares with past experience.", ["\\b(every (day|week)|always use|regular|daily|for years)\\b"]],
   ["budget_conscious", "Budget-conscious customer", "Price-sensitive; talks mainly about cost and value.", ["\\b(cheap|cheapest|budget|afford|save money|discount)\\b"]],
@@ -71,7 +71,12 @@ function validRegex(s) {
   }
 }
 
-export async function createTopic({ id, label, description, useClaude }) {
+/**
+ * overrides (optional, for hand-written topics): context_keywords, irrelevant_keywords, subreddit_query,
+ * regions: { india|europe|us: { subreddits, queries, suggest_seeds, web_queries, x_queries, google_extra } },
+ * categories / personas: topic-specific entries placed before the generic ones (first match wins).
+ */
+export async function createTopic({ id, label, description, useClaude, overrides = {} }) {
   const dir = path.join(TOPICS_DIR, id);
   if (fs.existsSync(dir)) throw new Error(`${dir} already exists - edit its files instead`);
   const words = label.toLowerCase();
@@ -90,9 +95,9 @@ export async function createTopic({ id, label, description, useClaude }) {
     id,
     label,
     description: description || label,
-    context_keywords: draft?.context_keywords?.length ? draft.context_keywords : words.split(/\s+/).filter((w) => w.length > 2),
-    irrelevant_keywords: (draft?.irrelevant_keywords || []).filter(validRegex),
-    subreddit_query: draft?.subreddit_query || words.split(/\s+/).join(" OR "),
+    context_keywords: overrides.context_keywords || (draft?.context_keywords?.length ? draft.context_keywords : words.split(/\s+/).filter((w) => w.length > 2)),
+    irrelevant_keywords: (overrides.irrelevant_keywords || draft?.irrelevant_keywords || []).filter(validRegex),
+    subreddit_query: overrides.subreddit_query || draft?.subreddit_query || words.split(/\s+/).join(" OR "),
   };
 
   const regions = { _comment: draft ? "Drafted by Claude - review subreddits and queries before a big run." : "Template - replace the example subreddits and queries with ones specific to this topic." };
@@ -105,21 +110,24 @@ export async function createTopic({ id, label, description, useClaude }) {
       suggest_seeds: d?.suggest_seeds || [words, `${words} near me`, `${words} cost`, `${words} problem`],
       web_queries: d?.web_queries || [`${words} complaint`, `${words} review problems`],
       x_queries: d?.x_queries || [`("${words}") (complaint OR problem OR worst OR scam) -is:retweet`],
+      ...(overrides.regions?.[rid] || {}),
     };
   }
 
-  const categories = draft?.categories?.length
+  let categories = draft?.categories?.length
     ? draft.categories.map((c) => ({ ...c, keywords: c.keywords.filter(validRegex) }))
     : GENERIC_CATEGORIES.map(([cid, name, desc, keywords]) => ({ id: cid, name, description: desc, keywords }));
+  if (overrides.categories) categories = [...overrides.categories, ...categories.filter((c) => !overrides.categories.some((o) => o.id === c.id))];
   if (!categories.some((c) => c.id === "other")) categories.push({ id: "other", name: "Other", description: "Clear customer pain point that does not fit any category above.", keywords: [] });
-  const personas = draft?.personas?.length
+  let personas = draft?.personas?.length
     ? draft.personas.map((p) => ({ ...p, keywords: p.keywords.filter(validRegex) }))
     : GENERIC_PERSONAS.map(([pid, name, desc, keywords]) => ({ id: pid, name, description: desc, keywords }));
+  if (overrides.personas) personas = [...overrides.personas, ...personas.filter((p) => !overrides.personas.some((o) => o.id === p.id))];
   if (!personas.some((p) => p.id === "general_citizen")) personas.push({ id: "general_citizen", name: "General customer", description: "Persona cannot be inferred.", keywords: [] });
 
   fs.mkdirSync(dir, { recursive: true });
   writeJson(path.join(dir, "topic.json"), topic);
   writeJson(path.join(dir, "regions.json"), regions);
-  writeJson(path.join(dir, "taxonomy.json"), { _comment: draft ? "Drafted by Claude." : "Generic categories - rename or add topic-specific ones.", categories, personas });
+  writeJson(path.join(dir, "taxonomy.json"), { _comment: draft ? "Drafted by Claude." : overrides.categories ? "Topic-specific categories first, then generic ones. The keyword classifier uses the first matches." : "Generic categories - rename or add topic-specific ones.", categories, personas });
   return dir;
 }

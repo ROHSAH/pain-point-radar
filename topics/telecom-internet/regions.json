@@ -1,0 +1,129 @@
+{
+  "_comment": "Template - replace the example subreddits and queries with ones specific to this topic.",
+  "india": {
+    "label": "India",
+    "google": {
+      "gl": "in",
+      "hl": "en"
+    },
+    "youtube": {
+      "regionCode": "IN"
+    },
+    "brave": {
+      "country": "IN"
+    },
+    "subreddits": [
+      "india",
+      "bangalore",
+      "mumbai",
+      "delhi",
+      "LegalAdviceIndia"
+    ],
+    "queries": [
+      "jio network problem",
+      "airtel broadband complaint",
+      "recharge price hike",
+      "no signal jio"
+    ],
+    "suggest_seeds": [
+      "jio",
+      "airtel",
+      "jio fiber",
+      "airtel broadband",
+      "vi network",
+      "bsnl"
+    ],
+    "web_queries": [
+      "jio network problem complaint",
+      "airtel broadband complaint complaint",
+      "recharge price hike complaint"
+    ],
+    "x_queries": [
+      "(\"jio\" OR \"airtel\" OR \"jio fiber\") (complaint OR problem OR worst OR scam) -is:retweet"
+    ]
+  },
+  "europe": {
+    "label": "Europe (UK + EU)",
+    "google": {
+      "gl": "gb",
+      "hl": "en"
+    },
+    "youtube": {
+      "regionCode": "GB"
+    },
+    "brave": {
+      "country": "GB"
+    },
+    "subreddits": [
+      "UKPersonalFinance",
+      "AskUK",
+      "unitedkingdom",
+      "britishproblems"
+    ],
+    "queries": [
+      "virgin media outage",
+      "broadband slow",
+      "mid contract price rise",
+      "no signal ee"
+    ],
+    "suggest_seeds": [
+      "virgin media",
+      "bt broadband",
+      "ee",
+      "vodafone",
+      "o2",
+      "sky broadband"
+    ],
+    "web_queries": [
+      "virgin media outage complaint",
+      "broadband slow complaint",
+      "mid contract price rise complaint"
+    ],
+    "x_queries": [
+      "(\"virgin media\" OR \"bt broadband\" OR \"ee\") (complaint OR problem OR worst OR scam) -is:retweet"
+    ]
+  },
+  "us": {
+    "label": "United States",
+    "google": {
+      "gl": "us",
+      "hl": "en"
+    },
+    "youtube": {
+      "regionCode": "US"
+    },
+    "brave": {
+      "country": "US"
+    },
+    "subreddits": [
+      "verizon",
+      "ATT",
+      "tmobile",
+      "Comcast_Xfinity",
+      "Spectrum",
+      "HomeNetworking"
+    ],
+    "queries": [
+      "xfinity outage",
+      "verizon price increase",
+      "t-mobile no signal",
+      "spectrum internet slow"
+    ],
+    "suggest_seeds": [
+      "verizon",
+      "at&t",
+      "t-mobile",
+      "xfinity",
+      "spectrum internet",
+      "starlink"
+    ],
+    "web_queries": [
+      "xfinity outage complaint",
+      "verizon price increase complaint",
+      "t-mobile no signal complaint"
+    ],
+    "x_queries": [
+      "(\"verizon\" OR \"at&t\" OR \"t-mobile\") (complaint OR problem OR worst OR scam) -is:retweet"
+    ]
+  }
+}

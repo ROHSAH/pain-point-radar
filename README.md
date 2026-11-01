@@ -18,12 +18,25 @@ Web / complaint sites
 ```bash
 npm install
 cp .env.example .env                  # add the keys you have (see Sources)
-node src/cli.js topics                # recycling, ev-charging, food-delivery
+node src/cli.js topics                # lists the 13 topics
 node src/cli.js run --topic recycling # collect -> classify -> report
 open out/dashboard.html               # all topics, with a Topic dropdown
 ```
 
 ## Topics
+
+13 starter topics ship with the repo:
+
+| Area | Topics (`--topic` id) |
+|---|---|
+| Finance | Banking & payments (`banking-payments`), Loans & lending (`lending-loans`), Insurance (`insurance`) |
+| Energy & environment | Home energy & electricity (`energy-utilities`), EV charging (`ev-charging`), Recycling (`recycling`) |
+| Everyday services | Mobile & internet (`telecom-internet`), Online shopping (`ecommerce`), Food delivery (`food-delivery`), Ride-hailing & taxis (`ride-hailing`) |
+| Life & home | Healthcare & hospitals (`healthcare`), Renting & housing (`renting-housing`), Air travel (`air-travel`) |
+
+Most were created by `scripts/starter-topics.js`. Each has industry-specific pain points first
+(e.g. lending: loan rejections, interest and EMI charges, recovery-agent harassment, credit score,
+loan-app scams), then generic ones (price, support, refunds, app, trust).
 
 Each topic is a folder in `topics/<id>/`:
 

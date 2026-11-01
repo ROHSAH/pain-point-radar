@@ -1,0 +1,131 @@
+{
+  "_comment": "Template - replace the example subreddits and queries with ones specific to this topic.",
+  "india": {
+    "label": "India",
+    "google": {
+      "gl": "in",
+      "hl": "en"
+    },
+    "youtube": {
+      "regionCode": "IN"
+    },
+    "brave": {
+      "country": "IN"
+    },
+    "subreddits": [
+      "india",
+      "IndiaInvestments",
+      "personalfinanceindia",
+      "CreditCardsIndia",
+      "bangalore",
+      "mumbai"
+    ],
+    "queries": [
+      "upi payment failed",
+      "bank account frozen",
+      "credit card fraud",
+      "money debited not credited"
+    ],
+    "suggest_seeds": [
+      "upi payment",
+      "sbi account",
+      "hdfc credit card",
+      "phonepe",
+      "paytm",
+      "bank account"
+    ],
+    "web_queries": [
+      "upi payment failed complaint",
+      "bank account frozen complaint",
+      "credit card fraud complaint"
+    ],
+    "x_queries": [
+      "(\"upi payment\" OR \"sbi account\" OR \"hdfc credit card\") (complaint OR problem OR worst OR scam) -is:retweet"
+    ]
+  },
+  "europe": {
+    "label": "Europe (UK + EU)",
+    "google": {
+      "gl": "gb",
+      "hl": "en"
+    },
+    "youtube": {
+      "regionCode": "GB"
+    },
+    "brave": {
+      "country": "GB"
+    },
+    "subreddits": [
+      "UKPersonalFinance",
+      "AskUK",
+      "eupersonalfinance",
+      "monzo",
+      "Revolut",
+      "germany"
+    ],
+    "queries": [
+      "bank account frozen",
+      "revolut account blocked",
+      "bank transfer missing",
+      "card fraud"
+    ],
+    "suggest_seeds": [
+      "monzo",
+      "revolut",
+      "barclays",
+      "bank transfer",
+      "credit card",
+      "paypal"
+    ],
+    "web_queries": [
+      "bank account frozen complaint",
+      "revolut account blocked complaint",
+      "bank transfer missing complaint"
+    ],
+    "x_queries": [
+      "(\"monzo\" OR \"revolut\" OR \"barclays\") (complaint OR problem OR worst OR scam) -is:retweet"
+    ]
+  },
+  "us": {
+    "label": "United States",
+    "google": {
+      "gl": "us",
+      "hl": "en"
+    },
+    "youtube": {
+      "regionCode": "US"
+    },
+    "brave": {
+      "country": "US"
+    },
+    "subreddits": [
+      "personalfinance",
+      "banking",
+      "CreditCards",
+      "Chase",
+      "povertyfinance"
+    ],
+    "queries": [
+      "zelle scam",
+      "bank account frozen",
+      "credit card fraud",
+      "chase closed my account"
+    ],
+    "suggest_seeds": [
+      "chase bank",
+      "bank of america",
+      "wells fargo",
+      "zelle",
+      "venmo",
+      "credit card"
+    ],
+    "web_queries": [
+      "zelle scam complaint",
+      "bank account frozen complaint",
+      "credit card fraud complaint"
+    ],
+    "x_queries": [
+      "(\"chase bank\" OR \"bank of america\" OR \"wells fargo\") (complaint OR problem OR worst OR scam) -is:retweet"
+    ]
+  }
+}

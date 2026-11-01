@@ -1,0 +1,26 @@
+{
+  "id": "healthcare",
+  "label": "Healthcare & hospitals",
+  "description": "Seeing doctors and hospitals: appointments, waiting times, costs and medical bills, pharmacies and prescriptions.",
+  "context_keywords": [
+    "hospital",
+    "doctor",
+    "clinic",
+    "appointment",
+    "\\bgp\\b",
+    "\\bnhs\\b",
+    "medical",
+    "medicine",
+    "pharmacy",
+    "prescription",
+    "health",
+    "\\ber\\b|a&e|emergency",
+    "surgery",
+    "dentist",
+    "apollo",
+    "practo",
+    "urgent care"
+  ],
+  "irrelevant_keywords": [],
+  "subreddit_query": "hospital OR doctor OR appointment OR \"medical bill\" OR NHS"
+}

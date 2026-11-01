@@ -1,0 +1,21 @@
+{
+  "id": "ride-hailing",
+  "label": "Ride-hailing & taxis",
+  "description": "Booking cabs, autos and bike taxis through apps: cancellations, fares and surge, driver behaviour, safety.",
+  "context_keywords": [
+    "\\buber\\b",
+    "\\bola\\b",
+    "rapido",
+    "\\bbolt\\b",
+    "\\blyft\\b",
+    "free now",
+    "\\bcab\\b",
+    "taxi",
+    "driver",
+    "\\bride\\b",
+    "\\bauto\\b",
+    "waymo"
+  ],
+  "irrelevant_keywords": [],
+  "subreddit_query": "uber OR ola OR rapido OR lyft OR cab OR taxi"
+}

@@ -1,0 +1,27 @@
+{
+  "id": "lending-loans",
+  "label": "Loans & lending",
+  "description": "Personal loans, home loans and mortgages, student loans, buy-now-pay-later, credit scores, EMIs and debt collection.",
+  "context_keywords": [
+    "loan",
+    "\\bemi\\b",
+    "credit score",
+    "cibil",
+    "mortgage",
+    "remortgage",
+    "\\bbnpl\\b",
+    "klarna",
+    "afterpay",
+    "affirm",
+    "interest rate",
+    "lender",
+    "nbfc",
+    "refinanc",
+    "foreclos",
+    "recovery agent",
+    "debt",
+    "\\bapr\\b"
+  ],
+  "irrelevant_keywords": [],
+  "subreddit_query": "loan OR mortgage OR EMI OR \"credit score\" OR debt"
+}

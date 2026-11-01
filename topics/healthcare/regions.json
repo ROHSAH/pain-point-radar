@@ -1,0 +1,124 @@
+{
+  "_comment": "Template - replace the example subreddits and queries with ones specific to this topic.",
+  "india": {
+    "label": "India",
+    "google": {
+      "gl": "in",
+      "hl": "en"
+    },
+    "youtube": {
+      "regionCode": "IN"
+    },
+    "brave": {
+      "country": "IN"
+    },
+    "subreddits": [
+      "india",
+      "bangalore",
+      "mumbai",
+      "delhi",
+      "IndianMedicine"
+    ],
+    "queries": [
+      "hospital overcharging",
+      "hospital bill too high",
+      "doctor appointment wait",
+      "medicine price high"
+    ],
+    "suggest_seeds": [
+      "hospital bill",
+      "apollo hospital",
+      "doctor appointment",
+      "practo",
+      "medicine price"
+    ],
+    "web_queries": [
+      "hospital overcharging complaint",
+      "hospital bill too high complaint",
+      "doctor appointment wait complaint"
+    ],
+    "x_queries": [
+      "(\"hospital bill\" OR \"apollo hospital\" OR \"doctor appointment\") (complaint OR problem OR worst OR scam) -is:retweet"
+    ]
+  },
+  "europe": {
+    "label": "Europe (UK + EU)",
+    "google": {
+      "gl": "gb",
+      "hl": "en"
+    },
+    "youtube": {
+      "regionCode": "GB"
+    },
+    "brave": {
+      "country": "GB"
+    },
+    "subreddits": [
+      "AskUK",
+      "NHS",
+      "unitedkingdom",
+      "LegalAdviceUK"
+    ],
+    "queries": [
+      "cant get gp appointment",
+      "nhs waiting list",
+      "a&e wait times",
+      "no nhs dentist"
+    ],
+    "suggest_seeds": [
+      "gp appointment",
+      "nhs waiting list",
+      "a&e wait",
+      "dentist nhs",
+      "prescription"
+    ],
+    "web_queries": [
+      "cant get gp appointment complaint",
+      "nhs waiting list complaint",
+      "a&e wait times complaint"
+    ],
+    "x_queries": [
+      "(\"gp appointment\" OR \"nhs waiting list\" OR \"a&e wait\") (complaint OR problem OR worst OR scam) -is:retweet"
+    ]
+  },
+  "us": {
+    "label": "United States",
+    "google": {
+      "gl": "us",
+      "hl": "en"
+    },
+    "youtube": {
+      "regionCode": "US"
+    },
+    "brave": {
+      "country": "US"
+    },
+    "subreddits": [
+      "HealthInsurance",
+      "personalfinance",
+      "AskDocs",
+      "legaladvice"
+    ],
+    "queries": [
+      "surprise medical bill",
+      "er bill",
+      "prescription too expensive",
+      "doctor appointment months"
+    ],
+    "suggest_seeds": [
+      "medical bill",
+      "er visit cost",
+      "doctor appointment",
+      "urgent care",
+      "prescription cost"
+    ],
+    "web_queries": [
+      "surprise medical bill complaint",
+      "er bill complaint",
+      "prescription too expensive complaint"
+    ],
+    "x_queries": [
+      "(\"medical bill\" OR \"er visit cost\" OR \"doctor appointment\") (complaint OR problem OR worst OR scam) -is:retweet"
+    ]
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "_comment": "Template - replace the example subreddits and queries with ones specific to this topic.",
+  "india": {
+    "label": "India",
+    "google": {
+      "gl": "in",
+      "hl": "en"
+    },
+    "youtube": {
+      "regionCode": "IN"
+    },
+    "brave": {
+      "country": "IN"
+    },
+    "subreddits": [
+      "india",
+      "bangalore",
+      "mumbai",
+      "delhi",
+      "hyderabad"
+    ],
+    "queries": [
+      "uber driver cancel",
+      "ola surge",
+      "rapido complaint",
+      "auto driver asking extra"
+    ],
+    "suggest_seeds": [
+      "uber",
+      "ola",
+      "rapido",
+      "ola cab",
+      "uber auto"
+    ],
+    "web_queries": [
+      "uber driver cancel complaint",
+      "ola surge complaint",
+      "rapido complaint complaint"
+    ],
+    "x_queries": [
+      "(\"uber\" OR \"ola\" OR \"rapido\") (complaint OR problem OR worst OR scam) -is:retweet"
+    ]
+  },
+  "europe": {
+    "label": "Europe (UK + EU)",
+    "google": {
+      "gl": "gb",
+      "hl": "en"
+    },
+    "youtube": {
+      "regionCode": "GB"
+    },
+    "brave": {
+      "country": "GB"
+    },
+    "subreddits": [
+      "london",
+      "AskUK",
+      "unitedkingdom",
+      "berlin"
+    ],
+    "queries": [
+      "uber cancelled",
+      "bolt driver complaint",
+      "uber price surge",
+      "taxi overcharged"
+    ],
+    "suggest_seeds": [
+      "uber",
+      "bolt",
+      "free now",
+      "black cab"
+    ],
+    "web_queries": [
+      "uber cancelled complaint",
+      "bolt driver complaint complaint",
+      "uber price surge complaint"
+    ],
+    "x_queries": [
+      "(\"uber\" OR \"bolt\" OR \"free now\") (complaint OR problem OR worst OR scam) -is:retweet"
+    ]
+  },
+  "us": {
+    "label": "United States",
+    "google": {
+      "gl": "us",
+      "hl": "en"
+    },
+    "youtube": {
+      "regionCode": "US"
+    },
+    "brave": {
+      "country": "US"
+    },
+    "subreddits": [
+      "uber",
+      "lyft",
+      "uberdrivers",
+      "nyc",
+      "sanfrancisco"
+    ],
+    "queries": [
+      "uber cancellation fee",
+      "lyft surge pricing",
+      "uber driver rude",
+      "uber overcharged"
+    ],
+    "suggest_seeds": [
+      "uber",
+      "lyft",
+      "uber driver",
+      "lyft fare",
+      "waymo"
+    ],
+    "web_queries": [
+      "uber cancellation fee complaint",
+      "lyft surge pricing complaint",
+      "uber driver rude complaint"
+    ],
+    "x_queries": [
+      "(\"uber\" OR \"lyft\" OR \"uber driver\") (complaint OR problem OR worst OR scam) -is:retweet"
+    ]
+  }
+}

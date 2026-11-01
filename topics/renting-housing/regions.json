@@ -1,0 +1,128 @@
+{
+  "_comment": "Template - replace the example subreddits and queries with ones specific to this topic.",
+  "india": {
+    "label": "India",
+    "google": {
+      "gl": "in",
+      "hl": "en"
+    },
+    "youtube": {
+      "regionCode": "IN"
+    },
+    "brave": {
+      "country": "IN"
+    },
+    "subreddits": [
+      "india",
+      "bangalore",
+      "mumbai",
+      "delhi",
+      "pune",
+      "LegalAdviceIndia"
+    ],
+    "queries": [
+      "landlord not returning deposit",
+      "broker fees",
+      "rent increase",
+      "landlord harassment"
+    ],
+    "suggest_seeds": [
+      "rent agreement",
+      "nobroker",
+      "landlord",
+      "security deposit",
+      "flat for rent"
+    ],
+    "web_queries": [
+      "landlord not returning deposit complaint",
+      "broker fees complaint",
+      "rent increase complaint"
+    ],
+    "x_queries": [
+      "(\"rent agreement\" OR \"nobroker\" OR \"landlord\") (complaint OR problem OR worst OR scam) -is:retweet"
+    ]
+  },
+  "europe": {
+    "label": "Europe (UK + EU)",
+    "google": {
+      "gl": "gb",
+      "hl": "en"
+    },
+    "youtube": {
+      "regionCode": "GB"
+    },
+    "brave": {
+      "country": "GB"
+    },
+    "subreddits": [
+      "HousingUK",
+      "LegalAdviceUK",
+      "AskUK",
+      "london",
+      "ireland",
+      "germany"
+    ],
+    "queries": [
+      "landlord wont fix mould",
+      "deposit deductions",
+      "section 21 eviction",
+      "rent increase uk"
+    ],
+    "suggest_seeds": [
+      "rent increase",
+      "letting agent",
+      "landlord",
+      "deposit protection",
+      "mould in rented flat"
+    ],
+    "web_queries": [
+      "landlord wont fix mould complaint",
+      "deposit deductions complaint",
+      "section 21 eviction complaint"
+    ],
+    "x_queries": [
+      "(\"rent increase\" OR \"letting agent\" OR \"landlord\") (complaint OR problem OR worst OR scam) -is:retweet"
+    ]
+  },
+  "us": {
+    "label": "United States",
+    "google": {
+      "gl": "us",
+      "hl": "en"
+    },
+    "youtube": {
+      "regionCode": "US"
+    },
+    "brave": {
+      "country": "US"
+    },
+    "subreddits": [
+      "Renters",
+      "Landlord",
+      "legaladvice",
+      "AskNYC",
+      "bayarea"
+    ],
+    "queries": [
+      "landlord kept security deposit",
+      "rent increase notice",
+      "landlord not fixing",
+      "eviction notice"
+    ],
+    "suggest_seeds": [
+      "landlord",
+      "rent increase",
+      "security deposit",
+      "apartment lease",
+      "eviction"
+    ],
+    "web_queries": [
+      "landlord kept security deposit complaint",
+      "rent increase notice complaint",
+      "landlord not fixing complaint"
+    ],
+    "x_queries": [
+      "(\"landlord\" OR \"rent increase\" OR \"security deposit\") (complaint OR problem OR worst OR scam) -is:retweet"
+    ]
+  }
+}

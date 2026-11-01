@@ -1,6 +1,6 @@
 # Food delivery: customer pain points - India, Europe, US
 
-_Generated 2026-11-01 15:53 UTC_
+_Generated 2026-11-01 16:03 UTC_
 
 ## Coverage
 
@@ -15,7 +15,7 @@ _Generated 2026-11-01 15:53 UTC_
 
 | # | Pain point | Mentions | Weighted volume | % of relevant | Avg severity | Channel mix | Top themes |
 |---:|---|---:|---:|---:|---:|---|---|
-| 1 | **Confusing information & rules** | 491 | 872.14 | 43.6% | 1.2 | search 491 | confusing information & rules (491) |
+| 1 | **How-to questions & confusing rules** | 491 | 872.14 | 43.6% | 1.2 | search 491 | how-to questions & confusing rules (491) |
 | 2 | **Refunds, billing & payments** | 200 | 361.21 | 17.7% | 2.7 | search 200 | refunds, billing & payments (200) |
 | 3 | **Customer support** | 167 | 295 | 14.8% | 1.1 | search 167 | customer support (167) |
 | 4 | **Availability & access** | 150 | 265.92 | 13.3% | 1.1 | search 150 | availability & access (150) |
@@ -28,7 +28,7 @@ _Generated 2026-11-01 15:53 UTC_
 
 | # | Pain point | Mentions | Weighted volume | % of relevant | Avg severity | Channel mix | Top themes |
 |---:|---|---:|---:|---:|---:|---|---|
-| 1 | **Confusing information & rules** | 150 | 265.02 | 39.6% | 1.2 | search 150 | confusing information & rules (150) |
+| 1 | **How-to questions & confusing rules** | 150 | 265.02 | 39.6% | 1.2 | search 150 | how-to questions & confusing rules (150) |
 | 2 | **Refunds, billing & payments** | 61 | 111.2 | 16.1% | 2.7 | search 61 | refunds, billing & payments (61) |
 | 3 | **Availability & access** | 59 | 104.42 | 15.6% | 1.2 | search 59 | availability & access (59) |
 | 4 | **Customer support** | 55 | 96.35 | 14.5% | 1.1 | search 55 | customer support (55) |
@@ -39,7 +39,7 @@ _Generated 2026-11-01 15:53 UTC_
 
 <details><summary>Voice of customer - example quotes</summary>
 
-**1. Confusing information & rules**
+**1. How-to questions & confusing rules**
 
 - "search: "how to swiggy order cancel"" - [google_suggest](https://www.google.com/search?q=how%20to%20swiggy%20order%20cancel&gl=in&hl=en)
 - "search: "can i swiggy on train"" - [google_suggest](https://www.google.com/search?q=can%20i%20swiggy%20on%20train&gl=in&hl=en)
@@ -93,7 +93,7 @@ _Generated 2026-11-01 15:53 UTC_
 
 | # | Pain point | Mentions | Weighted volume | % of relevant | Avg severity | Channel mix | Top themes |
 |---:|---|---:|---:|---:|---:|---|---|
-| 1 | **Confusing information & rules** | 146 | 261.79 | 45.8% | 1.2 | search 146 | confusing information & rules (146) |
+| 1 | **How-to questions & confusing rules** | 146 | 261.79 | 45.8% | 1.2 | search 146 | how-to questions & confusing rules (146) |
 | 2 | **Refunds, billing & payments** | 57 | 104.17 | 17.9% | 2.6 | search 57 | refunds, billing & payments (57) |
 | 3 | **Customer support** | 52 | 91.87 | 16.3% | 1 | search 52 | customer support (52) |
 | 4 | **Price, fees & hidden charges** | 33 | 61.24 | 10.3% | 1.1 | search 33 | price, fees & hidden charges (33) |
@@ -104,7 +104,7 @@ _Generated 2026-11-01 15:53 UTC_
 
 <details><summary>Voice of customer - example quotes</summary>
 
-**1. Confusing information & rules**
+**1. How-to questions & confusing rules**
 
 - "search: "how to deliveroo drivers get paid"" - [google_suggest](https://www.google.com/search?q=how%20to%20deliveroo%20drivers%20get%20paid&gl=gb&hl=en)
 - "search: "can i cancel deliveroo plus free trial"" - [google_suggest](https://www.google.com/search?q=can%20i%20cancel%20deliveroo%20plus%20free%20trial&gl=gb&hl=en)
@@ -158,7 +158,7 @@ _Generated 2026-11-01 15:53 UTC_
 
 | # | Pain point | Mentions | Weighted volume | % of relevant | Avg severity | Channel mix | Top themes |
 |---:|---|---:|---:|---:|---:|---|---|
-| 1 | **Confusing information & rules** | 195 | 345.33 | 45.5% | 1.3 | search 195 | confusing information & rules (195) |
+| 1 | **How-to questions & confusing rules** | 195 | 345.33 | 45.5% | 1.3 | search 195 | how-to questions & confusing rules (195) |
 | 2 | **Refunds, billing & payments** | 82 | 145.84 | 19.1% | 2.9 | search 82 | refunds, billing & payments (82) |
 | 3 | **Customer support** | 60 | 106.78 | 14.0% | 1.1 | search 60 | customer support (60) |
 | 4 | **Availability & access** | 58 | 102.98 | 13.5% | 1.2 | search 58 | availability & access (58) |
@@ -169,7 +169,7 @@ _Generated 2026-11-01 15:53 UTC_
 
 <details><summary>Voice of customer - example quotes</summary>
 
-**1. Confusing information & rules**
+**1. How-to questions & confusing rules**
 
 - "search: "how to doordash"" - [google_suggest](https://www.google.com/search?q=how%20to%20doordash&gl=us&hl=en)
 - "search: "can i doordash a vape"" - [google_suggest](https://www.google.com/search?q=can%20i%20doordash%20a%20vape&gl=us&hl=en)
