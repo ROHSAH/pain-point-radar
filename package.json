@@ -1,17 +1,15 @@
 {
-  "name": "recycling-pain-points",
+  "name": "pain-point-radar",
   "version": "0.1.0",
-  "description": "Agent that collects public customer conversations about recycling (India, Europe, US) from Reddit, X, YouTube, Google search suggestions and complaint sites, then uses Claude to rank pain points by volume.",
+  "description": "Agent that finds and ranks customer pain points for any industry or topic across India, Europe and the US, from Reddit, X, YouTube, Google searches and complaint sites, with an interactive dashboard.",
   "type": "module",
   "bin": {
     "pain-points": "src/cli.js"
   },
   "scripts": {
     "run": "node src/cli.js run",
-    "collect": "node src/cli.js collect",
-    "classify": "node src/cli.js classify",
-    "report": "node src/cli.js report",
-    "demo": "node src/cli.js report --data-dir test/fixtures --out-dir out/demo --skip-consolidate",
+    "topics": "node src/cli.js topics",
+    "dashboard": "node src/cli.js dashboard",
     "test": "node --test test/*.test.js"
   },
   "engines": {

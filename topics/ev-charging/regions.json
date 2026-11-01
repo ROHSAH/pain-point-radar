@@ -1,0 +1,158 @@
+{
+  "_comment": "Template - replace the example subreddits and queries with ones specific to this topic.",
+  "india": {
+    "label": "India",
+    "google": {
+      "gl": "in",
+      "hl": "en"
+    },
+    "youtube": {
+      "regionCode": "IN"
+    },
+    "brave": {
+      "country": "IN"
+    },
+    "subreddits": [
+      "india",
+      "CarsIndia",
+      "bangalore",
+      "mumbai",
+      "delhi",
+      "electricvehicles",
+      "IndianBikes"
+    ],
+    "queries": [
+      "ev charging problem",
+      "ev charging complaint",
+      "ev charging worst experience",
+      "ev charging not working",
+      "ev charging expensive"
+    ],
+    "suggest_seeds": [
+      "ev charging station",
+      "ev charger",
+      "tata power ez charge",
+      "statiq charger",
+      "ather grid",
+      "ev charging cost"
+    ],
+    "web_queries": [
+      "ev charging complaint",
+      "ev charging review problems"
+    ],
+    "x_queries": [
+      "(\"ev charging\") (complaint OR problem OR worst OR scam) -is:retweet"
+    ]
+  },
+  "europe": {
+    "label": "Europe (UK + EU)",
+    "google": {
+      "gl": "gb",
+      "hl": "en"
+    },
+    "youtube": {
+      "regionCode": "GB"
+    },
+    "brave": {
+      "country": "GB"
+    },
+    "subreddits": [
+      "unitedkingdom",
+      "AskUK",
+      "electricvehicles",
+      "UKcars",
+      "germany",
+      "Netherlands",
+      "ireland"
+    ],
+    "queries": [
+      "ev charging problem",
+      "ev charging complaint",
+      "ev charging worst experience",
+      "ev charging not working",
+      "ev charging expensive"
+    ],
+    "suggest_seeds": [
+      "ev charging",
+      "ev charger",
+      "public charger",
+      "ionity",
+      "tesla supercharger",
+      "charging cost per kwh"
+    ],
+    "web_queries": [
+      "ev charging complaint",
+      "ev charging review problems"
+    ],
+    "x_queries": [
+      "(\"ev charging\") (complaint OR problem OR worst OR scam) -is:retweet"
+    ],
+    "google_extra": [
+      {
+        "gl": "de",
+        "hl": "de",
+        "seeds": [
+          "ladesäule",
+          "e-auto laden"
+        ]
+      },
+      {
+        "gl": "nl",
+        "hl": "nl",
+        "seeds": [
+          "laadpaal"
+        ]
+      },
+      {
+        "gl": "fr",
+        "hl": "fr",
+        "seeds": [
+          "borne de recharge"
+        ]
+      }
+    ]
+  },
+  "us": {
+    "label": "United States",
+    "google": {
+      "gl": "us",
+      "hl": "en"
+    },
+    "youtube": {
+      "regionCode": "US"
+    },
+    "brave": {
+      "country": "US"
+    },
+    "subreddits": [
+      "electricvehicles",
+      "teslamotors",
+      "BoltEV",
+      "MachE",
+      "Rivian",
+      "evcharging"
+    ],
+    "queries": [
+      "ev charging problem",
+      "ev charging complaint",
+      "ev charging worst experience",
+      "ev charging not working",
+      "ev charging expensive"
+    ],
+    "suggest_seeds": [
+      "ev charging",
+      "ev charger",
+      "electrify america",
+      "chargepoint",
+      "tesla supercharger",
+      "level 2 charger"
+    ],
+    "web_queries": [
+      "ev charging complaint",
+      "ev charging review problems"
+    ],
+    "x_queries": [
+      "(\"ev charging\") (complaint OR problem OR worst OR scam) -is:retweet"
+    ]
+  }
+}

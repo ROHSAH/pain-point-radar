@@ -1,0 +1,23 @@
+{
+  "id": "ev-charging",
+  "label": "EV charging",
+  "description": "Public and home charging for electric car, scooter and bike owners: finding chargers, broken or occupied chargers, apps and payment, charging cost, wait times.",
+  "context_keywords": [
+    "charg",
+    "\\bev\\b",
+    "electric (car|vehicle|scooter)",
+    "kwh",
+    "supercharger",
+    "ionity",
+    "chargepoint",
+    "electrify america",
+    "statiq",
+    "ather",
+    "tata power",
+    "ladesäule",
+    "laadpaal",
+    "borne"
+  ],
+  "irrelevant_keywords": [],
+  "subreddit_query": "EV charging OR charger OR charging station OR supercharger"
+}

@@ -4,20 +4,29 @@
 
 const VERBATIM_CHARS = 700;
 
-export function renderDashboard({ mentions, docs, taxonomy, generatedAt = new Date().toISOString(), title = "Recycling Pain-Point Radar", fragment = false }) {
-  const personaName = Object.fromEntries((taxonomy.personas || []).map((p) => [p.id, p.name]));
+/**
+ * @param topics [{ id, label, mentions, docs, taxonomy }] - one entry per topic; the page gets a Topic
+ *               dropdown and each topic keeps its own pain-point categories and personas.
+ */
+export function renderDashboard({ topics, generatedAt = new Date().toISOString(), title = "Pain-Point Radar", fragment = false }) {
   const bySource = {};
-  for (const d of docs) bySource[d.source] = (bySource[d.source] || 0) + 1;
-  const dates = mentions.map((m) => m.date).filter(Boolean).sort();
+  let totalDocs = 0;
+  const rows = [];
+  for (const t of topics) {
+    const personaName = Object.fromEntries((t.taxonomy.personas || []).map((p) => [p.id, p.name]));
+    totalDocs += t.docs.length;
+    for (const d of t.docs) bySource[d.source] = (bySource[d.source] || 0) + 1;
+    for (const m of t.mentions) rows.push({ ...m, topic: t.label, persona: personaName[m.persona] || m.persona });
+  }
+  const dates = rows.map((m) => m.date).filter(Boolean).sort();
   const data = {
     generatedAt,
     docsBySource: bySource,
-    totalDocs: docs.length,
+    totalDocs,
     dateRange: dates.length ? [dates[0], dates[dates.length - 1]] : null,
-    personaName,
-    categoryOrder: taxonomy.categories.map((c) => c.name),
-    rows: mentions.map((m) => ({
-      r: m.region, c: m.country, p: m.persona, k: m.category_name, t: m.theme, s: m.severity,
+    topics: topics.map((t) => ({ label: t.label, docs: t.docs.length, mentions: t.mentions.length })),
+    rows: rows.map((m) => ({
+      tp: m.topic, r: m.region, c: m.country, p: m.persona, k: m.category_name, t: m.theme, s: m.severity,
       src: m.source, ch: m.channel, e: m.engagement, w: m.weight, d: m.date, q: m.quote,
       v: m.verbatim.length > VERBATIM_CHARS ? m.verbatim.slice(0, VERBATIM_CHARS) + " …" : m.verbatim,
       u: m.url, id: m.doc_id, cl: m.classifier,
@@ -154,20 +163,21 @@ a { color: var(--accent-ink); }
 <body>
 <div class="wrap">
   <header>
-    <span class="eyebrow">Customer pain points · recycling · India · Europe · US</span>
+    <span class="eyebrow" id="eyebrow">Customer pain points · India · Europe · US</span>
     <h1>__TITLE__</h1>
     <p class="meta" id="meta"></p>
     <div class="sources" id="sources"></div>
   </header>
 
   <form class="filters" id="filters" onsubmit="return false">
+    <label>Topic<select id="f-topic"></select></label>
     <label>Region<select id="f-region"></select></label>
     <label>Persona<select id="f-persona"></select></label>
     <label>Pain point<select id="f-category"></select></label>
     <label>Source<select id="f-source"></select></label>
     <label>Channel<select id="f-channel"></select></label>
     <label>Min severity<select id="f-sev"><option value="1">Any</option><option value="2">2+</option><option value="3">3+</option><option value="4">4+</option></select></label>
-    <label style="flex:1 1 180px">Search text<input type="search" id="f-q" placeholder="e.g. kabadiwala, landlord, Pfand"></label>
+    <label style="flex:1 1 180px">Search text<input type="search" id="f-q" placeholder="any word, e.g. refund, landlord, charger"></label>
     <button type="button" id="reset">Reset</button>
   </form>
 
@@ -218,10 +228,11 @@ a { color: var(--accent-ink); }
   const CHANNEL = { search: "Search", discussion: "Discussion", social: "Social", review: "Review" };
   const SOURCE = { reddit: "Reddit", x: "X", youtube: "YouTube", google_suggest: "Google search", web: "Web / complaint sites" };
   const DIMS = {
+    tp: { label: "Topic", fmt: (v) => v },
     k: { label: "Pain point", fmt: (v) => v },
     t: { label: "Theme", fmt: (v) => v },
     r: { label: "Region", fmt: (v) => REGION[v] || v },
-    p: { label: "Persona", fmt: (v) => D.personaName[v] || v },
+    p: { label: "Persona", fmt: (v) => v },
     src: { label: "Source", fmt: (v) => SOURCE[v] || v },
     ch: { label: "Channel", fmt: (v) => CHANNEL[v] || v },
     s: { label: "Severity", fmt: (v) => "Severity " + v },
@@ -234,6 +245,7 @@ a { color: var(--accent-ink); }
 
   // ---------- header
   const ALL_SOURCES = ["reddit", "x", "youtube", "google_suggest", "web"];
+  $("eyebrow").textContent = "Customer pain points · " + D.topics.map((t) => t.label).join(" · ") + " · India · Europe · US";
   $("meta").textContent = ROWS.length.toLocaleString() + " pain-point mentions from " + D.totalDocs.toLocaleString() + " collected documents. Generated " + D.generatedAt.slice(0, 16).replace("T", " ") + " UTC" + (D.dateRange ? ", posts dated " + D.dateRange[0] + " to " + D.dateRange[1] : "") + ".";
   $("sources").innerHTML = ALL_SOURCES.map((s) => {
     const n = D.docsBySource[s] || 0;
@@ -241,24 +253,34 @@ a { color: var(--accent-ink); }
   }).join("");
 
   // ---------- filters
-  const F = { r: $("f-region"), p: $("f-persona"), k: $("f-category"), src: $("f-source"), ch: $("f-channel") };
-  function fillSelect(sel, key, all) {
+  const F = { tp: $("f-topic"), r: $("f-region"), p: $("f-persona"), k: $("f-category"), src: $("f-source"), ch: $("f-channel") };
+  // Options are counted within the chosen topic, so each topic shows its own pain points and personas.
+  function fillSelect(sel, key, all, rows) {
+    const keep = sel.value;
     const counts = {};
-    for (const r of ROWS) counts[r[key]] = (counts[r[key]] || 0) + 1;
+    for (const r of rows) counts[r[key]] = (counts[r[key]] || 0) + 1;
     const vals = Object.keys(counts).sort((a, b) => counts[b] - counts[a]);
     sel.innerHTML = '<option value="">' + all + "</option>" + vals.map((v) => '<option value="' + esc(v) + '">' + esc(DIMS[key].fmt(v)) + " (" + counts[v] + ")</option>").join("");
+    sel.value = vals.includes(keep) ? keep : "";
   }
-  fillSelect(F.r, "r", "All regions"); fillSelect(F.p, "p", "All personas"); fillSelect(F.k, "k", "All pain points");
-  fillSelect(F.src, "src", "All sources"); fillSelect(F.ch, "ch", "All channels");
+  function fillAll() {
+    const inTopic = F.tp.value ? ROWS.filter((r) => r.tp === F.tp.value) : ROWS;
+    fillSelect(F.r, "r", "All regions", inTopic); fillSelect(F.p, "p", "All personas", inTopic); fillSelect(F.k, "k", "All pain points", inTopic);
+    fillSelect(F.src, "src", "All sources", inTopic); fillSelect(F.ch, "ch", "All channels", inTopic);
+  }
+  fillSelect(F.tp, "tp", D.topics.length > 1 ? "All topics" : "All topics (1)", ROWS);
+  if (D.topics.length > 1) F.tp.value = D.topics[0].label; // a topic's own categories make more sense than a cross-topic mix
+  fillAll();
+  F.tp.addEventListener("input", fillAll);
   const controls = [...Object.values(F), $("f-sev"), $("f-q")];
-  try { const saved = JSON.parse(store.get("filters") || "{}"); controls.forEach((c) => { if (saved[c.id] != null && [...(c.options || [])].some((o) => o.value === saved[c.id]) || c.id === "f-q" && saved[c.id]) c.value = saved[c.id]; }); } catch {}
+  try { const saved = JSON.parse(store.get("filters") || "{}"); controls.forEach((c) => { if (c.id === "f-topic" && saved[c.id] != null && [...c.options].some((o) => o.value === saved[c.id])) { c.value = saved[c.id]; fillAll(); } }); controls.forEach((c) => { if (c.id !== "f-topic" && (saved[c.id] != null && [...(c.options || [])].some((o) => o.value === saved[c.id]) || c.id === "f-q" && saved[c.id])) c.value = saved[c.id]; }); } catch {}
   controls.forEach((c) => c.addEventListener("input", () => { page = 0; render(); }));
-  $("reset").addEventListener("click", () => { controls.forEach((c) => (c.value = c.id === "f-sev" ? "1" : "")); page = 0; render(); });
+  $("reset").addEventListener("click", () => { controls.forEach((c) => { if (c.id !== "f-topic") c.value = c.id === "f-sev" ? "1" : ""; }); fillAll(); page = 0; render(); });
 
   function filtered() {
     const q = $("f-q").value.trim().toLowerCase();
     const minS = +$("f-sev").value;
-    return ROWS.filter((r) => (!F.r.value || r.r === F.r.value) && (!F.p.value || r.p === F.p.value) && (!F.k.value || r.k === F.k.value) &&
+    return ROWS.filter((r) => (!F.tp.value || r.tp === F.tp.value) && (!F.r.value || r.r === F.r.value) && (!F.p.value || r.p === F.p.value) && (!F.k.value || r.k === F.k.value) &&
       (!F.src.value || r.src === F.src.value) && (!F.ch.value || r.ch === F.ch.value) && r.s >= minS &&
       (!q || (r.v + " " + r.q + " " + r.t).toLowerCase().includes(q)));
   }
@@ -380,7 +402,7 @@ a { color: var(--accent-ink); }
       const extra = r.q && r.v && r.v !== r.q ? '<div class="full">' + esc(r.v) + "</div>" : "";
       return '<article class="entry"><div class="side"><span>' + esc(REGION[r.r] || r.r) + (r.c ? " · " + esc(r.c) : "") + "</span><span>" + esc(SOURCE[r.src] || r.src) + "</span><span>" + esc(r.d || "") + "</span>" + (r.e ? "<span>" + r.e.toLocaleString() + " reactions</span>" : "") + '</div><div class="body">' +
         "<blockquote>" + (r.src === "google_suggest" ? "Searched: " : "") + "“" + esc(quote) + "”</blockquote>" + extra +
-        '<div class="tags"><span class="sev" data-s="' + r.s + '">severity ' + r.s + '</span><span class="tag">' + esc(r.k) + '</span><span class="tag">' + esc(r.t) + '</span><span class="tag">' + esc(D.personaName[r.p] || r.p) + "</span>" +
+        '<div class="tags"><span class="sev" data-s="' + r.s + '">severity ' + r.s + '</span><span class="tag">' + esc(r.k) + '</span><span class="tag">' + esc(r.t) + '</span><span class="tag">' + esc(r.p) + "</span>" + (D.topics.length > 1 ? '<span class="tag">' + esc(r.tp) + "</span>" : "") +
         (r.u ? '<a class="tag" href="' + esc(r.u) + '" target="_blank" rel="noopener">source ↗</a>' : "") + "</div></div></article>";
     }).join("") || '<p class="empty">No mentions match these filters.</p>';
     $("pager").innerHTML = pages > 1 ? '<button type="button" id="prev"' + (page ? "" : " disabled") + '>Previous</button><span>Page ' + (page + 1) + " of " + pages + '</span><button type="button" id="next"' + (page < pages - 1 ? "" : " disabled") + ">Next</button>" : "";
@@ -390,9 +412,9 @@ a { color: var(--accent-ink); }
   $("sort").addEventListener("input", () => { page = 0; log(filtered()); });
 
   function csv(rows) {
-    const cols = [["region", "r"], ["country", "c"], ["persona", "p"], ["pain_point", "k"], ["theme", "t"], ["severity", "s"], ["source", "src"], ["channel", "ch"], ["engagement", "e"], ["date", "d"], ["quote", "q"], ["verbatim", "v"], ["url", "u"]];
+    const cols = [["topic", "tp"], ["region", "r"], ["country", "c"], ["persona", "p"], ["pain_point", "k"], ["theme", "t"], ["severity", "s"], ["source", "src"], ["channel", "ch"], ["engagement", "e"], ["date", "d"], ["quote", "q"], ["verbatim", "v"], ["url", "u"]];
     const cellv = (v) => { const s = String(v ?? ""); return /[",\n]/.test(s) ? '"' + s.replace(/"/g, '""') + '"' : s; };
-    return [cols.map((c) => c[0]).join(",")].concat(rows.map((r) => cols.map(([, k]) => cellv(k === "p" ? D.personaName[r.p] || r.p : r[k])).join(","))).join("\n");
+    return [cols.map((c) => c[0]).join(",")].concat(rows.map((r) => cols.map(([, k]) => cellv(r[k])).join(","))).join("\n");
   }
   $("copy").addEventListener("click", async () => {
     const text = csv(filtered()); const btn = $("copy");
@@ -403,7 +425,7 @@ a { color: var(--accent-ink); }
   $("dl").addEventListener("click", () => {
     const a = document.createElement("a");
     a.href = URL.createObjectURL(new Blob([csv(filtered())], { type: "text/csv" }));
-    a.download = "recycling-complaints-filtered.csv"; a.click();
+    a.download = "pain-points-filtered.csv"; a.click();
   });
 
   document.addEventListener("mousemove", (e) => { const el = e.target.closest?.("[data-tip]"); el ? showTip(e, el.dataset.tip) : hideTip(); });

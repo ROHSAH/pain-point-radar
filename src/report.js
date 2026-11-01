@@ -16,9 +16,9 @@ const fmtMix = (obj) =>
     .map(([k, v]) => `${k} ${v}`)
     .join(", ");
 
-export function renderMarkdown(agg, { top = 10, generatedAt = new Date().toISOString() } = {}) {
+export function renderMarkdown(agg, { top = 10, generatedAt = new Date().toISOString(), topicLabel = "Customer" } = {}) {
   const lines = [];
-  lines.push(`# Recycling customer pain points - India, Europe, US`, "");
+  lines.push(`# ${topicLabel}: customer pain points - India, Europe, US`, "");
   lines.push(`_Generated ${generatedAt.slice(0, 16).replace("T", " ")} UTC_`, "");
   lines.push("## Coverage", "", "| Region | Documents classified | Relevant | Sources |", "|---|---:|---:|---|");
   for (const r of ORDER) if (agg[r]) lines.push(`| ${REGION_LABEL[r]} | ${agg[r].total_docs} | ${agg[r].relevant_docs} | ${fmtMix(agg[r].by_source)} |`);

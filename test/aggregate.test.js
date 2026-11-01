@@ -9,7 +9,7 @@ import { renderCsv, renderMarkdown } from "../src/report.js";
 import { readJsonl, readJson, makeDoc } from "../src/util.js";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const taxonomy = readJson(path.join(root, "config/taxonomy.json"));
+const taxonomy = readJson(path.join(root, "topics/recycling/taxonomy.json"));
 const docs = readJsonl(path.join(root, "test/fixtures/docs.jsonl"));
 const classified = readJsonl(path.join(root, "test/fixtures/classified.jsonl"));
 
@@ -74,7 +74,7 @@ test("reports render", () => {
 });
 
 test("keyword classifier labels typical searches", async () => {
-  const { classifyByRules } = await import("../src/ruleClassifier.js");
+  const { classifyByRules } = await import("../topics/recycling/rules.js");
   const mk = (text, region_hint = "us") => ({ id: "t", source: "google_suggest", region_hint, text, title: "" });
   assert.equal(classifyByRules(mk("where to recycle batteries near me")).pain_points[0].sub_issue, "nowhere to take it: batteries");
   assert.equal(classifyByRules(mk("is recycling a scam")).pain_points[0].category, "trust_greenwashing");
@@ -82,4 +82,34 @@ test("keyword classifier labels typical searches", async () => {
   assert.equal(classifyByRules(mk("recycling bin with lid")).relevant, false);
   assert.equal(classifyByRules(mk("bin collection problems birmingham", "india")).region, "europe");
   assert.equal(classifyByRules(mk("deposit protection scheme complaint", "europe")).pain_points.some((p) => p.category === "deposit_return"), false);
+});
+
+test("generic keyword classifier works from a topic's own config", async () => {
+  const { makeKeywordClassifier } = await import("../src/keywordClassifier.js");
+  const topic = {
+    context_keywords: ["charg", "\\bev\\b"],
+    regions: { india: {}, us: {} },
+    taxonomy: {
+      categories: [{ id: "broken", name: "Broken chargers", keywords: ["not working|broken"] }, { id: "price_cost", name: "Price", keywords: ["\\bcost\\b|expensive"] }],
+      personas: [{ id: "fleet", name: "Fleet", keywords: ["\\bfleet\\b"] }],
+    },
+  };
+  const classify = makeKeywordClassifier(topic);
+  const r = classify({ id: "x", source: "reddit", region_hint: "us", text: "EV charger not working again and so expensive for our fleet" });
+  assert.equal(r.relevant, true);
+  assert.deepEqual(r.pain_points.map((p) => p.category), ["broken", "price_cost"]);
+  assert.equal(r.persona, "fleet");
+  assert.equal(r.pain_points[0].severity, 4);
+  assert.equal(classify({ id: "y", source: "reddit", region_hint: "us", text: "pizza is expensive" }).relevant, false);
+});
+
+test("dashboard embeds a topic dropdown and per-topic rows", async () => {
+  const { renderDashboard } = await import("../src/dashboard.js");
+  const { buildMentions } = await import("../src/aggregate.js");
+  const mentions = buildMentions({ docs, classified, taxonomy });
+  const html = renderDashboard({ topics: [{ label: "Recycling", taxonomy, docs, mentions }, { label: "EV charging", taxonomy, docs, mentions }] });
+  assert.match(html, /id="f-topic"/);
+  const data = JSON.parse(html.match(/<script id="data" type="application\/json">([\s\S]*?)<\/script>/)[1]);
+  assert.deepEqual(data.topics.map((t) => t.label), ["Recycling", "EV charging"]);
+  assert.equal(data.rows.filter((r) => r.tp === "EV charging").length, mentions.length);
 });

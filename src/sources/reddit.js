@@ -70,8 +70,8 @@ export async function collectReddit(region, regionId, opts) {
     const multi = subs.join("+");
     for (const q of queries) jobs.push({ path: `/r/${multi}/search?q=${encodeURIComponent(q)}&restrict_sr=1&sort=relevance&t=${t}&limit=${perQuery}`, q });
   }
-  // 2) recycling-themed search inside every regional subreddit
-  for (const s of subs) jobs.push({ path: `/r/${s}/search?q=${encodeURIComponent("recycling OR recycle OR waste OR bin OR garbage OR scrap")}&restrict_sr=1&sort=relevance&t=${t}&limit=${perQuery}`, q: `r/${s} recycling` });
+  // 2) topic-themed search inside every regional subreddit (topic.json "subreddit_query")
+  if (opts.subredditQuery) for (const s of subs) jobs.push({ path: `/r/${s}/search?q=${encodeURIComponent(opts.subredditQuery)}&restrict_sr=1&sort=relevance&t=${t}&limit=${perQuery}`, q: `r/${s} ${opts.subredditQuery}` });
 
   for (const job of jobs) {
     try {

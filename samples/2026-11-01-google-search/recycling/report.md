@@ -1,6 +1,6 @@
-# Recycling customer pain points - India, Europe, US
+# Recycling: customer pain points - India, Europe, US
 
-_Generated 2026-10-31 22:30 UTC_
+_Generated 2026-11-01 15:54 UTC_
 
 ## Coverage
 

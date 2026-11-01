@@ -1,0 +1,7 @@
+{
+  "id": "recycling",
+  "label": "Recycling",
+  "description": "Recycling, scrap selling, waste segregation and waste collection: households, apartment societies, small businesses and people selling scrap or redeeming bottle deposits.",
+  "context_keywords": ["recycl", "waste", "garbage", "trash", "rubbish", "\\bbins?\\b", "scrap", "kabad", "raddi", "dispos", "landfill", "segregat", "compost", "\\btip\\b", "dump", "pfand", "deposit", "müll", "abfall", "tonne", "wertstoff", "déchet", "poubelle", "recyclage", "reciclaje", "basura", "rifiuti", "differenziata", "afval", "statiegeld"],
+  "subreddit_query": "recycling OR recycle OR waste OR bin OR garbage OR scrap"
+}

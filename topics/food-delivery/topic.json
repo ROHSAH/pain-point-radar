@@ -1,0 +1,23 @@
+{
+  "id": "food-delivery",
+  "label": "Food delivery",
+  "description": "Ordering food through delivery apps (Swiggy, Zomato, Uber Eats, Deliveroo, DoorDash, Just Eat): late or missing orders, wrong items, fees, refunds, support.",
+  "context_keywords": [
+    "deliver",
+    "swiggy",
+    "zomato",
+    "deliveroo",
+    "just eat",
+    "uber ?eats",
+    "doordash",
+    "grubhub",
+    "lieferando",
+    "blinkit",
+    "instacart",
+    "order",
+    "rider",
+    "dasher"
+  ],
+  "irrelevant_keywords": [],
+  "subreddit_query": "delivery OR swiggy OR zomato OR deliveroo OR doordash OR \"uber eats\""
+}

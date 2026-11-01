@@ -1,0 +1,134 @@
+{
+  "_comment": "Template - replace the example subreddits and queries with ones specific to this topic.",
+  "india": {
+    "label": "India",
+    "google": {
+      "gl": "in",
+      "hl": "en"
+    },
+    "youtube": {
+      "regionCode": "IN"
+    },
+    "brave": {
+      "country": "IN"
+    },
+    "subreddits": [
+      "india",
+      "bangalore",
+      "mumbai",
+      "delhi",
+      "hyderabad",
+      "pune",
+      "swiggy",
+      "zomato"
+    ],
+    "queries": [
+      "food delivery problem",
+      "food delivery complaint",
+      "food delivery worst experience",
+      "food delivery not working",
+      "food delivery expensive"
+    ],
+    "suggest_seeds": [
+      "swiggy",
+      "zomato",
+      "food delivery",
+      "swiggy refund",
+      "zomato order",
+      "blinkit"
+    ],
+    "web_queries": [
+      "food delivery complaint",
+      "food delivery review problems"
+    ],
+    "x_queries": [
+      "(\"food delivery\") (complaint OR problem OR worst OR scam) -is:retweet"
+    ]
+  },
+  "europe": {
+    "label": "Europe (UK + EU)",
+    "google": {
+      "gl": "gb",
+      "hl": "en"
+    },
+    "youtube": {
+      "regionCode": "GB"
+    },
+    "brave": {
+      "country": "GB"
+    },
+    "subreddits": [
+      "unitedkingdom",
+      "AskUK",
+      "deliveroos",
+      "london",
+      "germany",
+      "ireland"
+    ],
+    "queries": [
+      "food delivery problem",
+      "food delivery complaint",
+      "food delivery worst experience",
+      "food delivery not working",
+      "food delivery expensive"
+    ],
+    "suggest_seeds": [
+      "deliveroo",
+      "just eat",
+      "uber eats",
+      "food delivery",
+      "deliveroo refund",
+      "lieferando"
+    ],
+    "web_queries": [
+      "food delivery complaint",
+      "food delivery review problems"
+    ],
+    "x_queries": [
+      "(\"food delivery\") (complaint OR problem OR worst OR scam) -is:retweet"
+    ]
+  },
+  "us": {
+    "label": "United States",
+    "google": {
+      "gl": "us",
+      "hl": "en"
+    },
+    "youtube": {
+      "regionCode": "US"
+    },
+    "brave": {
+      "country": "US"
+    },
+    "subreddits": [
+      "doordash",
+      "UberEATS",
+      "grubhub",
+      "AskAnAmerican",
+      "nyc",
+      "LosAngeles"
+    ],
+    "queries": [
+      "food delivery problem",
+      "food delivery complaint",
+      "food delivery worst experience",
+      "food delivery not working",
+      "food delivery expensive"
+    ],
+    "suggest_seeds": [
+      "doordash",
+      "uber eats",
+      "grubhub",
+      "food delivery",
+      "doordash refund",
+      "instacart"
+    ],
+    "web_queries": [
+      "food delivery complaint",
+      "food delivery review problems"
+    ],
+    "x_queries": [
+      "(\"food delivery\") (complaint OR problem OR worst OR scam) -is:retweet"
+    ]
+  }
+}

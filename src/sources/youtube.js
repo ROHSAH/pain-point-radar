@@ -1,5 +1,5 @@
 // YouTube collector - YouTube Data API v3 (free quota: 10k units/day; search = 100 units, comments = 1 unit).
-// Finds recycling videos per region, then pulls their most relevant comments.
+// Finds topic videos per region, then pulls their most relevant comments.
 import { httpJson, makeDoc, log } from "../util.js";
 
 const API = "https://www.googleapis.com/youtube/v3";

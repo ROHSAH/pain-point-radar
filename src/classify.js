@@ -14,7 +14,7 @@ const PainPoint = z.object({
 
 const Result = z.object({
   id: z.string(),
-  relevant: z.boolean().describe("true only if the text is a customer/citizen talking about a recycling or waste-handling experience, need or problem"),
+  relevant: z.boolean().describe("true only if the text is a customer talking about their own experience, need or problem with the topic"),
   region: z.string().describe("india | europe | us | other"),
   country: z.string().describe("Country name if identifiable, else empty string"),
   persona: z.string().describe("One persona id from the persona list"),
@@ -23,21 +23,22 @@ const Result = z.object({
 
 const BatchSchema = z.object({ results: z.array(Result) });
 
-export function buildSystemPrompt(taxonomy) {
+export function buildSystemPrompt(taxonomy, topic = {}) {
   const cats = taxonomy.categories.map((c) => `- ${c.id}: ${c.name} - ${c.description}`).join("\n");
   const personas = taxonomy.personas.map((c) => `- ${c.id}: ${c.name} - ${c.description}`).join("\n");
-  return `You are a market-research analyst studying customer pain points in the recycling and waste-collection business (households, apartment societies, small businesses, people selling scrap) in India, Europe and the United States.
+  const label = topic.label || "this industry";
+  return `You are a market-research analyst studying customer pain points in: ${label}. Scope: ${topic.description || label}. Markets: India, Europe and the United States.
 
 You receive a JSON array of public documents: Reddit posts/comments, X posts, YouTube comments, review/complaint-site snippets, and Google autocomplete search queries. For EVERY document return one result with the same id.
 
 Rules:
-- relevant=true only when the author (or searcher) is a customer/citizen expressing an experience, need, frustration or question about recycling, scrap selling, waste segregation/collection, or disposal of recyclable items. News headlines, ads, company PR, jokes with no substance, and unrelated uses of words like "bin" or "recycle" are relevant=false with no pain_points.
-- Search queries (source google_suggest) are one-liners typed by many people. Count one as a pain point only when it implies difficulty, confusion, distrust, cost or an unmet need (e.g. "where to recycle batteries" -> access_drop_off, "can you recycle pizza boxes" -> sorting_confusion, "why is recycling a waste of time" -> trust_greenwashing). Product-shopping queries ("recycling bin with lid") are not pain points.
+- relevant=true only when the author (or searcher) is a customer or end user expressing an experience, need, frustration or question about ${label}. News headlines, ads, company PR, jokes with no substance, and unrelated uses of the same words are relevant=false with no pain_points.
+- Search queries (source google_suggest) are one-liners typed by many people. Count one as a pain point only when it implies difficulty, confusion, distrust, cost or an unmet need ("where can I...", "why is ... so expensive", "... not working", "is ... a scam"). Plain shopping or definition queries are not pain points.
 - A document may contain 0-3 distinct pain points; list each once. Do not invent pain points that are not in the text.
 - category must be exactly one of the ids below; use "other" only when nothing fits.
 - sub_issue: a concise, reusable English phrase naming the specific problem (not the whole story), so identical problems from different people get near-identical phrases.
-- region: india, europe (UK, EU, EEA, Switzerland), us, or other. Use evidence in the text (cities, councils, currency, brands like BBMP / Waste Management / Pfand); if there is none, use region_hint unless region_hint is "global", in which case use "other".
-- persona: who is speaking, from the persona ids below, inferred from what they say about their housing, role or motivation ("our society", "my landlord", "I run a cafe", "the kabadiwala paid me", "I'm a binman"). Use general_citizen when it cannot be inferred - do not guess.
+- region: india, europe (UK, EU, EEA, Switzerland), us, or other. Use evidence in the text (cities, currency, local brands and institutions); if there is none, use region_hint unless region_hint is "global", in which case use "other".
+- persona: who is speaking, from the persona ids below, inferred from what they say about themselves (their housing, job, business, family or motivation). Use general_citizen when it cannot be inferred - do not guess.
 - Write in English except quote, which stays verbatim in the original language.
 
 Pain-point categories:
@@ -66,7 +67,7 @@ export function normalizeResult(r, doc, taxonomy) {
   return { id: doc.id, relevant: Boolean(r.relevant), region, country: r.country || "", persona, pain_points, model: MODEL, classified_at: new Date().toISOString() };
 }
 
-export async function classify({ docs, dataDir, taxonomy, batchSize = 20, concurrency = 4, maxDocChars = 1500, maxDocs = Infinity }) {
+export async function classify({ docs, dataDir, taxonomy, topic, batchSize = 20, concurrency = 4, maxDocChars = 1500, maxDocs = Infinity }) {
   const file = path.join(dataDir, "classified.jsonl");
   // Rows labelled by the keyword classifier are re-done by Claude (the newer row wins downstream).
   const done = new Set(readJsonl(file).filter((r) => r.model !== "rules").map((r) => r.id));
@@ -74,7 +75,7 @@ export async function classify({ docs, dataDir, taxonomy, batchSize = 20, concur
   log(`classify: ${done.size} already classified, ${todo.length} to go (model ${MODEL})`);
   if (!todo.length) return readJsonl(file);
 
-  const system = buildSystemPrompt(taxonomy);
+  const system = buildSystemPrompt(taxonomy, topic);
   const batches = [];
   for (let i = 0; i < todo.length; i += batchSize) batches.push(todo.slice(i, i + batchSize));
 

@@ -16,11 +16,11 @@ const ThemeSchema = z.object({
   ),
 });
 
-const SYSTEM = `You consolidate customer pain-point phrases from recycling / waste-collection research into themes.
+const SYSTEM = `You consolidate customer pain-point phrases from market research into themes.
 You receive numbered phrases (with mention counts) that all belong to one category. Group phrases that describe the same underlying customer problem.
 - Produce between 3 and 12 themes; fewer if the phrases are few. Prefer themes a product manager could act on.
 - Every index must appear in exactly one theme. Put leftovers in a theme called "Miscellaneous".
-- Theme names should be specific and in plain English (e.g. "Scrap buyers cheat on weight", not "Pricing issues").`;
+- Theme names should be specific and in plain English (e.g. "Chargers broken on arrival", not "Reliability issues").`;
 
 export function collectSubIssues(classified) {
   const byCat = {};
