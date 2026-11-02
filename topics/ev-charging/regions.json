@@ -38,7 +38,13 @@
     ],
     "web_queries": [
       "ev charging complaint",
-      "ev charging review problems"
+      "ev charging review problems",
+      "ev charging station complaint site:consumercomplaints.in",
+      "ev charging station complaint site:mouthshut.com",
+      "ev charging station complaint site:voxya.com",
+      "ev charger complaint site:consumercomplaints.in",
+      "ev charger complaint site:mouthshut.com",
+      "ev charger complaint site:voxya.com"
     ],
     "x_queries": [
       "(\"ev charging\") (complaint OR problem OR worst OR scam) -is:retweet"
@@ -82,7 +88,13 @@
     ],
     "web_queries": [
       "ev charging complaint",
-      "ev charging review problems"
+      "ev charging review problems",
+      "ev charging complaint site:trustpilot.com",
+      "ev charging complaint site:forums.moneysavingexpert.com",
+      "ev charging complaint site:which.co.uk",
+      "ev charger complaint site:trustpilot.com",
+      "ev charger complaint site:forums.moneysavingexpert.com",
+      "ev charger complaint site:which.co.uk"
     ],
     "x_queries": [
       "(\"ev charging\") (complaint OR problem OR worst OR scam) -is:retweet"
@@ -149,7 +161,13 @@
     ],
     "web_queries": [
       "ev charging complaint",
-      "ev charging review problems"
+      "ev charging review problems",
+      "ev charging complaint site:bbb.org",
+      "ev charging complaint site:consumeraffairs.com",
+      "ev charging complaint site:complaintsboard.com",
+      "ev charger complaint site:bbb.org",
+      "ev charger complaint site:consumeraffairs.com",
+      "ev charger complaint site:complaintsboard.com"
     ],
     "x_queries": [
       "(\"ev charging\") (complaint OR problem OR worst OR scam) -is:retweet"

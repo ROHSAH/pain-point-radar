@@ -36,7 +36,13 @@
     "web_queries": [
       "jio network problem complaint",
       "airtel broadband complaint complaint",
-      "recharge price hike complaint"
+      "recharge price hike complaint",
+      "jio complaint site:consumercomplaints.in",
+      "jio complaint site:mouthshut.com",
+      "jio complaint site:voxya.com",
+      "airtel complaint site:consumercomplaints.in",
+      "airtel complaint site:mouthshut.com",
+      "airtel complaint site:voxya.com"
     ],
     "x_queries": [
       "(\"jio\" OR \"airtel\" OR \"jio fiber\") (complaint OR problem OR worst OR scam) -is:retweet"
@@ -77,7 +83,13 @@
     "web_queries": [
       "virgin media outage complaint",
       "broadband slow complaint",
-      "mid contract price rise complaint"
+      "mid contract price rise complaint",
+      "virgin media complaint site:trustpilot.com",
+      "virgin media complaint site:forums.moneysavingexpert.com",
+      "virgin media complaint site:which.co.uk",
+      "bt broadband complaint site:trustpilot.com",
+      "bt broadband complaint site:forums.moneysavingexpert.com",
+      "bt broadband complaint site:which.co.uk"
     ],
     "x_queries": [
       "(\"virgin media\" OR \"bt broadband\" OR \"ee\") (complaint OR problem OR worst OR scam) -is:retweet"
@@ -120,7 +132,13 @@
     "web_queries": [
       "xfinity outage complaint",
       "verizon price increase complaint",
-      "t-mobile no signal complaint"
+      "t-mobile no signal complaint",
+      "verizon complaint site:bbb.org",
+      "verizon complaint site:consumeraffairs.com",
+      "verizon complaint site:complaintsboard.com",
+      "at&t complaint site:bbb.org",
+      "at&t complaint site:consumeraffairs.com",
+      "at&t complaint site:complaintsboard.com"
     ],
     "x_queries": [
       "(\"verizon\" OR \"at&t\" OR \"t-mobile\") (complaint OR problem OR worst OR scam) -is:retweet"

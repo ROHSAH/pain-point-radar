@@ -35,7 +35,13 @@
     "web_queries": [
       "flipkart fake product complaint",
       "amazon refund not received complaint",
-      "meesho return complaint"
+      "meesho return complaint",
+      "amazon order complaint site:consumercomplaints.in",
+      "amazon order complaint site:mouthshut.com",
+      "amazon order complaint site:voxya.com",
+      "flipkart complaint site:consumercomplaints.in",
+      "flipkart complaint site:mouthshut.com",
+      "flipkart complaint site:voxya.com"
     ],
     "x_queries": [
       "(\"amazon order\" OR \"flipkart\" OR \"meesho\") (complaint OR problem OR worst OR scam) -is:retweet"
@@ -75,7 +81,13 @@
     "web_queries": [
       "amazon parcel not delivered complaint",
       "temu refund complaint",
-      "ebay seller scam complaint"
+      "ebay seller scam complaint",
+      "amazon uk complaint site:trustpilot.com",
+      "amazon uk complaint site:forums.moneysavingexpert.com",
+      "amazon uk complaint site:which.co.uk",
+      "ebay complaint site:trustpilot.com",
+      "ebay complaint site:forums.moneysavingexpert.com",
+      "ebay complaint site:which.co.uk"
     ],
     "x_queries": [
       "(\"amazon uk\" OR \"ebay\" OR \"temu\") (complaint OR problem OR worst OR scam) -is:retweet"
@@ -116,7 +128,13 @@
     "web_queries": [
       "package marked delivered not received complaint",
       "amazon return refund complaint",
-      "temu scam complaint"
+      "temu scam complaint",
+      "amazon order complaint site:bbb.org",
+      "amazon order complaint site:consumeraffairs.com",
+      "amazon order complaint site:complaintsboard.com",
+      "walmart order complaint site:bbb.org",
+      "walmart order complaint site:consumeraffairs.com",
+      "walmart order complaint site:complaintsboard.com"
     ],
     "x_queries": [
       "(\"amazon order\" OR \"walmart order\" OR \"temu\") (complaint OR problem OR worst OR scam) -is:retweet"

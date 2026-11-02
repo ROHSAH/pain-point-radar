@@ -36,7 +36,13 @@
     "web_queries": [
       "loan recovery agent harassment complaint",
       "personal loan rejected complaint",
-      "cibil score low complaint"
+      "cibil score low complaint",
+      "personal loan complaint site:consumercomplaints.in",
+      "personal loan complaint site:mouthshut.com",
+      "personal loan complaint site:voxya.com",
+      "home loan complaint site:consumercomplaints.in",
+      "home loan complaint site:mouthshut.com",
+      "home loan complaint site:voxya.com"
     ],
     "x_queries": [
       "(\"personal loan\" OR \"home loan\" OR \"cibil score\") (complaint OR problem OR worst OR scam) -is:retweet"
@@ -77,7 +83,13 @@
     "web_queries": [
       "mortgage rejected complaint",
       "klarna debt collection complaint",
-      "credit score wrong complaint"
+      "credit score wrong complaint",
+      "mortgage complaint site:trustpilot.com",
+      "mortgage complaint site:forums.moneysavingexpert.com",
+      "mortgage complaint site:which.co.uk",
+      "personal loan complaint site:trustpilot.com",
+      "personal loan complaint site:forums.moneysavingexpert.com",
+      "personal loan complaint site:which.co.uk"
     ],
     "x_queries": [
       "(\"mortgage\" OR \"personal loan\" OR \"credit score uk\") (complaint OR problem OR worst OR scam) -is:retweet"
@@ -120,7 +132,13 @@
     "web_queries": [
       "student loan servicer complaint",
       "mortgage denied complaint",
-      "debt collector calls complaint"
+      "debt collector calls complaint",
+      "mortgage complaint site:bbb.org",
+      "mortgage complaint site:consumeraffairs.com",
+      "mortgage complaint site:complaintsboard.com",
+      "personal loan complaint site:bbb.org",
+      "personal loan complaint site:consumeraffairs.com",
+      "personal loan complaint site:complaintsboard.com"
     ],
     "x_queries": [
       "(\"mortgage\" OR \"personal loan\" OR \"student loan\") (complaint OR problem OR worst OR scam) -is:retweet"

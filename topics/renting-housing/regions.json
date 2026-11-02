@@ -36,7 +36,13 @@
     "web_queries": [
       "landlord not returning deposit complaint",
       "broker fees complaint",
-      "rent increase complaint"
+      "rent increase complaint",
+      "rent agreement complaint site:consumercomplaints.in",
+      "rent agreement complaint site:mouthshut.com",
+      "rent agreement complaint site:voxya.com",
+      "nobroker complaint site:consumercomplaints.in",
+      "nobroker complaint site:mouthshut.com",
+      "nobroker complaint site:voxya.com"
     ],
     "x_queries": [
       "(\"rent agreement\" OR \"nobroker\" OR \"landlord\") (complaint OR problem OR worst OR scam) -is:retweet"
@@ -78,7 +84,13 @@
     "web_queries": [
       "landlord wont fix mould complaint",
       "deposit deductions complaint",
-      "section 21 eviction complaint"
+      "section 21 eviction complaint",
+      "rent increase complaint site:trustpilot.com",
+      "rent increase complaint site:forums.moneysavingexpert.com",
+      "rent increase complaint site:which.co.uk",
+      "letting agent complaint site:trustpilot.com",
+      "letting agent complaint site:forums.moneysavingexpert.com",
+      "letting agent complaint site:which.co.uk"
     ],
     "x_queries": [
       "(\"rent increase\" OR \"letting agent\" OR \"landlord\") (complaint OR problem OR worst OR scam) -is:retweet"
@@ -119,7 +131,13 @@
     "web_queries": [
       "landlord kept security deposit complaint",
       "rent increase notice complaint",
-      "landlord not fixing complaint"
+      "landlord not fixing complaint",
+      "landlord complaint site:bbb.org",
+      "landlord complaint site:consumeraffairs.com",
+      "landlord complaint site:complaintsboard.com",
+      "rent increase complaint site:bbb.org",
+      "rent increase complaint site:consumeraffairs.com",
+      "rent increase complaint site:complaintsboard.com"
     ],
     "x_queries": [
       "(\"landlord\" OR \"rent increase\" OR \"security deposit\") (complaint OR problem OR worst OR scam) -is:retweet"

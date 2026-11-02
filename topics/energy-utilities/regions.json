@@ -37,7 +37,13 @@
     "web_queries": [
       "electricity bill too high complaint",
       "power cut daily complaint",
-      "smart meter problem complaint"
+      "smart meter problem complaint",
+      "electricity bill complaint site:consumercomplaints.in",
+      "electricity bill complaint site:mouthshut.com",
+      "electricity bill complaint site:voxya.com",
+      "power cut complaint site:consumercomplaints.in",
+      "power cut complaint site:mouthshut.com",
+      "power cut complaint site:voxya.com"
     ],
     "x_queries": [
       "(\"electricity bill\" OR \"power cut\" OR \"bescom\") (complaint OR problem OR worst OR scam) -is:retweet"
@@ -80,7 +86,13 @@
     "web_queries": [
       "energy bill too high complaint",
       "smart meter not working complaint",
-      "british gas complaint complaint"
+      "british gas complaint complaint",
+      "energy bill complaint site:trustpilot.com",
+      "energy bill complaint site:forums.moneysavingexpert.com",
+      "energy bill complaint site:which.co.uk",
+      "smart meter complaint site:trustpilot.com",
+      "smart meter complaint site:forums.moneysavingexpert.com",
+      "smart meter complaint site:which.co.uk"
     ],
     "x_queries": [
       "(\"energy bill\" OR \"smart meter\" OR \"octopus energy\") (complaint OR problem OR worst OR scam) -is:retweet"
@@ -133,7 +145,13 @@
     "web_queries": [
       "electric bill doubled complaint",
       "power outage again complaint",
-      "solar panel company complaint"
+      "solar panel company complaint",
+      "electric bill complaint site:bbb.org",
+      "electric bill complaint site:consumeraffairs.com",
+      "electric bill complaint site:complaintsboard.com",
+      "power outage complaint site:bbb.org",
+      "power outage complaint site:consumeraffairs.com",
+      "power outage complaint site:complaintsboard.com"
     ],
     "x_queries": [
       "(\"electric bill\" OR \"power outage\" OR \"pg&e\") (complaint OR problem OR worst OR scam) -is:retweet"

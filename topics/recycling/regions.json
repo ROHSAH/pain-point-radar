@@ -2,10 +2,30 @@
   "_comment": "Search plan per region. Every collector reads only the keys it needs. Edit freely: add cities, languages, brands, subreddits. Non-English queries are fine - Claude classifies in any language and reports in English.",
   "india": {
     "label": "India",
-    "google": { "gl": "in", "hl": "en" },
-    "youtube": { "regionCode": "IN" },
-    "brave": { "country": "IN" },
-    "subreddits": ["india", "bangalore", "mumbai", "delhi", "pune", "hyderabad", "chennai", "kolkata", "gurgaon", "noida", "indiasocial", "zerowasteindia"],
+    "google": {
+      "gl": "in",
+      "hl": "en"
+    },
+    "youtube": {
+      "regionCode": "IN"
+    },
+    "brave": {
+      "country": "IN"
+    },
+    "subreddits": [
+      "india",
+      "bangalore",
+      "mumbai",
+      "delhi",
+      "pune",
+      "hyderabad",
+      "chennai",
+      "kolkata",
+      "gurgaon",
+      "noida",
+      "indiasocial",
+      "zerowasteindia"
+    ],
     "queries": [
       "recycling problem",
       "dry waste collection not",
@@ -34,11 +54,14 @@
       "recycle plastic bottles"
     ],
     "web_queries": [
-      "garbage collection complaint site:consumercomplaints.in",
-      "scrap pickup app review site:mouthshut.com",
       "e-waste recycling complaint india",
       "kabadiwala app complaint",
-      "recycling india problems site:quora.com"
+      "kabadiwala complaint site:consumercomplaints.in",
+      "kabadiwala complaint site:mouthshut.com",
+      "kabadiwala complaint site:voxya.com",
+      "scrap price per kg complaint site:consumercomplaints.in",
+      "scrap price per kg complaint site:mouthshut.com",
+      "scrap price per kg complaint site:voxya.com"
     ],
     "x_queries": [
       "(recycling OR \"dry waste\" OR kabadiwala OR \"e-waste\") (india OR bengaluru OR mumbai OR delhi OR pune OR hyderabad OR chennai) (complaint OR problem OR \"not collected\" OR worst OR why)",
@@ -47,17 +70,77 @@
   },
   "europe": {
     "label": "Europe (UK + EU)",
-    "google": { "gl": "gb", "hl": "en" },
+    "google": {
+      "gl": "gb",
+      "hl": "en"
+    },
     "google_extra": [
-      { "gl": "de", "hl": "de", "seeds": ["mülltrennung", "pfand automat", "gelbe tonne", "wertstoffhof"] },
-      { "gl": "fr", "hl": "fr", "seeds": ["tri sélectif", "recyclage poubelle jaune", "déchetterie"] },
-      { "gl": "es", "hl": "es", "seeds": ["reciclaje contenedor amarillo", "punto limpio"] },
-      { "gl": "it", "hl": "it", "seeds": ["raccolta differenziata", "isola ecologica"] },
-      { "gl": "nl", "hl": "nl", "seeds": ["afval scheiden", "statiegeld automaat"] }
+      {
+        "gl": "de",
+        "hl": "de",
+        "seeds": [
+          "mülltrennung",
+          "pfand automat",
+          "gelbe tonne",
+          "wertstoffhof"
+        ]
+      },
+      {
+        "gl": "fr",
+        "hl": "fr",
+        "seeds": [
+          "tri sélectif",
+          "recyclage poubelle jaune",
+          "déchetterie"
+        ]
+      },
+      {
+        "gl": "es",
+        "hl": "es",
+        "seeds": [
+          "reciclaje contenedor amarillo",
+          "punto limpio"
+        ]
+      },
+      {
+        "gl": "it",
+        "hl": "it",
+        "seeds": [
+          "raccolta differenziata",
+          "isola ecologica"
+        ]
+      },
+      {
+        "gl": "nl",
+        "hl": "nl",
+        "seeds": [
+          "afval scheiden",
+          "statiegeld automaat"
+        ]
+      }
     ],
-    "youtube": { "regionCode": "GB" },
-    "brave": { "country": "GB" },
-    "subreddits": ["unitedkingdom", "AskUK", "CasualUK", "LegalAdviceUK", "london", "ireland", "germany", "de", "france", "spain", "italy", "Netherlands", "europe", "Scotland"],
+    "youtube": {
+      "regionCode": "GB"
+    },
+    "brave": {
+      "country": "GB"
+    },
+    "subreddits": [
+      "unitedkingdom",
+      "AskUK",
+      "CasualUK",
+      "LegalAdviceUK",
+      "london",
+      "ireland",
+      "germany",
+      "de",
+      "france",
+      "spain",
+      "italy",
+      "Netherlands",
+      "europe",
+      "Scotland"
+    ],
     "queries": [
       "recycling bin collection",
       "council recycling",
@@ -86,8 +169,12 @@
       "council recycling complaint",
       "bin collection missed complaint",
       "recycling centre booking system complaint",
-      "deposit return scheme problems",
-      "recycling company review site:trustpilot.com"
+      "bin collection complaint site:trustpilot.com",
+      "bin collection complaint site:forums.moneysavingexpert.com",
+      "bin collection complaint site:which.co.uk",
+      "council recycling complaint site:trustpilot.com",
+      "council recycling complaint site:forums.moneysavingexpert.com",
+      "council recycling complaint site:which.co.uk"
     ],
     "x_queries": [
       "(recycling OR \"bin collection\" OR \"bins\") (council OR UK) (missed OR \"not collected\" OR complaint OR joke OR ridiculous) -is:retweet",
@@ -96,10 +183,32 @@
   },
   "us": {
     "label": "United States",
-    "google": { "gl": "us", "hl": "en" },
-    "youtube": { "regionCode": "US" },
-    "brave": { "country": "US" },
-    "subreddits": ["recycling", "ZeroWaste", "Anticonsumption", "nyc", "chicago", "LosAngeles", "Austin", "Seattle", "Portland", "sanfrancisco", "Denver", "houston", "HomeImprovement", "Frugal"],
+    "google": {
+      "gl": "us",
+      "hl": "en"
+    },
+    "youtube": {
+      "regionCode": "US"
+    },
+    "brave": {
+      "country": "US"
+    },
+    "subreddits": [
+      "recycling",
+      "ZeroWaste",
+      "Anticonsumption",
+      "nyc",
+      "chicago",
+      "LosAngeles",
+      "Austin",
+      "Seattle",
+      "Portland",
+      "sanfrancisco",
+      "Denver",
+      "houston",
+      "HomeImprovement",
+      "Frugal"
+    ],
     "queries": [
       "recycling pickup missed",
       "Waste Management recycling",
@@ -126,11 +235,15 @@
       "how to recycle"
     ],
     "web_queries": [
-      "recycling pickup complaint site:complaintsboard.com",
-      "Waste Management recycling review site:trustpilot.com",
       "Republic Services complaint recycling",
       "recycling program complaints city",
-      "apartment recycling problem"
+      "apartment recycling problem",
+      "is recycling complaint site:bbb.org",
+      "is recycling complaint site:consumeraffairs.com",
+      "is recycling complaint site:complaintsboard.com",
+      "why is recycling complaint site:bbb.org",
+      "why is recycling complaint site:consumeraffairs.com",
+      "why is recycling complaint site:complaintsboard.com"
     ],
     "x_queries": [
       "(recycling OR recycle) (\"missed pickup\" OR \"didn't pick up\" OR \"not picked up\" OR \"waste management\" OR \"republic services\") -is:retweet",
@@ -139,7 +252,17 @@
   },
   "global": {
     "label": "Global (region inferred per post)",
-    "subreddits": ["recycling", "ZeroWaste", "sustainability", "environment"],
-    "queries": ["recycling frustrating", "recycling confusing", "recycling scam", "why don't they recycle"]
+    "subreddits": [
+      "recycling",
+      "ZeroWaste",
+      "sustainability",
+      "environment"
+    ],
+    "queries": [
+      "recycling frustrating",
+      "recycling confusing",
+      "recycling scam",
+      "why don't they recycle"
+    ]
   }
 }

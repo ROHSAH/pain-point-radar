@@ -40,7 +40,13 @@
     "web_queries": [
       "msme loan rejected complaint",
       "business loan collateral complaint",
-      "mudra loan problem complaint"
+      "mudra loan problem complaint",
+      "msme loan complaint site:consumercomplaints.in",
+      "msme loan complaint site:mouthshut.com",
+      "msme loan complaint site:voxya.com",
+      "business loan complaint site:consumercomplaints.in",
+      "business loan complaint site:mouthshut.com",
+      "business loan complaint site:voxya.com"
     ],
     "x_queries": [
       "(\"msme loan\" OR \"business loan\" OR \"mudra loan\") (complaint OR problem OR worst OR scam) -is:retweet"
@@ -82,7 +88,13 @@
     "web_queries": [
       "business loan rejected uk complaint",
       "invoice finance problems complaint",
-      "bounce back loan complaint"
+      "bounce back loan complaint",
+      "business loan uk complaint site:trustpilot.com",
+      "business loan uk complaint site:forums.moneysavingexpert.com",
+      "business loan uk complaint site:which.co.uk",
+      "start up loan complaint site:trustpilot.com",
+      "start up loan complaint site:forums.moneysavingexpert.com",
+      "start up loan complaint site:which.co.uk"
     ],
     "x_queries": [
       "(\"business loan uk\" OR \"start up loan\" OR \"invoice finance\") (complaint OR problem OR worst OR scam) -is:retweet"
@@ -135,7 +147,13 @@
     "web_queries": [
       "sba loan denied complaint",
       "merchant cash advance trap complaint",
-      "business line of credit complaint"
+      "business line of credit complaint",
+      "sba loan complaint site:bbb.org",
+      "sba loan complaint site:consumeraffairs.com",
+      "sba loan complaint site:complaintsboard.com",
+      "business line of credit complaint site:bbb.org",
+      "business line of credit complaint site:consumeraffairs.com",
+      "business line of credit complaint site:complaintsboard.com"
     ],
     "x_queries": [
       "(\"sba loan\" OR \"business line of credit\" OR \"merchant cash advance\") (complaint OR problem OR worst OR scam) -is:retweet"

@@ -39,7 +39,13 @@
     ],
     "web_queries": [
       "food delivery complaint",
-      "food delivery review problems"
+      "food delivery review problems",
+      "swiggy complaint site:consumercomplaints.in",
+      "swiggy complaint site:mouthshut.com",
+      "swiggy complaint site:voxya.com",
+      "zomato complaint site:consumercomplaints.in",
+      "zomato complaint site:mouthshut.com",
+      "zomato complaint site:voxya.com"
     ],
     "x_queries": [
       "(\"food delivery\") (complaint OR problem OR worst OR scam) -is:retweet"
@@ -82,7 +88,13 @@
     ],
     "web_queries": [
       "food delivery complaint",
-      "food delivery review problems"
+      "food delivery review problems",
+      "deliveroo complaint site:trustpilot.com",
+      "deliveroo complaint site:forums.moneysavingexpert.com",
+      "deliveroo complaint site:which.co.uk",
+      "just eat complaint site:trustpilot.com",
+      "just eat complaint site:forums.moneysavingexpert.com",
+      "just eat complaint site:which.co.uk"
     ],
     "x_queries": [
       "(\"food delivery\") (complaint OR problem OR worst OR scam) -is:retweet"
@@ -125,7 +137,13 @@
     ],
     "web_queries": [
       "food delivery complaint",
-      "food delivery review problems"
+      "food delivery review problems",
+      "doordash complaint site:bbb.org",
+      "doordash complaint site:consumeraffairs.com",
+      "doordash complaint site:complaintsboard.com",
+      "uber eats complaint site:bbb.org",
+      "uber eats complaint site:consumeraffairs.com",
+      "uber eats complaint site:complaintsboard.com"
     ],
     "x_queries": [
       "(\"food delivery\") (complaint OR problem OR worst OR scam) -is:retweet"

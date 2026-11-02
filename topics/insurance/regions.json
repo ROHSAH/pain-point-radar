@@ -34,7 +34,13 @@
     "web_queries": [
       "health insurance claim rejected complaint",
       "star health claim complaint",
-      "cashless denied complaint"
+      "cashless denied complaint",
+      "health insurance claim complaint site:consumercomplaints.in",
+      "health insurance claim complaint site:mouthshut.com",
+      "health insurance claim complaint site:voxya.com",
+      "star health complaint site:consumercomplaints.in",
+      "star health complaint site:mouthshut.com",
+      "star health complaint site:voxya.com"
     ],
     "x_queries": [
       "(\"health insurance claim\" OR \"star health\" OR \"lic policy\") (complaint OR problem OR worst OR scam) -is:retweet"
@@ -74,7 +80,13 @@
     "web_queries": [
       "car insurance premium increase complaint",
       "home insurance claim rejected complaint",
-      "travel insurance claim complaint"
+      "travel insurance claim complaint",
+      "car insurance complaint site:trustpilot.com",
+      "car insurance complaint site:forums.moneysavingexpert.com",
+      "car insurance complaint site:which.co.uk",
+      "home insurance complaint site:trustpilot.com",
+      "home insurance complaint site:forums.moneysavingexpert.com",
+      "home insurance complaint site:which.co.uk"
     ],
     "x_queries": [
       "(\"car insurance\" OR \"home insurance\" OR \"aviva claim\") (complaint OR problem OR worst OR scam) -is:retweet"
@@ -114,7 +126,13 @@
     "web_queries": [
       "insurance claim denied complaint",
       "car insurance went up complaint",
-      "health insurance denied complaint"
+      "health insurance denied complaint",
+      "health insurance complaint site:bbb.org",
+      "health insurance complaint site:consumeraffairs.com",
+      "health insurance complaint site:complaintsboard.com",
+      "car insurance complaint site:bbb.org",
+      "car insurance complaint site:consumeraffairs.com",
+      "car insurance complaint site:complaintsboard.com"
     ],
     "x_queries": [
       "(\"health insurance\" OR \"car insurance\" OR \"geico\") (complaint OR problem OR worst OR scam) -is:retweet"

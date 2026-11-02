@@ -34,7 +34,13 @@
     "web_queries": [
       "indigo delay complaint",
       "air india refund complaint",
-      "lost baggage indigo complaint"
+      "lost baggage indigo complaint",
+      "indigo flight complaint site:consumercomplaints.in",
+      "indigo flight complaint site:mouthshut.com",
+      "indigo flight complaint site:voxya.com",
+      "air india complaint site:consumercomplaints.in",
+      "air india complaint site:mouthshut.com",
+      "air india complaint site:voxya.com"
     ],
     "x_queries": [
       "(\"indigo flight\" OR \"air india\" OR \"flight cancelled\") (complaint OR problem OR worst OR scam) -is:retweet"
@@ -74,7 +80,13 @@
     "web_queries": [
       "ryanair compensation complaint",
       "easyjet cancelled complaint",
-      "british airways lost luggage complaint"
+      "british airways lost luggage complaint",
+      "ryanair complaint site:trustpilot.com",
+      "ryanair complaint site:forums.moneysavingexpert.com",
+      "ryanair complaint site:which.co.uk",
+      "easyjet complaint site:trustpilot.com",
+      "easyjet complaint site:forums.moneysavingexpert.com",
+      "easyjet complaint site:which.co.uk"
     ],
     "x_queries": [
       "(\"ryanair\" OR \"easyjet\" OR \"british airways\") (complaint OR problem OR worst OR scam) -is:retweet"
@@ -115,7 +127,13 @@
     "web_queries": [
       "flight cancelled refund complaint",
       "lost luggage complaint",
-      "delta delay complaint"
+      "delta delay complaint",
+      "delta complaint site:bbb.org",
+      "delta complaint site:consumeraffairs.com",
+      "delta complaint site:complaintsboard.com",
+      "united airlines complaint site:bbb.org",
+      "united airlines complaint site:consumeraffairs.com",
+      "united airlines complaint site:complaintsboard.com"
     ],
     "x_queries": [
       "(\"delta\" OR \"united airlines\" OR \"american airlines\") (complaint OR problem OR worst OR scam) -is:retweet"

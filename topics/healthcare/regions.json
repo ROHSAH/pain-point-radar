@@ -35,7 +35,13 @@
     "web_queries": [
       "hospital overcharging complaint",
       "hospital bill too high complaint",
-      "doctor appointment wait complaint"
+      "doctor appointment wait complaint",
+      "hospital bill complaint site:consumercomplaints.in",
+      "hospital bill complaint site:mouthshut.com",
+      "hospital bill complaint site:voxya.com",
+      "apollo hospital complaint site:consumercomplaints.in",
+      "apollo hospital complaint site:mouthshut.com",
+      "apollo hospital complaint site:voxya.com"
     ],
     "x_queries": [
       "(\"hospital bill\" OR \"apollo hospital\" OR \"doctor appointment\") (complaint OR problem OR worst OR scam) -is:retweet"
@@ -75,7 +81,13 @@
     "web_queries": [
       "cant get gp appointment complaint",
       "nhs waiting list complaint",
-      "a&e wait times complaint"
+      "a&e wait times complaint",
+      "gp appointment complaint site:trustpilot.com",
+      "gp appointment complaint site:forums.moneysavingexpert.com",
+      "gp appointment complaint site:which.co.uk",
+      "nhs waiting list complaint site:trustpilot.com",
+      "nhs waiting list complaint site:forums.moneysavingexpert.com",
+      "nhs waiting list complaint site:which.co.uk"
     ],
     "x_queries": [
       "(\"gp appointment\" OR \"nhs waiting list\" OR \"a&e wait\") (complaint OR problem OR worst OR scam) -is:retweet"
@@ -115,7 +127,13 @@
     "web_queries": [
       "surprise medical bill complaint",
       "er bill complaint",
-      "prescription too expensive complaint"
+      "prescription too expensive complaint",
+      "medical bill complaint site:bbb.org",
+      "medical bill complaint site:consumeraffairs.com",
+      "medical bill complaint site:complaintsboard.com",
+      "er visit cost complaint site:bbb.org",
+      "er visit cost complaint site:consumeraffairs.com",
+      "er visit cost complaint site:complaintsboard.com"
     ],
     "x_queries": [
       "(\"medical bill\" OR \"er visit cost\" OR \"doctor appointment\") (complaint OR problem OR worst OR scam) -is:retweet"

@@ -37,7 +37,13 @@
     "web_queries": [
       "upi payment failed complaint",
       "bank account frozen complaint",
-      "credit card fraud complaint"
+      "credit card fraud complaint",
+      "upi payment complaint site:consumercomplaints.in",
+      "upi payment complaint site:mouthshut.com",
+      "upi payment complaint site:voxya.com",
+      "sbi account complaint site:consumercomplaints.in",
+      "sbi account complaint site:mouthshut.com",
+      "sbi account complaint site:voxya.com"
     ],
     "x_queries": [
       "(\"upi payment\" OR \"sbi account\" OR \"hdfc credit card\") (complaint OR problem OR worst OR scam) -is:retweet"
@@ -80,7 +86,13 @@
     "web_queries": [
       "bank account frozen complaint",
       "revolut account blocked complaint",
-      "bank transfer missing complaint"
+      "bank transfer missing complaint",
+      "monzo complaint site:trustpilot.com",
+      "monzo complaint site:forums.moneysavingexpert.com",
+      "monzo complaint site:which.co.uk",
+      "revolut complaint site:trustpilot.com",
+      "revolut complaint site:forums.moneysavingexpert.com",
+      "revolut complaint site:which.co.uk"
     ],
     "x_queries": [
       "(\"monzo\" OR \"revolut\" OR \"barclays\") (complaint OR problem OR worst OR scam) -is:retweet"
@@ -122,7 +134,13 @@
     "web_queries": [
       "zelle scam complaint",
       "bank account frozen complaint",
-      "credit card fraud complaint"
+      "credit card fraud complaint",
+      "chase bank complaint site:bbb.org",
+      "chase bank complaint site:consumeraffairs.com",
+      "chase bank complaint site:complaintsboard.com",
+      "bank of america complaint site:bbb.org",
+      "bank of america complaint site:consumeraffairs.com",
+      "bank of america complaint site:complaintsboard.com"
     ],
     "x_queries": [
       "(\"chase bank\" OR \"bank of america\" OR \"wells fargo\") (complaint OR problem OR worst OR scam) -is:retweet"
