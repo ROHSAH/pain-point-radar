@@ -33,7 +33,7 @@ export function renderDashboard({ topics, generatedAt = new Date().toISOString()
         ["india", "europe", "us"].map((r) => {
           const inR = (x) => x.id !== "other" && x.id !== "general_citizen" && (!x.regions?.length || x.regions.includes(r));
           return [r, {
-            categories: (t.taxonomy.categories || []).filter(inR).map((c) => ({ name: c.name, desc: c.description || "" })),
+            categories: (t.taxonomy.categories || []).filter(inR).map((c) => ({ name: c.name, desc: c.description || "", ent: c.enterprise_equivalent || "" })),
             personas: (t.taxonomy.personas || []).filter(inR).map((p) => ({ name: p.name, desc: p.description || "" })),
           }];
         }),
@@ -481,7 +481,7 @@ a { color: var(--accent-ink); }
     $("defs-sub").textContent = "Pain points and personas specific to this market, with mentions found so far (before other filters). Zero means tracked but not yet seen in the collected data.";
     const list = (items, key, title) => '<div><h3 class="eyebrow" style="margin:0 0 8px">' + title + '</h3><div class="log">' + items.map((x) => {
       const n = count(key, x.name);
-      return '<div class="entry" style="grid-template-columns:56px 1fr;padding:10px 0"><div class="side"><span style="font-size:14px;color:var(--ink)">' + n + '</span></div><div class="body"><strong>' + esc(x.name) + '</strong><span class="full">' + esc(x.desc) + "</span></div></div>";
+      return '<div class="entry" style="grid-template-columns:56px 1fr;padding:10px 0"><div class="side"><span style="font-size:14px;color:var(--ink)">' + n + '</span></div><div class="body"><strong>' + esc(x.name) + '</strong><span class="full">' + esc(x.desc) + "</span>" + (x.ent ? '<span class="tags"><span class="tag" title="What large companies use ERP suites for">Enterprise equivalent: ' + esc(x.ent) + "</span></span>" : "") + "</div></div>";
     }).join("") + "</div></div>";
     $("defs").innerHTML = list(d.categories, "k", "Pain points") + list(d.personas, "p", "Personas");
   }

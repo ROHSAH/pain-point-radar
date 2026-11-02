@@ -1,0 +1,602 @@
+{
+  "_comment": "Region-specific pain points and personas (ids prefixed in_/eu_/us_). Keyword patterns drive the no-key classifier (first 3 matches, in order, within the document's region).",
+  "categories": [
+    {
+      "id": "in_multi_supplier_ordering",
+      "name": "Ordering from many suppliers by phone & WhatsApp",
+      "description": "Placing and tracking orders with several distributors by call or WhatsApp; comparing rate lists by hand.",
+      "keywords": [
+        "whatsapp order|order (from|to|with) (multiple|many|different|several) (suppliers|distributors|wholesalers)|compare (prices|rates)|best (supplier|wholesaler)|rate list|price list|purchase order"
+      ],
+      "enterprise_equivalent": "Procurement & purchase orders",
+      "regions": [
+        "india"
+      ]
+    },
+    {
+      "id": "in_stock_tracking_manual",
+      "name": "Tracking stock, expiry & reorders manually",
+      "description": "No simple way to see stock, expiries and when to reorder; billing apps that don't fit a kirana.",
+      "keywords": [
+        "stock (register|tracking|management|count)|inventory (app|software|management)|expiry|reorder|billing (software|app)|vyapar|mybillbook|marg erp|\\btally\\b"
+      ],
+      "enterprise_equivalent": "Inventory management",
+      "regions": [
+        "india"
+      ]
+    },
+    {
+      "id": "in_bookkeeping_reconciliation",
+      "name": "Purchase bills, books & reconciliation",
+      "description": "Keeping purchase bills from many suppliers, ledgers and outstanding balances reconciled.",
+      "keywords": [
+        "accounting|bookkeeping|purchase (bill|register|entry)|reconcil|ledger|khata (book|app)|outstanding (report|balance)|account statement"
+      ],
+      "enterprise_equivalent": "Finance: AP/AR & reconciliation",
+      "regions": [
+        "india"
+      ]
+    },
+    {
+      "id": "in_supplier_credit_udhaar",
+      "name": "Supplier credit & udhaar terms",
+      "description": "Distributors and wholesalers cutting credit days, demanding advance or cash, udhaar disputes.",
+      "keywords": [
+        "credit (period|days|limit)|udhaar|udhar|advance payment|cash only|distributor credit|payment terms|on credit"
+      ],
+      "enterprise_equivalent": "Supply-chain finance",
+      "regions": [
+        "india"
+      ]
+    },
+    {
+      "id": "in_working_capital_stock",
+      "name": "Working capital stuck in stock",
+      "description": "Money tied up in inventory across suppliers; dead stock; cash-flow gaps before festivals.",
+      "keywords": [
+        "working capital|cash flow|dead stock|stock (stuck|piling|clearance)|inventory (loan|finance)|festival stock"
+      ],
+      "enterprise_equivalent": "Working capital & treasury",
+      "regions": [
+        "india"
+      ]
+    },
+    {
+      "id": "in_small_loans_no_papers",
+      "name": "Small loans without ITR/GST papers",
+      "description": "Shopkeepers unable to get loans without ITR, GST or collateral; turning to moneylenders or apps.",
+      "keywords": [
+        "(shop|kirana|business|dukaan) loan|loan (without|for) (itr|gst|documents|shop|business)|moneylender|daily (emi|collection)|pm svanidhi|mudra"
+      ],
+      "require": [
+        "problem|issue|complain|grievance|reject|denied|declin|refus|not (able|getting|approved|sanctioned|received|paid|eligible|working|credited)|delay|stuck|pending|high|expensive|costs?\\b|fees?\\b|rates?\\b|charges|interest|trap|scam|fraud|hidden|reduc|\\bcut\\b|withdrawn|can.?t|unable|eligib|documents|collateral|guarantee|\\blaws?\\b|legal|lawsuit|default|worth|\\bvs\\b|alternative|without|repay|forgiv|penalt|closed|frozen|blocked|why"
+      ],
+      "enterprise_equivalent": "Financing",
+      "regions": [
+        "india"
+      ]
+    },
+    {
+      "id": "in_b2b_app_issues",
+      "name": "B2B app ordering problems (Udaan, Jumbotail, JioMart Partner)",
+      "description": "Wrong or late deliveries, cancelled orders, price changes and credit holds on B2B ordering apps.",
+      "keywords": [
+        "udaan|jumbotail|jiomart partner|elastic run|b2b app|wholesale app"
+      ],
+      "require": [
+        "problem|issue|complain|grievance|reject|denied|declin|refus|not (able|getting|approved|sanctioned|received|paid|eligible|working|credited)|delay|stuck|pending|high|expensive|costs?\\b|fees?\\b|rates?\\b|charges|interest|trap|scam|fraud|hidden|reduc|\\bcut\\b|withdrawn|can.?t|unable|eligib|documents|collateral|guarantee|\\blaws?\\b|legal|lawsuit|default|worth|\\bvs\\b|alternative|without|repay|forgiv|penalt|closed|frozen|blocked|why"
+      ],
+      "enterprise_equivalent": "Procurement",
+      "regions": [
+        "india"
+      ]
+    },
+    {
+      "id": "in_fake_suppliers_quality",
+      "name": "Fake suppliers & poor-quality stock",
+      "description": "IndiaMART/WhatsApp supplier frauds, advance taken and goods not sent, defective or wrong goods.",
+      "keywords": [
+        "fake (supplier|seller|manufacturer)|supplier (fraud|scam|cheat)|indiamart (scam|fraud|fake)|advance (taken|paid) (but|and)|defective|poor quality|wrong (goods|items)|duplicate"
+      ],
+      "enterprise_equivalent": "Supplier vetting & quality",
+      "regions": [
+        "india"
+      ]
+    },
+    {
+      "id": "in_margins_quick_commerce",
+      "name": "Thin margins & quick-commerce competition",
+      "description": "Margins squeezed by distributor prices, MRP rules and Blinkit/Zepto/Instamart discounts.",
+      "keywords": [
+        "margin|quick commerce|blinkit|zepto|instamart|price war|losing customers|mrp|distributor price|scheme"
+      ],
+      "enterprise_equivalent": "Pricing & margin analytics",
+      "regions": [
+        "india"
+      ]
+    },
+    {
+      "id": "in_gst_compliance",
+      "name": "GST, input credit & e-way bills",
+      "description": "GST registration and returns, input tax credit mismatches, e-invoices and e-way bills.",
+      "keywords": [
+        "\\bgst\\b|input tax credit|\\bitc\\b|e-?invoice|e-?way bill|gstr|composition scheme"
+      ],
+      "enterprise_equivalent": "Tax & compliance",
+      "regions": [
+        "india"
+      ]
+    },
+    {
+      "id": "in_marketplace_fees_returns",
+      "name": "Marketplace commissions, returns & payouts (Meesho, Flipkart, Amazon)",
+      "description": "Commission hikes, return/RTO losses, delayed settlements, seller penalties and support.",
+      "keywords": [
+        "commission|payout|settlement|\\brto\\b|return (fraud|loss|claim)|penalty|seller (account|support|blocked)|claim rejected"
+      ],
+      "enterprise_equivalent": "Channel & order management",
+      "regions": [
+        "india"
+      ]
+    },
+    {
+      "id": "in_logistics_freight",
+      "name": "Transport, freight & delivery costs",
+      "description": "Rising transport and courier costs from multiple suppliers, damaged goods in transit.",
+      "keywords": [
+        "transport|freight|logistics|courier|shipping (charges|cost)|delivery charges|porter|tempo|damaged in transit"
+      ],
+      "enterprise_equivalent": "Transport & logistics",
+      "regions": [
+        "india"
+      ]
+    },
+    {
+      "id": "in_payment_collection",
+      "name": "Collecting payments & customer udhaar",
+      "description": "Customers not paying udhaar, cheque bounces, UPI settlement delays and charges.",
+      "keywords": [
+        "customer udhaar|khata|khatabook|okcredit|payment (collection|recovery)|cheque bounce|upi (charges|settlement|limit)|soundbox"
+      ],
+      "enterprise_equivalent": "Accounts receivable & collections",
+      "regions": [
+        "india"
+      ]
+    },
+    {
+      "id": "eu_multi_supplier_ordering",
+      "name": "Reordering from many suppliers",
+      "description": "Juggling reorders, price lists and portals across several wholesalers.",
+      "keywords": [
+        "reorder|purchase order|order(ing)? from (several|multiple|many) suppliers|compare suppliers|supplier portal|price list"
+      ],
+      "enterprise_equivalent": "Procurement & purchase orders",
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_stock_sync_channels",
+      "name": "Stock sync across shop & online channels",
+      "description": "Overselling and manual stock counts across shop, website and marketplaces.",
+      "keywords": [
+        "inventory (management|software|system|sync)|stock (sync|levels|control|count)|oversell|\\bepos\\b|multichannel|linnworks|shopify pos"
+      ],
+      "enterprise_equivalent": "Inventory & order management",
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_bookkeeping_reconciliation",
+      "name": "Bookkeeping, invoices & Making Tax Digital",
+      "description": "Matching supplier invoices, marketplace payouts and VAT; MTD obligations.",
+      "keywords": [
+        "bookkeeping|accounting|xero|quickbooks|reconcil|making tax digital|\\bmtd\\b|supplier invoices|self assessment"
+      ],
+      "enterprise_equivalent": "Finance: AP/AR & reconciliation",
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_wholesale_minimums_terms",
+      "name": "Wholesale minimums & supplier terms",
+      "description": "High minimum orders, trade-account hurdles, pro-forma/upfront payment, no credit for new shops.",
+      "keywords": [
+        "minimum order|\\bmoq\\b|wholesale account|trade account|pro ?forma|upfront payment|payment terms|net 30"
+      ],
+      "enterprise_equivalent": "Supplier terms & procurement",
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_supplier_reliability",
+      "name": "Unreliable suppliers & stock-outs",
+      "description": "Late or short deliveries, backorders, suppliers going bust.",
+      "keywords": [
+        "out of stock|backorder|supplier (let|late|not|went bust|stopped)|delay(ed)? (order|delivery)|shortage"
+      ],
+      "enterprise_equivalent": "Supplier management",
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_import_customs_vat",
+      "name": "Imports, customs & post-Brexit VAT",
+      "description": "Customs charges, EORI, IOSS/VAT, CBAM and paperwork when sourcing from outside the UK/EU.",
+      "keywords": [
+        "customs|import (duty|vat|charges)|\\bvat\\b|\\bioss\\b|post-?brexit|\\beori\\b|commodity code|cbam"
+      ],
+      "enterprise_equivalent": "Trade compliance",
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_platform_fees",
+      "name": "Marketplace & wholesale-platform fees (Amazon, Etsy, eBay, Ankorstore, Faire)",
+      "description": "Fee increases, commission on wholesale platforms, offsite ads.",
+      "keywords": [
+        "(etsy|amazon|ebay|ankorstore|faire|vinted|notonthehighstreet).{0,25}(fee|commission|charge|increase|ads)|seller fees|transaction fee|offsite ads"
+      ],
+      "enterprise_equivalent": "Channel & order management",
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_payout_holds",
+      "name": "Payout holds & reserves (PayPal, Stripe, Amazon)",
+      "description": "Funds held, rolling reserves, delayed disbursements.",
+      "keywords": [
+        "payout|reserve|funds (held|on hold)|paypal (hold|limited)|stripe (hold|reserve)|disbursement|money held"
+      ],
+      "enterprise_equivalent": "Cash management",
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_cash_flow_stock_finance",
+      "name": "Cash flow & stock finance",
+      "description": "Paying suppliers before selling; stock finance, trade credit, overdrafts.",
+      "keywords": [
+        "cash ?flow|stock finance|inventory finance|trade credit|working capital|overdraft|pay suppliers"
+      ],
+      "enterprise_equivalent": "Working capital & treasury",
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_shipping_costs",
+      "name": "Shipping & courier costs",
+      "description": "Royal Mail/Evri/DPD price rises, lost parcels, returns postage.",
+      "keywords": [
+        "royal mail|evri|\\bdpd\\b|parcelforce|shipping (cost|rates)|postage|courier (cost|price)"
+      ],
+      "enterprise_equivalent": "Transport & logistics",
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_shop_overheads",
+      "name": "Rent, business rates & energy for shops",
+      "description": "Business rates, shop rent and energy bills squeezing small retailers.",
+      "keywords": [
+        "business rates|shop rent|rent (increase|review)|energy bill|high street|footfall"
+      ],
+      "enterprise_equivalent": "Cost management",
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "us_purchase_orders_suppliers",
+      "name": "Purchase orders & supplier management",
+      "description": "Managing POs, lead times and many suppliers in spreadsheets.",
+      "keywords": [
+        "purchase order|reorder|supplier (management|portal|spreadsheet)|compare suppliers|vendor management|lead time"
+      ],
+      "enterprise_equivalent": "Procurement & purchase orders",
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_inventory_sync_forecast",
+      "name": "Inventory sync & forecasting across channels",
+      "description": "Stockouts, overselling and overstock across Amazon, Shopify, Etsy and a store.",
+      "keywords": [
+        "inventory (management|software|sync|forecast|planning)|stockout|oversell|overstock|multichannel|cin7|sellbrite|inventory planner"
+      ],
+      "enterprise_equivalent": "Inventory planning & forecasting",
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_bookkeeping_reconciliation",
+      "name": "Bookkeeping, COGS & payout reconciliation",
+      "description": "Reconciling marketplace payouts, COGS and landed costs; messy books at tax time.",
+      "keywords": [
+        "bookkeeping|accounting|quickbooks|reconcil|\\bcogs\\b|landed cost tracking|payout reconciliation|profit (tracking|margin)"
+      ],
+      "enterprise_equivalent": "Finance: AP/AR & reconciliation",
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_wholesale_moq_net_terms",
+      "name": "Wholesale minimums & Net-30 terms",
+      "description": "High MOQs, no net terms for new businesses, upfront payment to suppliers.",
+      "keywords": [
+        "minimum order|\\bmoq\\b|net ?(30|60)|wholesale account|payment terms|upfront payment|resale certificate"
+      ],
+      "enterprise_equivalent": "Supplier terms & procurement",
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_sourcing_scams_quality",
+      "name": "Sourcing scams & quality (Alibaba, 1688, dropship suppliers)",
+      "description": "Fake factories, samples vs. bulk quality, dropship suppliers vanishing.",
+      "keywords": [
+        "alibaba|1688|aliexpress|cj dropshipping|supplier|factory|dropship"
+      ],
+      "require": [
+        "scam|fake|fraud|quality|defect|never (shipped|arrived)|wrong|refund|dispute|trust|legit"
+      ],
+      "enterprise_equivalent": "Supplier vetting & quality",
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_tariffs_landed_cost",
+      "name": "Tariffs & landed costs",
+      "description": "Tariff increases, end of de minimis, customs brokers raising landed cost.",
+      "keywords": [
+        "tariff|duty|duties|customs|landed cost|de minimis|section 301|customs broker"
+      ],
+      "enterprise_equivalent": "Trade compliance & landed cost",
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_inventory_financing",
+      "name": "Inventory financing & cash flow",
+      "description": "Paying suppliers months before sales; PO financing, credit lines, cash crunch.",
+      "keywords": [
+        "inventory (financing|loan)|cash ?flow|working capital|line of credit|purchase order financ|po financ|capital (offer|loan)|shopify capital|amazon lending"
+      ],
+      "enterprise_equivalent": "Working capital & treasury",
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_marketplace_fees_suspensions",
+      "name": "Marketplace fees & account suspensions (Amazon, Etsy, Walmart, Faire)",
+      "description": "FBA fee hikes, storage fees, suspensions and account-health strikes.",
+      "keywords": [
+        "(amazon|fba|etsy|walmart|faire|tiktok shop|ebay).{0,25}(fee|suspend|deactivat|account health|policy|strike)|storage fees|referral fee|inbound placement"
+      ],
+      "enterprise_equivalent": "Channel & order management",
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_payout_holds",
+      "name": "Payout holds & reserves (Stripe, PayPal, Shopify Payments)",
+      "description": "Rolling reserves, funds held for weeks, payout delays.",
+      "keywords": [
+        "payout|rolling reserve|funds (held|on hold)|paypal hold|stripe (hold|reserve)|shopify payments (hold|reserve)|disbursement"
+      ],
+      "enterprise_equivalent": "Cash management",
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_shipping_3pl_returns",
+      "name": "Shipping, 3PL & returns",
+      "description": "Carrier rate hikes, 3PL costs and errors, return fraud.",
+      "keywords": [
+        "shipping (cost|rates)|\\b3pl\\b|fulfillment (center|cost)|return (fraud|abuse)|\\bups\\b|fedex|usps"
+      ],
+      "enterprise_equivalent": "Logistics & returns",
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_sales_tax_compliance",
+      "name": "Sales tax & compliance",
+      "description": "Multi-state sales tax nexus, 1099-K, resale certificates.",
+      "keywords": [
+        "sales tax|nexus|1099-?k|resale certificate|marketplace facilitator"
+      ],
+      "enterprise_equivalent": "Tax & compliance",
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "other",
+      "name": "Other",
+      "description": "Clear customer pain point that does not fit any category above.",
+      "keywords": []
+    }
+  ],
+  "personas": [
+    {
+      "id": "in_kirana_owner",
+      "name": "Kirana / general store owner",
+      "description": "Neighbourhood store buying from several distributors and B2B apps.",
+      "keywords": [
+        "kirana|general store|grocery shop|provision store|\\bdukaan\\b|my shop"
+      ],
+      "regions": [
+        "india"
+      ]
+    },
+    {
+      "id": "in_wholesaler_distributor",
+      "name": "Wholesaler / distributor",
+      "description": "Buys from brands and sells on credit to retailers.",
+      "keywords": [
+        "wholesaler|distributor|stockist|super stockist|c&f"
+      ],
+      "regions": [
+        "india"
+      ]
+    },
+    {
+      "id": "in_online_reseller",
+      "name": "Online reseller (Meesho, Instagram, WhatsApp)",
+      "description": "Sources from wholesale markets or suppliers and resells online.",
+      "keywords": [
+        "reseller|meesho|instagram (store|shop)|whatsapp (business|group)|reselling|dropship"
+      ],
+      "regions": [
+        "india"
+      ]
+    },
+    {
+      "id": "in_small_brand_maker",
+      "name": "Small manufacturer / D2C brand",
+      "description": "Makes products and sources raw material from several vendors.",
+      "keywords": [
+        "my brand|manufactur|d2c|raw material|private label"
+      ],
+      "regions": [
+        "india"
+      ]
+    },
+    {
+      "id": "in_street_vendor",
+      "name": "Street vendor",
+      "description": "Cart or stall; PM SVANidhi borrower.",
+      "keywords": [
+        "street vendor|thela|stall|hawker|svanidhi|rehri"
+      ],
+      "regions": [
+        "india"
+      ]
+    },
+    {
+      "id": "eu_independent_shop",
+      "name": "Independent shop owner",
+      "description": "High-street or village shop buying from many suppliers.",
+      "keywords": [
+        "my shop|independent (shop|retailer)|boutique|gift shop|high street"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_market_trader",
+      "name": "Market trader",
+      "description": "Sells at markets and fairs.",
+      "keywords": [
+        "market (trader|stall)|car boot|craft fair"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_online_maker",
+      "name": "Online maker / Etsy seller",
+      "description": "Handmade or small-batch seller.",
+      "keywords": [
+        "etsy|handmade|maker|small batch|notonthehighstreet"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_online_reseller",
+      "name": "Amazon / eBay reseller",
+      "description": "Buys wholesale or clearance and resells online.",
+      "keywords": [
+        "amazon seller|ebay seller|reseller|retail arbitrage|fba|vinted"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "us_amazon_fba_seller",
+      "name": "Amazon / FBA seller",
+      "description": "Sources from several suppliers for Amazon.",
+      "keywords": [
+        "\\bfba\\b|amazon seller|private label|wholesale on amazon"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_etsy_handmade",
+      "name": "Etsy / handmade seller",
+      "description": "Small-batch maker.",
+      "keywords": [
+        "etsy|handmade|maker"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_boutique_retailer",
+      "name": "Small retailer / boutique",
+      "description": "Physical store buying wholesale.",
+      "keywords": [
+        "boutique|my store|retail store|brick and mortar|gift shop"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_dropshipper",
+      "name": "Dropshipper",
+      "description": "Sells without holding stock.",
+      "keywords": [
+        "dropship|shopify store"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_wholesaler",
+      "name": "Small wholesaler / distributor",
+      "description": "Buys in bulk and resells to retailers.",
+      "keywords": [
+        "wholesaler|distributor|distribution"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "general_citizen",
+      "name": "General customer",
+      "description": "Persona cannot be inferred.",
+      "keywords": []
+    }
+  ]
+}

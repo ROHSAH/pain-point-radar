@@ -33,6 +33,19 @@ const TOPICS = [
     ),
   },
   {
+    id: "small-sellers",
+    label: "Small vendors & sellers",
+    description: "Small shops, resellers and online sellers who source from several suppliers (wholesalers, distributors, B2B apps, factories) and juggle supplier credit, stock and working capital, platform fees, payouts, logistics and tax.",
+    context_keywords: ["wholesale", "supplier", "distributor", "seller", "vendor", "retailer", "kirana", "\\bshop\\b", "store", "inventory", "\\bstock\\b", "sourcing", "reseller", "udaan", "jumbotail", "jiomart partner", "indiamart", "meesho", "faire", "ankorstore", "alibaba", "1688", "etsy", "amazon seller", "\\bfba\\b", "ebay", "\\bb2b\\b", "trade account", "\\bmoq\\b", "merchant", "dropship", "market trader", "\\bgst\\b", "payout", "udhaar", "khata", "net ?30"],
+    irrelevant_keywords: ["\\bstock (price|market|broker)\\b", "\\bshare price\\b", "\\bjobs?\\b", "day trad", "forex", "trading account", "demat", "udaan (scheme|yatri|movie|film|serial|watch|airport|flight)", "where can i watch", "wholesale electricity", "electricity market", "\\bmeta\\b", "advertis"],
+    subreddit_query: "supplier OR wholesale OR distributor OR inventory OR seller fees OR payout",
+    regions: R(
+      plan(["india", "IndianStartups", "StartUpIndia", "CAIndia", "indianbusiness", "IndianEcommerce"], ["wholesale market", "udaan", "indiamart supplier", "kirana store loan", "distributor credit", "meesho seller", "jumbotail", "b2b wholesale app"], ["supplier credit problem", "udaan order problem", "indiamart supplier fraud", "meesho seller payment", "kirana shop loan"]),
+      plan(["smallbusinessuk", "UKBusiness", "EtsySellers", "Entrepreneur", "eupersonalfinance", "AmazonSeller"], ["wholesale suppliers uk", "trade account", "ankorstore", "faire wholesale", "etsy seller fees", "market trader", "amazon seller uk"], ["supplier minimum order", "ankorstore problems", "etsy fees increase", "import vat problems", "paypal holding funds"]),
+      plan(["smallbusiness", "FulfillmentByAmazon", "EtsySellers", "AmazonSeller", "dropship", "ecommerce"], ["wholesale suppliers", "faire wholesale", "alibaba supplier", "amazon seller", "inventory financing", "net 30 vendors", "etsy seller"], ["alibaba supplier scam", "tariffs small business", "amazon fba fees", "stripe holding funds", "inventory financing"]),
+    ),
+  },
+  {
     id: "msme-lending",
     label: "MSME & B2B lending",
     description: "Credit for small and medium businesses: business loans, working capital, OD/CC limits, invoice discounting and factoring, TReDS, trade finance, government schemes (Mudra, CGTMSE, SBA, British Business Bank), merchant cash advances, NBFC and fintech lenders.",

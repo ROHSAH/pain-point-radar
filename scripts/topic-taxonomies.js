@@ -14,6 +14,76 @@ const CREDIT_PAIN = "low|down|drop|fell|wrong|error|incorrect|dispute|remove|imp
 const PAIN = "problem|issue|complain|grievance|reject|denied|declin|refus|not (able|getting|approved|sanctioned|received|paid|eligible|working|credited)|delay|stuck|pending|high|expensive|costs?\\b|fees?\\b|rates?\\b|charges|interest|trap|scam|fraud|hidden|reduc|\\bcut\\b|withdrawn|can.?t|unable|eligib|documents|collateral|guarantee|\\blaws?\\b|legal|lawsuit|default|worth|\\bvs\\b|alternative|without|repay|forgiv|penalt|closed|frozen|blocked|why";
 
 export const TAXONOMIES = {
+  // ───────────────────────────────── Small vendors & sellers (multi-supplier) ─────────────────────────────────
+  "small-sellers": {
+    india: {
+      categories: [
+        C("multi_supplier_ordering", "Ordering from many suppliers by phone & WhatsApp", "Placing and tracking orders with several distributors by call or WhatsApp; comparing rate lists by hand.", "whatsapp order|order (from|to|with) (multiple|many|different|several) (suppliers|distributors|wholesalers)|compare (prices|rates)|best (supplier|wholesaler)|rate list|price list|purchase order"),
+        C("stock_tracking_manual", "Tracking stock, expiry & reorders manually", "No simple way to see stock, expiries and when to reorder; billing apps that don't fit a kirana.", "stock (register|tracking|management|count)|inventory (app|software|management)|expiry|reorder|billing (software|app)|vyapar|mybillbook|marg erp|\\btally\\b"),
+        C("bookkeeping_reconciliation", "Purchase bills, books & reconciliation", "Keeping purchase bills from many suppliers, ledgers and outstanding balances reconciled.", "accounting|bookkeeping|purchase (bill|register|entry)|reconcil|ledger|khata (book|app)|outstanding (report|balance)|account statement"),
+        C("supplier_credit_udhaar", "Supplier credit & udhaar terms", "Distributors and wholesalers cutting credit days, demanding advance or cash, udhaar disputes.", "credit (period|days|limit)|udhaar|udhar|advance payment|cash only|distributor credit|payment terms|on credit"),
+        C("working_capital_stock", "Working capital stuck in stock", "Money tied up in inventory across suppliers; dead stock; cash-flow gaps before festivals.", "working capital|cash flow|dead stock|stock (stuck|piling|clearance)|inventory (loan|finance)|festival stock"),
+        C("small_loans_no_papers", "Small loans without ITR/GST papers", "Shopkeepers unable to get loans without ITR, GST or collateral; turning to moneylenders or apps.", "(shop|kirana|business|dukaan) loan|loan (without|for) (itr|gst|documents|shop|business)|moneylender|daily (emi|collection)|pm svanidhi|mudra", PAIN),
+        C("b2b_app_issues", "B2B app ordering problems (Udaan, Jumbotail, JioMart Partner)", "Wrong or late deliveries, cancelled orders, price changes and credit holds on B2B ordering apps.", "udaan|jumbotail|jiomart partner|elastic run|b2b app|wholesale app", PAIN),
+        C("fake_suppliers_quality", "Fake suppliers & poor-quality stock", "IndiaMART/WhatsApp supplier frauds, advance taken and goods not sent, defective or wrong goods.", "fake (supplier|seller|manufacturer)|supplier (fraud|scam|cheat)|indiamart (scam|fraud|fake)|advance (taken|paid) (but|and)|defective|poor quality|wrong (goods|items)|duplicate"),
+        C("margins_quick_commerce", "Thin margins & quick-commerce competition", "Margins squeezed by distributor prices, MRP rules and Blinkit/Zepto/Instamart discounts.", "margin|quick commerce|blinkit|zepto|instamart|price war|losing customers|mrp|distributor price|scheme"),
+        C("gst_compliance", "GST, input credit & e-way bills", "GST registration and returns, input tax credit mismatches, e-invoices and e-way bills.", "\\bgst\\b|input tax credit|\\bitc\\b|e-?invoice|e-?way bill|gstr|composition scheme"),
+        C("marketplace_fees_returns", "Marketplace commissions, returns & payouts (Meesho, Flipkart, Amazon)", "Commission hikes, return/RTO losses, delayed settlements, seller penalties and support.", "commission|payout|settlement|\\brto\\b|return (fraud|loss|claim)|penalty|seller (account|support|blocked)|claim rejected"),
+        C("logistics_freight", "Transport, freight & delivery costs", "Rising transport and courier costs from multiple suppliers, damaged goods in transit.", "transport|freight|logistics|courier|shipping (charges|cost)|delivery charges|porter|tempo|damaged in transit"),
+        C("payment_collection", "Collecting payments & customer udhaar", "Customers not paying udhaar, cheque bounces, UPI settlement delays and charges.", "customer udhaar|khata|khatabook|okcredit|payment (collection|recovery)|cheque bounce|upi (charges|settlement|limit)|soundbox"),
+      ],
+      personas: [
+        P("kirana_owner", "Kirana / general store owner", "Neighbourhood store buying from several distributors and B2B apps.", "kirana|general store|grocery shop|provision store|\\bdukaan\\b|my shop"),
+        P("wholesaler_distributor", "Wholesaler / distributor", "Buys from brands and sells on credit to retailers.", "wholesaler|distributor|stockist|super stockist|c&f"),
+        P("online_reseller", "Online reseller (Meesho, Instagram, WhatsApp)", "Sources from wholesale markets or suppliers and resells online.", "reseller|meesho|instagram (store|shop)|whatsapp (business|group)|reselling|dropship"),
+        P("small_brand_maker", "Small manufacturer / D2C brand", "Makes products and sources raw material from several vendors.", "my brand|manufactur|d2c|raw material|private label"),
+        P("street_vendor", "Street vendor", "Cart or stall; PM SVANidhi borrower.", "street vendor|thela|stall|hawker|svanidhi|rehri"),
+      ],
+    },
+    europe: {
+      categories: [
+        C("multi_supplier_ordering", "Reordering from many suppliers", "Juggling reorders, price lists and portals across several wholesalers.", "reorder|purchase order|order(ing)? from (several|multiple|many) suppliers|compare suppliers|supplier portal|price list"),
+        C("stock_sync_channels", "Stock sync across shop & online channels", "Overselling and manual stock counts across shop, website and marketplaces.", "inventory (management|software|system|sync)|stock (sync|levels|control|count)|oversell|\\bepos\\b|multichannel|linnworks|shopify pos"),
+        C("bookkeeping_reconciliation", "Bookkeeping, invoices & Making Tax Digital", "Matching supplier invoices, marketplace payouts and VAT; MTD obligations.", "bookkeeping|accounting|xero|quickbooks|reconcil|making tax digital|\\bmtd\\b|supplier invoices|self assessment"),
+        C("wholesale_minimums_terms", "Wholesale minimums & supplier terms", "High minimum orders, trade-account hurdles, pro-forma/upfront payment, no credit for new shops.", "minimum order|\\bmoq\\b|wholesale account|trade account|pro ?forma|upfront payment|payment terms|net 30"),
+        C("supplier_reliability", "Unreliable suppliers & stock-outs", "Late or short deliveries, backorders, suppliers going bust.", "out of stock|backorder|supplier (let|late|not|went bust|stopped)|delay(ed)? (order|delivery)|shortage"),
+        C("import_customs_vat", "Imports, customs & post-Brexit VAT", "Customs charges, EORI, IOSS/VAT, CBAM and paperwork when sourcing from outside the UK/EU.", "customs|import (duty|vat|charges)|\\bvat\\b|\\bioss\\b|post-?brexit|\\beori\\b|commodity code|cbam"),
+        C("platform_fees", "Marketplace & wholesale-platform fees (Amazon, Etsy, eBay, Ankorstore, Faire)", "Fee increases, commission on wholesale platforms, offsite ads.", "(etsy|amazon|ebay|ankorstore|faire|vinted|notonthehighstreet).{0,25}(fee|commission|charge|increase|ads)|seller fees|transaction fee|offsite ads"),
+        C("payout_holds", "Payout holds & reserves (PayPal, Stripe, Amazon)", "Funds held, rolling reserves, delayed disbursements.", "payout|reserve|funds (held|on hold)|paypal (hold|limited)|stripe (hold|reserve)|disbursement|money held"),
+        C("cash_flow_stock_finance", "Cash flow & stock finance", "Paying suppliers before selling; stock finance, trade credit, overdrafts.", "cash ?flow|stock finance|inventory finance|trade credit|working capital|overdraft|pay suppliers"),
+        C("shipping_costs", "Shipping & courier costs", "Royal Mail/Evri/DPD price rises, lost parcels, returns postage.", "royal mail|evri|\\bdpd\\b|parcelforce|shipping (cost|rates)|postage|courier (cost|price)"),
+        C("shop_overheads", "Rent, business rates & energy for shops", "Business rates, shop rent and energy bills squeezing small retailers.", "business rates|shop rent|rent (increase|review)|energy bill|high street|footfall"),
+      ],
+      personas: [
+        P("independent_shop", "Independent shop owner", "High-street or village shop buying from many suppliers.", "my shop|independent (shop|retailer)|boutique|gift shop|high street"),
+        P("market_trader", "Market trader", "Sells at markets and fairs.", "market (trader|stall)|car boot|craft fair"),
+        P("online_maker", "Online maker / Etsy seller", "Handmade or small-batch seller.", "etsy|handmade|maker|small batch|notonthehighstreet"),
+        P("online_reseller", "Amazon / eBay reseller", "Buys wholesale or clearance and resells online.", "amazon seller|ebay seller|reseller|retail arbitrage|fba|vinted"),
+      ],
+    },
+    us: {
+      categories: [
+        C("purchase_orders_suppliers", "Purchase orders & supplier management", "Managing POs, lead times and many suppliers in spreadsheets.", "purchase order|reorder|supplier (management|portal|spreadsheet)|compare suppliers|vendor management|lead time"),
+        C("inventory_sync_forecast", "Inventory sync & forecasting across channels", "Stockouts, overselling and overstock across Amazon, Shopify, Etsy and a store.", "inventory (management|software|sync|forecast|planning)|stockout|oversell|overstock|multichannel|cin7|sellbrite|inventory planner"),
+        C("bookkeeping_reconciliation", "Bookkeeping, COGS & payout reconciliation", "Reconciling marketplace payouts, COGS and landed costs; messy books at tax time.", "bookkeeping|accounting|quickbooks|reconcil|\\bcogs\\b|landed cost tracking|payout reconciliation|profit (tracking|margin)"),
+        C("wholesale_moq_net_terms", "Wholesale minimums & Net-30 terms", "High MOQs, no net terms for new businesses, upfront payment to suppliers.", "minimum order|\\bmoq\\b|net ?(30|60)|wholesale account|payment terms|upfront payment|resale certificate"),
+        C("sourcing_scams_quality", "Sourcing scams & quality (Alibaba, 1688, dropship suppliers)", "Fake factories, samples vs. bulk quality, dropship suppliers vanishing.", "alibaba|1688|aliexpress|cj dropshipping|supplier|factory|dropship", "scam|fake|fraud|quality|defect|never (shipped|arrived)|wrong|refund|dispute|trust|legit"),
+        C("tariffs_landed_cost", "Tariffs & landed costs", "Tariff increases, end of de minimis, customs brokers raising landed cost.", "tariff|duty|duties|customs|landed cost|de minimis|section 301|customs broker"),
+        C("inventory_financing", "Inventory financing & cash flow", "Paying suppliers months before sales; PO financing, credit lines, cash crunch.", "inventory (financing|loan)|cash ?flow|working capital|line of credit|purchase order financ|po financ|capital (offer|loan)|shopify capital|amazon lending"),
+        C("marketplace_fees_suspensions", "Marketplace fees & account suspensions (Amazon, Etsy, Walmart, Faire)", "FBA fee hikes, storage fees, suspensions and account-health strikes.", "(amazon|fba|etsy|walmart|faire|tiktok shop|ebay).{0,25}(fee|suspend|deactivat|account health|policy|strike)|storage fees|referral fee|inbound placement"),
+        C("payout_holds", "Payout holds & reserves (Stripe, PayPal, Shopify Payments)", "Rolling reserves, funds held for weeks, payout delays.", "payout|rolling reserve|funds (held|on hold)|paypal hold|stripe (hold|reserve)|shopify payments (hold|reserve)|disbursement"),
+        C("shipping_3pl_returns", "Shipping, 3PL & returns", "Carrier rate hikes, 3PL costs and errors, return fraud.", "shipping (cost|rates)|\\b3pl\\b|fulfillment (center|cost)|return (fraud|abuse)|\\bups\\b|fedex|usps"),
+        C("sales_tax_compliance", "Sales tax & compliance", "Multi-state sales tax nexus, 1099-K, resale certificates.", "sales tax|nexus|1099-?k|resale certificate|marketplace facilitator"),
+      ],
+      personas: [
+        P("amazon_fba_seller", "Amazon / FBA seller", "Sources from several suppliers for Amazon.", "\\bfba\\b|amazon seller|private label|wholesale on amazon"),
+        P("etsy_handmade", "Etsy / handmade seller", "Small-batch maker.", "etsy|handmade|maker"),
+        P("boutique_retailer", "Small retailer / boutique", "Physical store buying wholesale.", "boutique|my store|retail store|brick and mortar|gift shop"),
+        P("dropshipper", "Dropshipper", "Sells without holding stock.", "dropship|shopify store"),
+        P("wholesaler", "Small wholesaler / distributor", "Buys in bulk and resells to retailers.", "wholesaler|distributor|distribution"),
+      ],
+    },
+  },
   // ───────────────────────────────── MSME & B2B lending ─────────────────────────────────
   "msme-lending": {
     india: {
@@ -822,3 +892,19 @@ export const TAXONOMIES = {
     },
   },
 };
+
+// Enterprise capability each small-seller pain point stands in for (what large firms run on ERP/SAP-type suites).
+const ENTERPRISE_EQUIVALENT = {
+  multi_supplier_ordering: "Procurement & purchase orders", purchase_orders_suppliers: "Procurement & purchase orders",
+  stock_tracking_manual: "Inventory management", stock_sync_channels: "Inventory & order management", inventory_sync_forecast: "Inventory planning & forecasting",
+  bookkeeping_reconciliation: "Finance: AP/AR & reconciliation",
+  supplier_credit_udhaar: "Supply-chain finance", wholesale_minimums_terms: "Supplier terms & procurement", wholesale_moq_net_terms: "Supplier terms & procurement",
+  working_capital_stock: "Working capital & treasury", cash_flow_stock_finance: "Working capital & treasury", inventory_financing: "Working capital & treasury",
+  small_loans_no_papers: "Financing", payment_collection: "Accounts receivable & collections",
+  b2b_app_issues: "Procurement", fake_suppliers_quality: "Supplier vetting & quality", supplier_reliability: "Supplier management", sourcing_scams_quality: "Supplier vetting & quality",
+  margins_quick_commerce: "Pricing & margin analytics", gst_compliance: "Tax & compliance", import_customs_vat: "Trade compliance", tariffs_landed_cost: "Trade compliance & landed cost", sales_tax_compliance: "Tax & compliance",
+  marketplace_fees_returns: "Channel & order management", platform_fees: "Channel & order management", marketplace_fees_suspensions: "Channel & order management",
+  payout_holds: "Cash management", logistics_freight: "Transport & logistics", shipping_costs: "Transport & logistics", shipping_3pl_returns: "Logistics & returns",
+  shop_overheads: "Cost management",
+};
+for (const region of Object.values(TAXONOMIES["small-sellers"])) for (const c of region.categories) if (ENTERPRISE_EQUIVALENT[c.id]) c.enterprise_equivalent = ENTERPRISE_EQUIVALENT[c.id];

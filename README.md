@@ -18,18 +18,19 @@ Web / complaint sites
 ```bash
 npm install
 cp .env.example .env                  # add the keys you have (see Sources)
-node src/cli.js topics                # lists the 14 topics
+node src/cli.js topics                # lists the 15 topics
 node src/cli.js run --topic recycling # collect -> classify -> report
 open out/dashboard.html               # all topics, with a Topic dropdown
 ```
 
 ## Topics
 
-14 starter topics ship with the repo:
+15 starter topics ship with the repo:
 
 | Area | Topics (`--topic` id) |
 |---|---|
 | Finance | Banking & payments (`banking-payments`), Consumer loans & lending (`lending-loans`), **MSME & B2B lending** (`msme-lending`), Insurance (`insurance`) |
+| Small business operations | **Small vendors & sellers** (`small-sellers`): sourcing from many suppliers, supplier credit, stock, platform fees, payouts, logistics, tax. Each pain point is tagged with the enterprise capability (procurement, inventory, AP/AR, supply-chain finance…) that big companies run on ERP suites |
 | Energy & environment | Home energy & electricity (`energy-utilities`), EV charging (`ev-charging`), Recycling (`recycling`) |
 | Everyday services | Mobile & internet (`telecom-internet`), Online shopping (`ecommerce`), Food delivery (`food-delivery`), Ride-hailing & taxis (`ride-hailing`) |
 | Life & home | Healthcare & hospitals (`healthcare`), Renting & housing (`renting-housing`), Air travel (`air-travel`) |

@@ -1,0 +1,139 @@
+{
+  "_comment": "Template - replace the example subreddits and queries with ones specific to this topic.",
+  "india": {
+    "label": "India",
+    "google": {
+      "gl": "in",
+      "hl": "en"
+    },
+    "youtube": {
+      "regionCode": "IN"
+    },
+    "brave": {
+      "country": "IN"
+    },
+    "subreddits": [
+      "india",
+      "IndianStartups",
+      "StartUpIndia",
+      "CAIndia",
+      "indianbusiness",
+      "IndianEcommerce"
+    ],
+    "queries": [
+      "supplier credit problem",
+      "udaan order problem",
+      "indiamart supplier fraud",
+      "meesho seller payment",
+      "kirana shop loan"
+    ],
+    "suggest_seeds": [
+      "wholesale market",
+      "udaan",
+      "indiamart supplier",
+      "kirana store loan",
+      "distributor credit",
+      "meesho seller",
+      "jumbotail",
+      "b2b wholesale app"
+    ],
+    "web_queries": [
+      "supplier credit problem complaint",
+      "udaan order problem complaint",
+      "indiamart supplier fraud complaint"
+    ],
+    "x_queries": [
+      "(\"wholesale market\" OR \"udaan\" OR \"indiamart supplier\") (complaint OR problem OR worst OR scam) -is:retweet"
+    ]
+  },
+  "europe": {
+    "label": "Europe (UK + EU)",
+    "google": {
+      "gl": "gb",
+      "hl": "en"
+    },
+    "youtube": {
+      "regionCode": "GB"
+    },
+    "brave": {
+      "country": "GB"
+    },
+    "subreddits": [
+      "smallbusinessuk",
+      "UKBusiness",
+      "EtsySellers",
+      "Entrepreneur",
+      "eupersonalfinance",
+      "AmazonSeller"
+    ],
+    "queries": [
+      "supplier minimum order",
+      "ankorstore problems",
+      "etsy fees increase",
+      "import vat problems",
+      "paypal holding funds"
+    ],
+    "suggest_seeds": [
+      "wholesale suppliers uk",
+      "trade account",
+      "ankorstore",
+      "faire wholesale",
+      "etsy seller fees",
+      "market trader",
+      "amazon seller uk"
+    ],
+    "web_queries": [
+      "supplier minimum order complaint",
+      "ankorstore problems complaint",
+      "etsy fees increase complaint"
+    ],
+    "x_queries": [
+      "(\"wholesale suppliers uk\" OR \"trade account\" OR \"ankorstore\") (complaint OR problem OR worst OR scam) -is:retweet"
+    ]
+  },
+  "us": {
+    "label": "United States",
+    "google": {
+      "gl": "us",
+      "hl": "en"
+    },
+    "youtube": {
+      "regionCode": "US"
+    },
+    "brave": {
+      "country": "US"
+    },
+    "subreddits": [
+      "smallbusiness",
+      "FulfillmentByAmazon",
+      "EtsySellers",
+      "AmazonSeller",
+      "dropship",
+      "ecommerce"
+    ],
+    "queries": [
+      "alibaba supplier scam",
+      "tariffs small business",
+      "amazon fba fees",
+      "stripe holding funds",
+      "inventory financing"
+    ],
+    "suggest_seeds": [
+      "wholesale suppliers",
+      "faire wholesale",
+      "alibaba supplier",
+      "amazon seller",
+      "inventory financing",
+      "net 30 vendors",
+      "etsy seller"
+    ],
+    "web_queries": [
+      "alibaba supplier scam complaint",
+      "tariffs small business complaint",
+      "amazon fba fees complaint"
+    ],
+    "x_queries": [
+      "(\"wholesale suppliers\" OR \"faire wholesale\" OR \"alibaba supplier\") (complaint OR problem OR worst OR scam) -is:retweet"
+    ]
+  }
+}
