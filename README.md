@@ -78,6 +78,21 @@ industry's own before relying on the results.
 
 Sources without keys are skipped with a message; nothing is faked.
 
+**Reddit without the Reddit API.** While Reddit API access is pending, the web collector also runs
+`<problem query> site:reddit.com/r/<subreddit>` searches for each region's subreddits through Brave.
+Those results show as **Reddit (via search)**: real posts with their titles and search snippets, but
+not full threads or comments.
+
+**Staying inside Brave's free plan.** Every Brave call is counted in `data/_brave_usage.json`:
+- a monthly cap shared by all topics (`BRAVE_MONTHLY_LIMIT`, default 1000 calls);
+- a per-run cap (`--max-web-calls`, default 300);
+- a search already run in the last 30 days is skipped instead of paid for again;
+- the run stops on the first quota error instead of retrying;
+- one request per second.
+
+A full web run of all 14 topics needs about 1,000 calls, so run the topics you care about most first,
+e.g. `node src/cli.js run --topic msme-lending --sources web`, and spread the rest over the month.
+
 ## Classification
 
 `--classifier auto` (default) uses **Claude** when `ANTHROPIC_API_KEY` (or an `ant` profile) is set.

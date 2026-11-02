@@ -38,6 +38,7 @@ Options
   --limit          max items per query/source             (default: 100)
   --time           reddit time window: week|month|year|all (default: year)
   --since-days     drop documents older than N days        (default: 365)
+  --max-web-calls  Brave Search calls allowed this run      (default: 300; monthly cap via BRAVE_MONTHLY_LIMIT, default 1000)
   --max-docs       cap documents classified this run (cost control)
   --batch-size     documents per Claude request           (default: 20)
   --concurrency    parallel Claude requests               (default: 4)
@@ -57,6 +58,7 @@ const { positionals, values: a } = parseArgs({
     limit: { type: "string", default: "100" },
     time: { type: "string", default: "year" },
     "since-days": { type: "string", default: "365" },
+    "max-web-calls": { type: "string", default: "300" },
     "max-docs": { type: "string" },
     "batch-size": { type: "string", default: "20" },
     concurrency: { type: "string", default: "4" },
@@ -109,7 +111,7 @@ async function main() {
       sources: list(a.sources),
       dataDir,
       regionConfig: topic.regions,
-      opts: { limit: Number(a.limit), timeWindow: a.time, sinceDays: Number(a["since-days"]) || 0, subredditQuery: topic.subreddit_query },
+      opts: { limit: Number(a.limit), timeWindow: a.time, sinceDays: Number(a["since-days"]) || 0, subredditQuery: topic.subreddit_query, maxWebCalls: Number(a["max-web-calls"]) },
     });
   }
 

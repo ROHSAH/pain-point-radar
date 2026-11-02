@@ -246,7 +246,7 @@ a { color: var(--accent-ink); }
   const ROWS = D.rows;
   const REGION = { india: "India", europe: "Europe", us: "United States", other: "Other / unknown" };
   const CHANNEL = { search: "Search", discussion: "Discussion", social: "Social", review: "Review" };
-  const SOURCE = { reddit: "Reddit", x: "X", youtube: "YouTube", google_suggest: "Google search", web: "Web / complaint sites" };
+  const SOURCE = { reddit: "Reddit", reddit_search: "Reddit (via search)", x: "X", youtube: "YouTube", google_suggest: "Google search", web: "Web / complaint sites" };
   const DIMS = {
     tp: { label: "Topic", fmt: (v) => v },
     k: { label: "Pain point", fmt: (v) => v },
@@ -264,7 +264,7 @@ a { color: var(--accent-ink); }
   const store = { get(k) { try { return localStorage.getItem(k); } catch { return null; } }, set(k, v) { try { localStorage.setItem(k, v); } catch {} } };
 
   // ---------- header
-  const ALL_SOURCES = ["reddit", "x", "youtube", "google_suggest", "web"];
+  const ALL_SOURCES = ["reddit", "reddit_search", "x", "youtube", "google_suggest", "web"];
   $("eyebrow").textContent = "Customer pain points · " + (D.topics.length > 4 ? D.topics.length + " topics" : D.topics.map((t) => t.label).join(" · ")) + " · India · Europe · US";
   $("meta").textContent = ROWS.length.toLocaleString() + " pain-point mentions from " + D.totalDocs.toLocaleString() + " collected documents. Generated " + D.generatedAt.slice(0, 16).replace("T", " ") + " UTC" + (D.dateRange ? ", posts dated " + D.dateRange[0] + " to " + D.dateRange[1] : "") + ".";
   $("sources").innerHTML = ALL_SOURCES.map((s) => {

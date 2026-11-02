@@ -132,3 +132,20 @@ test("product categories need a problem signal ('require')", async () => {
   assert.equal(classify(doc("merchant cash advance")).relevant, false);
   assert.equal(classify(doc("is merchant cash advance illegal")).pain_points[0].category, "mca");
 });
+
+test("reddit-via-search queries target the region's subreddits", async () => {
+  const { redditSearchQueries } = await import("../src/sources/webSearch.js");
+  const qs = redditSearchQueries({ subreddits: ["IndianStartups", "CAIndia", "india", "x"], queries: ["msme loan rejected", "mudra loan problem", "z"] });
+  assert.equal(qs.length, 6);
+  assert.equal(qs[0], "msme loan rejected site:reddit.com/r/IndianStartups");
+});
+
+test("Brave budget enforces caps and skips repeats", async () => {
+  const { createBudget, BudgetExhausted } = await import("../src/sources/braveBudget.js");
+  const os = await import("node:os");
+  const b = createBudget({ perRun: 2, monthly: 1e9, file: path.join(os.tmpdir(), `brave-budget-test-${process.pid}.json`) });
+  b.reserve(); b.reserve();
+  assert.throws(() => b.reserve(), BudgetExhausted);
+  b.done("test|unit-check|0");
+  assert.equal(b.seenRecently("test|unit-check|0"), true);
+});
