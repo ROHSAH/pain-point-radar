@@ -33,6 +33,18 @@ const TOPICS = [
     ),
   },
   {
+    id: "msme-lending",
+    label: "MSME & B2B lending",
+    description: "Credit for small and medium businesses: business loans, working capital, OD/CC limits, invoice discounting and factoring, TReDS, trade finance, government schemes (Mudra, CGTMSE, SBA, British Business Bank), merchant cash advances, NBFC and fintech lenders.",
+    context_keywords: ["business loan", "\\bmsme\\b", "\\bsmes?\\b", "small business", "mudra", "working capital", "invoice", "factoring", "\\btreds\\b", "supply chain financ", "merchant cash advance", "\\bmca\\b", "line of credit", "credit line", "overdraft", "\\bod limit", "cash credit", "\\bcc limit", "cgtmse", "\\bsba\\b", "equipment financ", "trade financ", "letter of credit", "bank guarantee", "bounce ?back loan", "start ?up loan", "revenue based financ", "\\bnbfc\\b", "collateral", "udyam", "lendingkart", "flexiloans", "indifi", "bluevine", "fundbox", "iwoca", "funding circle", "ondeck", "kabbage", "pmegp", "commercial loan", "company loan"],
+    subreddit_query: "\"business loan\" OR MSME OR \"working capital\" OR \"line of credit\" OR \"invoice financing\" OR SBA",
+    regions: R(
+      plan(["IndianStartups", "StartUpIndia", "CAIndia", "india", "IndiaInvestments", "IndiaTax"], ["msme loan", "business loan", "mudra loan", "working capital loan", "invoice discounting", "cgtmse", "od limit", "treds"], ["msme loan rejected", "business loan collateral", "mudra loan problem", "working capital limit", "payment delay msme"]),
+      plan(["smallbusinessuk", "UKPersonalFinance", "Entrepreneur", "eupersonalfinance", "germany"], ["business loan uk", "start up loan", "invoice finance", "merchant cash advance", "british business bank", "business overdraft"], ["business loan rejected uk", "invoice finance problems", "bounce back loan", "business overdraft withdrawn"], { google_extra: [{ gl: "de", hl: "de", seeds: ["kmu kredit", "firmenkredit"] }] }),
+      plan(["smallbusiness", "Entrepreneur", "sba", "startups", "ecommerce", "restaurantowners"], ["sba loan", "business line of credit", "merchant cash advance", "invoice factoring", "equipment financing", "small business loan"], ["sba loan denied", "merchant cash advance trap", "business line of credit", "factoring company problems"]),
+    ),
+  },
+  {
     id: "lending-loans",
     label: "Loans & lending",
     description: "Personal loans, home loans and mortgages, student loans, buy-now-pay-later, credit scores, EMIs and debt collection.",

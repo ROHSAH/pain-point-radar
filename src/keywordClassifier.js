@@ -13,7 +13,9 @@ const compile = (list) => (list && list.length ? new RegExp(list.join("|"), "i")
 export function makeKeywordClassifier(topic) {
   const context = compile(topic.context_keywords);
   const irrelevant = compile([...DEFAULT_IRRELEVANT, ...(topic.irrelevant_keywords || [])]);
-  const cats = (topic.taxonomy.categories || []).filter((c) => c.keywords?.length).map((c) => ({ id: c.id, label: c.name.toLowerCase(), re: compile(c.keywords) }));
+  // "require": extra patterns that must ALSO match - used where the category name is a product
+  // (e.g. "merchant cash advance") so a plain product search isn't counted as a complaint.
+  const cats = (topic.taxonomy.categories || []).filter((c) => c.keywords?.length).map((c) => ({ id: c.id, label: c.name.toLowerCase(), re: compile(c.keywords), require: compile(c.require) }));
   const personas = (topic.taxonomy.personas || []).filter((p) => p.keywords?.length).map((p) => ({ id: p.id, re: compile(p.keywords) }));
   const regionIds = Object.keys(topic.regions || {}).filter((r) => r !== "global");
 
@@ -27,7 +29,7 @@ export function makeKeywordClassifier(topic) {
     const pain_points = [];
     for (const c of cats) {
       if (pain_points.length >= 3) break;
-      if (!c.re.test(text)) continue;
+      if (!c.re.test(text) || (c.require && !c.require.test(text))) continue;
       let severity = doc.source === "google_suggest" ? 1 : 2;
       if (SEVERE.test(text)) severity += 2;
       pain_points.push({ category: c.id, sub_issue: c.label, severity: Math.min(5, severity), quote: doc.source === "google_suggest" ? "" : text.slice(0, 240) });

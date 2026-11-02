@@ -3,7 +3,7 @@
 // it takes the first 3 categories whose pattern matches, so specific ones come before broad ones.
 // Each persona: [id, name, description, keyword regex] - matched against what people say about themselves.
 
-const C = (id, name, description, re) => ({ id, name, description, keywords: re ? [re] : [] });
+const C = (id, name, description, re, require) => ({ id, name, description, keywords: re ? [re] : [], ...(require ? { require: [require] } : {}) });
 const P = C;
 
 export const TAXONOMIES = {
@@ -29,6 +29,33 @@ export const TAXONOMIES = {
     ],
   },
 
+  "msme-lending": {
+    categories: [
+      C("mca_predatory", "Merchant cash advances & predatory lenders", "Daily debits, factor rates, loan stacking, confessions of judgment, loan sharks.", "merchant cash advance|\\bmca\\b|daily (payments|debits)|factor rate|stacking|predatory|confession of judgment|loan shark", "problem|issue|complain|grievance|reject|denied|declin|not (able|getting|approved|sanctioned|received|paid|eligible)|delay|stuck|pending|high|expensive|costs?\\b|fees?\\b|rates?\\b|charges|interest|trap|scam|fraud|hidden|reduc|\\bcut\\b|withdrawn|can.?t|unable|eligib|documents|collateral|security|guarantee|\\blaws?\\b|legal|lawsuit|default|npa|worth|vs\\b|alternative|without"),
+      C("recovery_npa", "Defaults, NPA & recovery pressure", "Accounts turning NPA, SARFAESI, recovery action, restructuring and settlements.", "\\bnpa\\b|recovery|sarfaesi|default|restructur|moratorium|one time settlement|\\bots\\b|seized|auction|insolvency|\\bibc\\b"),
+      C("collateral_guarantee", "Collateral & personal guarantee demands", "Lenders demanding property, FDs or personal guarantees even for small loans.", "collateral|security (required|demand)|(mortgage|pledge) (property|house|fd)|personal guarantee|unsecured|without (collateral|security)"),
+      C("rejection_eligibility", "Rejected or can't qualify", "Turned down over business vintage, turnover, credit history or sector.", "reject|denied|declined|not eligible|eligib|qualify|vintage|turnover (criteria|requirement)|minimum (turnover|revenue)|time in business|years in business"),
+      C("documentation", "Paperwork, GST/ITR & financials demands", "Endless documents: GST returns, ITRs, bank statements, audited financials, CMA data.", "documents?|paperwork|\\bitr\\b|gst (returns?|filing|data)|bank statements?|balance sheet|audited|udyam|project report|cma data|financial statements"),
+      C("slow_disbursal", "Slow sanction & disbursal", "Weeks or months from application to money in the account.", "(sanction|disburs|approval|processing|underwriting).{0,15}(delay|slow|time|taking|pending)|how long (does|to get)|still waiting"),
+      C("working_capital_limits", "Working capital, OD & CC limits", "Too-small, cut or hard-to-renew overdraft, cash-credit and credit lines.", "working capital|\\bod\\b|overdraft|cash credit|\\bcc (limit|account)\\b|line of credit|credit line|limit (reduced|cut|enhancement|renewal|increase)|drawing power", "problem|issue|complain|grievance|reject|denied|declin|not (able|getting|approved|sanctioned|received|paid|eligible)|delay|stuck|pending|high|expensive|costs?\\b|fees?\\b|rates?\\b|charges|interest|trap|scam|fraud|hidden|reduc|\\bcut\\b|withdrawn|can.?t|unable|eligib|documents|collateral|security|guarantee|\\blaws?\\b|legal|lawsuit|default|npa|worth|vs\\b|alternative|without"),
+      C("delayed_receivables", "Delayed customer payments & receivables", "Large buyers paying late, long payment terms starving cash flow.", "delayed payments?|late payments?|payment terms|receivables|invoices? (unpaid|overdue|not paid)|45 days|samadhaan|debtors|net ?(30|60|90)|cash ?flow"),
+      C("invoice_supply_chain", "Invoice discounting, factoring & TReDS", "Getting invoices financed: discounting, factoring, TReDS and supply-chain finance.", "invoice (discount|financ|factor)|factoring|\\btreds\\b|supply chain financ|reverse factoring|bill discounting|receivables financ", "problem|issue|complain|grievance|reject|denied|declin|not (able|getting|approved|sanctioned|received|paid|eligible)|delay|stuck|pending|high|expensive|costs?\\b|fees?\\b|rates?\\b|charges|interest|trap|scam|fraud|hidden|reduc|\\bcut\\b|withdrawn|can.?t|unable|eligib|documents|collateral|security|guarantee|\\blaws?\\b|legal|lawsuit|default|npa|worth|vs\\b|alternative|without"),
+      C("govt_schemes", "Government schemes (Mudra, CGTMSE, SBA...)", "Hard to access or slow government-backed schemes and guarantees.", "mudra|cgtmse|pmegp|stand ?up india|\\bsba\\b|7\\(a\\)|\\b504\\b|start ?up loan|british business bank|bounce ?back|eclgs|recovery loan scheme|subsid|scheme", "problem|issue|complain|grievance|reject|denied|declin|not (able|getting|approved|sanctioned|received|paid|eligible)|delay|stuck|pending|high|expensive|costs?\\b|fees?\\b|rates?\\b|charges|interest|trap|scam|fraud|hidden|reduc|\\bcut\\b|withdrawn|can.?t|unable|eligib|documents|collateral|security|guarantee|\\blaws?\\b|legal|lawsuit|default|npa|worth|vs\\b|alternative|without"),
+      C("rates_fees", "High rates, processing & hidden fees", "High interest or factor rates, processing, prepayment and penal charges.", "interest rate|rate of interest|\\broi\\b|\\bapr\\b|processing (fee|charge)|hidden (charges|fees)|prepayment|foreclos|penal (interest|charges)|expensive|charges"),
+      C("business_credit_score", "Business credit score & bureau issues", "Low or wrong commercial scores (CMR, Paydex), personal score dragging the business.", "cibil (msme|rank|commercial)|\\bcmr\\b|business credit (score|report)|experian business|dun ?& ?bradstreet|paydex|credit score|cibil"),
+      C("fintech_digital", "Fintech & digital lending experience", "Online lenders and apps: instant-loan promises, app issues, opaque decisions.", "fintech|\\bapp\\b|online (loan|application|lender)|instant business loan|digital lending|lendingkart|flexiloans|indifi|kabbage|bluevine|fundbox|iwoca|funding circle|ondeck|\\bnbfc\\b"),
+      C("lender_support", "Bank & NBFC relationship and support", "Unresponsive relationship managers, branches, complaints and ombudsman.", "relationship manager|branch manager|customer (care|service|support)|complain|complaint|ombudsman|no response|banker"),
+    ],
+    personas: [
+      P("trader_retailer", "Trader / retailer", "Shop, kirana, wholesaler or distributor.", "trader|retailer|\\bshop\\b|store|kirana|wholesale|distributor|dealer"),
+      P("manufacturer", "Manufacturer", "Runs a factory or production unit.", "manufactur|factory|\\bplant\\b|machinery|raw material|production unit"),
+      P("startup_founder", "Startup founder", "Early-stage company, often pre-profit.", "startup|start-up|founder|saas|venture|pre-?revenue|runway"),
+      P("service_business", "Service business", "Agency, consultancy, clinic, restaurant, salon.", "agency|consult|service business|clinic|restaurant|salon|cafe"),
+      P("exporter_importer", "Exporter / importer", "Trades across borders; needs trade finance.", "export|import|forex|\\blc\\b|letter of credit|packing credit"),
+      P("supplier_contractor", "Supplier / contractor to large buyers", "Sells to corporates or government and waits to be paid.", "supplier to|government (contract|tender)|tender|vendor|\\bpsu\\b|corporate client|gem portal"),
+      P("sole_proprietor", "Sole proprietor / self-employed", "Very small business run by one person.", "sole proprietor|proprietorship|freelanc|self[- ]employed|1099|one[- ]man"),
+    ],
+  },
   "lending-loans": {
     categories: [
       C("recovery_harassment", "Recovery agents & debt collection", "Harassing recovery agents and debt collectors, threats, calls to family and contacts.", "recovery agent|harass|debt collect|collection (agency|agent|calls?)|threat|calling (my )?(family|contacts|relatives|office)|abus"),

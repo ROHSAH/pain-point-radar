@@ -1,6 +1,6 @@
 # Snapshot: 1 Nov 2026, Google search queries only
 
-Real Google autocomplete data for 13 topics (India `gl=in`, Europe `gl=gb` plus a few non-English
+Real Google autocomplete data for 14 topics (India `gl=in`, Europe `gl=gb` plus a few non-English
 seeds, US `gl=us`): **20,010 search queries, about 9,800 pain-point mentions**.
 
 Open `dashboard.html`. It starts on **All topics**: the first table shows which pain points hit which

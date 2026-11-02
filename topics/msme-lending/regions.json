@@ -1,0 +1,144 @@
+{
+  "_comment": "Template - replace the example subreddits and queries with ones specific to this topic.",
+  "india": {
+    "label": "India",
+    "google": {
+      "gl": "in",
+      "hl": "en"
+    },
+    "youtube": {
+      "regionCode": "IN"
+    },
+    "brave": {
+      "country": "IN"
+    },
+    "subreddits": [
+      "IndianStartups",
+      "StartUpIndia",
+      "CAIndia",
+      "india",
+      "IndiaInvestments",
+      "IndiaTax"
+    ],
+    "queries": [
+      "msme loan rejected",
+      "business loan collateral",
+      "mudra loan problem",
+      "working capital limit",
+      "payment delay msme"
+    ],
+    "suggest_seeds": [
+      "msme loan",
+      "business loan",
+      "mudra loan",
+      "working capital loan",
+      "invoice discounting",
+      "cgtmse",
+      "od limit",
+      "treds"
+    ],
+    "web_queries": [
+      "msme loan rejected complaint",
+      "business loan collateral complaint",
+      "mudra loan problem complaint"
+    ],
+    "x_queries": [
+      "(\"msme loan\" OR \"business loan\" OR \"mudra loan\") (complaint OR problem OR worst OR scam) -is:retweet"
+    ]
+  },
+  "europe": {
+    "label": "Europe (UK + EU)",
+    "google": {
+      "gl": "gb",
+      "hl": "en"
+    },
+    "youtube": {
+      "regionCode": "GB"
+    },
+    "brave": {
+      "country": "GB"
+    },
+    "subreddits": [
+      "smallbusinessuk",
+      "UKPersonalFinance",
+      "Entrepreneur",
+      "eupersonalfinance",
+      "germany"
+    ],
+    "queries": [
+      "business loan rejected uk",
+      "invoice finance problems",
+      "bounce back loan",
+      "business overdraft withdrawn"
+    ],
+    "suggest_seeds": [
+      "business loan uk",
+      "start up loan",
+      "invoice finance",
+      "merchant cash advance",
+      "british business bank",
+      "business overdraft"
+    ],
+    "web_queries": [
+      "business loan rejected uk complaint",
+      "invoice finance problems complaint",
+      "bounce back loan complaint"
+    ],
+    "x_queries": [
+      "(\"business loan uk\" OR \"start up loan\" OR \"invoice finance\") (complaint OR problem OR worst OR scam) -is:retweet"
+    ],
+    "google_extra": [
+      {
+        "gl": "de",
+        "hl": "de",
+        "seeds": [
+          "kmu kredit",
+          "firmenkredit"
+        ]
+      }
+    ]
+  },
+  "us": {
+    "label": "United States",
+    "google": {
+      "gl": "us",
+      "hl": "en"
+    },
+    "youtube": {
+      "regionCode": "US"
+    },
+    "brave": {
+      "country": "US"
+    },
+    "subreddits": [
+      "smallbusiness",
+      "Entrepreneur",
+      "sba",
+      "startups",
+      "ecommerce",
+      "restaurantowners"
+    ],
+    "queries": [
+      "sba loan denied",
+      "merchant cash advance trap",
+      "business line of credit",
+      "factoring company problems"
+    ],
+    "suggest_seeds": [
+      "sba loan",
+      "business line of credit",
+      "merchant cash advance",
+      "invoice factoring",
+      "equipment financing",
+      "small business loan"
+    ],
+    "web_queries": [
+      "sba loan denied complaint",
+      "merchant cash advance trap complaint",
+      "business line of credit complaint"
+    ],
+    "x_queries": [
+      "(\"sba loan\" OR \"business line of credit\" OR \"merchant cash advance\") (complaint OR problem OR worst OR scam) -is:retweet"
+    ]
+  }
+}

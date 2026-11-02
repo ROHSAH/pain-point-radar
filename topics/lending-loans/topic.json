@@ -1,7 +1,7 @@
 {
   "id": "lending-loans",
-  "label": "Loans & lending",
-  "description": "Personal loans, home loans and mortgages, student loans, buy-now-pay-later, credit scores, EMIs and debt collection.",
+  "label": "Consumer loans & lending",
+  "description": "Personal borrowing: personal loans, home loans and mortgages, student loans, buy-now-pay-later, credit scores, EMIs and debt collection. (Business credit is in msme-lending.)",
   "context_keywords": [
     "loan",
     "\\bemi\\b",

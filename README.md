@@ -18,18 +18,18 @@ Web / complaint sites
 ```bash
 npm install
 cp .env.example .env                  # add the keys you have (see Sources)
-node src/cli.js topics                # lists the 13 topics
+node src/cli.js topics                # lists the 14 topics
 node src/cli.js run --topic recycling # collect -> classify -> report
 open out/dashboard.html               # all topics, with a Topic dropdown
 ```
 
 ## Topics
 
-13 starter topics ship with the repo:
+14 starter topics ship with the repo:
 
 | Area | Topics (`--topic` id) |
 |---|---|
-| Finance | Banking & payments (`banking-payments`), Loans & lending (`lending-loans`), Insurance (`insurance`) |
+| Finance | Banking & payments (`banking-payments`), Consumer loans & lending (`lending-loans`), **MSME & B2B lending** (`msme-lending`), Insurance (`insurance`) |
 | Energy & environment | Home energy & electricity (`energy-utilities`), EV charging (`ev-charging`), Recycling (`recycling`) |
 | Everyday services | Mobile & internet (`telecom-internet`), Online shopping (`ecommerce`), Food delivery (`food-delivery`), Ride-hailing & taxis (`ride-hailing`) |
 | Life & home | Healthcare & hospitals (`healthcare`), Renting & housing (`renting-housing`), Air travel (`air-travel`) |

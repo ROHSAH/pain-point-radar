@@ -113,3 +113,15 @@ test("dashboard embeds a topic dropdown and per-topic rows", async () => {
   assert.deepEqual(data.topics.map((t) => t.label), ["Recycling", "EV charging"]);
   assert.equal(data.rows.filter((r) => r.tp === "EV charging").length, mentions.length);
 });
+
+test("product categories need a problem signal ('require')", async () => {
+  const { makeKeywordClassifier } = await import("../src/keywordClassifier.js");
+  const classify = makeKeywordClassifier({
+    context_keywords: ["merchant cash advance"],
+    regions: { us: {} },
+    taxonomy: { categories: [{ id: "mca", name: "MCA", keywords: ["merchant cash advance"], require: ["fees?|illegal|trap"] }], personas: [] },
+  });
+  const doc = (text) => ({ id: "x", source: "google_suggest", region_hint: "us", text });
+  assert.equal(classify(doc("merchant cash advance")).relevant, false);
+  assert.equal(classify(doc("is merchant cash advance illegal")).pain_points[0].category, "mca");
+});

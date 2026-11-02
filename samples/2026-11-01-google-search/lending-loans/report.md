@@ -1,6 +1,6 @@
-# Loans & lending: customer pain points - India, Europe, US
+# Consumer loans & lending: customer pain points - India, Europe, US
 
-_Generated 2026-11-02 06:20 UTC_
+_Generated 2026-11-02 06:28 UTC_
 
 ## Coverage
 
