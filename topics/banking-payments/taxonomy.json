@@ -1,84 +1,271 @@
 {
-  "_comment": "Topic-specific categories. Keyword patterns drive the no-key classifier (first 3 matches, in order).",
+  "_comment": "Region-specific pain points and personas (ids prefixed in_/eu_/us_). Keyword patterns drive the no-key classifier (first 3 matches, in order, within the document's region).",
   "categories": [
     {
-      "id": "upi_payment_failures",
-      "name": "UPI & payment failures",
-      "description": "Payments fail or stay pending while money is debited; receiver not credited.",
+      "id": "in_upi_failures",
+      "name": "UPI payments failing or pending",
+      "description": "UPI debited but not credited, pending for hours, bank servers down.",
       "keywords": [
-        "(upi|payment|transaction|transfer).{0,20}(fail|pending|stuck|declined)|money (debited|deducted) (but|not)|not (received|credited)|debited but"
+        "upi.{0,25}(fail|pending|stuck|declined|not (received|credited)|limit)|money debited but|transaction failed|npci"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "fraud_scams",
-      "name": "Fraud, scams & unauthorized debits",
-      "description": "Money stolen through fraud, phishing, fake calls, OTP or SIM-swap scams.",
+      "id": "in_upi_otp_scams",
+      "name": "UPI, OTP & KYC scams",
+      "description": "Collect-request scams, fake KYC calls, digital-arrest frauds.",
       "keywords": [
-        "fraud|scam|unauthori[sz]ed|phishing|hacked|stolen|otp (fraud|scam)|sim swap|deducted without|vishing"
+        "fraud|scam|otp|fake (kyc|call|customer care)|digital arrest|phishing|vishing|sim swap|unauthori[sz]ed"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "account_frozen",
-      "name": "Frozen, blocked or closed accounts",
-      "description": "Accounts frozen or debit-frozen, liens, sudden closures, holds on funds.",
+      "id": "in_account_freeze_lien",
+      "name": "Accounts frozen by cyber cell / lien",
+      "description": "Accounts frozen or liened after receiving disputed UPI money.",
       "keywords": [
-        "frozen|freeze|blocked|suspended|closed (my )?account|account (locked|restricted|closed|on hold)|\\blien\\b|debit freeze"
+        "frozen|freeze|\\blien\\b|cyber (cell|crime) (freeze|complaint)|debit freeze|account (blocked|on hold)"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "kyc_documents",
-      "name": "KYC, verification & paperwork",
-      "description": "Repeated KYC, re-verification, document demands, ID checks blocking access.",
+      "id": "in_rekyc_documents",
+      "name": "Re-KYC, Aadhaar & PAN hassles",
+      "description": "Repeated re-KYC, branch visits, Aadhaar/PAN linking.",
       "keywords": [
-        "\\bkyc\\b|re-?kyc|verification|aadhaar|\\bpan\\b|proof of (address|income)|id verification|documents? (required|needed)"
+        "re-?kyc|\\bkyc\\b|aadhaar|\\bpan\\b|ckyc|video kyc"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "fees_minimum_balance",
-      "name": "Fees, charges & minimum balance",
-      "description": "Minimum-balance penalties, overdraft, maintenance, SMS and transaction charges.",
+      "id": "in_minimum_balance_charges",
+      "name": "Minimum balance & hidden charges",
+      "description": "Non-maintenance, SMS, debit-card and ATM charges.",
       "keywords": [
-        "minimum balance|overdraft|maintenance (fee|charge)|penalty|annual fee|sms charges|(bank|account|atm|transaction) (charges?|fees?)"
+        "minimum balance|non-?maintenance|sms charges|debit card (charges|annual fee)|atm (charges|fee)|hidden charges|charges deducted"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "cards",
-      "name": "Debit & credit card problems",
-      "description": "Cards declined, blocked, not delivered, limits, chargebacks, card replacement.",
+      "id": "in_credit_card_charges",
+      "name": "Credit card fees, late charges & devaluation",
+      "description": "Annual fees, late-payment charges, reward devaluations, limit cuts.",
       "keywords": [
-        "(debit|credit) card|card (declined|blocked|not working|limit|not received|delivery)|cvv|chargeback|card replacement"
+        "credit card.{0,30}(fee|charge|late|limit|reward|devaluat|block|declin)|annual fee"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "transfers_limits",
-      "name": "Transfers, limits & delays",
-      "description": "Slow or capped transfers, international transfers, NEFT/IMPS/SEPA/wire delays.",
+      "id": "in_netbanking_app_down",
+      "name": "Bank app & net banking downtime",
+      "description": "YONO/iMobile/net banking down, OTP not arriving.",
       "keywords": [
-        "\\b(neft|imps|rtgs|sepa|swift|wire|zelle|ach)\\b|transfer limit|daily limit|how long .*transfer|international transfer|takes (days|long)"
+        "yono|imobile|net ?banking|mobile banking|bank app|server (down|error)|otp not (received|coming)|not working"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "app_netbanking",
-      "name": "App & net-banking glitches",
-      "description": "App crashes, login and OTP failures, server downtime, forced updates.",
+      "id": "in_branch_service",
+      "name": "Branch service & complaints",
+      "description": "Long queues, staff sending customers away, ombudsman complaints.",
       "keywords": [
-        "\\bapp\\b|net ?banking|online banking|mobile banking|login|log in|otp not|server (down|error)|technical (issue|error)|not working|\\bdown\\b|problem today"
+        "branch|bank manager|complain|complaint|ombudsman|cms\\.rbi|customer care|helpline|passbook"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "branch_support",
-      "name": "Branch & customer support",
-      "description": "Unhelpful branches, unreachable helplines, complaints ignored, ombudsman escalations.",
+      "id": "eu_app_bank_freezes",
+      "name": "Digital bank account freezes (Monzo, Revolut, N26)",
+      "description": "Accounts frozen for reviews with no timeline or explanation.",
       "keywords": [
-        "customer (care|service|support)|helpline|branch|complain|complaint|ombudsman|no response|contact number|phone number|relationship manager"
+        "(monzo|revolut|n26|wise|starling|bunq|chase uk).{0,30}(frozen|freeze|blocked|closed|locked|review|suspend)"
+      ],
+      "regions": [
+        "europe"
       ]
     },
     {
-      "id": "interest_savings",
-      "name": "Savings interest & deposit returns",
-      "description": "Low savings interest, FD/term-deposit rates, rate cuts.",
+      "id": "eu_app_scam_reimbursement",
+      "name": "Scam losses & APP reimbursement",
+      "description": "Authorised push-payment scams, safe-account scams, refusals to refund.",
       "keywords": [
-        "interest (rate|on savings)|savings (rate|interest)|\\bfd\\b|fixed deposit|term deposit|\\bapy\\b|\\baer\\b"
+        "scam|fraud|\\bapp fraud\\b|authori[sz]ed push|safe account|reimburse|phishing|spoof"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_debanking_closures",
+      "name": "Account closures & debanking",
+      "description": "Banks closing accounts with 60 days' notice and no reason.",
+      "keywords": [
+        "account closed|closing my account|debank|60 days notice|exit(ed)? (me|customer)"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_transfer_delays",
+      "name": "Faster Payments / SEPA transfer delays",
+      "description": "Payments held for checks, SEPA delays, international transfers.",
+      "keywords": [
+        "faster payment|sepa|bank transfer.{0,20}(delay|pending|held|not arrived)|swift|international transfer|payment held"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_overdraft_fees",
+      "name": "Overdraft rates & fees",
+      "description": "Arranged overdraft rates near 40% APR, unexpected fees.",
+      "keywords": [
+        "overdraft|unarranged|\\bapr\\b|bank charges|account fee"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_branch_closures_cash",
+      "name": "Branch closures & cash access",
+      "description": "Local branches and ATMs closing, harder to deposit cash.",
+      "keywords": [
+        "branch (closure|closing|closed)|nearest branch|deposit cash|cash machine|post office banking|atm (closed|removed)"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_strong_auth_verification",
+      "name": "Verification, 2FA & ID checks",
+      "description": "Strong customer authentication failures, phone changes, ID verification loops.",
+      "keywords": [
+        "verification|verify (my )?identity|\\b2fa\\b|strong customer authentication|new phone|card reader|id check"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_card_declines",
+      "name": "Card declines & blocks",
+      "description": "Cards declined abroad or blocked by fraud systems.",
+      "keywords": [
+        "card (declined|blocked|not working)|payment declined|declined abroad|fraud alert"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "us_zelle_scams",
+      "name": "Zelle & P2P scams",
+      "description": "Zelle, Venmo and Cash App scams; banks refusing reimbursement.",
+      "keywords": [
+        "zelle|venmo|cash app|p2p"
+      ],
+      "require": [
+        "scam|fraud|stolen|hack|refund|reimburs|sent to wrong|dispute"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_overdraft_nsf",
+      "name": "Overdraft & NSF fees",
+      "description": "Overdraft fees, NSF charges, fee reordering.",
+      "keywords": [
+        "overdraft|\\bnsf\\b|insufficient funds|returned item|overdraft fee"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_account_closures",
+      "name": "Accounts closed without explanation",
+      "description": "Chase, Wells Fargo and others closing accounts suddenly.",
+      "keywords": [
+        "(chase|wells fargo|bank of america|capital one|citi|td bank).{0,30}(closed|closing|froze|frozen|locked)|account closed|closed my account"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_deposit_holds",
+      "name": "Check, mobile-deposit & wire holds",
+      "description": "Funds held for days, mobile deposits rejected, wires delayed.",
+      "keywords": [
+        "hold on (my )?(check|deposit)|mobile deposit|check hold|funds (on hold|not available)|wire (transfer )?(delay|pending)|\\bach\\b"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_card_disputes",
+      "name": "Card disputes & chargebacks",
+      "description": "Fraud claims and merchant disputes denied.",
+      "keywords": [
+        "dispute|chargeback|claim denied|unauthori[sz]ed (charge|transaction)|fraudulent charge"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_fraud_locks",
+      "name": "Fraud alerts & locked accounts",
+      "description": "Accounts or cards locked for suspected fraud; verification loops.",
+      "keywords": [
+        "fraud alert|locked (out|account)|card (locked|declined)|verify identity|suspicious activity"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_atm_fees_branches",
+      "name": "ATM fees & branch access",
+      "description": "Out-of-network ATM fees, branch closures.",
+      "keywords": [
+        "atm fee|out of network atm|branch (closed|closing)"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_low_savings_apy",
+      "name": "Low savings interest",
+      "description": "Big banks paying near-zero APY.",
+      "keywords": [
+        "\\bapy\\b|savings (rate|interest)|high yield|interest on savings"
+      ],
+      "regions": [
+        "us"
       ]
     },
     {
@@ -90,43 +277,157 @@
   ],
   "personas": [
     {
-      "id": "salaried",
-      "name": "Salaried account holder",
-      "description": "Uses a salary account for everyday banking.",
+      "id": "in_salaried",
+      "name": "Salaried customer",
+      "description": "Salary account and cards.",
       "keywords": [
-        "salary|salaried|payroll|my employer"
+        "salary|salaried|\\bctc\\b|my employer"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "merchant",
-      "name": "Small business / merchant",
-      "description": "Takes payments as a shop or small business.",
+      "id": "in_upi_merchant",
+      "name": "UPI merchant / shopkeeper",
+      "description": "Takes UPI payments via QR and soundbox.",
       "keywords": [
-        "my (shop|store|business|customers)|merchant|qr code|soundbox|current account|gst"
+        "shop|merchant|qr code|soundbox|my customers|current account"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "student",
-      "name": "Student",
-      "description": "Student or first-time account holder.",
-      "keywords": [
-        "student|college|university|first account"
-      ]
-    },
-    {
-      "id": "senior_citizen",
+      "id": "in_senior_citizen",
       "name": "Senior citizen",
-      "description": "Older customer, often less comfortable with apps.",
+      "description": "Branch-dependent, pension account.",
       "keywords": [
-        "senior citizen|pension|pensioner|my (parents|father|mother|grandfather|grandmother)|elderly"
+        "senior citizen|pension|my (father|mother|parents)|elderly"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "expat_nri",
-      "name": "Expat / NRI",
-      "description": "Banks across countries, sends money home.",
+      "id": "in_nri",
+      "name": "NRI",
+      "description": "NRE/NRO accounts, remittances.",
       "keywords": [
-        "\\bnri\\b|expat|abroad|overseas|remittance|nre|nro"
+        "\\bnri\\b|\\bnre\\b|\\bnro\\b|remit|abroad"
+      ],
+      "regions": [
+        "india"
+      ]
+    },
+    {
+      "id": "in_student",
+      "name": "Student",
+      "description": "First account, education payments.",
+      "keywords": [
+        "student|college|hostel"
+      ],
+      "regions": [
+        "india"
+      ]
+    },
+    {
+      "id": "eu_digital_bank_user",
+      "name": "Digital-bank customer",
+      "description": "Uses Monzo, Revolut, N26 or Starling.",
+      "keywords": [
+        "monzo|revolut|n26|starling|bunq|wise"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_expat_migrant",
+      "name": "Expat / migrant",
+      "description": "New arrival needing an account and transfers home.",
+      "keywords": [
+        "expat|moved to|new to the uk|immigrant|visa|send money home"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_sole_trader",
+      "name": "Sole trader",
+      "description": "Uses personal or business accounts for trade.",
+      "keywords": [
+        "sole trader|self[- ]employed|business account"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_older_customer",
+      "name": "Older, branch-dependent customer",
+      "description": "Relies on branches and cash.",
+      "keywords": [
+        "elderly|my (mum|dad|nan|grandad)|pension|over 70"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "us_paycheck_to_paycheck",
+      "name": "Paycheck-to-paycheck customer",
+      "description": "Hit hardest by overdraft fees.",
+      "keywords": [
+        "paycheck to paycheck|negative balance|payday|low balance"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_small_business",
+      "name": "Small business owner",
+      "description": "Business checking and deposits.",
+      "keywords": [
+        "small business|my business|llc|business account"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_immigrant_unbanked",
+      "name": "Immigrant / newly banked",
+      "description": "ITIN, first US account.",
+      "keywords": [
+        "immigrant|\\bitin\\b|no ssn|new to the us"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_retiree",
+      "name": "Retiree",
+      "description": "Fixed income, scam target.",
+      "keywords": [
+        "retire|social security|elderly|my (mom|dad|parents)"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_student",
+      "name": "Student",
+      "description": "First checking account.",
+      "keywords": [
+        "student|college"
+      ],
+      "regions": [
+        "us"
       ]
     },
     {

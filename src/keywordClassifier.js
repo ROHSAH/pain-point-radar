@@ -15,21 +15,23 @@ export function makeKeywordClassifier(topic) {
   const irrelevant = compile([...DEFAULT_IRRELEVANT, ...(topic.irrelevant_keywords || [])]);
   // "require": extra patterns that must ALSO match - used where the category name is a product
   // (e.g. "merchant cash advance") so a plain product search isn't counted as a complaint.
-  const cats = (topic.taxonomy.categories || []).filter((c) => c.keywords?.length).map((c) => ({ id: c.id, label: c.name.toLowerCase(), re: compile(c.keywords), require: compile(c.require) }));
-  const personas = (topic.taxonomy.personas || []).filter((p) => p.keywords?.length).map((p) => ({ id: p.id, re: compile(p.keywords) }));
+  // Categories and personas may be limited to regions ("regions": ["india"]); unscoped ones apply everywhere.
+  const inRegion = (x, region) => !x.regions?.length || x.regions.includes(region);
+  const cats = (topic.taxonomy.categories || []).filter((c) => c.keywords?.length).map((c) => ({ id: c.id, regions: c.regions, label: c.name.toLowerCase(), re: compile(c.keywords), require: compile(c.require) }));
+  const personas = (topic.taxonomy.personas || []).filter((p) => p.keywords?.length).map((p) => ({ id: p.id, regions: p.regions, re: compile(p.keywords) }));
   const regionIds = Object.keys(topic.regions || {}).filter((r) => r !== "global");
 
   return function classifyByRules(doc) {
     const text = `${doc.title || ""} ${doc.text || ""}`.replace(/\s+/g, " ").trim();
     const region = regionIds.includes(doc.region_hint) ? doc.region_hint : "other";
-    const persona = (personas.find((p) => p.re.test(text)) || { id: "general_citizen" }).id;
+    const persona = (personas.find((p) => inRegion(p, region) && p.re.test(text)) || { id: "general_citizen" }).id;
     const base = { id: doc.id, country: "", region, persona, model: "rules", classified_at: new Date().toISOString() };
     if ((irrelevant && irrelevant.test(text)) || (context && !context.test(text))) return { ...base, relevant: false, pain_points: [] };
 
     const pain_points = [];
     for (const c of cats) {
       if (pain_points.length >= 3) break;
-      if (!c.re.test(text) || (c.require && !c.require.test(text))) continue;
+      if (!inRegion(c, region) || !c.re.test(text) || (c.require && !c.require.test(text))) continue;
       let severity = doc.source === "google_suggest" ? 1 : 2;
       if (SEVERE.test(text)) severity += 2;
       pain_points.push({ category: c.id, sub_issue: c.label, severity: Math.min(5, severity), quote: doc.source === "google_suggest" ? "" : text.slice(0, 240) });

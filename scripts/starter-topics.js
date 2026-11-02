@@ -207,7 +207,7 @@ for (const t of TOPICS) {
   const regions = Object.fromEntries(
     Object.entries(t.regions).map(([rid, p]) => [rid, { ...p, web_queries: p.queries.slice(0, 3).map((q) => `${q} complaint`), x_queries: [`(${p.suggest_seeds.slice(0, 3).map((s) => `"${s}"`).join(" OR ")}) (complaint OR problem OR worst OR scam) -is:retweet`] }]),
   );
-  const tax = TAXONOMIES[t.id];
+  const tax = buildTaxonomy(TAXONOMIES[t.id]);
   const dir = await createTopic({ id: t.id, label: t.label, description: t.description, useClaude: false, overrides: { context_keywords: t.context_keywords, subreddit_query: t.subreddit_query, categories: tax.categories, personas: tax.personas, regions } });
   console.log(`created ${dir}`);
 }
@@ -215,6 +215,8 @@ for (const t of TOPICS) {
 for (const [id, tax] of Object.entries(TAXONOMIES)) {
   const dir = path.join(TOPICS_DIR, id);
   if (!fs.existsSync(dir)) continue;
-  writeJson(path.join(dir, "taxonomy.json"), buildTaxonomy(tax));
-  console.log(`taxonomy ${id}: ${tax.categories.length} pain points, ${tax.personas.length} personas`);
+  const built = buildTaxonomy(tax);
+  writeJson(path.join(dir, "taxonomy.json"), built);
+  const per = Object.entries(tax).map(([r, x]) => `${r} ${x.categories.length}/${x.personas.length}`).join(", ");
+  console.log(`taxonomy ${id}: pain points/personas by region: ${per}`);
 }

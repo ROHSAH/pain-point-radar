@@ -1,117 +1,371 @@
 {
-  "_comment": "Seed pain-point categories. Claude assigns each mention to one of these ids (or 'other' with a free-text sub_issue). The consolidation step then clusters sub_issues into themes inside each category, so new problems still surface even if they are not listed here.",
+  "_comment": "Region-specific pain points and personas (ids prefixed in_/eu_/us_). Keyword patterns drive the no-key classifier (first 3 matches, in order, within the document's region).",
   "categories": [
     {
-      "id": "collection_reliability",
-      "name": "Missed / unreliable collection",
-      "description": "Pickups missed, late, irregular, collectors not showing up, schedules changed without notice, recycling dumped with trash by the collector."
+      "id": "in_kabadiwala_price_weight",
+      "name": "Kabadiwala prices & weighing",
+      "description": "Low scrap rates, cheating on weight, opaque per-kg prices.",
+      "keywords": [
+        "kabad|raddi|scrap (price|rate|dealer)|per kg|weigh|cheat|sell (old )?(newspaper|scrap)"
+      ],
+      "regions": [
+        "india"
+      ]
     },
     {
-      "id": "sorting_confusion",
-      "name": "Confusing sorting rules",
-      "description": "Not knowing what is recyclable, inconsistent rules between cities/councils, plastic resin numbers, labels on packaging, wishcycling."
+      "id": "in_segregation_mixed",
+      "name": "Segregated waste mixed by collectors",
+      "description": "Households segregate but BBMP/MCD trucks mix it.",
+      "keywords": [
+        "segregat|mix(ed|es)? (it )?(all )?together|dry (and|&) wet|wet waste|mixed waste"
+      ],
+      "regions": [
+        "india"
+      ]
     },
     {
-      "id": "access_drop_off",
-      "name": "No access / drop-off points",
-      "description": "No recycling for apartments or rural areas, nowhere to take e-waste, batteries, glass, textiles, hazardous items; recycling centres far away or closed."
+      "id": "in_dry_waste_pickup",
+      "name": "Dry-waste pickup missing or irregular",
+      "description": "Dry waste not collected, collectors not coming.",
+      "keywords": [
+        "dry waste|garbage (van|truck) not|not (collected|coming)|garbage collection|waste collection"
+      ],
+      "regions": [
+        "india"
+      ]
     },
     {
-      "id": "booking_digital",
-      "name": "Booking systems, apps & digital service",
-      "description": "Recycling-centre booking slots, pickup apps not working, app pickups cancelled, poor online information, website/phone booking problems."
+      "id": "in_ewaste_disposal",
+      "name": "Where to dispose e-waste & batteries",
+      "description": "No easy e-waste or battery drop-off; unclear authorised recyclers.",
+      "keywords": [
+        "e-?waste|electronic waste|batter(y|ies)|old (phone|laptop|tv)|dispose|where to (recycle|throw|sell)"
+      ],
+      "regions": [
+        "india"
+      ]
     },
     {
-      "id": "payout_pricing",
-      "name": "Low / unfair payout for scrap",
-      "description": "Kabadiwala/scrap dealers paying too little or cheating on weight, scrap rates opaque, buy-back programs not worth it."
+      "id": "in_municipal_complaints",
+      "name": "Municipal complaints (BBMP, MCD, BMC, GHMC)",
+      "description": "Complaints to civic bodies ignored; fines for not segregating.",
+      "keywords": [
+        "bbmp|\\bmcd\\b|\\bbmc\\b|ghmc|municipal|complain|complaint|\\bfine\\b"
+      ],
+      "regions": [
+        "india"
+      ]
     },
     {
-      "id": "deposit_return",
-      "name": "Deposit-return & reverse vending",
-      "description": "Bottle/can deposit machines broken, full or queues, redemption centres closed, refunds refused, DRS rollout problems."
+      "id": "in_burning_dumping",
+      "name": "Garbage burning & black spots",
+      "description": "Open burning, dumping on roadsides and black spots.",
+      "keywords": [
+        "\\bburn|black ?spot|dump(ing)?|garbage (on road|pile)|landfill"
+      ],
+      "regions": [
+        "india"
+      ]
     },
     {
-      "id": "fees_cost",
-      "name": "Fees & cost",
-      "description": "Charges for recycling, garden-waste fees, bulky-item fees, rising bills, paying for a service that is not delivered."
+      "id": "in_plastic_recycling",
+      "name": "Plastic recycling access",
+      "description": "Nowhere to recycle plastic; multilayer plastic.",
+      "keywords": [
+        "plastic|multilayer|\\bmlp\\b"
+      ],
+      "regions": [
+        "india"
+      ]
     },
     {
-      "id": "trust_greenwashing",
+      "id": "eu_missed_bin_collections",
+      "name": "Missed bin collections",
+      "description": "Councils missing collections, strikes, schedule changes.",
+      "keywords": [
+        "missed (bin|collection)|bin collection|not (collected|emptied)|nicht abgeholt|bin strike|bin men|collection (problem|day)"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_council_rules_differ",
+      "name": "Different rules per council",
+      "description": "Confusion over what goes in which bin; rules differ by council or country.",
+      "keywords": [
+        "can (i|you) recycle|which bin|what (goes|can go) in|was darf in|gelbe tonne|poubelle jaune|que mettre|raccolta differenziata|recyclable|rules"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_tip_booking",
+      "name": "Recycling-centre booking systems",
+      "description": "Having to book tip visits days ahead, vans banned.",
+      "keywords": [
+        "book(ing)?|appointment|slot|wertstoffhof|déchetterie|\\btip\\b|recycling cent(re|er)"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_deposit_return",
+      "name": "Deposit return schemes & reverse vending",
+      "description": "Pfand/statiegeld machines broken, UK DRS delays.",
+      "keywords": [
+        "deposit return|\\bdrs\\b|pfand|statiegeld|consigne|reverse vending"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_garden_waste_fees",
+      "name": "Garden-waste & bulky-item fees",
+      "description": "Paying for green bins and bulky collections.",
+      "keywords": [
+        "garden waste|green bin|bulky (waste|item)|\\bfee\\b|charge|cost"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_contamination_rejections",
+      "name": "Bins rejected for contamination",
+      "description": "Bins tagged or left unemptied; fines.",
+      "keywords": [
+        "contaminat|rejected|tag(ged)?|sticker|\\bfine\\b|non conforme"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_food_waste_bins",
+      "name": "Food-waste caddies",
+      "description": "New weekly food-waste collections, smells, liners.",
+      "keywords": [
+        "food waste|caddy|compost bin|biotonne"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_soft_plastics",
+      "name": "Soft plastics & hard-to-recycle items",
+      "description": "Soft plastics, tetra paks, batteries.",
+      "keywords": [
+        "soft plastic|plastic film|tetra|batter(y|ies)|crisp packet|electrical"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "us_hauler_missed_pickup",
+      "name": "Missed pickups (Waste Management, Republic)",
+      "description": "Haulers skipping recycling day.",
+      "keywords": [
+        "missed pickup|didn'?t pick up|not picked up|waste management|republic services|hauler|recycling day|pickup"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_landfill_distrust",
       "name": "Distrust: does it really get recycled?",
-      "description": "Belief recycling goes to landfill or is exported/burned, mixing of segregated waste, greenwashing by brands or municipalities."
+      "description": "Belief that recycling goes to landfill.",
+      "keywords": [
+        "goes to (the )?landfill|actually recycled|recycling (a )?(scam|myth|pointless)|is (recycling|it) worth|why recycl"
+      ],
+      "regions": [
+        "us"
+      ]
     },
     {
-      "id": "bins_containers",
-      "name": "Bins & containers",
-      "description": "Bins too small, not provided, damaged, stolen, overflowing, too many bins, no space to store them, communal bins dirty."
+      "id": "us_apartment_no_recycling",
+      "name": "No recycling in apartments",
+      "description": "Complexes with only trash dumpsters.",
+      "keywords": [
+        "apartment|complex|landlord|no recycling"
+      ],
+      "regions": [
+        "us"
+      ]
     },
     {
-      "id": "enforcement_penalties",
-      "name": "Rejections, fines & enforcement",
-      "description": "Bins rejected or tagged for contamination, fines for wrong sorting, neighbours contaminating shared bins, lack of enforcement of segregation rules."
+      "id": "us_resin_numbers_rules",
+      "name": "Confusing rules & resin numbers",
+      "description": "Which plastics (#1–#7) are accepted; rules vary by city.",
+      "keywords": [
+        "#[1-7]|number [1-7]|can (i|you) recycle|is .* recyclable|which bin|rules"
+      ],
+      "regions": [
+        "us"
+      ]
     },
     {
-      "id": "customer_service",
-      "name": "Customer service & accountability",
-      "description": "Unresponsive council/hauler/company support, complaints ignored, no one accountable, long hold times."
+      "id": "us_bottle_redemption",
+      "name": "Bottle deposit & redemption centers",
+      "description": "Redemption centers closing, CRV hassles.",
+      "keywords": [
+        "redemption (center|centre)|\\bcrv\\b|bottle deposit|can deposit|cash for cans|recycling near me for (money|cash)"
+      ],
+      "regions": [
+        "us"
+      ]
     },
     {
-      "id": "illegal_dumping_burning",
-      "name": "Dumping, burning & littering",
-      "description": "Waste dumped on streets or vacant lots, open burning, landfill fires, overflowing public dumps as a consequence of broken recycling."
+      "id": "us_ewaste_battery_dropoff",
+      "name": "E-waste, batteries & hazardous drop-off",
+      "description": "Where to take electronics, batteries, paint.",
+      "keywords": [
+        "e-?waste|electronic|batter(y|ies)|paint|hazardous|light bulbs|where (to|can) .*recycle|near me"
+      ],
+      "regions": [
+        "us"
+      ]
     },
     {
-      "id": "specific_materials",
-      "name": "Hard-to-recycle materials",
-      "description": "Soft plastics, styrofoam, tetra paks, mattresses, solar panels, cooking oil, medicines, textiles - where the main complaint is about one material type."
+      "id": "us_hauler_fees",
+      "name": "Recycling fees & hauler price hikes",
+      "description": "Fees for recycling service, rate increases.",
+      "keywords": [
+        "\\bfee\\b|\\bcost\\b|price|\\bbill\\b|charge|pay to recycle"
+      ],
+      "regions": [
+        "us"
+      ]
     },
     {
       "id": "other",
       "name": "Other",
-      "description": "Clear customer pain point that does not fit any category above."
+      "description": "Clear customer pain point that does not fit any category above.",
+      "keywords": []
     }
   ],
   "personas": [
     {
-      "id": "homeowner_household",
-      "name": "Homeowner / independent house",
-      "description": "Lives in a house with its own bins or kerbside collection; pays council tax or hauler fees directly."
-    },
-    {
-      "id": "apartment_resident",
+      "id": "in_apartment_society",
       "name": "Apartment / society resident",
-      "description": "Renter or owner in a flat, apartment complex, gated community or Indian housing society / RWA building; shared bins or society-managed collection."
+      "description": "Society-managed collection.",
+      "keywords": [
+        "society|apartment|\\brwa\\b|gated community"
+      ],
+      "regions": [
+        "india"
+      ]
     },
     {
-      "id": "landlord_property_manager",
-      "name": "Landlord / property or society manager",
-      "description": "Manages bins, contracts or rules for a building, complex or residents' welfare association."
+      "id": "in_independent_house",
+      "name": "Independent house",
+      "description": "Door-to-door municipal collection.",
+      "keywords": [
+        "independent house|my house|our street"
+      ],
+      "regions": [
+        "india"
+      ]
     },
     {
-      "id": "small_business",
-      "name": "Small business / shop / office",
-      "description": "Restaurant, shop, office, café, trades - commercial waste contracts, cardboard, trade waste."
+      "id": "in_scrap_seller",
+      "name": "Scrap seller",
+      "description": "Sells newspaper and metal to kabadiwalas.",
+      "keywords": [
+        "kabad|raddi|sell (old|scrap|newspaper)"
+      ],
+      "regions": [
+        "india"
+      ]
     },
     {
-      "id": "scrap_seller",
-      "name": "Scrap seller / deposit redeemer",
-      "description": "Sells newspaper, metal, e-waste to kabadiwalas or scrap yards, or returns bottles and cans for deposit refunds; cares about price and payout."
+      "id": "in_eco_volunteer",
+      "name": "Eco-conscious / volunteer",
+      "description": "Composts, campaigns for segregation.",
+      "keywords": [
+        "compost|zero waste|volunteer|\\beco\\b"
+      ],
+      "regions": [
+        "india"
+      ]
     },
     {
-      "id": "eco_enthusiast",
-      "name": "Eco-conscious / zero-waster",
-      "description": "Motivated by environment; tries hard to sort, compost and reduce; frustrated by systems and greenwashing."
+      "id": "eu_homeowner",
+      "name": "Homeowner with own bins",
+      "description": "Kerbside wheelie bins.",
+      "keywords": [
+        "wheelie bin|my house|driveway|kerbside"
+      ],
+      "regions": [
+        "europe"
+      ]
     },
     {
-      "id": "waste_worker",
-      "name": "Waste worker / collector / insider",
-      "description": "Collector, binman, pourakarmika, MRF or recycling-industry worker speaking from the inside."
+      "id": "eu_flat_resident",
+      "name": "Flat / apartment resident",
+      "description": "Communal bins.",
+      "keywords": [
+        "\\bflat\\b|communal bin|apartment|block"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_eco_minded",
+      "name": "Eco-minded recycler",
+      "description": "Wants to recycle properly.",
+      "keywords": [
+        "zero waste|environment|sustainab"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "us_homeowner",
+      "name": "Homeowner",
+      "description": "Curbside carts.",
+      "keywords": [
+        "my house|curbside|homeowner"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_apartment_renter",
+      "name": "Apartment renter",
+      "description": "No curbside service.",
+      "keywords": [
+        "apartment|renter|complex"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_eco_minded",
+      "name": "Zero-waster",
+      "description": "Wants to recycle correctly.",
+      "keywords": [
+        "zero waste|environment"
+      ],
+      "regions": [
+        "us"
+      ]
     },
     {
       "id": "general_citizen",
-      "name": "General citizen",
-      "description": "Customer or resident whose housing or role cannot be inferred."
+      "name": "General customer",
+      "description": "Persona cannot be inferred.",
+      "keywords": []
     }
   ]
 }

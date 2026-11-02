@@ -1,84 +1,257 @@
 {
-  "_comment": "Topic-specific categories. Keyword patterns drive the no-key classifier (first 3 matches, in order).",
+  "_comment": "Region-specific pain points and personas (ids prefixed in_/eu_/us_). Keyword patterns drive the no-key classifier (first 3 matches, in order, within the document's region).",
   "categories": [
     {
-      "id": "power_cuts",
-      "name": "Power cuts & outages",
-      "description": "Frequent or long cuts, blackouts, load shedding, voltage fluctuation, slow restoration.",
+      "id": "in_power_cuts",
+      "name": "Power cuts & load shedding",
+      "description": "Daily cuts, unscheduled outages, summer load shedding.",
       "keywords": [
-        "power cut|outage|blackout|load ?shedding|no (electricity|power|current)|power (gone|went|failure)|voltage|tripping|light (gone|nahi)"
+        "power cut|load ?shedding|no (electricity|power|current|light)|bijli|outage|power (gone|failure)|light (gone|nahi)"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "high_bills",
-      "name": "Bills too high or wrong",
-      "description": "Unexpectedly high, estimated or incorrect bills; bill shock.",
+      "id": "in_voltage_transformer",
+      "name": "Voltage fluctuation & transformer failures",
+      "description": "Low voltage, fluctuations damaging appliances, burnt transformers.",
       "keywords": [
-        "bill (too high|doubled|high|wrong|shock|increased)|high (bill|electricity bill)|overcharg|estimated (bill|reading)|bill(ing)? (error|mistake)|why is my .*bill"
+        "voltage|fluctuat|transformer|trip(ping)?|low current"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "smart_prepaid_meters",
-      "name": "Smart & prepaid meters",
-      "description": "Smart meters not communicating, prepaid top-ups, faulty or fast meters.",
+      "id": "in_inflated_bills",
+      "name": "Inflated or average bills",
+      "description": "Bills far above usage, average/estimated billing, wrong slabs.",
       "keywords": [
-        "smart meter|prepaid meter|meter reading|meter (fast|faulty|not working|running)|top ?up|in-?home display"
+        "bill (too high|high|wrong|double|increased)|high (bill|electricity bill)|average bill|slab|meter (fast|jumping)|excess bill"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "tariff_price",
-      "name": "Tariff & unit-rate rises",
-      "description": "Unit-rate and standing-charge rises, price cap changes, slab rates.",
+      "id": "in_smart_prepaid_meter",
+      "name": "Smart prepaid meter rollout",
+      "description": "Smart meters running fast, auto-disconnection on zero balance, recharge issues.",
       "keywords": [
-        "tariff|unit rate|per (unit|kwh)|price cap|price (rise|increase|hike)|standing charge|slab|rate per unit"
+        "smart meter|prepaid meter|smart meter recharge|meter (fast|disconnect)|negative balance"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "solar_net_metering",
-      "name": "Solar & net metering",
-      "description": "Rooftop solar approvals, net-meter delays, export rates, subsidy hassles.",
+      "id": "in_new_connection_load",
+      "name": "New connections & load enhancement",
+      "description": "Months-long waits for connections, load changes, name transfer.",
       "keywords": [
-        "solar|net meter|rooftop|feed-?in|export (rate|tariff)|surya ghar|subsid"
+        "new connection|load (increase|enhancement|extension)|name (change|transfer)|connection (delay|pending)|demand note"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "new_connection",
-      "name": "New connections & load changes",
-      "description": "Slow new connections, load enhancement, name transfers.",
+      "id": "in_rooftop_solar_subsidy",
+      "name": "Rooftop solar & PM Surya Ghar subsidy",
+      "description": "Net-meter installation delays, subsidy not credited, vendor issues.",
       "keywords": [
-        "new connection|load (increase|extension|enhancement)|transfer (of )?(name|connection)|name change|connection (delay|pending)"
+        "solar|net meter|surya ghar|subsid|rooftop|vendor"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "switching_supplier",
-      "name": "Switching supplier & contracts",
-      "description": "Switching problems, fixed deals, exit fees, supplier failures.",
+      "id": "in_discom_complaints",
+      "name": "Discom complaints & linemen",
+      "description": "1912 helpline not answering, linemen asking for money, complaints ignored.",
       "keywords": [
-        "switch(ing)? (supplier|provider|energy|to)|fixed (tariff|deal)|exit fee|contract|cheapest (energy|electricity)"
+        "\\b1912\\b|discom|bescom|msedcl|tneb|tangedco|tata power|adani electricity|bses|torrent|complain|complaint|lineman"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "payments_disconnection",
-      "name": "Payments, arrears & disconnection",
-      "description": "Disconnection threats, arrears, direct-debit hikes, refunds of credit.",
+      "id": "eu_bill_shock_price_cap",
+      "name": "Bill shock & the price cap",
+      "description": "Bills rising with Ofgem price cap changes, direct debits jumping.",
       "keywords": [
-        "disconnect|arrears|debt|direct debit|payment (failed|plan)|late payment|credit balance|refund"
+        "price cap|ofgem|direct debit (increase|went up)|bill (shock|doubled|increase)|energy bill"
+      ],
+      "regions": [
+        "europe"
       ]
     },
     {
-      "id": "heating_gas",
-      "name": "Gas, heating & LPG costs",
-      "description": "Gas bills, heating costs, boiler and heat-pump running costs, LPG cylinders.",
+      "id": "eu_standing_charges",
+      "name": "Standing charges",
+      "description": "Daily standing charges high regardless of usage.",
       "keywords": [
-        "gas (bill|price|supply)|heating|boiler|heat pump|\\blpg\\b|cylinder"
+        "standing charge"
+      ],
+      "regions": [
+        "europe"
       ]
     },
     {
-      "id": "supplier_support",
-      "name": "Supplier & discom support",
-      "description": "Unreachable suppliers/discoms, ignored complaints, ombudsman.",
+      "id": "eu_smart_meter_smets",
+      "name": "Smart meters not working (SMETS1/2)",
+      "description": "Smart meters going dumb, not sending readings, IHD problems.",
       "keywords": [
-        "customer (service|care|support)|complain|complaint|ombudsman|helpline|contact number|no response|call (center|centre)|toll free|\\b1912\\b|problems? today|not working|back ?billing|bill download"
+        "smart meter|smets|in-?home display|\\bihd\\b|not sending readings|gone dumb"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_back_billing_estimates",
+      "name": "Back-billing & estimated readings",
+      "description": "Huge catch-up bills after estimates; back-billing rules.",
+      "keywords": [
+        "back ?bill|estimated (bill|reading)|catch-?up bill|meter reading"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_prepayment_forced",
+      "name": "Prepayment meters & self-disconnection",
+      "description": "Forced installs, emergency credit, standing charge debt on PPM.",
+      "keywords": [
+        "prepayment|pay as you go|key meter|top ?up|emergency credit|self[- ]disconnect"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_switching_supplier_failure",
+      "name": "Switching & failed suppliers",
+      "description": "Switching delays, credit balances after supplier collapse, exit fees.",
+      "keywords": [
+        "switch(ing)? (supplier|energy)|exit fee|supplier (failed|collapsed|bust)|credit balance|fixed deal"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_heat_pump_insulation",
+      "name": "Heat pumps, boilers & insulation costs",
+      "description": "Heat-pump running costs, boiler upgrade scheme, insulation grants.",
+      "keywords": [
+        "heat pump|boiler upgrade|insulation|\\beco4\\b|heating (cost|bill)|gas boiler"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_solar_export_seg",
+      "name": "Solar export rates (SEG) & installs",
+      "description": "Low export payments, installer issues, battery value.",
+      "keywords": [
+        "solar|smart export|\\bseg\\b|export (rate|tariff)|battery storage|einspeiseverg"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_supplier_service",
+      "name": "Supplier customer service & ombudsman",
+      "description": "Hours on hold, unresolved complaints, Energy Ombudsman.",
+      "keywords": [
+        "customer service|on hold|complain|complaint|energy ombudsman|(octopus|british gas|ovo|edf|e\\.?on|scottish power).{0,25}(down|not working|problem|issue|complain|refund|wrong|error)"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "us_utility_rate_hikes",
+      "name": "Utility rate hikes & rate cases",
+      "description": "PG&E, Con Ed and others raising rates; fixed charges.",
+      "keywords": [
+        "rate (hike|increase|case)|fixed charge|rates going up|price (increase|hike)|(pg&e|\\bpge\\b|con ?ed|duke energy|dominion|sce|xcel).{0,25}(rate|increase|hike|expensive|high|charge)"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_outages_storms_psps",
+      "name": "Outages, storms & wildfire shutoffs",
+      "description": "Storm outages, PSPS shutoffs, slow restoration.",
+      "keywords": [
+        "outage|power out|blackout|psps|public safety power shutoff|storm|restoration|no power"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_summer_bills_ac",
+      "name": "High summer bills & AC costs",
+      "description": "Bills spiking with AC use and heat waves.",
+      "keywords": [
+        "electric bill.{0,25}(high|doubled|summer|ac)|high electric bill|why is my electric bill"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_nem3_net_metering",
+      "name": "Net metering changes (NEM 3.0)",
+      "description": "Lower solar export credits, true-up bills.",
+      "keywords": [
+        "nem ?3|net metering|net billing|true-?up|export credit"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_solar_sales_scams",
+      "name": "Solar sales tactics & loans",
+      "description": "Door-to-door solar pitches, solar loans, broken promises.",
+      "keywords": [
+        "solar (scam|loan|sales|company)|sunrun|sunnova|door to door solar|solar lease"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_deregulated_supplier",
+      "name": "Retail electricity plans (Texas & deregulated states)",
+      "description": "Variable-rate plans, teaser rates, supplier switching.",
+      "keywords": [
+        "texas electricity|power to choose|variable rate plan|retail electric provider|deregulated|griddy"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_shutoff_assistance",
+      "name": "Shutoffs, past-due & assistance",
+      "description": "Disconnection notices, LIHEAP, payment plans.",
+      "keywords": [
+        "shut ?off|disconnect|past due|liheap|payment (plan|assistance)|budget billing"
+      ],
+      "regions": [
+        "us"
       ]
     },
     {
@@ -90,43 +263,168 @@
   ],
   "personas": [
     {
-      "id": "homeowner",
-      "name": "Homeowner",
-      "description": "Owns their home; pays bills directly.",
+      "id": "in_urban_household",
+      "name": "Urban household",
+      "description": "City home, AC usage in summer.",
       "keywords": [
-        "my house|homeowner|our house|own home"
+        "flat|apartment|\\bac\\b|city"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "renter",
-      "name": "Renter",
-      "description": "Rents; landlord controls meter or supplier.",
+      "id": "in_rural_farmer",
+      "name": "Rural household / farmer",
+      "description": "Irregular supply, agricultural pumps.",
       "keywords": [
-        "renting|tenant|landlord|rented flat"
+        "village|rural|farm|pump|agricultur"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "solar_adopter",
+      "id": "in_society_resident",
+      "name": "Apartment society resident",
+      "description": "Common-area and DG backup issues.",
+      "keywords": [
+        "society|\\brwa\\b|\\bdg\\b|common area|association"
+      ],
+      "regions": [
+        "india"
+      ]
+    },
+    {
+      "id": "in_small_shop",
+      "name": "Small shop / commercial",
+      "description": "Commercial tariff.",
+      "keywords": [
+        "shop|commercial connection|business"
+      ],
+      "regions": [
+        "india"
+      ]
+    },
+    {
+      "id": "in_solar_adopter",
       "name": "Solar adopter",
       "description": "Has or wants rooftop solar.",
       "keywords": [
-        "solar|rooftop|net meter"
+        "solar|rooftop"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "small_business",
-      "name": "Small business",
-      "description": "Pays commercial energy bills.",
+      "id": "eu_renter",
+      "name": "Renter",
+      "description": "Landlord controls meter and supplier.",
       "keywords": [
-        "my (shop|business|restaurant|office)|commercial (connection|meter)"
+        "renting|tenant|landlord|rented"
+      ],
+      "regions": [
+        "europe"
       ]
     },
     {
-      "id": "prepaid_low_income",
-      "name": "Prepaid / low-income household",
-      "description": "Pays as you go, sensitive to price rises.",
+      "id": "eu_homeowner",
+      "name": "Homeowner",
+      "description": "Considering heat pumps, solar, insulation.",
       "keywords": [
-        "prepaid|pay as you go|can'?t afford|struggling to pay|benefits"
+        "homeowner|my house|own home"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_prepayment_customer",
+      "name": "Prepayment customer",
+      "description": "On a key or smart PAYG meter.",
+      "keywords": [
+        "prepayment|pay as you go|top up"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_fuel_poor_retiree",
+      "name": "Retiree / fuel-poor household",
+      "description": "Struggling to heat the home.",
+      "keywords": [
+        "pension|retired|can'?t afford (to heat|heating)|winter fuel"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_ev_heatpump_owner",
+      "name": "EV or heat-pump household",
+      "description": "On a smart time-of-use tariff.",
+      "keywords": [
+        "\\bev\\b|electric car|heat pump|agile|intelligent octopus|time of use"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "us_homeowner",
+      "name": "Homeowner",
+      "description": "Pays the bill, may have solar.",
+      "keywords": [
+        "homeowner|my house"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_renter",
+      "name": "Renter",
+      "description": "Apartment renter.",
+      "keywords": [
+        "apartment|renter|landlord"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_solar_owner",
+      "name": "Solar owner",
+      "description": "Rooftop solar customer.",
+      "keywords": [
+        "solar|panels"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_texas_resident",
+      "name": "Texas resident",
+      "description": "On a retail electricity plan.",
+      "keywords": [
+        "texas|ercot|houston|dallas|austin"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_low_income",
+      "name": "Low-income household",
+      "description": "Needs bill assistance.",
+      "keywords": [
+        "liheap|can'?t pay|assistance|low income"
+      ],
+      "regions": [
+        "us"
       ]
     },
     {

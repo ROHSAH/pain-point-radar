@@ -1,84 +1,246 @@
 {
-  "_comment": "Topic-specific categories. Keyword patterns drive the no-key classifier (first 3 matches, in order).",
+  "_comment": "Region-specific pain points and personas (ids prefixed in_/eu_/us_). Keyword patterns drive the no-key classifier (first 3 matches, in order, within the document's region).",
   "categories": [
     {
-      "id": "missing_wrong_items",
+      "id": "in_platform_packaging_fees",
+      "name": "Platform, packaging & rain fees",
+      "description": "Swiggy/Zomato platform fees, packaging charges, rain and late-night surcharges.",
+      "keywords": [
+        "platform fee|packaging (charge|fee)|rain (fee|surge)|late night fee|delivery (charge|fee)|surge|gst on"
+      ],
+      "regions": [
+        "india"
+      ]
+    },
+    {
+      "id": "in_menu_price_markup",
+      "name": "Menu prices higher than in-restaurant",
+      "description": "Higher app prices than dine-in, inflated MRPs.",
+      "keywords": [
+        "price (difference|higher|more)|than restaurant|menu price|markup|expensive"
+      ],
+      "regions": [
+        "india"
+      ]
+    },
+    {
+      "id": "in_missing_wrong_items",
       "name": "Missing or wrong items",
-      "description": "Items missing, wrong order delivered, order never arrived.",
+      "description": "Items missing, wrong order, spilled food.",
       "keywords": [
-        "missing (item|items)|wrong (order|item|food)|incomplete|never (arrived|came)|didn'?t receive|not delivered"
+        "missing|wrong (order|item|food)|incomplete|spilled|not received"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "late_delivery",
-      "name": "Late deliveries",
-      "description": "Orders much later than promised, stuck orders.",
-      "keywords": [
-        "\\blate\\b|delay|taking (long|forever)|still not (here|delivered)|\\beta\\b|stuck|waiting"
-      ]
-    },
-    {
-      "id": "food_quality",
-      "name": "Cold, spilled or bad food",
-      "description": "Cold or spilled food, stale, wrong quantity, food safety.",
-      "keywords": [
-        "\\bcold\\b|spilled|stale|bad (food|quality)|undercooked|hair|insect|food poisoning|quantity|portion"
-      ]
-    },
-    {
-      "id": "fees_markups",
-      "name": "Delivery fees, platform fees & markups",
-      "description": "Delivery, platform, packaging and small-order fees; menu prices above the restaurant.",
-      "keywords": [
-        "delivery (fee|charge)|platform fee|service fee|surge|packaging charge|small order fee|markup|price (higher|difference)|expensive"
-      ]
-    },
-    {
-      "id": "refunds",
-      "name": "Refunds refused",
-      "description": "Refunds denied or only partial for bad orders.",
+      "id": "in_refund_denied",
+      "name": "Refunds denied or partial",
+      "description": "Refunds refused, partial refunds as coupons.",
       "keywords": [
         "refund"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "cancellations",
-      "name": "Order cancellations",
-      "description": "Orders cancelled by restaurant or app, cancellation charges.",
+      "id": "in_one_gold_membership",
+      "name": "Swiggy One / Zomato Gold value",
+      "description": "Paid memberships still charging fees, benefits shrinking.",
       "keywords": [
-        "cancel"
+        "swiggy one|zomato gold|membership|zomato pro|subscription"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "subscriptions_offers",
-      "name": "Memberships, coupons & offers",
-      "description": "Paid memberships not delivering value, coupons that don't apply.",
+      "id": "in_late_cold",
+      "name": "Late or cold food",
+      "description": "Long delays, cold food, order stuck.",
       "keywords": [
-        "zomato gold|swiggy one|dashpass|uber one|deliveroo plus|subscription|membership|coupon|promo code|\\boffer\\b"
+        "\\blate\\b|delay|\\bcold\\b|stuck|taking (long|forever)"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "rider_issues",
-      "name": "Rider behaviour",
-      "description": "Delivery partners being rude, asking for tips or cash, not finding the address.",
+      "id": "in_rider_conduct",
+      "name": "Delivery partner conduct",
+      "description": "Riders asking for cash, tips, refusing to come up.",
       "keywords": [
-        "\\brider\\b|delivery (boy|partner|driver|guy)|dasher|courier|rude|asked (for )?(cash|tip)"
+        "rider|delivery (boy|partner|executive)|asked (for )?(cash|tip|money)|won'?t come up|rude"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "support_bots",
-      "name": "Support & chatbots",
-      "description": "Chatbots that loop, no human agent, complaints ignored.",
+      "id": "in_chatbot_support",
+      "name": "Chatbot support & complaints",
+      "description": "Bots looping, no human, consumer forum.",
       "keywords": [
-        "customer (care|service|support)|support|complain|complaint|\\bchat\\b|\\bbot\\b|contact number|helpline|escalat|\\bproblem\\b|\\bissue\\b|not working"
+        "customer care|chat ?bot|support|complain|complaint|consumer (forum|court)|helpline|problem|not working"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "account_bans",
-      "name": "Account bans & fraud flags",
-      "description": "Accounts blocked for too many refund requests.",
+      "id": "eu_fees_markups",
+      "name": "Service fees & menu markups (Deliveroo, Just Eat, Uber Eats)",
+      "description": "Service and small-order fees, app prices above restaurant prices.",
       "keywords": [
-        "account (blocked|banned|suspended|deactivated)|\\bban(ned)?\\b|flagged"
+        "service fee|delivery fee|small order fee|markup|price (higher|difference)|expensive"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_missing_orders_refunds",
+      "name": "Missing orders & refund disputes",
+      "description": "Orders not arriving, refunds refused.",
+      "keywords": [
+        "missing|not (arrived|delivered)|never arrived|refund|wrong order"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_late_cold",
+      "name": "Late or cold food",
+      "description": "Long waits, cold or spilled food.",
+      "keywords": [
+        "\\blate\\b|delay|\\bcold\\b|spilled"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_rider_issues",
+      "name": "Rider issues",
+      "description": "Riders not finding addresses, rude, substitution riders.",
+      "keywords": [
+        "rider|courier|driver|rude|wrong address"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_account_bans",
+      "name": "Account bans for refund requests",
+      "description": "Accounts suspended after too many refund claims.",
+      "keywords": [
+        "account (banned|blocked|suspended|deactivated)|banned|refund abuse"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_support",
+      "name": "Support",
+      "description": "Bot-only support, no resolution.",
+      "keywords": [
+        "support|customer service|complain|complaint|\\bchat\\b|problem|not working"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "us_fees_markups",
+      "name": "Fees & menu markups (DoorDash, Uber Eats, Grubhub)",
+      "description": "Service fees, regulatory response fees, inflated menu prices.",
+      "keywords": [
+        "service fee|delivery fee|regulatory|markup|menu price|expensive|price (higher|difference)"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_missing_items_refunds",
+      "name": "Missing items & refunds",
+      "description": "Missing items, refunds denied, credits instead of cash.",
+      "keywords": [
+        "missing|wrong (order|item)|never (arrived|came)|refund|credit"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_dashpass_uber_one",
+      "name": "DashPass & Uber One value",
+      "description": "Memberships still charging fees.",
+      "keywords": [
+        "dashpass|uber one|grubhub\\+|membership|subscription"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_tipping_pressure",
+      "name": "Tipping pressure",
+      "description": "Tip expectations and 'no tip' orders delayed.",
+      "keywords": [
+        "\\btip(s|ping)?\\b|no tip"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_late_cold",
+      "name": "Late or cold food",
+      "description": "Stacked orders, long waits.",
+      "keywords": [
+        "\\blate\\b|delay|\\bcold\\b|stacked|taking forever"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_account_deactivation",
+      "name": "Customer account deactivation",
+      "description": "Accounts disabled after refund requests.",
+      "keywords": [
+        "account (deactivated|disabled|banned|suspended)|banned"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_dasher_pay",
+      "name": "Dasher/driver pay",
+      "description": "Low pay, base pay changes.",
+      "keywords": [
+        "dasher|driver pay|base pay|per order|uber eats driver|as a driver"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_support",
+      "name": "Support",
+      "description": "Bots, no human help.",
+      "keywords": [
+        "support|customer service|complain|complaint|\\bchat\\b|problem|not working"
+      ],
+      "regions": [
+        "us"
       ]
     },
     {
@@ -90,43 +252,146 @@
   ],
   "personas": [
     {
-      "id": "regular_orderer",
-      "name": "Regular orderer",
-      "description": "Orders most days or weeks.",
+      "id": "in_working_professional",
+      "name": "Working professional",
+      "description": "Orders lunch or late dinners.",
       "keywords": [
-        "order (every|daily|often)|regular|always order"
+        "office|work|lunch|late night"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "student",
+      "id": "in_student",
       "name": "Student",
-      "description": "Price-sensitive, late-night orders.",
+      "description": "Price-sensitive, hostel orders.",
       "keywords": [
-        "student|hostel|college|dorm"
+        "student|hostel|college|\\bpg\\b"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "family",
+      "id": "in_family",
       "name": "Family",
       "description": "Orders for the household.",
       "keywords": [
-        "for (my )?(family|kids|parents)"
+        "family|kids|parents"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "restaurant_owner",
+      "id": "in_restaurant_owner",
       "name": "Restaurant owner",
-      "description": "Lists a restaurant on the apps.",
+      "description": "Pays platform commissions.",
       "keywords": [
         "my restaurant|restaurant owner|commission|cloud kitchen"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "delivery_rider",
-      "name": "Delivery rider",
-      "description": "Delivers for the platform.",
+      "id": "in_delivery_partner",
+      "name": "Delivery partner",
+      "description": "Rides for Swiggy, Zomato, Blinkit.",
       "keywords": [
-        "i('m| am) a (rider|dasher|delivery)|as a (rider|dasher|courier)|delivery partner earnings"
+        "delivery partner|as a rider|i deliver|payout|incentive"
+      ],
+      "regions": [
+        "india"
+      ]
+    },
+    {
+      "id": "eu_regular_orderer",
+      "name": "Regular orderer",
+      "description": "Orders weekly.",
+      "keywords": [
+        "every week|always order|regular"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_student",
+      "name": "Student",
+      "description": "Student orders.",
+      "keywords": [
+        "student|\\buni\\b"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_restaurant_owner",
+      "name": "Restaurant owner",
+      "description": "Pays commissions.",
+      "keywords": [
+        "my restaurant|commission"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_rider",
+      "name": "Rider",
+      "description": "Delivers for platforms.",
+      "keywords": [
+        "as a rider|i deliver|courier"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "us_regular_orderer",
+      "name": "Regular orderer",
+      "description": "Frequent DoorDash/Uber Eats user.",
+      "keywords": [
+        "every (day|week)|always order"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_family",
+      "name": "Family",
+      "description": "Orders for household.",
+      "keywords": [
+        "family|kids"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_restaurant_owner",
+      "name": "Restaurant owner",
+      "description": "Pays commissions.",
+      "keywords": [
+        "my restaurant|commission"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_dasher",
+      "name": "Dasher / driver",
+      "description": "Delivers for apps.",
+      "keywords": [
+        "dasher|as a driver|i deliver"
+      ],
+      "regions": [
+        "us"
       ]
     },
     {

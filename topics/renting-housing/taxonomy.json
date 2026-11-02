@@ -1,84 +1,235 @@
 {
-  "_comment": "Topic-specific categories. Keyword patterns drive the no-key classifier (first 3 matches, in order).",
+  "_comment": "Region-specific pain points and personas (ids prefixed in_/eu_/us_). Keyword patterns drive the no-key classifier (first 3 matches, in order, within the document's region).",
   "categories": [
     {
-      "id": "deposit_disputes",
-      "name": "Deposit withheld or deducted",
-      "description": "Deposits withheld, unfair deductions, deposits not protected.",
+      "id": "in_huge_deposits",
+      "name": "Huge deposits (up to 10 months) & refunds",
+      "description": "Bengaluru-style 6–10 month deposits, deductions, deposits not returned.",
       "keywords": [
-        "deposit|deduction"
+        "deposit|advance (amount|rent)|10 months|deduction|painting charges"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "repairs_mould",
-      "name": "Repairs, damp & mould ignored",
-      "description": "Landlords ignoring repairs, damp, mould, leaks, pests, heating.",
+      "id": "in_broker_fees",
+      "name": "Broker fees & fake listings",
+      "description": "One month's rent as brokerage, fake 'owner' listings.",
       "keywords": [
-        "repair|mou?ld|damp|leak|maintenance|broken (boiler|heater|ac|appliance)|pest|cockroach|rats|heating"
+        "broker|brokerage|nobroker|magicbricks|99acres|housing\\.com|fake listing"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "rent_increases",
-      "name": "Rent increases",
-      "description": "Steep or frequent rent rises.",
+      "id": "in_bachelor_food_restrictions",
+      "name": "Bachelor, food & religion restrictions",
+      "description": "No bachelors, veg-only, religion or caste filters.",
       "keywords": [
-        "rent (increase|hike|rise|going up)|raise (the )?rent|rent review|rent control|rent cap"
+        "bachelor|veg(etarian)? only|non-?veg|family only|religion|caste|muslim|single (men|women)"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "brokerage_fees",
-      "name": "Broker, agent & application fees",
-      "description": "Brokerage, letting/agent fees, holding deposits, application fees.",
+      "id": "in_rent_agreement_registration",
+      "name": "Rent agreement & registration",
+      "description": "11-month agreements, stamp duty, police verification.",
       "keywords": [
-        "broker|brokerage|agent fee|letting fee|application fee|holding deposit|admin fee"
+        "rent agreement|rental agreement|11 months|stamp (duty|paper)|police verification|notar|registration"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "eviction_notice",
-      "name": "Eviction & notice to leave",
-      "description": "Evictions, no-fault notices, sudden demands to vacate.",
+      "id": "in_society_rules_maintenance",
+      "name": "Society rules & maintenance charges",
+      "description": "RWA rules, maintenance charges, visitor restrictions.",
       "keywords": [
-        "evict|notice (period|to leave|to vacate)|section 21|kicked out|vacate"
+        "society|\\brwa\\b|maintenance (charges|fee)|association|gated community|visitor"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "finding_rentals",
-      "name": "Finding a place & competition",
-      "description": "Few listings, bidding wars, fake listings, viewing scrambles.",
+      "id": "in_landlord_eviction_hikes",
+      "name": "Sudden eviction & rent hikes",
+      "description": "Landlords demanding exit or 10–20% hikes on renewal.",
       "keywords": [
-        "find(ing)? (a )?(flat|apartment|house|room|pg)|viewing|bidding war|competition|fake listing|nobroker|rightmove|zillow|spareroom"
+        "evict|vacate|rent (increase|hike)|renewal|landlord (asking|wants)"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "restrictive_rules",
-      "name": "Restrictive rules & discrimination",
-      "description": "No bachelors, pets, food or religion rules, guarantor and income checks.",
+      "id": "in_repairs_water_power",
+      "name": "Repairs, water & power problems",
+      "description": "Seepage, water supply, power backup, landlord not fixing.",
       "keywords": [
-        "bachelor|no pets|\\bpets?\\b|vegetarian only|family only|discriminat|guarantor|credit check|income requirement"
+        "repair|seepage|leak|water (supply|problem|tanker)|power backup|maintenance|not fixing"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "landlord_behaviour",
-      "name": "Landlord harassment & entry",
-      "description": "Landlords entering without notice, threats, lock-outs.",
+      "id": "eu_mould_disrepair",
+      "name": "Mould, damp & disrepair",
+      "description": "Landlords ignoring damp, mould and repairs; Awaab's Law.",
       "keywords": [
-        "landlord (harass|enter|threat|refus|won'?t)|harass|entering without|privacy|lock(ed)? out"
+        "mou?ld|damp|disrepair|leak|condensation|awaab|repair|boiler"
+      ],
+      "regions": [
+        "europe"
       ]
     },
     {
-      "id": "lease_agreements",
-      "name": "Lease & rental agreements",
-      "description": "Agreement terms, registration, break clauses, renewals.",
+      "id": "eu_section21_renters_rights",
+      "name": "No-fault evictions & Renters' Rights",
+      "description": "Section 21 notices, Renters' Rights changes, Kündigung.",
       "keywords": [
-        "\\blease\\b|rental agreement|rent agreement|tenancy agreement|stamp duty|break clause|renewal"
+        "section 21|no[- ]fault|evict|renters'? rights|notice to leave|kündigung"
+      ],
+      "regions": [
+        "europe"
       ]
     },
     {
-      "id": "utilities_society",
-      "name": "Utilities & society/service charges",
-      "description": "Maintenance and society fees, utility bills, water supply.",
+      "id": "eu_deposit_protection",
+      "name": "Deposit protection & deductions",
+      "description": "Unprotected deposits, unfair deductions, Kaution disputes.",
       "keywords": [
-        "maintenance charges|society (charges|fees)|electricity (bill|meter)|water (bill|supply)|utilities|service charge"
+        "deposit|\\bdps\\b|\\btds\\b|mydeposits|kaution|deduction|end of tenancy"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_rent_rises_bidding",
+      "name": "Rent rises & bidding wars",
+      "description": "Large increases, bidding above asking, Section 13.",
+      "keywords": [
+        "rent (increase|rise)|section 13|bidding war|above asking|mietpreisbremse|mieterhöhung"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_finding_flats_viewings",
+      "name": "Finding a flat & viewing scrambles",
+      "description": "Dozens of applicants per viewing, scams, SpareRoom.",
+      "keywords": [
+        "viewing|spareroom|rightmove|zoopla|\\bdaft\\b|wg-gesucht|immobilienscout|scam listing|can'?t find (a )?flat"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_agent_fees_requirements",
+      "name": "Letting agent fees, referencing & guarantors",
+      "description": "Holding deposits, guarantors, income checks, Schufa for renting.",
+      "keywords": [
+        "letting agent|holding deposit|guarantor|referencing|income (requirement|check)|schufa|admin fee"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_service_charges_utilities",
+      "name": "Service charges & Nebenkosten",
+      "description": "Rising service charges, utility statements.",
+      "keywords": [
+        "service charge|nebenkosten|utility (bill|statement)|council tax"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "us_rent_hikes",
+      "name": "Rent hikes at renewal",
+      "description": "Large renewal increases, algorithmic pricing.",
+      "keywords": [
+        "rent (increase|hike|went up)|renewal (increase|offer)|realpage|raise (the )?rent"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_junk_fees",
+      "name": "Junk fees (application, admin, amenity)",
+      "description": "Application, admin, amenity, trash and convenience fees.",
+      "keywords": [
+        "application fee|admin fee|amenity fee|junk fee|convenience fee|valet trash|pet rent"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_security_deposit_return",
+      "name": "Security deposit returns",
+      "description": "Deposits kept for normal wear and tear.",
+      "keywords": [
+        "security deposit|deposit (back|return|withheld)|wear and tear"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_repairs_habitability",
+      "name": "Repairs & habitability",
+      "description": "Mold, pests, broken AC/heat ignored.",
+      "keywords": [
+        "repair|mold|mould|roach|pest|bed ?bugs|no (heat|ac|hot water)|maintenance request|habitab"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_evictions",
+      "name": "Evictions & notices",
+      "description": "Eviction filings, notices to vacate.",
+      "keywords": [
+        "evict|notice to vacate|lease termination|kicked out"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_broker_fees_income",
+      "name": "Broker fees & income requirements",
+      "description": "NYC broker fees (FARE Act), 40x rent, credit checks.",
+      "keywords": [
+        "broker fee|fare act|40x|income requirement|credit check|guarantor|cosigner"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_lease_landlord_conduct",
+      "name": "Lease terms & landlord conduct",
+      "description": "Landlords entering, lease breaks, unclear terms.",
+      "keywords": [
+        "\\blease\\b|landlord (entering|won'?t|refus)|break (my )?lease|privacy"
+      ],
+      "regions": [
+        "us"
       ]
     },
     {
@@ -90,43 +241,135 @@
   ],
   "personas": [
     {
-      "id": "student_renter",
-      "name": "Student renter",
-      "description": "Student housing or shared rooms.",
+      "id": "in_bachelor_techie",
+      "name": "Bachelor / tech employee",
+      "description": "Moved city for an IT job.",
       "keywords": [
-        "student|university|college|hostel|\\bpg\\b"
+        "bachelor|techie|it (job|company)|moved to (bangalore|bengaluru|pune|hyderabad)"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "young_professional",
-      "name": "Young professional",
-      "description": "Moved city for work.",
+      "id": "in_family",
+      "name": "Family tenant",
+      "description": "Renting with spouse and children.",
       "keywords": [
-        "moved (to|for) (work|job)|new job|working professional"
+        "family|my (wife|husband|kids)"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "family_renter",
-      "name": "Family renter",
-      "description": "Rents with partner or children.",
+      "id": "in_student_pg",
+      "name": "Student / PG resident",
+      "description": "Paying guest or hostel.",
       "keywords": [
-        "my (wife|husband|kids|children|family)"
+        "\\bpg\\b|paying guest|hostel|student"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "bachelor",
-      "name": "Bachelor / single tenant",
-      "description": "Single tenant facing restrictions.",
-      "keywords": [
-        "bachelor|single (man|woman|guy|girl)"
-      ]
-    },
-    {
-      "id": "landlord",
+      "id": "in_landlord",
       "name": "Landlord",
-      "description": "Rents out property.",
+      "description": "Owner renting out flats.",
       "keywords": [
-        "my tenant|as a landlord|i('m| am) a landlord"
+        "my tenant|as a landlord|owner"
+      ],
+      "regions": [
+        "india"
+      ]
+    },
+    {
+      "id": "eu_student",
+      "name": "Student renter",
+      "description": "Student houses and halls.",
+      "keywords": [
+        "student|\\buni\\b|university|halls"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_young_professional",
+      "name": "Young professional",
+      "description": "Renting in a city.",
+      "keywords": [
+        "professional|moved to london|flat share|houseshare"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_family",
+      "name": "Family renter",
+      "description": "Renting with children.",
+      "keywords": [
+        "family|my (kids|children)"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_migrant",
+      "name": "Migrant / new arrival",
+      "description": "No UK/EU rental history.",
+      "keywords": [
+        "moved (here|to)|new to|expat|visa|no credit history"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "us_big_city_renter",
+      "name": "Big-city renter",
+      "description": "NYC, SF, LA, Boston, Chicago.",
+      "keywords": [
+        "nyc|new york|san francisco|\\bsf\\b|los angeles|boston|chicago"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_student",
+      "name": "Student",
+      "description": "Off-campus housing.",
+      "keywords": [
+        "student|college|campus"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_family",
+      "name": "Family renter",
+      "description": "Renting with kids.",
+      "keywords": [
+        "family|my (kids|children)"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_landlord",
+      "name": "Small landlord",
+      "description": "Owns a few units.",
+      "keywords": [
+        "my tenant|as a landlord"
+      ],
+      "regions": [
+        "us"
       ]
     },
     {

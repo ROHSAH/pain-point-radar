@@ -1,84 +1,257 @@
 {
-  "_comment": "Topic-specific categories. Keyword patterns drive the no-key classifier (first 3 matches, in order).",
+  "_comment": "Region-specific pain points and personas (ids prefixed in_/eu_/us_). Keyword patterns drive the no-key classifier (first 3 matches, in order, within the document's region).",
   "categories": [
     {
-      "id": "broken_chargers",
-      "name": "Broken or faulty chargers",
-      "description": "Chargers out of order, errors, sessions failing to start or stopping.",
+      "id": "in_few_public_chargers",
+      "name": "Too few public chargers",
+      "description": "Few chargers in cities and on highways; long detours.",
       "keywords": [
-        "broken|not working|faulty|out of order|error|won'?t (charge|start)|failed to (charge|start)|offline|stopped charging"
+        "near me|where (to|can)|no chargers?|highway|charging station (near|in)|few chargers|range anxiety"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "finding_chargers",
-      "name": "Finding chargers & coverage gaps",
-      "description": "Too few chargers, charging deserts, highway gaps, range anxiety.",
+      "id": "in_chargers_broken_offline",
+      "name": "Chargers broken or offline",
+      "description": "Listed chargers not working when you arrive.",
       "keywords": [
-        "near me|where (to|can)|find (a )?charger|no chargers|charging (desert|station near)|range anxiety|highway"
+        "not working|broken|offline|faulty|out of (order|service)|error"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "occupied_queues",
-      "name": "Occupied chargers & queues",
-      "description": "Bays taken by EVs or petrol cars, queues at popular sites.",
+      "id": "in_app_fragmentation",
+      "name": "Too many charging apps & wallets",
+      "description": "Tata Power EZ Charge, Statiq, Jio-bp pulse, ChargeZone each needing an app and wallet.",
       "keywords": [
-        "occupied|queue|waiting|\\biced?\\b|blocked by|parked in|busy|line at"
+        "\\bapp\\b|wallet|tata power ez|statiq|jio-?bp|chargezone|zeon|glida|payment"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "charging_cost",
-      "name": "Charging cost & pricing",
-      "description": "Price per kWh, idle fees, home vs public cost, subscriptions.",
+      "id": "in_society_noc_home_charging",
+      "name": "Society NOC & home charging in apartments",
+      "description": "RWAs refusing charger installation, separate meters, parking.",
       "keywords": [
-        "\\bcost\\b|price|per (kwh|unit)|expensive|cheap|tariff|idle fee|overstay|subscription|how much"
+        "society|\\bnoc\\b|\\brwa\\b|apartment|parking|separate meter|home charger"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "slow_charging",
-      "name": "Slow charging speed",
-      "description": "Chargers delivering far below rated kW, long charging times.",
+      "id": "in_scooter_battery_service",
+      "name": "E-scooter battery & service problems",
+      "description": "Ola S1/Ather/Chetak battery issues, service delays.",
       "keywords": [
-        "\\bslow\\b|speed|\\bkw\\b|taking (long|hours)|how long|charging time|throttl"
+        "ola s1|ather|chetak|iqube|scooter|battery (issue|problem|drain)|service (center|delay)"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "apps_payment",
-      "name": "Apps, RFID cards & payment hassles",
-      "description": "Too many apps, failed payments, accounts and RFID cards.",
+      "id": "in_charging_cost_gst",
+      "name": "Public charging cost vs home",
+      "description": "Per-kWh prices, GST and session fees.",
       "keywords": [
-        "\\bapp\\b|rfid|payment|account|too many apps|wallet|tap to pay|plug and charge"
+        "\\bcost\\b|price|per (kwh|unit)|\\bgst\\b|expensive|tariff|how much"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "home_charging",
-      "name": "Home charger installation",
-      "description": "Installing a home or apartment charger, society/landlord permission, electricians.",
+      "id": "in_slow_charging",
+      "name": "Slow charging speeds",
+      "description": "DC chargers delivering far less than rated.",
       "keywords": [
-        "home charger|wallbox|install|installation|electrician|apartment charging|society (permission|noc)|ohme|pod point|level 2"
+        "\\bslow\\b|speed|\\bkw\\b|taking (long|hours)|how long"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "battery_range",
-      "name": "Battery, range & winter loss",
-      "description": "Range drops, degradation, cold-weather charging.",
+      "id": "eu_unreliable_rapid_chargers",
+      "name": "Unreliable rapid chargers",
+      "description": "Rapid chargers broken or derated; reliability rules.",
       "keywords": [
-        "battery|range|degradation|winter|cold|\\bsoc\\b|80%"
+        "not working|broken|out of order|faulty|offline|failed to (start|charge)|unreliable"
+      ],
+      "regions": [
+        "europe"
       ]
     },
     {
-      "id": "compatibility",
-      "name": "Plug & vehicle compatibility",
-      "description": "Connector types, adapters, Tesla/NACS access.",
+      "id": "eu_public_price_vs_home",
+      "name": "High public charging prices vs home",
+      "description": "Public rapid prices far above home tariffs; VAT difference.",
       "keywords": [
-        "\\bccs\\b|chademo|type 2|\\bnacs\\b|adapter|compatib|bharat (ac|dc)|connector"
+        "\\bcost\\b|price|per kwh|expensive|\\bvat\\b|cheaper at home|pence per kwh|p/kwh"
+      ],
+      "regions": [
+        "europe"
       ]
     },
     {
-      "id": "network_support",
-      "name": "Charging network support & refunds",
-      "description": "No help on site, refunds for failed sessions, double charges.",
+      "id": "eu_contactless_ad_hoc",
+      "name": "Contactless & ad-hoc payment",
+      "description": "Needing apps or RFID instead of contactless.",
       "keywords": [
-        "customer (care|service|support)|support|complain|complaint|refund|charged (twice|wrong)|helpline"
+        "contactless|\\bapp\\b|rfid|payment|ad[- ]hoc|too many apps"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_on_street_renters",
+      "name": "No home charging for flats & terraces",
+      "description": "No driveway; on-street lamppost chargers, cable gullies.",
+      "keywords": [
+        "no driveway|on[- ]street|lamp ?post|terrace|\\bflat\\b|cable (across|gully)|kerbside"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_home_charger_install",
+      "name": "Home charger installs & grants",
+      "description": "Installer costs, DNO approvals, EV chargepoint grant.",
+      "keywords": [
+        "home charger|wallbox|install|\\bdno\\b|grant|ohme|pod point|zappi|easee"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_tesla_ionity_access",
+      "name": "Network access (Tesla, Ionity) & roaming",
+      "description": "Supercharger access for non-Teslas, roaming tariffs.",
+      "keywords": [
+        "supercharger|ionity|tesla (network|charger)|roaming"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_winter_range",
+      "name": "Winter range & charging speed",
+      "description": "Cold-weather range loss and slow charging.",
+      "keywords": [
+        "winter|\\bcold\\b|range|preheat|precondition"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_blocked_bays_queues",
+      "name": "Blocked bays & queues",
+      "description": "ICE cars in bays, queues at hubs, idle fees.",
+      "keywords": [
+        "\\biced?\\b|blocked|queue|waiting|idle fee|overstay"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "us_broken_chargers",
+      "name": "Broken DCFC (Electrify America, EVgo)",
+      "description": "Non-Tesla fast chargers broken or derated.",
+      "keywords": [
+        "not working|broken|faulty|error|failed|derat"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_nacs_adapters",
+      "name": "NACS adapters & Supercharger access",
+      "description": "Adapters, compatibility and Supercharger access for non-Teslas.",
+      "keywords": [
+        "\\bnacs\\b|adapter|supercharger (access|for)|\\bccs\\b|j3400"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_charging_deserts",
+      "name": "Charging deserts & road trips",
+      "description": "Rural gaps and long stretches without fast charging.",
+      "keywords": [
+        "road trip|rural|desert|no chargers|range anxiety|interstate|near me|where to"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_cost_idle_fees",
+      "name": "Charging cost & idle fees",
+      "description": "Per-kWh or per-minute prices, idle fees.",
+      "keywords": [
+        "\\bcost\\b|price|per kwh|per minute|idle fee|expensive|how much"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_apps_payment",
+      "name": "Apps, accounts & payment",
+      "description": "Multiple apps, accounts, card readers not working.",
+      "keywords": [
+        "\\bapp\\b|payment|account|card reader|plug and charge"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_apartment_charging",
+      "name": "Apartment & HOA charging",
+      "description": "Renters and HOAs without charging.",
+      "keywords": [
+        "apartment|renter|\\bhoa\\b|condo|landlord"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_home_install_panel",
+      "name": "Level 2 home install & panel upgrades",
+      "description": "Electrician costs, panel upgrades, permits.",
+      "keywords": [
+        "level 2|home charger|install|electrician|panel upgrade|240v|nema 14-?50"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_cold_weather",
+      "name": "Cold weather range & charging",
+      "description": "Winter range loss and slow charging.",
+      "keywords": [
+        "\\bcold\\b|winter|freez|range loss|precondition"
+      ],
+      "regions": [
+        "us"
       ]
     },
     {
@@ -90,51 +263,135 @@
   ],
   "personas": [
     {
-      "id": "ev_car_owner",
+      "id": "in_ev_car_owner",
       "name": "EV car owner",
-      "description": "Owns an electric car.",
+      "description": "Nexon EV, MG, BYD, Mahindra owner.",
       "keywords": [
-        "my (ev|car|tesla|nexon|model 3|model y|ioniq|bolt|mach-e|id\\.4)"
+        "nexon|tiago ev|punch ev|mg (zs|comet|windsor)|\\bbyd\\b|xuv ?400|be ?6|my ev"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "e_scooter_owner",
-      "name": "Electric scooter/bike owner",
-      "description": "Owns an electric two-wheeler.",
+      "id": "in_e_scooter_owner",
+      "name": "E-scooter owner",
+      "description": "Ola, Ather, TVS, Bajaj scooter.",
       "keywords": [
-        "scooter|ather|ola s1|e-?bike|two wheeler|chetak|iqube"
+        "scooter|ola s1|ather|iqube|chetak"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "apartment_dweller",
+      "id": "in_apartment_dweller",
       "name": "Apartment dweller",
-      "description": "No private parking or charger at home.",
+      "description": "No private charging point.",
       "keywords": [
-        "apartment|flat|society|condo|no driveway|street parking"
+        "apartment|\\bflat\\b|society"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "fleet_operator",
-      "name": "Fleet / taxi operator",
-      "description": "Runs EVs commercially.",
+      "id": "in_fleet_cab",
+      "name": "Fleet / cab operator",
+      "description": "EV cabs and delivery fleets.",
       "keywords": [
-        "fleet|taxi|uber driver|cab|commercial"
+        "fleet|\\bcab\\b|taxi|blusmart|delivery"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "road_tripper",
+      "id": "eu_no_driveway",
+      "name": "Driver without a driveway",
+      "description": "Relies on public charging.",
+      "keywords": [
+        "no driveway|on[- ]street|\\bflat\\b|terrace"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_company_car",
+      "name": "Company-car driver",
+      "description": "Salary-sacrifice EV.",
+      "keywords": [
+        "company car|salary sacrifice|\\bbik\\b"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_road_tripper",
+      "name": "Long-distance driver",
+      "description": "Motorway and cross-border trips.",
+      "keywords": [
+        "road trip|motorway|autobahn|long distance|france"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_homeowner",
+      "name": "Homeowner with home charger",
+      "description": "Charges mostly at home.",
+      "keywords": [
+        "home charger|driveway|my house"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "us_tesla_owner",
+      "name": "Tesla owner",
+      "description": "Uses Superchargers.",
+      "keywords": [
+        "tesla|model (3|y|s|x)|cybertruck"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_non_tesla_owner",
+      "name": "Non-Tesla EV owner",
+      "description": "Relies on CCS networks.",
+      "keywords": [
+        "\\bbolt\\b|mach-?e|ioniq|ev6|id\\.4|rivian|lightning|\\bleaf\\b"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_apartment_renter",
+      "name": "Apartment renter",
+      "description": "No home charging.",
+      "keywords": [
+        "apartment|renter|condo"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_road_tripper",
       "name": "Road tripper",
-      "description": "Long-distance driving.",
+      "description": "Long highway trips.",
       "keywords": [
-        "road trip|highway|long drive|long distance"
-      ]
-    },
-    {
-      "id": "prospective_buyer",
-      "name": "Prospective EV buyer",
-      "description": "Considering an EV.",
-      "keywords": [
-        "should i (buy|get)|thinking of buying|worth (buying|it)|considering an ev"
+        "road trip|highway|cross country"
+      ],
+      "regions": [
+        "us"
       ]
     },
     {

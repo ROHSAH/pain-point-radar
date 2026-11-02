@@ -47,12 +47,14 @@
     "company loan"
   ],
   "irrelevant_keywords": [
-    "invest(ing|ment|or)? in treds",
-    "treds (investment|for investors|returns)",
-    "invoice discounting (investment|returns|for investors)",
-    "investors?",
+    "\\bbanks? jobs?\\b",
     "\\bfor investors\\b",
-    "\\bbanks? jobs?\\b"
+    "\\bipo\\b",
+    "\\bstock\\b",
+    "invest(ing|ment|or)? in treds",
+    "investors?",
+    "invoice discounting (investment|returns|for investors)",
+    "treds (investment|for investors|returns)"
   ],
   "subreddit_query": "\"business loan\" OR MSME OR \"working capital\" OR \"line of credit\" OR \"invoice financing\" OR SBA"
 }

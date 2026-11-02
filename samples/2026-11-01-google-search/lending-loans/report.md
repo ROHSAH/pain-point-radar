@@ -1,234 +1,171 @@
 # Consumer loans & lending: customer pain points - India, Europe, US
 
-_Generated 2026-11-02 06:28 UTC_
+_Generated 2026-11-02 06:44 UTC_
 
 ## Coverage
 
 | Region | Documents classified | Relevant | Sources |
 |---|---:|---:|---|
-| All regions combined | 1797 | 980 | google_suggest 1797 |
-| India | 628 | 284 | google_suggest 628 |
-| Europe (UK + EU) | 545 | 275 | google_suggest 545 |
-| United States | 624 | 421 | google_suggest 624 |
+| All regions combined | 1797 | 771 | google_suggest 1797 |
+| India | 628 | 234 | google_suggest 628 |
+| Europe (UK + EU) | 545 | 258 | google_suggest 545 |
+| United States | 624 | 279 | google_suggest 624 |
 
 ## All regions combined - top 10 pain points
 
 | # | Pain point | Mentions | Weighted volume | % of relevant | Avg severity | Channel mix | Top themes |
 |---:|---|---:|---:|---:|---:|---|---|
-| 1 | **Credit score & report problems** | 261 | 465.77 | 26.6% | 1 | search 261 | credit score & report problems (261) |
-| 2 | **Buy-now-pay-later traps** | 216 | 381.3 | 22.0% | 1 | search 216 | buy-now-pay-later traps (216) |
-| 3 | **Refinancing & balance transfer** | 116 | 207.57 | 11.8% | 1 | search 116 | refinancing & balance transfer (116) |
-| 4 | **Student loan repayment** | 115 | 203.62 | 11.7% | 1 | search 115 | student loan repayment (115) |
-| 5 | **High interest, EMIs & rate hikes** | 102 | 180.93 | 10.4% | 1 | search 102 | high interest, emis & rate hikes (102) |
-| 6 | **Recovery agents & debt collection** | 90 | 160.59 | 9.2% | 1 | search 90 | recovery agents & debt collection (90) |
-| 7 | **Illegal loan apps & scams** | 89 | 158.01 | 9.1% | 1 | search 89 | illegal loan apps & scams (89) |
-| 8 | **Loan rejected or can't qualify** | 22 | 38.46 | 2.2% | 1 | search 22 | loan rejected or can't qualify (22) |
-| 9 | **Debt stress & missed payments** | 4 | 7.41 | 0.4% | 1 | search 4 | debt stress & missed payments (4) |
-| 10 | **Mortgage & home-loan process** | 3 | 5.28 | 0.3% | 1 | search 3 | mortgage & home-loan process (3) |
+| 1 | **Student loan servicing, IDR & forgiveness** | 106 | 189.06 | 13.7% | 1 | search 106 | student loan servicing, idr & forgiveness (106) |
+| 2 | **Buy-now-pay-later (Affirm, Afterpay, Klarna)** | 106 | 187.69 | 13.7% | 1 | search 106 | buy-now-pay-later (affirm, afterpay, klarna) (106) |
+| 3 | **Buy-now-pay-later debt (Klarna, Clearpay, PayPal)** | 104 | 183.31 | 13.5% | 1 | search 104 | buy-now-pay-later debt (klarna, clearpay, paypal) (104) |
+| 4 | **EMI and tenure hikes after repo-rate changes** | 87 | 156.58 | 11.3% | 1 | search 87 | emi and tenure hikes after repo-rate changes (87) |
+| 5 | **Debt collectors, CCJs & defaults** | 87 | 155.94 | 11.3% | 1 | search 87 | debt collectors, ccjs & defaults (87) |
+| 6 | **Illegal loan apps & morphed-photo harassment** | 82 | 145.77 | 10.6% | 1 | search 82 | illegal loan apps & morphed-photo harassment (82) |
+| 7 | **Fixed-rate endings & remortgage shock** | 54 | 96.57 | 7.0% | 1 | search 54 | fixed-rate endings & remortgage shock (54) |
+| 8 | **Gold-loan renewals & auctions** | 44 | 79.58 | 5.7% | 1 | search 44 | gold-loan renewals & auctions (44) |
+| 9 | **Credit report errors & disputes** | 24 | 42.91 | 3.1% | 1 | search 24 | credit report errors & disputes (24) |
+| 10 | **CIBIL errors & low scores** | 23 | 41.44 | 3.0% | 1 | search 23 | cibil errors & low scores (23) |
 
-## India - top 8 pain points
+## India - top 6 pain points
 
 | # | Pain point | Mentions | Weighted volume | % of relevant | Avg severity | Channel mix | Top themes |
 |---:|---|---:|---:|---:|---:|---|---|
-| 1 | **Credit score & report problems** | 102 | 181.02 | 35.9% | 1 | search 102 | credit score & report problems (102) |
-| 2 | **High interest, EMIs & rate hikes** | 87 | 156.58 | 30.6% | 1 | search 87 | high interest, emis & rate hikes (87) |
-| 3 | **Illegal loan apps & scams** | 82 | 145.77 | 28.9% | 1 | search 82 | illegal loan apps & scams (82) |
-| 4 | **Loan rejected or can't qualify** | 13 | 21.94 | 4.6% | 1 | search 13 | loan rejected or can't qualify (13) |
-| 5 | **Refinancing & balance transfer** | 6 | 11.17 | 2.1% | 1 | search 6 | refinancing & balance transfer (6) |
-| 6 | **Recovery agents & debt collection** | 3 | 4.65 | 1.1% | 1 | search 3 | recovery agents & debt collection (3) |
-| 7 | **Mortgage & home-loan process** | 2 | 3.51 | 0.7% | 1 | search 2 | mortgage & home-loan process (2) |
-| 8 | **Student loan repayment** | 1 | 1.78 | 0.4% | 1 | search 1 | student loan repayment (1) |
+| 1 | **EMI and tenure hikes after repo-rate changes** | 87 | 156.58 | 37.2% | 1 | search 87 | emi and tenure hikes after repo-rate changes (87) |
+| 2 | **Illegal loan apps & morphed-photo harassment** | 82 | 145.77 | 35.0% | 1 | search 82 | illegal loan apps & morphed-photo harassment (82) |
+| 3 | **Gold-loan renewals & auctions** | 44 | 79.58 | 18.8% | 1 | search 44 | gold-loan renewals & auctions (44) |
+| 4 | **CIBIL errors & low scores** | 23 | 41.44 | 9.8% | 1 | search 23 | cibil errors & low scores (23) |
+| 5 | **Personal loan rejections** | 4 | 6.97 | 1.7% | 1 | search 4 | personal loan rejections (4) |
+| 6 | **Recovery agents calling family & contacts** | 3 | 4.65 | 1.3% | 1 | search 3 | recovery agents calling family & contacts (3) |
 
 <details><summary>Voice of customer - example quotes</summary>
 
-**1. Credit score & report problems**
-
-- "search: "cibil score"" - [google_suggest](https://www.google.com/search?q=cibil%20score&gl=in&hl=en)
-- "search: "why cibil score decrease"" - [google_suggest](https://www.google.com/search?q=why%20cibil%20score%20decrease&gl=in&hl=en)
-- "search: "how to cibil score check"" - [google_suggest](https://www.google.com/search?q=how%20to%20cibil%20score%20check&gl=in&hl=en)
-
-**2. High interest, EMIs & rate hikes**
+**1. EMI and tenure hikes after repo-rate changes**
 
 - "search: "home loan emi calculator"" - [google_suggest](https://www.google.com/search?q=home%20loan%20emi%20calculator&gl=in&hl=en)
 - "search: "why home loan interest rate increase"" - [google_suggest](https://www.google.com/search?q=why%20home%20loan%20interest%20rate%20increase&gl=in&hl=en)
 - "search: "how to home loan emi calculator"" - [google_suggest](https://www.google.com/search?q=how%20to%20home%20loan%20emi%20calculator&gl=in&hl=en)
 
-**3. Illegal loan apps & scams**
+**2. Illegal loan apps & morphed-photo harassment**
 
 - "search: "loan app"" - [google_suggest](https://www.google.com/search?q=loan%20app&gl=in&hl=en)
 - "search: "why loan application is rejected"" - [google_suggest](https://www.google.com/search?q=why%20loan%20application%20is%20rejected&gl=in&hl=en)
 - "search: "how to loan apply"" - [google_suggest](https://www.google.com/search?q=how%20to%20loan%20apply&gl=in&hl=en)
 
-**4. Loan rejected or can't qualify**
+**3. Gold-loan renewals & auctions**
+
+- "search: "why gold loan interest rate is high"" - [google_suggest](https://www.google.com/search?q=why%20gold%20loan%20interest%20rate%20is%20high&gl=in&hl=en)
+- "search: "how to gold loan interest calculator"" - [google_suggest](https://www.google.com/search?q=how%20to%20gold%20loan%20interest%20calculator&gl=in&hl=en)
+- "search: "is it worth taking gold loan"" - [google_suggest](https://www.google.com/search?q=is%20it%20worth%20taking%20gold%20loan&gl=in&hl=en)
+
+**4. CIBIL errors & low scores**
+
+- "search: "why cibil score decrease"" - [google_suggest](https://www.google.com/search?q=why%20cibil%20score%20decrease&gl=in&hl=en)
+- "search: "cibil score not showing"" - [google_suggest](https://www.google.com/search?q=cibil%20score%20not%20showing&gl=in&hl=en)
+- "search: "home loan not showing on credit report"" - [google_suggest](https://www.google.com/search?q=home%20loan%20not%20showing%20on%20credit%20report&gl=in&hl=en)
+
+**5. Personal loan rejections**
 
 - "search: "why personal loan rejected"" - [google_suggest](https://www.google.com/search?q=why%20personal%20loan%20rejected&gl=in&hl=en)
-- "search: "why loan application is rejected"" - [google_suggest](https://www.google.com/search?q=why%20loan%20application%20is%20rejected&gl=in&hl=en)
-- "search: "home loan not approved"" - [google_suggest](https://www.google.com/search?q=home%20loan%20not%20approved&gl=in&hl=en)
+- "search: "why personal loan gets rejected"" - [google_suggest](https://www.google.com/search?q=why%20personal%20loan%20gets%20rejected&gl=in&hl=en)
+- "search: "personal loan not approved"" - [google_suggest](https://www.google.com/search?q=personal%20loan%20not%20approved&gl=in&hl=en)
 
-**5. Refinancing & balance transfer**
-
-- "search: "is it worth refinancing personal loan"" - [google_suggest](https://www.google.com/search?q=is%20it%20worth%20refinancing%20personal%20loan&gl=in&hl=en)
-- "search: "is it worth refinancing home loan"" - [google_suggest](https://www.google.com/search?q=is%20it%20worth%20refinancing%20home%20loan&gl=in&hl=en)
-- "search: "is it worth getting a personal loan to consolidate debt"" - [google_suggest](https://www.google.com/search?q=is%20it%20worth%20getting%20a%20personal%20loan%20to%20consolidate%20debt&gl=in&hl=en)
-
-**6. Recovery agents & debt collection**
+**6. Recovery agents calling family & contacts**
 
 - "search: "emi harassment complaint"" - [google_suggest](https://www.google.com/search?q=emi%20harassment%20complaint&gl=in&hl=en)
 - "search: "loan app harassment complaint"" - [google_suggest](https://www.google.com/search?q=loan%20app%20harassment%20complaint&gl=in&hl=en)
 - "search: "emi harassment complaint number"" - [google_suggest](https://www.google.com/search?q=emi%20harassment%20complaint%20number&gl=in&hl=en)
 
-**7. Mortgage & home-loan process**
-
-- "search: "home loan application. cost"" - [google_suggest](https://www.google.com/search?q=home%20loan%20application.%20cost&gl=in&hl=en)
-- "search: "how to home loan process"" - [google_suggest](https://www.google.com/search?q=how%20to%20home%20loan%20process&gl=in&hl=en)
-
-**8. Student loan repayment**
-
-- "search: "student loan application cost"" - [google_suggest](https://www.google.com/search?q=student%20loan%20application%20cost&gl=in&hl=en)
-
 </details>
 
-## Europe (UK + EU) - top 9 pain points
+## Europe (UK + EU) - top 5 pain points
 
 | # | Pain point | Mentions | Weighted volume | % of relevant | Avg severity | Channel mix | Top themes |
 |---:|---|---:|---:|---:|---:|---|---|
-| 1 | **Buy-now-pay-later traps** | 110 | 193.61 | 40.0% | 1 | search 110 | buy-now-pay-later traps (110) |
-| 2 | **Recovery agents & debt collection** | 87 | 155.94 | 31.6% | 1 | search 87 | recovery agents & debt collection (87) |
-| 3 | **Credit score & report problems** | 46 | 83.01 | 16.7% | 1 | search 46 | credit score & report problems (46) |
-| 4 | **Refinancing & balance transfer** | 15 | 26.85 | 5.5% | 1 | search 15 | refinancing & balance transfer (15) |
-| 5 | **High interest, EMIs & rate hikes** | 8 | 12.96 | 2.9% | 1 | search 8 | high interest, emis & rate hikes (8) |
-| 6 | **Loan rejected or can't qualify** | 4 | 7.5 | 1.5% | 1 | search 4 | loan rejected or can't qualify (4) |
-| 7 | **Illegal loan apps & scams** | 4 | 6.78 | 1.5% | 1 | search 4 | illegal loan apps & scams (4) |
-| 8 | **Student loan repayment** | 2 | 3.8 | 0.7% | 1 | search 2 | student loan repayment (2) |
-| 9 | **Debt stress & missed payments** | 2 | 3.73 | 0.7% | 1 | search 2 | debt stress & missed payments (2) |
+| 1 | **Buy-now-pay-later debt (Klarna, Clearpay, PayPal)** | 104 | 183.31 | 40.3% | 1 | search 104 | buy-now-pay-later debt (klarna, clearpay, paypal) (104) |
+| 2 | **Debt collectors, CCJs & defaults** | 87 | 155.94 | 33.7% | 1 | search 87 | debt collectors, ccjs & defaults (87) |
+| 3 | **Fixed-rate endings & remortgage shock** | 54 | 96.57 | 20.9% | 1 | search 54 | fixed-rate endings & remortgage shock (54) |
+| 4 | **Credit file errors (Experian, Equifax, Schufa)** | 11 | 19.97 | 4.3% | 1 | search 11 | credit file errors (experian, equifax, schufa) (11) |
+| 5 | **Student loan repayment plans** | 2 | 3.8 | 0.8% | 1 | search 2 | student loan repayment plans (2) |
 
 <details><summary>Voice of customer - example quotes</summary>
 
-**1. Buy-now-pay-later traps**
+**1. Buy-now-pay-later debt (Klarna, Clearpay, PayPal)**
 
 - "search: "klarna"" - [google_suggest](https://www.google.com/search?q=klarna&gl=gb&hl=en)
 - "search: "why klarna is not working"" - [google_suggest](https://www.google.com/search?q=why%20klarna%20is%20not%20working&gl=gb&hl=en)
 - "search: "how to klarna amazon"" - [google_suggest](https://www.google.com/search?q=how%20to%20klarna%20amazon&gl=gb&hl=en)
 
-**2. Recovery agents & debt collection**
+**2. Debt collectors, CCJs & defaults**
 
 - "search: "debt collection"" - [google_suggest](https://www.google.com/search?q=debt%20collection&gl=gb&hl=en)
 - "search: "why debt collector"" - [google_suggest](https://www.google.com/search?q=why%20debt%20collector&gl=gb&hl=en)
 - "search: "how to debt collection agencies work"" - [google_suggest](https://www.google.com/search?q=how%20to%20debt%20collection%20agencies%20work&gl=gb&hl=en)
 
-**3. Credit score & report problems**
+**3. Fixed-rate endings & remortgage shock**
+
+- "search: "remortgage calculator"" - [google_suggest](https://www.google.com/search?q=remortgage%20calculator&gl=gb&hl=en)
+- "search: "why remortgage"" - [google_suggest](https://www.google.com/search?q=why%20remortgage&gl=gb&hl=en)
+- "search: "how to remortgage a house"" - [google_suggest](https://www.google.com/search?q=how%20to%20remortgage%20a%20house&gl=gb&hl=en)
+
+**4. Credit file errors (Experian, Equifax, Schufa)**
 
 - "search: "mortgage not showing on credit report"" - [google_suggest](https://www.google.com/search?q=mortgage%20not%20showing%20on%20credit%20report&gl=gb&hl=en)
-- "search: "credit score uk"" - [google_suggest](https://www.google.com/search?q=credit%20score%20uk&gl=gb&hl=en)
-- "search: "what is credit score uk"" - [google_suggest](https://www.google.com/search?q=what%20is%20credit%20score%20uk&gl=gb&hl=en)
+- "search: "how to improve credit score uk"" - [google_suggest](https://www.google.com/search?q=how%20to%20improve%20credit%20score%20uk&gl=gb&hl=en)
+- "search: "mortgage not showing on clearscore"" - [google_suggest](https://www.google.com/search?q=mortgage%20not%20showing%20on%20clearscore&gl=gb&hl=en)
 
-**4. Refinancing & balance transfer**
-
-- "search: "is it worth refinancing personal loan"" - [google_suggest](https://www.google.com/search?q=is%20it%20worth%20refinancing%20personal%20loan&gl=gb&hl=en)
-- "search: "where to refinance car loan"" - [google_suggest](https://www.google.com/search?q=where%20to%20refinance%20car%20loan&gl=gb&hl=en)
-- "search: "where to refinance my car"" - [google_suggest](https://www.google.com/search?q=where%20to%20refinance%20my%20car&gl=gb&hl=en)
-
-**5. High interest, EMIs & rate hikes**
-
-- "search: "personal loan emi calculator"" - [google_suggest](https://www.google.com/search?q=personal%20loan%20emi%20calculator&gl=gb&hl=en)
-- "search: "personal loan interest rate"" - [google_suggest](https://www.google.com/search?q=personal%20loan%20interest%20rate&gl=gb&hl=en)
-- "search: "why personal loan interest rate is high"" - [google_suggest](https://www.google.com/search?q=why%20personal%20loan%20interest%20rate%20is%20high&gl=gb&hl=en)
-
-**6. Loan rejected or can't qualify**
-
-- "search: "why personal loan rejected"" - [google_suggest](https://www.google.com/search?q=why%20personal%20loan%20rejected&gl=gb&hl=en)
-- "search: "why klarna denied me"" - [google_suggest](https://www.google.com/search?q=why%20klarna%20denied%20me&gl=gb&hl=en)
-- "search: "why personal loan gets rejected"" - [google_suggest](https://www.google.com/search?q=why%20personal%20loan%20gets%20rejected&gl=gb&hl=en)
-
-**7. Illegal loan apps & scams**
-
-- "search: "how to personal loan apply"" - [google_suggest](https://www.google.com/search?q=how%20to%20personal%20loan%20apply&gl=gb&hl=en)
-- "search: "personal loan app"" - [google_suggest](https://www.google.com/search?q=personal%20loan%20app&gl=gb&hl=en)
-- "search: "personal loan apply"" - [google_suggest](https://www.google.com/search?q=personal%20loan%20apply&gl=gb&hl=en)
-
-**8. Student loan repayment**
+**5. Student loan repayment plans**
 
 - "search: "where to refinance student loans"" - [google_suggest](https://www.google.com/search?q=where%20to%20refinance%20student%20loans&gl=gb&hl=en)
 - "search: "where to refinance private student loans"" - [google_suggest](https://www.google.com/search?q=where%20to%20refinance%20private%20student%20loans&gl=gb&hl=en)
 
-**9. Debt stress & missed payments**
-
-- "search: "iva remortgage rules"" - [google_suggest](https://www.google.com/search?q=iva%20remortgage%20rules&gl=gb&hl=en)
-- "search: "can i remortgage with an iva"" - [google_suggest](https://www.google.com/search?q=can%20i%20remortgage%20with%20an%20iva&gl=gb&hl=en)
-
 </details>
 
-## United States - top 10 pain points
+## United States - top 6 pain points
 
 | # | Pain point | Mentions | Weighted volume | % of relevant | Avg severity | Channel mix | Top themes |
 |---:|---|---:|---:|---:|---:|---|---|
-| 1 | **Credit score & report problems** | 113 | 201.74 | 26.8% | 1 | search 113 | credit score & report problems (113) |
-| 2 | **Student loan repayment** | 112 | 198.04 | 26.6% | 1 | search 112 | student loan repayment (112) |
-| 3 | **Buy-now-pay-later traps** | 106 | 187.69 | 25.2% | 1 | search 106 | buy-now-pay-later traps (106) |
-| 4 | **Refinancing & balance transfer** | 95 | 169.55 | 22.6% | 1 | search 95 | refinancing & balance transfer (95) |
-| 5 | **High interest, EMIs & rate hikes** | 7 | 11.38 | 1.7% | 1 | search 7 | high interest, emis & rate hikes (7) |
-| 6 | **Loan rejected or can't qualify** | 5 | 9.02 | 1.2% | 1 | search 5 | loan rejected or can't qualify (5) |
-| 7 | **Illegal loan apps & scams** | 3 | 5.46 | 0.7% | 1 | search 3 | illegal loan apps & scams (3) |
-| 8 | **Debt stress & missed payments** | 2 | 3.68 | 0.5% | 1 | search 2 | debt stress & missed payments (2) |
-| 9 | **Mortgage & home-loan process** | 1 | 1.78 | 0.2% | 1 | search 1 | mortgage & home-loan process (1) |
-| 10 | **Processing, prepayment & hidden fees** | 1 | 1.48 | 0.2% | 1 | search 1 | processing, prepayment & hidden fees (1) |
+| 1 | **Student loan servicing, IDR & forgiveness** | 106 | 189.06 | 38.0% | 1 | search 106 | student loan servicing, idr & forgiveness (106) |
+| 2 | **Buy-now-pay-later (Affirm, Afterpay, Klarna)** | 106 | 187.69 | 38.0% | 1 | search 106 | buy-now-pay-later (affirm, afterpay, klarna) (106) |
+| 3 | **Credit report errors & disputes** | 24 | 42.91 | 8.6% | 1 | search 24 | credit report errors & disputes (24) |
+| 4 | **Auto loan APRs & repossession** | 22 | 38.84 | 7.9% | 1 | search 22 | auto loan aprs & repossession (22) |
+| 5 | **Mortgage rates, PMI & closing costs** | 21 | 37.53 | 7.5% | 1 | search 21 | mortgage rates, pmi & closing costs (21) |
+| 6 | **Payday loans & cash-advance apps** | 1 | 1.7 | 0.4% | 1 | search 1 | payday loans & cash-advance apps (1) |
 
 <details><summary>Voice of customer - example quotes</summary>
 
-**1. Credit score & report problems**
-
-- "search: "mortgage not showing on credit report"" - [google_suggest](https://www.google.com/search?q=mortgage%20not%20showing%20on%20credit%20report&gl=us&hl=en)
-- "search: "student loan not showing on credit report"" - [google_suggest](https://www.google.com/search?q=student%20loan%20not%20showing%20on%20credit%20report&gl=us&hl=en)
-- "search: "credit score"" - [google_suggest](https://www.google.com/search?q=credit%20score&gl=us&hl=en)
-
-**2. Student loan repayment**
+**1. Student loan servicing, IDR & forgiveness**
 
 - "search: "student loan"" - [google_suggest](https://www.google.com/search?q=student%20loan&gl=us&hl=en)
 - "search: "why student loans are bad"" - [google_suggest](https://www.google.com/search?q=why%20student%20loans%20are%20bad&gl=us&hl=en)
 - "search: "how to student loans work"" - [google_suggest](https://www.google.com/search?q=how%20to%20student%20loans%20work&gl=us&hl=en)
 
-**3. Buy-now-pay-later traps**
+**2. Buy-now-pay-later (Affirm, Afterpay, Klarna)**
 
 - "search: "afterpay"" - [google_suggest](https://www.google.com/search?q=afterpay&gl=us&hl=en)
 - "search: "why afterpay not working"" - [google_suggest](https://www.google.com/search?q=why%20afterpay%20not%20working&gl=us&hl=en)
 - "search: "how to afterpay on amazon"" - [google_suggest](https://www.google.com/search?q=how%20to%20afterpay%20on%20amazon&gl=us&hl=en)
 
-**4. Refinancing & balance transfer**
+**3. Credit report errors & disputes**
 
-- "search: "is it worth refinancing personal loan"" - [google_suggest](https://www.google.com/search?q=is%20it%20worth%20refinancing%20personal%20loan&gl=us&hl=en)
-- "search: "personal loan not debt consolidation"" - [google_suggest](https://www.google.com/search?q=personal%20loan%20not%20debt%20consolidation&gl=us&hl=en)
+- "search: "mortgage not showing on credit report"" - [google_suggest](https://www.google.com/search?q=mortgage%20not%20showing%20on%20credit%20report&gl=us&hl=en)
+- "search: "student loan not showing on credit report"" - [google_suggest](https://www.google.com/search?q=student%20loan%20not%20showing%20on%20credit%20report&gl=us&hl=en)
+- "search: "why credit score goes down"" - [google_suggest](https://www.google.com/search?q=why%20credit%20score%20goes%20down&gl=us&hl=en)
+
+**4. Auto loan APRs & repossession**
+
 - "search: "refinance car loan"" - [google_suggest](https://www.google.com/search?q=refinance%20car%20loan&gl=us&hl=en)
+- "search: "how to refinance a car loan"" - [google_suggest](https://www.google.com/search?q=how%20to%20refinance%20a%20car%20loan&gl=us&hl=en)
+- "search: "where to refinance car loan"" - [google_suggest](https://www.google.com/search?q=where%20to%20refinance%20car%20loan&gl=us&hl=en)
 
-**5. High interest, EMIs & rate hikes**
+**5. Mortgage rates, PMI & closing costs**
 
-- "search: "why personal loan interest rate is high"" - [google_suggest](https://www.google.com/search?q=why%20personal%20loan%20interest%20rate%20is%20high&gl=us&hl=en)
-- "search: "mortgage interest rates"" - [google_suggest](https://www.google.com/search?q=mortgage%20interest%20rates&gl=us&hl=en)
-- "search: "personal loans with low interest rates"" - [google_suggest](https://www.google.com/search?q=personal%20loans%20with%20low%20interest%20rates&gl=us&hl=en)
+- "search: "why mortgage rates are going up"" - [google_suggest](https://www.google.com/search?q=why%20mortgage%20rates%20are%20going%20up&gl=us&hl=en)
+- "search: "mortgage rates today"" - [google_suggest](https://www.google.com/search?q=mortgage%20rates%20today&gl=us&hl=en)
+- "search: "why mortgage rates are so high"" - [google_suggest](https://www.google.com/search?q=why%20mortgage%20rates%20are%20so%20high&gl=us&hl=en)
 
-**6. Loan rejected or can't qualify**
+**6. Payday loans & cash-advance apps**
 
-- "search: "why personal loan rejected"" - [google_suggest](https://www.google.com/search?q=why%20personal%20loan%20rejected&gl=us&hl=en)
-- "search: "why afterpay declined in store"" - [google_suggest](https://www.google.com/search?q=why%20afterpay%20declined%20in%20store&gl=us&hl=en)
-- "search: "why personal loan gets rejected"" - [google_suggest](https://www.google.com/search?q=why%20personal%20loan%20gets%20rejected&gl=us&hl=en)
-
-**7. Illegal loan apps & scams**
-
-- "search: "how to personal loan apply"" - [google_suggest](https://www.google.com/search?q=how%20to%20personal%20loan%20apply&gl=us&hl=en)
-- "search: "how to student loan apply"" - [google_suggest](https://www.google.com/search?q=how%20to%20student%20loan%20apply&gl=us&hl=en)
-- "search: "how to education loan apply"" - [google_suggest](https://www.google.com/search?q=how%20to%20education%20loan%20apply&gl=us&hl=en)
-
-**8. Debt stress & missed payments**
-
-- "search: "personal loan not debt relief"" - [google_suggest](https://www.google.com/search?q=personal%20loan%20not%20debt%20relief&gl=us&hl=en)
-- "search: "why student loans are not bankruptable"" - [google_suggest](https://www.google.com/search?q=why%20student%20loans%20are%20not%20bankruptable&gl=us&hl=en)
-
-**9. Mortgage & home-loan process**
-
-- "search: "student loan not disbursed"" - [google_suggest](https://www.google.com/search?q=student%20loan%20not%20disbursed&gl=us&hl=en)
-
-**10. Processing, prepayment & hidden fees**
-
-- "search: "can i mortgage a foreclosure"" - [google_suggest](https://www.google.com/search?q=can%20i%20mortgage%20a%20foreclosure&gl=us&hl=en)
+- "search: "personal loan campaign problem statement great learning"" - [google_suggest](https://www.google.com/search?q=personal%20loan%20campaign%20problem%20statement%20great%20learning&gl=us&hl=en)
 
 </details>
 

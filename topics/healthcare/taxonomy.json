@@ -1,84 +1,238 @@
 {
-  "_comment": "Topic-specific categories. Keyword patterns drive the no-key classifier (first 3 matches, in order).",
+  "_comment": "Region-specific pain points and personas (ids prefixed in_/eu_/us_). Keyword patterns drive the no-key classifier (first 3 matches, in order, within the document's region).",
   "categories": [
     {
-      "id": "appointment_access",
-      "name": "Can't get an appointment",
-      "description": "No GP/doctor slots, 8am scramble, long booking lead times.",
+      "id": "in_private_hospital_overcharging",
+      "name": "Private hospital overcharging & package rates",
+      "description": "Inflated bills, unnecessary tests, deposits before admission.",
       "keywords": [
-        "appointment|\\bgp\\b|8am|can'?t (get|book)|walk-?in|registration"
+        "overcharg|hospital bill|package (rate|cost)|unnecessary tests?|deposit (before|for) admission|bill (too high|inflated)"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "waiting_lists",
-      "name": "Waiting lists & ER waits",
-      "description": "Long waits for specialists, surgery, A&E/ER.",
+      "id": "in_ayushman_cghs_cashless",
+      "name": "Ayushman Bharat & CGHS access",
+      "description": "Empanelled hospitals refusing cards, CGHS reimbursement delays.",
       "keywords": [
-        "waiting (list|time)|wait (times|for)|a&e|\\ber\\b|emergency (wait|room)|backlog|referral"
+        "ayushman|pmjay|\\bcghs\\b|\\besic?\\b|empanel|health card"
+      ],
+      "require": [
+        "problem|issue|complain|grievance|reject|denied|declin|refus|not (able|getting|approved|sanctioned|received|paid|eligible|working|credited)|delay|stuck|pending|high|expensive|costs?\\b|fees?\\b|rates?\\b|charges|interest|trap|scam|fraud|hidden|reduc|\\bcut\\b|withdrawn|can.?t|unable|eligib|documents|collateral|guarantee|\\blaws?\\b|legal|lawsuit|default|worth|\\bvs\\b|alternative|without|repay|forgiv|penalt|closed|frozen|blocked|why"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "medical_bills",
-      "name": "Medical bills & surprise charges",
-      "description": "Surprise bills, out-of-network charges, unclear costs.",
+      "id": "in_govt_hospital_queues",
+      "name": "Government hospital queues & OPD waits",
+      "description": "Crowded OPDs, long queues, bed shortages in AIIMS and district hospitals.",
       "keywords": [
-        "medical bill|hospital bill|surprise bill|itemi[sz]ed|out of network|balance billing|cost of (surgery|delivery|treatment|mri|scan)"
+        "\\bopd\\b|aiims|government hospital|civil hospital|queue|bed (not available|shortage)|waiting"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "hospital_overcharging",
-      "name": "Hospital overcharging & deposits",
-      "description": "Private hospitals overcharging, package rates, advance deposits.",
+      "id": "in_medicine_prices",
+      "name": "Medicine prices & generics",
+      "description": "Expensive branded medicines, pharmacy markups, Jan Aushadhi availability.",
       "keywords": [
-        "overcharg|package (rate|cost)|hidden charges|private hospital|deposit (before|for) admission"
+        "medicine (price|cost)|jan aushadhi|generic medicine|pharmacy|chemist|\\bmrp\\b"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "insurance_schemes",
-      "name": "Insurance & public scheme coverage",
-      "description": "Coverage denials and scheme confusion (Ayushman, CGHS, Medicare, Medicaid).",
+      "id": "in_diagnostic_costs",
+      "name": "Diagnostic & test costs",
+      "description": "MRI, CT and lab test prices.",
       "keywords": [
-        "insurance|coverage|prior auth|\\bcghs\\b|ayushman|medicare|medicaid"
+        "\\bmri\\b|ct scan|blood test|diagnostic|lab test|pathology"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "medicines_pharmacy",
-      "name": "Medicines, prescriptions & shortages",
-      "description": "Drug prices, shortages, refills, pharmacy problems.",
+      "id": "in_doctor_appointments",
+      "name": "Getting a specialist appointment",
+      "description": "Long waits for good specialists, consultation fees.",
       "keywords": [
-        "prescription|pharmacy|chemist|medicine (price|cost|shortage)|drug (price|cost)|refill|generic|out of stock|shortage"
+        "appointment|consultation fee|specialist|practo|doctor (not available|fees)"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "dental",
-      "name": "Dental care access & cost",
-      "description": "Can't find a dentist, high dental costs.",
+      "id": "in_negligence_conduct",
+      "name": "Negligence & doctor conduct",
+      "description": "Misdiagnosis, negligence, rude staff.",
       "keywords": [
-        "dentist|dental|braces|root canal|implant"
+        "negligence|misdiagnos|wrong treatment|rude|consumer forum|medical council"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "quality_negligence",
-      "name": "Quality of care & negligence",
-      "description": "Misdiagnosis, negligence, rude staff, poor care.",
+      "id": "eu_gp_8am_scramble",
+      "name": "GP appointments & the 8am scramble",
+      "description": "Calling at 8am, no slots, e-consult limits.",
       "keywords": [
-        "negligence|misdiagnos|wrong (diagnosis|treatment)|rude (doctor|nurse|staff)|malpractice|careless|bad (doctor|hospital)"
+        "\\bgp\\b|8am|doctor'?s? appointment|surgery (phone|appointment)|e-?consult|hausarzt"
+      ],
+      "regions": [
+        "europe"
       ]
     },
     {
-      "id": "mental_health",
-      "name": "Mental health access",
-      "description": "Long waits and costs for therapy and psychiatry.",
+      "id": "eu_nhs_waiting_lists",
+      "name": "NHS waiting lists & referrals",
+      "description": "Months or years for specialist care and operations.",
       "keywords": [
-        "mental health|therapist|therapy|psychiatrist|counsell?ing|anxiety|depression"
+        "waiting list|referral|\\brtt\\b|specialist (wait|appointment)|operation (wait|delayed)|facharzt|termin"
+      ],
+      "regions": [
+        "europe"
       ]
     },
     {
-      "id": "records_admin",
-      "name": "Reports, records & admin",
-      "description": "Test results, records, certificates and discharge paperwork.",
+      "id": "eu_a_e_waits",
+      "name": "A&E waits & ambulance delays",
+      "description": "12-hour A&E waits, corridor care, ambulance response times.",
       "keywords": [
-        "medical records|test results|\\breport\\b|discharge|certificate|referral letter"
+        "a&e|\\bae\\b|emergency department|ambulance (wait|delay)|corridor care|\\b111\\b"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_nhs_dentist_access",
+      "name": "NHS dentist access",
+      "description": "Can't find an NHS dentist; private costs.",
+      "keywords": [
+        "nhs dentist|dentist|dental"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_prescription_shortages",
+      "name": "Medicine shortages & prescription charges",
+      "description": "ADHD/HRT shortages, prescription charges.",
+      "keywords": [
+        "shortage|out of stock|prescription (charge|cost)|adhd medication|\\bhrt\\b|pharmacy"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_mental_health_waits",
+      "name": "Mental health waits",
+      "description": "Long waits for therapy, CAMHS, ADHD/autism assessments.",
+      "keywords": [
+        "mental health|therapy|camhs|adhd (assessment|diagnosis)|autism assessment|psychiatr"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_private_costs",
+      "name": "Going private & self-pay costs",
+      "description": "Paying privately to skip queues.",
+      "keywords": [
+        "go(ing)? private|private (scan|consultation|operation)|self[- ]pay|bupa"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "us_surprise_bills",
+      "name": "Surprise & out-of-network bills",
+      "description": "Out-of-network anesthesiologists, No Surprises Act disputes.",
+      "keywords": [
+        "surprise bill|out of network|balance bill|no surprises act|itemi[sz]ed bill"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_prior_auth_denials",
+      "name": "Prior authorization & coverage denials",
+      "description": "Treatments and drugs delayed by prior auth.",
+      "keywords": [
+        "prior auth|denied|not covered|step therapy|appeal"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_er_costs",
+      "name": "ER & ambulance costs",
+      "description": "Thousands for ER visits and ambulance rides.",
+      "keywords": [
+        "\\ber\\b (bill|cost|visit)|emergency room|ambulance (bill|cost)"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_drug_prices",
+      "name": "Prescription prices (insulin, GLP-1s)",
+      "description": "High drug prices, coupons, pharmacy shortages.",
+      "keywords": [
+        "insulin|ozempic|wegovy|mounjaro|glp-?1|prescription (price|cost)|goodrx|drug (price|cost)|shortage"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_finding_in_network",
+      "name": "Finding in-network doctors",
+      "description": "Doctors not accepting new patients or the plan.",
+      "keywords": [
+        "in[- ]network|accepting new patients|primary care|\\bpcp\\b|find a doctor"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_medical_debt_collections",
+      "name": "Medical debt & collections",
+      "description": "Bills sent to collections, payment plans.",
+      "keywords": [
+        "medical debt|collections|payment plan|financial assistance|charity care"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_wait_times",
+      "name": "Wait times for specialists",
+      "description": "Months-long waits for specialists and mental health.",
+      "keywords": [
+        "wait (time|list)|months (for|to see)|specialist|therapist|psychiatrist"
+      ],
+      "regions": [
+        "us"
       ]
     },
     {
@@ -90,35 +244,146 @@
   ],
   "personas": [
     {
-      "id": "caregiver",
-      "name": "Parent or caregiver",
-      "description": "Seeks care for a child or relative.",
+      "id": "in_urban_patient",
+      "name": "Urban private-hospital patient",
+      "description": "Uses private hospitals and insurance.",
       "keywords": [
-        "my (son|daughter|baby|child|mother|father|mom|dad|parents)"
+        "private hospital|apollo|fortis|\\bmax\\b|manipal|insurance"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "senior",
-      "name": "Senior patient",
-      "description": "Older patient.",
+      "id": "in_rural_patient",
+      "name": "Rural patient",
+      "description": "Travels to cities or govt hospitals.",
       "keywords": [
-        "senior|elderly|retired|pension"
+        "village|rural|district hospital|\\bphc\\b"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "chronic_patient",
+      "id": "in_caregiver",
+      "name": "Caregiver for parents",
+      "description": "Managing elderly parents' care.",
+      "keywords": [
+        "my (father|mother|parents)|elderly"
+      ],
+      "regions": [
+        "india"
+      ]
+    },
+    {
+      "id": "in_parent",
+      "name": "Parent",
+      "description": "Child's healthcare.",
+      "keywords": [
+        "my (son|daughter|baby|child)|pediatric"
+      ],
+      "regions": [
+        "india"
+      ]
+    },
+    {
+      "id": "eu_parent",
+      "name": "Parent",
+      "description": "Child's appointments and CAMHS.",
+      "keywords": [
+        "my (son|daughter|child|baby)"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_older_patient",
+      "name": "Older patient",
+      "description": "Hip/knee/cataract waits.",
+      "keywords": [
+        "elderly|my (mum|dad)|\\bhip\\b|knee|cataract"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_chronic_patient",
       "name": "Chronic condition patient",
-      "description": "Ongoing condition, frequent visits.",
+      "description": "Ongoing prescriptions and specialist care.",
       "keywords": [
-        "diabet|chronic|cancer|kidney|dialysis|thyroid|asthma"
+        "chronic|diabet|crohn|cancer|asthma"
+      ],
+      "regions": [
+        "europe"
       ]
     },
     {
-      "id": "uninsured",
+      "id": "eu_adhd_mental_health",
+      "name": "Seeking ADHD or mental-health care",
+      "description": "Assessments and medication.",
+      "keywords": [
+        "adhd|autism|anxiety|depression"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "us_uninsured",
       "name": "Uninsured / self-pay",
       "description": "Pays out of pocket.",
       "keywords": [
-        "uninsured|no insurance|self[- ]pay|out of pocket"
+        "uninsured|no insurance|self[- ]pay|cash price"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_employer_insured",
+      "name": "Employer-insured",
+      "description": "High-deductible employer plan.",
+      "keywords": [
+        "employer|hdhp|deductible|through work"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_medicare",
+      "name": "Medicare patient",
+      "description": "Over 65.",
+      "keywords": [
+        "medicare|\\b65\\b|retire"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_parent",
+      "name": "Parent",
+      "description": "Child's care.",
+      "keywords": [
+        "my (son|daughter|kid|child|baby)"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_chronic",
+      "name": "Chronic condition",
+      "description": "Ongoing meds and specialists.",
+      "keywords": [
+        "diabet|chronic|cancer|autoimmune"
+      ],
+      "regions": [
+        "us"
       ]
     },
     {

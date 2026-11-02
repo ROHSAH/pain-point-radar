@@ -1,92 +1,246 @@
 {
-  "_comment": "Topic-specific categories. Keyword patterns drive the no-key classifier (first 3 matches, in order).",
+  "_comment": "Region-specific pain points and personas (ids prefixed in_/eu_/us_). Keyword patterns drive the no-key classifier (first 3 matches, in order, within the document's region).",
   "categories": [
     {
-      "id": "cancellations",
+      "id": "in_indigo_delays_cancellations",
+      "name": "Delays & cancellations (IndiGo, Air India)",
+      "description": "Hours-long delays, last-minute cancellations, crew shortages.",
+      "keywords": [
+        "delay|cancel|rescheduled|late|stuck"
+      ],
+      "regions": [
+        "india"
+      ]
+    },
+    {
+      "id": "in_fare_spikes_festival",
+      "name": "Fare spikes in festivals & peak dates",
+      "description": "Prices tripling around Diwali, holidays, last minute.",
+      "keywords": [
+        "\\bfare\\b|ticket price|price (hike|increase)|expensive|diwali|festival|last minute"
+      ],
+      "regions": [
+        "india"
+      ]
+    },
+    {
+      "id": "in_baggage_15kg_fees",
+      "name": "15kg baggage limits & excess fees",
+      "description": "Low domestic baggage allowance, excess charges.",
+      "keywords": [
+        "15 ?kg|7 ?kg|excess baggage|baggage (fee|charge|allowance)|cabin bag"
+      ],
+      "regions": [
+        "india"
+      ]
+    },
+    {
+      "id": "in_seat_checkin_charges",
+      "name": "Seat selection & web check-in charges",
+      "description": "Paying for seats, forced separation of families.",
+      "keywords": [
+        "seat (selection|charge|fee)|web check-?in|paid seat"
+      ],
+      "regions": [
+        "india"
+      ]
+    },
+    {
+      "id": "in_refund_credit_shell",
+      "name": "Refunds & credit shells",
+      "description": "Refunds as credit shells, travel-agent refunds stuck.",
+      "keywords": [
+        "refund|credit shell|makemytrip|easemytrip|goibibo|cleartrip|travel agent"
+      ],
+      "regions": [
+        "india"
+      ]
+    },
+    {
+      "id": "in_airport_queues_digiyatra",
+      "name": "Airport queues & DigiYatra",
+      "description": "Long security queues, DigiYatra failures, crowding.",
+      "keywords": [
+        "queue|security (check|line)|digiyatra|crowd|boarding gate"
+      ],
+      "regions": [
+        "india"
+      ]
+    },
+    {
+      "id": "in_lost_baggage",
+      "name": "Lost or damaged baggage",
+      "description": "Bags lost or damaged on domestic flights.",
+      "keywords": [
+        "lost (bag|luggage|baggage)|(bag|luggage|baggage) (lost|damaged|missing|delayed)"
+      ],
+      "regions": [
+        "india"
+      ]
+    },
+    {
+      "id": "in_dgca_complaints",
+      "name": "Complaints & DGCA escalation",
+      "description": "AirSewa, DGCA complaints, rude staff.",
+      "keywords": [
+        "airsewa|\\bdgca\\b|complain|complaint|customer care|rude"
+      ],
+      "regions": [
+        "india"
+      ]
+    },
+    {
+      "id": "eu_eu261_refusals",
+      "name": "EU261/UK261 compensation refused",
+      "description": "Airlines blaming 'extraordinary circumstances', ignoring claims.",
+      "keywords": [
+        "eu ?261|uk ?261|compensation|extraordinary circumstances|aviation adr|\\bcaa\\b"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_ryanair_bag_fees",
+      "name": "Bag fees & cabin-bag rules (Ryanair, easyJet, Wizz)",
+      "description": "Paid cabin bags, sizers at the gate, check-in fees.",
+      "keywords": [
+        "cabin bag|bag (fee|size)|priority boarding|check-?in fee|hand luggage|baggage (fee|allowance)"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_strikes_atc",
+      "name": "Strikes & air traffic control disruption",
+      "description": "French ATC strikes, airport staff strikes.",
+      "keywords": [
+        "strike|air traffic control|\\batc\\b|walkout"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_cancellations_rebooking",
       "name": "Cancellations & rebooking",
-      "description": "Flights cancelled, schedule changes, missed connections.",
+      "description": "Cancelled flights, rebooking only days later.",
       "keywords": [
-        "cancel|rebook|rescheduled|missed connection|schedule change"
+        "cancel|rebook|rescheduled|schedule change|delay"
+      ],
+      "regions": [
+        "europe"
       ]
     },
     {
-      "id": "delays",
-      "name": "Flight delays",
-      "description": "Long delays, tarmac waits, gate waits.",
+      "id": "eu_lost_baggage",
+      "name": "Lost or delayed baggage",
+      "description": "Bags lost at hubs, slow tracing.",
       "keywords": [
-        "delay|delayed|\\blate\\b|stuck on (tarmac|plane)|waiting at (airport|gate)"
+        "lost (bag|luggage)|(bag|luggage|suitcase) (lost|delayed|missing|damaged)"
+      ],
+      "regions": [
+        "europe"
       ]
     },
     {
-      "id": "refunds_compensation",
-      "name": "Refunds & compensation refused",
-      "description": "Refunds or EU261/DGCA compensation refused or slow; vouchers instead of cash.",
+      "id": "eu_airport_queues_ees",
+      "name": "Airport queues, security & EES border checks",
+      "description": "Security queues, passport control, new EES/ETIAS checks.",
       "keywords": [
-        "refund|compensation|eu ?261|uk ?261|voucher|credit shell|reimburse|\\bdgca\\b"
+        "queue|security (line|queue)|passport control|\\bees\\b|etias|border check|e-?gates"
+      ],
+      "regions": [
+        "europe"
       ]
     },
     {
-      "id": "baggage_lost",
-      "name": "Lost, delayed or damaged baggage",
-      "description": "Bags lost, delayed or damaged.",
+      "id": "eu_refunds_vouchers",
+      "name": "Refunds vs vouchers",
+      "description": "Vouchers instead of cash, slow refunds.",
       "keywords": [
-        "lost (bag|luggage|baggage)|(bag|luggage|baggage|suitcase) (lost|damaged|delayed|missing)|\\bpir\\b"
+        "refund|voucher"
+      ],
+      "regions": [
+        "europe"
       ]
     },
     {
-      "id": "baggage_seat_fees",
-      "name": "Baggage, seat & add-on fees",
-      "description": "Bag fees, seat selection fees, hidden add-ons.",
+      "id": "us_cancellations_refund_rule",
+      "name": "Cancellations & DOT refund rules",
+      "description": "Cancellations and refusals to refund despite DOT rules.",
       "keywords": [
-        "baggage (fee|allowance|charge)|carry-?on|cabin bag|seat (selection|fee)|excess baggage|add-?on|hidden fee"
+        "cancel|refund|\\bdot\\b|department of transportation|significant delay"
+      ],
+      "regions": [
+        "us"
       ]
     },
     {
-      "id": "overbooking",
-      "name": "Overbooking & denied boarding",
-      "description": "Bumped or offloaded passengers.",
+      "id": "us_delays_meltdowns",
+      "name": "Delays & airline meltdowns",
+      "description": "Delays, IT outages, operational meltdowns.",
       "keywords": [
-        "overbook|denied boarding|bumped|offloaded"
+        "delay|meltdown|outage|ground stop|stuck"
+      ],
+      "regions": [
+        "us"
       ]
     },
     {
-      "id": "airport_queues",
-      "name": "Airport queues & security",
-      "description": "Long check-in, security and immigration lines.",
+      "id": "us_bag_fees_basic_economy",
+      "name": "Bag fees & basic economy",
+      "description": "Checked-bag fees, basic economy restrictions.",
       "keywords": [
-        "queue|security (line|check|wait)|immigration|check-?in (line|queue)|digiyatra|\\btsa\\b|long lines"
+        "bag fee|checked bag|basic economy|carry-?on|seat (fee|selection)"
+      ],
+      "regions": [
+        "us"
       ]
     },
     {
-      "id": "fares_pricing",
-      "name": "Ticket prices & fare jumps",
-      "description": "High fares, sudden price jumps, dynamic pricing.",
+      "id": "us_overbooking_bumping",
+      "name": "Overbooking & bumping",
+      "description": "Bumped passengers, vouchers.",
       "keywords": [
-        "(ticket|fare|flight) (price|prices|cost)|expensive|price (increase|jump|hike)|cheap flights|dynamic pricing"
+        "overbook|bumped|denied boarding|volunteer"
+      ],
+      "regions": [
+        "us"
       ]
     },
     {
-      "id": "booking_checkin",
-      "name": "Booking changes & check-in",
-      "description": "Name changes, date changes, web check-in and booking errors.",
+      "id": "us_tsa_lines",
+      "name": "TSA lines & airport crowds",
+      "description": "Security waits, PreCheck, crowded terminals.",
       "keywords": [
-        "name change|change (flight|date)|web check-?in|boarding pass|booking (error|problem)|\\bpnr\\b|travel agent"
+        "\\btsa\\b|precheck|security line|\\bclear\\b"
+      ],
+      "regions": [
+        "us"
       ]
     },
     {
-      "id": "accessibility",
-      "name": "Accessibility & special assistance",
-      "description": "Wheelchair, elderly, infant and special-assistance failures.",
+      "id": "us_lost_luggage",
+      "name": "Lost or damaged luggage",
+      "description": "Bags lost or damaged.",
       "keywords": [
-        "wheelchair|special assistance|disab|elderly|infant|unaccompanied minor"
+        "lost (bag|luggage)|(bag|luggage) (lost|damaged|delayed)|airtag"
+      ],
+      "regions": [
+        "us"
       ]
     },
     {
-      "id": "airline_service",
-      "name": "Airline customer service",
-      "description": "Unreachable support, rude staff, no answers.",
+      "id": "us_customer_service_waits",
+      "name": "Customer service hold times",
+      "description": "Hours on hold, no agents.",
       "keywords": [
-        "customer (care|service|support)|complain|complaint|rude (staff|crew)|no response|contact number|helpline"
+        "on hold|customer service|call back|\\bagent\\b|complain|complaint"
+      ],
+      "regions": [
+        "us"
       ]
     },
     {
@@ -98,43 +252,135 @@
   ],
   "personas": [
     {
-      "id": "business_traveller",
+      "id": "in_business_traveller",
       "name": "Business traveller",
-      "description": "Flies for work.",
+      "description": "Metro-to-metro work trips.",
       "keywords": [
-        "business trip|for work|meeting|conference"
+        "business trip|office|meeting|work trip"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "family_traveller",
+      "id": "in_family",
       "name": "Family traveller",
-      "description": "Flies with kids or parents.",
+      "description": "Flying home for festivals.",
       "keywords": [
-        "with (my )?(kids|children|baby|infant|family|parents)"
+        "family|kids|parents|diwali|vacation"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "budget_flyer",
+      "id": "in_gulf_nri",
+      "name": "NRI / Gulf traveller",
+      "description": "Flies to/from the Gulf.",
+      "keywords": [
+        "dubai|gulf|\\bnri\\b|abu dhabi|saudi|doha"
+      ],
+      "regions": [
+        "india"
+      ]
+    },
+    {
+      "id": "in_budget_flyer",
       "name": "Budget flyer",
-      "description": "Uses low-cost carriers.",
+      "description": "Hunts cheapest fares.",
       "keywords": [
-        "ryanair|easyjet|spirit|frontier|indigo|cheap flight|budget airline"
+        "cheap|cheapest|budget|sale fare"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "frequent_flyer",
+      "id": "eu_holiday_family",
+      "name": "Holiday family",
+      "description": "School-holiday trips.",
+      "keywords": [
+        "family|kids|half term|summer holiday"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_budget_flyer",
+      "name": "Budget-airline flyer",
+      "description": "Ryanair, easyJet, Wizz.",
+      "keywords": [
+        "ryanair|easyjet|wizz|cheap flight"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_business",
+      "name": "Business traveller",
+      "description": "Work trips.",
+      "keywords": [
+        "business|work trip|meeting"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_disabled_traveller",
+      "name": "Traveller needing assistance",
+      "description": "PRM assistance.",
+      "keywords": [
+        "wheelchair|special assistance|disab"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "us_frequent_flyer",
       "name": "Frequent flyer",
-      "description": "Status or miles holder.",
+      "description": "Elite status holder.",
       "keywords": [
-        "status|miles|frequent flyer|gold member|platinum"
+        "status|miles|platinum|\\bgold\\b|elite|frequent flyer"
+      ],
+      "regions": [
+        "us"
       ]
     },
     {
-      "id": "migrant_traveller",
-      "name": "NRI / migrant traveller",
-      "description": "Flies home internationally.",
+      "id": "us_family",
+      "name": "Family traveller",
+      "description": "Kids and car seats.",
       "keywords": [
-        "\\bnri\\b|going home|visiting family abroad|gulf"
+        "family|kids|car seat|infant"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_budget_flyer",
+      "name": "Budget flyer",
+      "description": "Spirit, Frontier, basic economy.",
+      "keywords": [
+        "spirit|frontier|allegiant|basic economy|cheap"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_business",
+      "name": "Business traveller",
+      "description": "Work trips.",
+      "keywords": [
+        "business|work trip"
+      ],
+      "regions": [
+        "us"
       ]
     },
     {

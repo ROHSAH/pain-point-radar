@@ -1,84 +1,230 @@
 {
-  "_comment": "Topic-specific categories. Keyword patterns drive the no-key classifier (first 3 matches, in order).",
+  "_comment": "Region-specific pain points and personas (ids prefixed in_/eu_/us_). Keyword patterns drive the no-key classifier (first 3 matches, in order, within the document's region).",
   "categories": [
     {
-      "id": "not_delivered",
-      "name": "Not delivered or marked delivered",
-      "description": "Orders never arrive or show delivered but missing.",
+      "id": "in_fake_products",
+      "name": "Fake or duplicate products (Flipkart, Meesho, Amazon)",
+      "description": "Counterfeit electronics, cosmetics and branded goods from marketplace sellers.",
       "keywords": [
-        "not delivered|marked (as )?delivered|delivered but|never (arrived|received)|lost (parcel|package|order)|missing (package|parcel)"
+        "fake|duplicate|counterfeit|first copy|not original|refurbished as new"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "fake_counterfeit",
-      "name": "Fake & counterfeit products",
-      "description": "Counterfeit or duplicate products from sellers.",
+      "id": "in_return_refused_open_box",
+      "name": "Returns refused & open-box delivery",
+      "description": "Return requests rejected, 'non-returnable', open-box disputes.",
       "keywords": [
-        "fake|counterfeit|duplicate|replica|not original|authentic"
+        "return (rejected|refused|denied|not accepted|request)|non-?returnable|open box|replacement (rejected|denied)"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "wrong_damaged",
-      "name": "Wrong, damaged or used items",
-      "description": "Wrong item/size, damaged goods, used items, empty boxes.",
-      "keywords": [
-        "wrong (item|product|size|colou?r)|damaged|broken|used product|empty box|missing (item|part)"
-      ]
-    },
-    {
-      "id": "returns_refused",
-      "name": "Returns refused or difficult",
-      "description": "Return rejected, pickup not arranged, non-returnable items.",
-      "keywords": [
-        "return (rejected|refused|denied|window|policy|pickup|request)|can'?t return|non-?returnable|how to return"
-      ]
-    },
-    {
-      "id": "refunds",
-      "name": "Refunds slow or missing",
-      "description": "Refunds pending for weeks or never credited.",
+      "id": "in_refund_delays_cod",
+      "name": "Refund delays (COD, wallet credit)",
+      "description": "Refunds stuck, credited to wallet instead of bank, COD refunds.",
       "keywords": [
         "refund"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "late_tracking",
-      "name": "Late delivery & tracking",
-      "description": "Delivery dates slip, tracking stuck, no updates.",
+      "id": "in_sale_cancellations",
+      "name": "Sale-day order cancellations",
+      "description": "Orders cancelled during Big Billion Days / Great Indian Festival.",
       "keywords": [
-        "\\blate\\b|delay|tracking|where is my (order|parcel|package)|out for delivery|stuck in transit|expected delivery"
+        "order cancel|cancelled (my )?order|big billion|great indian festival|sale (cancel|price)"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "order_cancelled",
-      "name": "Orders cancelled by seller",
-      "description": "Orders auto-cancelled or cancelled after a price change.",
+      "id": "in_delivery_delays_tier2",
+      "name": "Delays & non-delivery in smaller towns",
+      "description": "Late or failed deliveries, pincode not serviceable, fake 'delivery attempted'.",
       "keywords": [
-        "order cancel|cancelled (my )?order|seller cancel|auto cancel"
+        "not delivered|delivery (delay|attempted|failed)|pincode|not serviceable|ekart|delhivery|shadowfax|xpressbees"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "seller_scams",
-      "name": "Seller & marketplace scams",
-      "description": "Fake sellers, fake reviews, third-party seller fraud.",
+      "id": "in_wrong_damaged_item",
+      "name": "Wrong, damaged or empty-box deliveries",
+      "description": "Wrong item, damaged goods, missing parts, empty boxes.",
       "keywords": [
-        "scam|fraud|fake seller|third party seller|seller (not responding|scam)|fake reviews"
+        "wrong (item|product|size)|damaged|empty box|missing (item|part)|used product|stone in box"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "payment_cod",
-      "name": "Payment & cash-on-delivery problems",
-      "description": "Payment debited but order failed, COD refused, double charges.",
+      "id": "in_customer_care_bots",
+      "name": "Customer care & bots",
+      "description": "Bots looping, no callback, consumer forum escalation.",
       "keywords": [
-        "payment (failed|deducted|pending)|\\bcod\\b|cash on delivery|charged twice|gift card"
+        "customer care|chat ?bot|complain|complaint|consumer (forum|court)|national consumer helpline|\\bnch\\b|escalat|problem|not working"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "customer_support",
-      "name": "Customer support",
-      "description": "Bots, unhelpful agents, no escalation path.",
+      "id": "eu_lost_parcels_couriers",
+      "name": "Lost & mishandled parcels (Evri, Royal Mail, DPD, DHL)",
+      "description": "Parcels lost, left in bins, 'delivered' photos of the wrong door.",
       "keywords": [
-        "customer (care|service|support)|complain|complaint|chat (support|bot)|contact number|no response|escalat|\\bproblem\\b|\\bissue\\b|not working|account (locked|blocked|suspended)"
+        "evri|hermes|royal mail|\\bdpd\\b|\\bdhl\\b|yodel|parcel (lost|missing|left)|delivered to wrong|delivery photo"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_customs_import_fees",
+      "name": "Customs, VAT & import fees",
+      "description": "Unexpected duties and handling fees on non-EU/UK orders.",
+      "keywords": [
+        "customs|import (fee|duty|vat)|handling fee|duty to pay|post-?brexit"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_returns_refunds",
+      "name": "Returns & refunds",
+      "description": "Return shipping costs, refunds withheld, 14-day rights.",
+      "keywords": [
+        "return|refund|14 day|cooling off"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_temu_shein_quality",
+      "name": "Temu / Shein quality & safety",
+      "description": "Poor quality, unsafe products, misleading listings.",
+      "keywords": [
+        "temu|shein|aliexpress"
+      ],
+      "require": [
+        "problem|issue|complain|grievance|reject|denied|declin|refus|not (able|getting|approved|sanctioned|received|paid|eligible|working|credited)|delay|stuck|pending|high|expensive|costs?\\b|fees?\\b|rates?\\b|charges|interest|trap|scam|fraud|hidden|reduc|\\bcut\\b|withdrawn|can.?t|unable|eligib|documents|collateral|guarantee|\\blaws?\\b|legal|lawsuit|default|worth|\\bvs\\b|alternative|without|repay|forgiv|penalt|closed|frozen|blocked|why"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_marketplace_scams",
+      "name": "Marketplace & seller scams",
+      "description": "Fake sellers, eBay/Amazon/Vinted scams.",
+      "keywords": [
+        "scam|fraud|fake seller|vinted|ebay seller|marketplace"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_consumer_rights",
+      "name": "Consumer rights disputes",
+      "description": "Faulty goods, Consumer Rights Act, chargebacks.",
+      "keywords": [
+        "consumer rights|faulty|section 75|chargeback|trading standards|small claims"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "us_porch_piracy_marked_delivered",
+      "name": "Marked delivered but missing / porch theft",
+      "description": "Packages marked delivered and gone; porch pirates.",
+      "keywords": [
+        "marked (as )?delivered|porch (pirate|theft)|package stolen|delivered but (not|never)|missing package"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_tariffs_price_rises",
+      "name": "Tariffs, de minimis & price increases",
+      "description": "Import price rises, de minimis changes, surprise duties.",
+      "keywords": [
+        "tariff|de minimis|import (duty|fee)|prices (went up|increase)"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_temu_shein_quality",
+      "name": "Temu / Shein quality & safety",
+      "description": "Low quality, safety concerns, misleading listings.",
+      "keywords": [
+        "temu|shein|aliexpress"
+      ],
+      "require": [
+        "problem|issue|complain|grievance|reject|denied|declin|refus|not (able|getting|approved|sanctioned|received|paid|eligible|working|credited)|delay|stuck|pending|high|expensive|costs?\\b|fees?\\b|rates?\\b|charges|interest|trap|scam|fraud|hidden|reduc|\\bcut\\b|withdrawn|can.?t|unable|eligib|documents|collateral|guarantee|\\blaws?\\b|legal|lawsuit|default|worth|\\bvs\\b|alternative|without|repay|forgiv|penalt|closed|frozen|blocked|why"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_returns_refunds",
+      "name": "Returns & refunds",
+      "description": "Refunds delayed or denied, restocking fees.",
+      "keywords": [
+        "return|refund|restocking fee"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_third_party_scams",
+      "name": "Third-party seller scams & fake reviews",
+      "description": "Fake or knockoff products, fake reviews, seller fraud.",
+      "keywords": [
+        "third party seller|fake (review|product)|knock-?off|counterfeit|scam|fraud"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_prime_subscription",
+      "name": "Prime & subscription fees",
+      "description": "Prime price, ads on Prime Video, subscription traps.",
+      "keywords": [
+        "prime (price|fee|membership)|subscription|auto-?renew|cancel prime"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_delivery_delays",
+      "name": "Late deliveries",
+      "description": "Delivery dates slipping, stuck in transit.",
+      "keywords": [
+        "\\blate\\b|delay|stuck in transit|where is my (package|order)|tracking"
+      ],
+      "regions": [
+        "us"
       ]
     },
     {
@@ -90,35 +236,124 @@
   ],
   "personas": [
     {
-      "id": "frequent_shopper",
-      "name": "Frequent shopper",
-      "description": "Orders often, Prime/Plus member.",
+      "id": "in_deal_hunter",
+      "name": "Deal hunter",
+      "description": "Shops sales and offers.",
       "keywords": [
-        "prime|plus member|order (every|regularly)|always order"
+        "sale|offer|deal|discount|coupon"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "budget_shopper",
-      "name": "Budget shopper",
-      "description": "Hunts deals, cheap marketplaces.",
+      "id": "in_tier2_shopper",
+      "name": "Tier-2/3 town shopper",
+      "description": "Outside metros, relies on COD.",
       "keywords": [
-        "cheap|sale|deal|discount|temu|meesho|shein"
+        "\\bcod\\b|cash on delivery|small town|village|pincode"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "seller",
-      "name": "Seller",
-      "description": "Sells on the marketplace.",
+      "id": "in_seller",
+      "name": "Marketplace seller",
+      "description": "Sells on Flipkart, Amazon or Meesho.",
       "keywords": [
-        "as a seller|my (listing|store|customers)|seller account|fba"
+        "seller|my listing|meesho supplier|commission"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "gift_buyer",
+      "id": "in_gadget_buyer",
+      "name": "Gadget buyer",
+      "description": "Buys phones, laptops, electronics.",
+      "keywords": [
+        "phone|laptop|iphone|earbuds|\\btv\\b"
+      ],
+      "regions": [
+        "india"
+      ]
+    },
+    {
+      "id": "eu_online_shopper",
+      "name": "Regular online shopper",
+      "description": "Shops online weekly.",
+      "keywords": [
+        "prime|always order|every week"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_bargain_hunter",
+      "name": "Bargain hunter",
+      "description": "Uses Temu, Shein, AliExpress.",
+      "keywords": [
+        "temu|shein|aliexpress|cheap"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_small_seller",
+      "name": "Small online seller",
+      "description": "Sells on eBay, Etsy, Vinted.",
+      "keywords": [
+        "seller|etsy|vinted|ebay shop"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "us_prime_member",
+      "name": "Prime member",
+      "description": "Heavy Amazon user.",
+      "keywords": [
+        "\\bprime\\b"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_bargain_shopper",
+      "name": "Bargain shopper",
+      "description": "Temu, Shein, Walmart deals.",
+      "keywords": [
+        "temu|shein|cheap|deal"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_reseller",
+      "name": "Reseller / seller",
+      "description": "Sells on Amazon, eBay, Etsy.",
+      "keywords": [
+        "seller|reseller|flipping|etsy shop"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_gift_buyer",
       "name": "Gift buyer",
-      "description": "Buying for someone else; deadlines matter.",
+      "description": "Holiday deadlines.",
       "keywords": [
-        "gift|birthday|for my (mom|dad|wife|husband)"
+        "gift|christmas|birthday"
+      ],
+      "regions": [
+        "us"
       ]
     },
     {

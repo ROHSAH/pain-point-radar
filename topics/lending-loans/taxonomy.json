@@ -1,92 +1,280 @@
 {
-  "_comment": "Topic-specific categories. Keyword patterns drive the no-key classifier (first 3 matches, in order).",
+  "_comment": "Region-specific pain points and personas (ids prefixed in_/eu_/us_). Keyword patterns drive the no-key classifier (first 3 matches, in order, within the document's region).",
   "categories": [
     {
-      "id": "recovery_harassment",
-      "name": "Recovery agents & debt collection",
-      "description": "Harassing recovery agents and debt collectors, threats, calls to family and contacts.",
+      "id": "in_loan_app_harassment",
+      "name": "Illegal loan apps & morphed-photo harassment",
+      "description": "Instant-loan apps abusing contacts, morphing photos, charging huge fees.",
       "keywords": [
-        "recovery agent|harass|debt collect|collection (agency|agent|calls?)|threat|calling (my )?(family|contacts|relatives|office)|abus"
+        "loan app|instant loan|morphed|illegal (app|lender|loan)|chinese loan|fake loan|loan app harassment"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "loan_app_scams",
-      "name": "Illegal loan apps & scams",
-      "description": "Fake instant-loan apps, illegal lenders, morphed photos, data misuse.",
+      "id": "in_recovery_agents",
+      "name": "Recovery agents calling family & contacts",
+      "description": "Agents threatening, calling relatives, office and references.",
       "keywords": [
-        "loan app|instant loan|fake loan|illegal (lender|loan)|loan scam|morphed|unregistered lender|predatory"
+        "recovery agent|harass|calling (my )?(family|relatives|contacts|office|references)|threat|abus|collection call"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "loan_rejection",
-      "name": "Loan rejected or can't qualify",
-      "description": "Applications denied, unclear eligibility, income and paperwork hurdles.",
+      "id": "in_cibil_errors",
+      "name": "CIBIL errors & low scores",
+      "description": "Wrong entries, settled-loan marks, low CIBIL blocking new loans.",
       "keywords": [
-        "reject|denied|declined|not approved|eligib|qualify|turned down|approval"
+        "cibil|credit score|credit report|crif|experian|settled status|written off"
+      ],
+      "require": [
+        "low|down|drop|fell|wrong|error|incorrect|dispute|remove|improve|increase|raise|fix|bad|why|reject|denied|not (showing|updated)|settled|written off|negative"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "credit_score",
-      "name": "Credit score & report problems",
-      "description": "Low or wrong scores, report errors, scores dropping, hard to rebuild.",
+      "id": "in_emi_repo_hikes",
+      "name": "EMI and tenure hikes after repo-rate changes",
+      "description": "Floating home-loan EMIs or tenures increasing; MCLR/RLLR changes.",
       "keywords": [
-        "cibil|credit score|credit report|experian|equifax|transunion|credit history|credit rating|score (drop|low)"
+        "\\bemi\\b|tenure|repo rate|mclr|rllr|floating rate|rate (hike|increase)|interest rate"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "interest_emi",
-      "name": "High interest, EMIs & rate hikes",
-      "description": "High interest/APR, EMI burden, floating-rate hikes, tenure extensions.",
+      "id": "in_forced_insurance_fees",
+      "name": "Processing fees & forced insurance",
+      "description": "Loan insurance bundled without consent, processing/foreclosure charges.",
       "keywords": [
-        "interest rate|\\bemi\\b|\\bapr\\b|rate (hike|increase|rise)|variable rate|floating rate|repo rate|monthly payment|tenure"
+        "processing fee|forced insurance|insurance (added|deducted|forced)|foreclosure (charge|fee)|pre-?closure|hidden charges|bounce charge"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "hidden_fees",
-      "name": "Processing, prepayment & hidden fees",
-      "description": "Processing fees, foreclosure/prepayment penalties, forced insurance, late fees.",
+      "id": "in_gold_loan_auction",
+      "name": "Gold-loan renewals & auctions",
+      "description": "Gold loans auctioned, renewal rules, LTV changes.",
       "keywords": [
-        "processing fee|prepayment|foreclos|pre-?closure|hidden (charges|fees)|forced insurance|late fee|bounce charge|penalty"
+        "gold loan"
+      ],
+      "require": [
+        "problem|issue|complain|grievance|reject|denied|declin|refus|not (able|getting|approved|sanctioned|received|paid|eligible|working|credited)|delay|stuck|pending|high|expensive|costs?\\b|fees?\\b|rates?\\b|charges|interest|trap|scam|fraud|hidden|reduc|\\bcut\\b|withdrawn|can.?t|unable|eligib|documents|collateral|guarantee|\\blaws?\\b|legal|lawsuit|default|worth|\\bvs\\b|alternative|without|repay|forgiv|penalt|closed|frozen|blocked|why"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "bnpl",
-      "name": "Buy-now-pay-later traps",
-      "description": "BNPL late fees, overspending, collections, credit-score hits.",
+      "id": "in_home_loan_sanction_builder",
+      "name": "Home-loan sanction, disbursal & builder delays",
+      "description": "Slow sanction or disbursal, stalled builder projects with EMIs running.",
       "keywords": [
-        "\\bbnpl\\b|klarna|afterpay|affirm|clearpay|pay later|lazypay|simpl\\b|zip pay"
+        "home loan.{0,25}(sanction|disburs|delay|reject|documents|builder)|builder (delay|stalled)|pre-?emi|possession delay"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "student_loans",
-      "name": "Student loan repayment",
-      "description": "Servicer problems, repayment plans, forgiveness, interest growth.",
+      "id": "in_personal_loan_rejection",
+      "name": "Personal loan rejections",
+      "description": "Rejected despite salary, unclear reasons, low CIBIL.",
       "keywords": [
-        "student loan|education loan|\\bidr\\b|servicer|forgiveness|\\bslc\\b|repayment plan|mohela|nelnet|navient"
+        "personal loan.{0,25}(reject|denied|not approved|eligib)|loan rejected|not eligible"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "mortgage_process",
-      "name": "Mortgage & home-loan process",
-      "description": "Slow sanction or disbursal, valuations, underwriting, closing delays.",
+      "id": "eu_remortgage_rate_shock",
+      "name": "Fixed-rate endings & remortgage shock",
+      "description": "Payments jumping when fixed deals end; product transfers vs remortgaging.",
       "keywords": [
-        "(mortgage|home loan|housing loan).{0,25}(delay|process|approval|offer|application|documents|sanction|disburs|valuation|rejected|stuck)|underwriting|conveyancing|disburs|closing (costs|date)|escrow"
+        "remortgag|fixed (rate|deal) end|product transfer|mortgage (rate|payments?) (rise|increase|jump)|tracker|\\bsvr\\b"
+      ],
+      "regions": [
+        "europe"
       ]
     },
     {
-      "id": "refinance_switching",
-      "name": "Refinancing & balance transfer",
-      "description": "Hard or costly to refinance, switch lenders or consolidate.",
+      "id": "eu_mortgage_affordability",
+      "name": "Mortgage affordability rejections",
+      "description": "Declined on affordability, deposit size, self-employed income.",
       "keywords": [
-        "refinanc|balance transfer|switch (lender|bank)|top-?up loan|consolidat|rate switch"
+        "mortgage.{0,25}(declin|reject|affordab|deposit|refused|self[- ]employed)|first time buyer|lifetime isa"
+      ],
+      "regions": [
+        "europe"
       ]
     },
     {
-      "id": "debt_distress",
-      "name": "Debt stress & missed payments",
-      "description": "Can't keep up with payments, defaults, settlements, insolvency.",
+      "id": "eu_bnpl_klarna",
+      "name": "Buy-now-pay-later debt (Klarna, Clearpay, PayPal)",
+      "description": "BNPL balances spiralling, late fees, collections.",
       "keywords": [
-        "can'?t (pay|repay)|missed (payment|emi)|default|in debt|debt (trap|spiral|relief)|bankrupt|one time settlement|\\biva\\b|\\bccj\\b|written off"
+        "klarna|clearpay|paypal (pay in 3|credit)|\\bbnpl\\b|pay later|laybuy|zilch"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_debt_collectors_ccj",
+      "name": "Debt collectors, CCJs & defaults",
+      "description": "Lowell, Cabot and others chasing debts, CCJs, default notices.",
+      "keywords": [
+        "lowell|cabot|intrum|debt collect|\\bccj\\b|default notice|bailiff|enforcement agent"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_credit_file_errors",
+      "name": "Credit file errors (Experian, Equifax, Schufa)",
+      "description": "Wrong entries or low scores blocking credit; Schufa in Germany.",
+      "keywords": [
+        "experian|equifax|transunion|clearscore|credit karma|schufa|credit (file|score|report)"
+      ],
+      "require": [
+        "low|down|drop|fell|wrong|error|incorrect|dispute|remove|improve|increase|raise|fix|bad|why|reject|denied|not (showing|updated)|settled|written off|negative"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_car_finance_pcp",
+      "name": "Car finance, PCP & commission claims",
+      "description": "Hidden dealer commission, PCP balloon payments, claims.",
+      "keywords": [
+        "car finance|\\bpcp\\b|\\bhp\\b agreement|balloon payment|car finance claim|commission claim"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_high_cost_credit",
+      "name": "Payday & high-cost credit",
+      "description": "Payday loans, guarantor loans, affordability complaints.",
+      "keywords": [
+        "payday|guarantor loan|high cost credit|unaffordable lending|quickquid|wonga|cashfloat"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_student_loan_plan2",
+      "name": "Student loan repayment plans",
+      "description": "Plan 2/Plan 5 interest, repayments that never shrink.",
+      "keywords": [
+        "student loan|plan [125]\\b|\\bslc\\b|postgraduate loan"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "us_student_loan_servicing",
+      "name": "Student loan servicing, IDR & forgiveness",
+      "description": "Servicer errors, IDR/SAVE changes, PSLF denials, payments restarting.",
+      "keywords": [
+        "student loan|\\bidr\\b|\\bsave plan\\b|\\bpslf\\b|forgiveness|mohela|nelnet|navient|aidvantage|servicer"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_credit_report_disputes",
+      "name": "Credit report errors & disputes",
+      "description": "Inaccurate items, disputes ignored, score drops.",
+      "keywords": [
+        "credit (report|score)|dispute|equifax|experian|transunion|credit karma|hard inquiry"
+      ],
+      "require": [
+        "low|down|drop|fell|wrong|error|incorrect|dispute|remove|improve|increase|raise|fix|bad|why|reject|denied|not (showing|updated)|settled|written off|negative"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_mortgage_rates_closing",
+      "name": "Mortgage rates, PMI & closing costs",
+      "description": "High rates, PMI, closing costs, underwriting delays.",
+      "keywords": [
+        "mortgage.{0,25}(rate|denied|underwriting|closing)|\\bpmi\\b|closing costs|escrow (shortage|increase)|refinanc(e|ing) (my )?(house|home|mortgage)"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_bnpl_affirm",
+      "name": "Buy-now-pay-later (Affirm, Afterpay, Klarna)",
+      "description": "Stacked BNPL plans, late fees, account bans.",
+      "keywords": [
+        "affirm|afterpay|klarna|\\bbnpl\\b|pay in 4|sezzle|zip pay"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_debt_collectors",
+      "name": "Debt collectors & validation",
+      "description": "Collector calls, validation letters, old debts, lawsuits.",
+      "keywords": [
+        "debt collect|collection agency|validation letter|portfolio recovery|midland credit|sued for debt|charge-?off"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_medical_debt",
+      "name": "Medical debt on credit",
+      "description": "Medical bills sent to collections, hurting credit.",
+      "keywords": [
+        "medical debt|medical bill.{0,20}(collection|credit)"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_cash_advance_apps",
+      "name": "Payday loans & cash-advance apps",
+      "description": "Payday loans, Dave/Earnin/Brigit fees, rollovers.",
+      "keywords": [
+        "payday|cash advance app|earnin|\\bdave\\b|brigit|cleo|title loan"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_auto_loans_repo",
+      "name": "Auto loan APRs & repossession",
+      "description": "Very high car-loan APRs, upside-down loans, repossession.",
+      "keywords": [
+        "auto loan|car loan|repossess|upside down|negative equity|car payment|refinanc(e|ing) (my )?car"
+      ],
+      "regions": [
+        "us"
       ]
     },
     {
@@ -98,43 +286,168 @@
   ],
   "personas": [
     {
-      "id": "salaried_borrower",
-      "name": "Salaried borrower",
-      "description": "Borrows against a regular salary.",
+      "id": "in_salaried",
+      "name": "Salaried employee",
+      "description": "Borrows against salary; IT and private-sector employees.",
       "keywords": [
-        "salary|salaried|my employer|payslip"
+        "salary|salaried|my company|\\bctc\\b|it employee"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "self_employed",
-      "name": "Self-employed / freelancer",
-      "description": "Irregular income, harder to prove.",
+      "id": "in_self_employed",
+      "name": "Self-employed / business owner",
+      "description": "Irregular income, harder documentation.",
       "keywords": [
-        "self[- ]employed|freelanc|business owner|gig|contractor|1099"
+        "self[- ]employed|business owner|shop|freelanc"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "student",
-      "name": "Student borrower",
-      "description": "Education or student loan.",
+      "id": "in_student_education_loan",
+      "name": "Student with education loan",
+      "description": "Studying in India or abroad on a loan.",
       "keywords": [
-        "student|education loan|college|university"
+        "education loan|student|study abroad|ms in|college fees"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "first_home_buyer",
-      "name": "First-time home buyer",
+      "id": "in_homebuyer",
+      "name": "Home buyer",
+      "description": "Buying a flat, often under construction.",
+      "keywords": [
+        "flat|apartment|builder|home loan|property"
+      ],
+      "regions": [
+        "india"
+      ]
+    },
+    {
+      "id": "in_gig_worker",
+      "name": "Gig / low-income borrower",
+      "description": "Delivery or gig worker using instant-loan apps.",
+      "keywords": [
+        "delivery|gig|rider|driver|low salary"
+      ],
+      "regions": [
+        "india"
+      ]
+    },
+    {
+      "id": "eu_first_time_buyer",
+      "name": "First-time buyer",
+      "description": "Saving a deposit, renting meanwhile.",
+      "keywords": [
+        "first time buyer|\\bftb\\b|deposit for (a )?house|lifetime isa"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_remortgaging_homeowner",
+      "name": "Homeowner remortgaging",
+      "description": "Fixed deal ending.",
+      "keywords": [
+        "remortgag|my fixed (rate|deal)|product transfer"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_graduate",
+      "name": "Graduate with student loan",
+      "description": "Repaying a student loan.",
+      "keywords": [
+        "graduate|student loan|plan 2"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_self_employed",
+      "name": "Self-employed",
+      "description": "Lenders want years of accounts.",
+      "keywords": [
+        "self[- ]employed|contractor|sole trader|ltd company"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_struggling_borrower",
+      "name": "Borrower in financial difficulty",
+      "description": "Juggling debts, considering IVA or DMP.",
+      "keywords": [
+        "debt|\\biva\\b|\\bdmp\\b|stepchange|struggling|can'?t pay"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "us_student_grad",
+      "name": "Student / recent grad",
+      "description": "Carrying federal or private student loans.",
+      "keywords": [
+        "student|grad school|college|graduate"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_first_time_homebuyer",
+      "name": "First-time homebuyer",
       "description": "Buying a first home.",
       "keywords": [
-        "first (home|house|time buyer|flat)|\\bftb\\b"
+        "first (home|house|time buyer)|\\bfha\\b"
+      ],
+      "regions": [
+        "us"
       ]
     },
     {
-      "id": "small_business",
-      "name": "Small business borrower",
-      "description": "Borrows for a business.",
+      "id": "us_low_credit",
+      "name": "Low-credit borrower",
+      "description": "Thin or damaged credit.",
       "keywords": [
-        "business loan|msme|working capital|my (shop|business)"
+        "bad credit|low credit|no credit|credit score (of )?[45]\\d\\d"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_gig_worker",
+      "name": "Gig worker",
+      "description": "Irregular 1099 income.",
+      "keywords": [
+        "gig|1099|uber driver|doordash|instacart shopper"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_renter",
+      "name": "Renter",
+      "description": "Uses BNPL and cash-advance apps between paychecks.",
+      "keywords": [
+        "paycheck to paycheck|rent is due|between paychecks"
+      ],
+      "regions": [
+        "us"
       ]
     },
     {

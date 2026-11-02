@@ -1,92 +1,260 @@
 {
-  "_comment": "Topic-specific categories. Keyword patterns drive the no-key classifier (first 3 matches, in order).",
+  "_comment": "Region-specific pain points and personas (ids prefixed in_/eu_/us_). Keyword patterns drive the no-key classifier (first 3 matches, in order, within the document's region).",
   "categories": [
     {
-      "id": "driver_cancellations",
-      "name": "Driver cancellations & no-shows",
-      "description": "Drivers cancel, don't move, refuse destinations or no-show.",
+      "id": "in_extra_cash_ac",
+      "name": "Drivers demanding extra cash or switching off AC",
+      "description": "Asking for more than the app fare, 'AC extra', cash-only, off-app rides.",
       "keywords": [
-        "cancel|no show|didn'?t (come|show|arrive)|not (coming|moving)|refus|won'?t go|keeps cancelling"
+        "extra (money|cash|charge|fare)|asking (for )?(extra|more|cash)|\\bac\\b (off|extra|charge)|cash only|online payment (nahi|not accepted)|offline ride"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "extra_cash_demands",
-      "name": "Drivers demanding extra cash",
-      "description": "Asking for extra money, AC charges, cash only, off-app fares.",
+      "id": "in_cancels_after_destination",
+      "name": "Drivers asking destination then cancelling",
+      "description": "Drivers call to ask where you're going and cancel; long pickups.",
       "keywords": [
-        "extra (money|cash|charge)|asking (for )?(extra|cash|more)|\\bac\\b (charge|extra)|cash only|online payment|turn off ac"
+        "ask(s|ing)? (for )?destination|where (are you|you) going|cancel|not coming|keeps cancelling|won'?t go"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "fare_surge",
-      "name": "Surge & fares higher than shown",
-      "description": "Surge pricing, final fare above estimate, high prices.",
+      "id": "in_auto_rickshaw_fares",
+      "name": "Auto-rickshaw fares & meter refusal",
+      "description": "Autos refusing meter, app-auto prices, Namma Yatri vs Uber/Ola.",
       "keywords": [
-        "surge|fare|price (high|higher|changed|increase)|more than (shown|quoted)|expensive|cost (of|per)"
+        "auto (fare|driver|rickshaw)|meter (refus|down)|namma yatri|uber auto|ola auto"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "safety",
-      "name": "Safety & harassment",
-      "description": "Rash or drunk driving, harassment, unsafe late-night rides.",
+      "id": "in_bike_taxi_safety",
+      "name": "Bike-taxi safety & legality (Rapido)",
+      "description": "Bike-taxi bans, helmets, rash riding.",
       "keywords": [
-        "safety|unsafe|harass|assault|rash driving|drunk|women safety|\\bsos\\b|night"
+        "rapido|bike taxi|helmet|\\bban\\b"
+      ],
+      "require": [
+        "problem|issue|complain|grievance|reject|denied|declin|refus|not (able|getting|approved|sanctioned|received|paid|eligible|working|credited)|delay|stuck|pending|high|expensive|costs?\\b|fees?\\b|rates?\\b|charges|interest|trap|scam|fraud|hidden|reduc|\\bcut\\b|withdrawn|can.?t|unable|eligib|documents|collateral|guarantee|\\blaws?\\b|legal|lawsuit|default|worth|\\bvs\\b|alternative|without|repay|forgiv|penalt|closed|frozen|blocked|why"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "availability_waits",
-      "name": "No cabs & long waits",
-      "description": "No drivers available, long ETAs at peak hours.",
+      "id": "in_surge_peak_rain",
+      "name": "Surge pricing in peak hours & rain",
+      "description": "Prices doubling in rain and office hours.",
       "keywords": [
-        "no (cabs|drivers|rides|autos) available|waiting|long wait|\\beta\\b|not available|peak hours"
+        "surge|peak (hours|time)|\\brain\\b|price (high|double)|expensive"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "payments_fees",
-      "name": "Cancellation fees, payments & refunds",
-      "description": "Unfair cancellation fees, wrong charges, refunds.",
+      "id": "in_women_safety",
+      "name": "Women's safety at night",
+      "description": "Unsafe drivers, harassment, SOS not working.",
       "keywords": [
-        "cancellation fee|refund|charged (twice|wrong)|payment|wallet|deduct"
+        "women safety|harass|unsafe|night|\\bsos\\b|molest|stalk"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "lost_items",
-      "name": "Lost items",
-      "description": "Things left in the car and hard to recover.",
+      "id": "in_airport_pickup",
+      "name": "Airport pickups & queues",
+      "description": "Airport pickup zones, queues, fixed fares.",
       "keywords": [
-        "lost (item|phone|bag|wallet)|left (my|in)|forgot (my|in)"
+        "airport|terminal|pickup (point|zone)"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "app_glitches",
-      "name": "App & booking glitches",
-      "description": "App crashes, booking failures, GPS and map problems.",
+      "id": "in_support_complaints",
+      "name": "Support & complaints",
+      "description": "No human support, complaints ignored.",
       "keywords": [
-        "\\bapp\\b|not working|problem today|server|booking (failed|not)|gps|location|map"
+        "customer care|support|complain|complaint|helpline|refund|problem|not working"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "account_bans",
-      "name": "Account bans & blocks",
-      "description": "Rider accounts blocked or banned, often without explanation.",
+      "id": "eu_prices_vs_black_cabs",
+      "name": "Prices vs black cabs & taxis",
+      "description": "Uber/Bolt prices rising, comparisons with black cabs and local taxis.",
       "keywords": [
-        "account (blocked|banned|suspended|deactivated)|\\bbanned\\b"
+        "black cab|taxi (price|fare)|uber (price|expensive)|bolt (price|cheaper)|free now|price|expensive"
+      ],
+      "regions": [
+        "europe"
       ]
     },
     {
-      "id": "complaints_support",
-      "name": "Complaints & customer support",
-      "description": "No human support, hard to complain or escalate.",
+      "id": "eu_driver_cancellations",
+      "name": "Driver cancellations",
+      "description": "Drivers cancelling short or late-night trips.",
       "keywords": [
-        "support|complaint|complain|customer (care|service)|\\bhelp(line)?\\b|contact number|grievance|\\bproblem\\b"
+        "cancel|no show|didn'?t (come|show)"
+      ],
+      "regions": [
+        "europe"
       ]
     },
     {
-      "id": "driver_earnings",
-      "name": "Driver earnings & commissions",
-      "description": "Drivers' side: commissions, incentives, deactivations.",
+      "id": "eu_accessibility_refusals",
+      "name": "Wheelchair & guide-dog refusals",
+      "description": "Drivers refusing assistance dogs or wheelchairs.",
       "keywords": [
-        "driver (earnings|pay|income)|commission|incentive|captain|deactivat"
+        "guide dog|assistance dog|wheelchair|disab|refused"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_airport_station_fees",
+      "name": "Airport & station pickup fees",
+      "description": "Drop-off charges and pickup zones.",
+      "keywords": [
+        "airport|drop-?off charge|pickup (zone|fee)|station"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_safety_night",
+      "name": "Safety on nights out",
+      "description": "Late-night safety, drivers' conduct.",
+      "keywords": [
+        "safety|unsafe|harass|night out|drunk|assault"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_driver_rights_pay",
+      "name": "Driver pay & worker rights",
+      "description": "Driver earnings, worker status, commissions.",
+      "keywords": [
+        "driver (pay|earnings|rights)|worker status|commission|deactivat"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_support",
+      "name": "Support & refunds",
+      "description": "Cancellation fees, refunds, support.",
+      "keywords": [
+        "refund|cancellation fee|support|complain|complaint|problem"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "us_rising_fares_surge",
+      "name": "Rising fares & surge pricing",
+      "description": "Fares far higher than a few years ago; surge.",
+      "keywords": [
+        "surge|fare|price (increase|high|went up)|expensive|cheaper than"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_upfront_pricing_changes",
+      "name": "Upfront price changes & extra charges",
+      "description": "Final price above upfront quote; route changes.",
+      "keywords": [
+        "upfront|price changed|charged more|extra charge|cleaning fee|route"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_airport_fees",
+      "name": "Airport fees & pickups",
+      "description": "Airport surcharges and lot pickups.",
+      "keywords": [
+        "airport|terminal|pickup (lot|zone)|\\blax\\b"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_driver_cancellations",
+      "name": "Driver cancellations & long waits",
+      "description": "Drivers cancelling, long waits.",
+      "keywords": [
+        "cancel|no show|wait(ing)? (time|for)|long wait"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_safety",
+      "name": "Safety concerns",
+      "description": "Driver conduct, assaults, fake drivers.",
+      "keywords": [
+        "safety|unsafe|assault|harass|fake (uber|driver)"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_robotaxis",
+      "name": "Robotaxis (Waymo, Zoox)",
+      "description": "Robotaxi reliability, safety, availability.",
+      "keywords": [
+        "waymo|robotaxi|zoox|driverless|self[- ]driving"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_tipping",
+      "name": "Tipping pressure",
+      "description": "Tip prompts and expectations.",
+      "keywords": [
+        "\\btip(s|ping)?\\b"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_driver_pay_deactivation",
+      "name": "Driver pay & deactivations",
+      "description": "Low pay per mile, deactivations.",
+      "keywords": [
+        "driver (pay|earnings)|deactivat|per mile|uber driver|lyft driver"
+      ],
+      "regions": [
+        "us"
       ]
     },
     {
@@ -98,43 +266,135 @@
   ],
   "personas": [
     {
-      "id": "daily_commuter",
-      "name": "Daily commuter",
-      "description": "Uses rides to get to work.",
+      "id": "in_daily_commuter",
+      "name": "Daily office commuter",
+      "description": "Rides to tech parks and offices.",
       "keywords": [
-        "office|commute|work every day|daily"
+        "office|commute|daily|tech park"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "woman_rider",
+      "id": "in_woman_rider",
       "name": "Woman rider",
-      "description": "Safety is a major concern.",
+      "description": "Safety is the top concern.",
       "keywords": [
-        "as a (woman|girl|female)|women safety"
+        "as a (woman|girl|female)|women|ladies"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "airport_traveller",
+      "id": "in_airport_traveller",
       "name": "Airport traveller",
-      "description": "Rides to and from airports.",
+      "description": "Rides to/from airports.",
       "keywords": [
         "airport|flight"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "driver",
+      "id": "in_driver_captain",
       "name": "Driver / captain",
-      "description": "Drives for the platform.",
+      "description": "Drives for Uber, Ola, Rapido.",
       "keywords": [
-        "i('m| am) a driver|as a driver|captain|my rating as driver|drive for"
+        "captain|driver (earnings|commission|id)|as a driver|i drive for"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "tourist",
-      "name": "Tourist",
-      "description": "Visiting a new city.",
+      "id": "eu_night_out",
+      "name": "Night-out rider",
+      "description": "Late-night rides home.",
       "keywords": [
-        "tourist|visiting|first time in|trip to"
+        "night out|late night|club|\\bpub\\b"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_tourist",
+      "name": "Tourist",
+      "description": "Visiting a city.",
+      "keywords": [
+        "tourist|visiting|holiday|trip"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_disabled_rider",
+      "name": "Disabled rider",
+      "description": "Needs accessible rides.",
+      "keywords": [
+        "wheelchair|guide dog|disab"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_driver",
+      "name": "Driver",
+      "description": "Drives for Uber or Bolt.",
+      "keywords": [
+        "as a driver|i drive|my car (for|on) uber"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "us_commuter",
+      "name": "Commuter",
+      "description": "Regular rides.",
+      "keywords": [
+        "commute|work|daily"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_airport_traveller",
+      "name": "Airport traveller",
+      "description": "Airport rides.",
+      "keywords": [
+        "airport|flight"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_late_night",
+      "name": "Late-night rider",
+      "description": "Bars and events.",
+      "keywords": [
+        "late night|\\bbar\\b|concert|game"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_driver",
+      "name": "Driver",
+      "description": "Drives for Uber or Lyft.",
+      "keywords": [
+        "as a driver|i drive|my rating as"
+      ],
+      "regions": [
+        "us"
       ]
     },
     {

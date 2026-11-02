@@ -34,8 +34,13 @@ open out/dashboard.html               # all topics, with a Topic dropdown
 | Everyday services | Mobile & internet (`telecom-internet`), Online shopping (`ecommerce`), Food delivery (`food-delivery`), Ride-hailing & taxis (`ride-hailing`) |
 | Life & home | Healthcare & hospitals (`healthcare`), Renting & housing (`renting-housing`), Air travel (`air-travel`) |
 
-Each topic has its **own** pain points and personas, written for that industry (see
-`scripts/topic-taxonomies.js`). For example, lending tracks recovery-agent harassment, illegal loan
+Each topic has its **own** pain points and personas **for each region**, written in that market's
+terms (see `scripts/topic-taxonomies.js`). MSME lending in India tracks Mudra/CGTMSE hurdles,
+collateral demands, OD/CC limits, the 45-day payment rule and TReDS for traders, MSE manufacturers
+and GeM suppliers; in Europe, Bounce Back Loan repayments, personal guarantees and withdrawn
+overdrafts for sole traders and limited-company directors; in the US, SBA delays, merchant-cash-advance
+traps and Paydex credit for LLC owners and 1099 contractors. Category and persona ids carry a region
+prefix (`in_`, `eu_`, `us_`), and the classifier only picks from the document's own region. For example, lending tracks recovery-agent harassment, illegal loan
 apps, credit-score problems, BNPL traps, EMI and rate hikes; energy tracks power cuts, smart and
 prepaid meters, net metering and discom support; ride-hailing tracks drivers demanding extra cash,
 cancellations and surge. `node scripts/starter-topics.js` rewrites the taxonomies from that file.

@@ -1,84 +1,246 @@
 {
-  "_comment": "Topic-specific categories. Keyword patterns drive the no-key classifier (first 3 matches, in order).",
+  "_comment": "Region-specific pain points and personas (ids prefixed in_/eu_/us_). Keyword patterns drive the no-key classifier (first 3 matches, in order, within the document's region).",
   "categories": [
     {
-      "id": "claim_rejected",
-      "name": "Claims rejected or underpaid",
-      "description": "Claims denied, repudiated or only partly paid.",
+      "id": "in_health_claim_rejection",
+      "name": "Health claims rejected (PED, non-disclosure)",
+      "description": "Claims denied for pre-existing disease, non-disclosure or 'not medically necessary'.",
       "keywords": [
-        "claim (rejected|denied|declined|repudiat)|reject|denied|partial(ly)? (paid|settle)|underpaid|deduct"
+        "claim (rejected|denied|repudiat)|reject|repudiat|non-?disclosure|pre-?existing|\\bped\\b"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "cashless_hospital",
-      "name": "Cashless & hospital authorisation",
-      "description": "Cashless denied, slow pre-authorisation, TPA problems, reimbursement waits.",
+      "id": "in_cashless_tpa_denial",
+      "name": "Cashless denied & TPA delays",
+      "description": "Hospitals and TPAs refusing or delaying cashless; discharge waits.",
       "keywords": [
-        "cashless|pre-?auth|\\btpa\\b|network hospital|reimbursement"
+        "cashless|\\btpa\\b|pre-?auth|discharge (delay|approval)|network hospital|reimbursement"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "claim_delays",
-      "name": "Slow claims & settlement",
-      "description": "Claims stuck for weeks or months, endless documents.",
+      "id": "in_room_rent_copay_sublimits",
+      "name": "Room-rent limits, co-pay & sub-limits",
+      "description": "Proportionate deductions from room-rent caps, co-pays, disease sub-limits.",
       "keywords": [
-        "claim (delay|pending|taking|stuck|status|process)|settlement (delay|time)|how long .*claim|waiting for (payout|claim)"
+        "room rent|co-?pay|sub-?limit|proportionate deduction|deduct"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "exclusions_fine_print",
-      "name": "Exclusions, waiting periods & fine print",
-      "description": "Pre-existing exclusions, waiting periods, room-rent caps, co-pays, deductibles.",
+      "id": "in_motor_claim_survey",
+      "name": "Motor claims, surveyors & garages",
+      "description": "Surveyor delays, depreciation deductions, garage disputes, IDV.",
       "keywords": [
-        "exclusion|waiting period|pre-?existing|not covered|fine print|sub-?limit|room rent|co-?pay|deductible"
+        "(car|bike|motor|vehicle) insurance.{0,25}(claim|surveyor|garage|depreciation|idv)|surveyor|zero dep|\\bidv\\b|\\bncb\\b"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "premium_hikes",
-      "name": "Premium hikes at renewal",
-      "description": "Premiums rising sharply at renewal or with age; loyalty penalty.",
+      "id": "in_lic_ulip_misselling",
+      "name": "LIC, ULIP & endowment mis-selling",
+      "description": "Low-return policies pushed by agents and banks; surrender losses.",
       "keywords": [
-        "premium (increase|hike|went up|rise)|renewal (price|quote)|why (is|did) my (insurance|premium)|loyalty penalty|went up"
+        "\\blic\\b|ulip|endowment|money back policy|mis-?sold|surrender|agent (lied|cheated)|bancassurance"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "mis_selling",
-      "name": "Mis-selling & pushy agents",
-      "description": "Policies sold under false pretences, bundled or forced insurance.",
+      "id": "in_premium_hike_age",
+      "name": "Premium hikes with age & renewal",
+      "description": "Steep renewal increases, especially for senior citizens.",
       "keywords": [
-        "mis-?sold|mis-?selling|agent (lied|cheated)|forced (to buy|insurance)|bundled|ulip|endowment"
+        "premium (increase|hike|went up)|renewal premium|senior citizen (health )?premium|age band"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "motor_claims",
-      "name": "Car & motor claims",
-      "description": "Accident claims, write-offs, garage disputes, no-claim bonus.",
+      "id": "in_ombudsman_bima_bharosa",
+      "name": "Grievances, ombudsman & Bima Bharosa",
+      "description": "Escalations to insurer GRO, Insurance Ombudsman, IRDAI Bima Bharosa.",
       "keywords": [
-        "(car|motor|bike|auto|vehicle) insurance.{0,20}(claim|accident|garage|repair|write|total)|accident claim|write-?off|garage|no claim bonus|\\bncb\\b|\\bidv\\b|total loss|not at fault"
+        "ombudsman|bima bharosa|\\bigms\\b|irdai|grievance|complaint|complain|customer care"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "health_coverage",
-      "name": "Health cover gaps",
-      "description": "Out-of-network care, prior authorisation, high deductibles.",
+      "id": "eu_car_premium_rises",
+      "name": "Car insurance premiums rising",
+      "description": "Renewal quotes up 30–50%, young-driver prices.",
       "keywords": [
-        "out of network|prior authori[sz]ation|\\bhmo\\b|\\bppo\\b|(health|medical) insurance.{0,20}(not cover|doesn.t cover|deductible|copay|denied|rejected|network)|travel insurance.{0,20}(not|medical)"
+        "car insurance.{0,25}(increase|went up|expensive|quote|renewal|price)|young driver|black box"
+      ],
+      "regions": [
+        "europe"
       ]
     },
     {
-      "id": "cancellation_refund",
-      "name": "Cancellation, lapse & surrender",
-      "description": "Hard to cancel, surrender losses, lapsed policies, refunds.",
+      "id": "eu_price_walking_renewal",
+      "name": "Renewal price-walking & loyalty penalties",
+      "description": "Existing customers quoted more than new ones.",
       "keywords": [
-        "cancel|free look|surrender|lapse|revive|refund"
+        "renewal|loyalty penalty|price walking|auto[- ]renew|cheaper for new customers"
+      ],
+      "regions": [
+        "europe"
       ]
     },
     {
-      "id": "support_grievance",
-      "name": "Support & grievance escalation",
-      "description": "Unresponsive insurers, ombudsman and regulator complaints.",
+      "id": "eu_home_claims_flood_subsidence",
+      "name": "Home claims: flood, subsidence & leaks",
+      "description": "Escape-of-water, flood and subsidence claims disputed or slow.",
       "keywords": [
-        "customer (care|service)|complain|complaint|ombudsman|grievance|igms|bima bharosa|contact number|no response"
+        "home insurance.{0,25}(claim|leak|flood|subsidence|storm)|escape of water|flood re|subsidence"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_travel_claims",
+      "name": "Travel insurance claims",
+      "description": "Medical, cancellation and baggage claims refused.",
+      "keywords": [
+        "travel insurance.{0,25}(claim|refused|reject|cancel|medical)"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_pet_insurance",
+      "name": "Pet insurance exclusions & premiums",
+      "description": "Pre-existing exclusions, premiums rising with age.",
+      "keywords": [
+        "pet insurance|vet (bill|fees)|petplan|bought by many"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_claim_delays_handling",
+      "name": "Slow claims & loss adjusters",
+      "description": "Claims dragging on, adjusters low-balling.",
+      "keywords": [
+        "claim.{0,20}(delay|slow|taking|weeks|months)|loss adjuster|low ?ball|settlement offer"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_ombudsman_fos",
+      "name": "Financial Ombudsman & complaints",
+      "description": "FOS cases, final responses, compensation.",
+      "keywords": [
+        "financial ombudsman|\\bfos\\b|final response|complain|complaint|bafin|ombudsman"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_health_pmi_pkv",
+      "name": "Private medical & German PKV/GKV costs",
+      "description": "Private medical insurance premiums, PKV rises, GKV contributions.",
+      "keywords": [
+        "private medical insurance|\\bpmi\\b|\\bpkv\\b|\\bgkv\\b|krankenversicherung|bupa|axa health|vitality"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "us_health_denials_prior_auth",
+      "name": "Health claim denials & prior authorization",
+      "description": "Prior-auth denials, 'not medically necessary', out-of-network bills.",
+      "keywords": [
+        "prior auth|not medically necessary|claim denied|denial|out of network|appeal"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_aca_premiums",
+      "name": "ACA marketplace premiums & subsidies",
+      "description": "Premium increases, subsidy changes, plan choice.",
+      "keywords": [
+        "\\baca\\b|obamacare|marketplace|healthcare\\.gov|premium tax credit|subsid"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_auto_rate_hikes",
+      "name": "Auto insurance rate hikes",
+      "description": "Premiums up sharply without claims.",
+      "keywords": [
+        "(car|auto) insurance.{0,25}(increase|went up|doubled|expensive|rate)|geico|progressive|state farm|allstate"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_home_nonrenewal",
+      "name": "Home policies dropped (wildfire, hurricane)",
+      "description": "Non-renewals in CA, FL and elsewhere; FAIR Plan, Citizens.",
+      "keywords": [
+        "non-?renew|dropped (my )?(home )?insurance|fair plan|citizens|wildfire|hurricane|home insurance.{0,20}(cancel|increase)"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_lowball_adjuster",
+      "name": "Low-ball offers & adjuster disputes",
+      "description": "Adjusters undervaluing claims, total-loss disputes.",
+      "keywords": [
+        "adjuster|low ?ball|total loss|appraisal|undervalu|settlement"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_deductibles_copays",
+      "name": "High deductibles & copays",
+      "description": "Deductibles and out-of-pocket costs too high to use cover.",
+      "keywords": [
+        "deductible|copay|coinsurance|out of pocket|\\bhdhp\\b|\\bhsa\\b"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_medicare_advantage",
+      "name": "Medicare Advantage networks & denials",
+      "description": "Narrow networks, prior auth, plan switching.",
+      "keywords": [
+        "medicare advantage|medigap|part d|medicare (denial|plan)"
+      ],
+      "regions": [
+        "us"
       ]
     },
     {
@@ -90,35 +252,146 @@
   ],
   "personas": [
     {
-      "id": "family_policyholder",
-      "name": "Family policyholder",
-      "description": "Insures a family's health or home.",
+      "id": "in_family_floater",
+      "name": "Family floater buyer",
+      "description": "Covers spouse, children and parents.",
       "keywords": [
-        "family floater|my (wife|husband|kids|family|parents)"
+        "family floater|my (wife|husband|kids|family)"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "car_owner",
-      "name": "Car owner",
-      "description": "Motor insurance customer.",
+      "id": "in_parents_cover",
+      "name": "Buying for senior parents",
+      "description": "Parents over 60 with PEDs.",
       "keywords": [
-        "my car|car insurance|bike insurance|vehicle"
+        "parents|senior citizen|my (father|mother)|age 6"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "senior_citizen",
-      "name": "Senior citizen",
-      "description": "Older policyholder or buying for parents.",
+      "id": "in_vehicle_owner",
+      "name": "Car or bike owner",
+      "description": "Motor policy holder.",
       "keywords": [
-        "senior citizen|my (father|mother|parents)|age 6|retired"
+        "my (car|bike|scooter)|vehicle"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "self_employed",
-      "name": "Self-employed / gig worker",
-      "description": "Buys cover without an employer.",
+      "id": "in_group_cover_employee",
+      "name": "Employee on group cover",
+      "description": "Corporate health plan, sometimes topped up.",
       "keywords": [
-        "self[- ]employed|freelanc|gig|no employer"
+        "group (health|insurance)|corporate (policy|insurance)|employer|super top-?up"
+      ],
+      "regions": [
+        "india"
+      ]
+    },
+    {
+      "id": "eu_young_driver",
+      "name": "Young driver",
+      "description": "Under 25, very high premiums.",
+      "keywords": [
+        "young driver|\\b(17|18|19)\\b|new driver|first car|black box"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_homeowner",
+      "name": "Homeowner",
+      "description": "Home and contents cover.",
+      "keywords": [
+        "my house|homeowner|buildings insurance"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_pet_owner",
+      "name": "Pet owner",
+      "description": "Pet cover.",
+      "keywords": [
+        "my (dog|cat|puppy|kitten)"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_traveller",
+      "name": "Traveller",
+      "description": "Travel cover claims.",
+      "keywords": [
+        "holiday|trip|travel"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "us_aca_buyer",
+      "name": "Marketplace (ACA) buyer",
+      "description": "Self-employed or between jobs.",
+      "keywords": [
+        "\\baca\\b|marketplace|self[- ]employed|between jobs"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_employer_plan",
+      "name": "Employer-plan member",
+      "description": "Covered through work.",
+      "keywords": [
+        "employer|through work|my company"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_medicare_beneficiary",
+      "name": "Medicare beneficiary",
+      "description": "Over 65.",
+      "keywords": [
+        "medicare|\\b65\\b|retire"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_homeowner_risk_state",
+      "name": "Homeowner in a high-risk state",
+      "description": "California, Florida, Texas, Louisiana.",
+      "keywords": [
+        "california|florida|texas|louisiana|wildfire|hurricane"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_driver",
+      "name": "Driver",
+      "description": "Auto policy holder.",
+      "keywords": [
+        "my car|driver|teen driver"
+      ],
+      "regions": [
+        "us"
       ]
     },
     {

@@ -24,7 +24,21 @@ export function renderDashboard({ topics, generatedAt = new Date().toISOString()
     docsBySource: bySource,
     totalDocs,
     dateRange: dates.length ? [dates[0], dates[dates.length - 1]] : null,
-    topics: topics.map((t) => ({ label: t.label, docs: t.docs.length, mentions: t.mentions.length })),
+    // What each topic tracks per region, so pain points and personas show even before data arrives.
+    topics: topics.map((t) => ({
+      label: t.label,
+      docs: t.docs.length,
+      mentions: t.mentions.length,
+      defs: Object.fromEntries(
+        ["india", "europe", "us"].map((r) => {
+          const inR = (x) => x.id !== "other" && x.id !== "general_citizen" && (!x.regions?.length || x.regions.includes(r));
+          return [r, {
+            categories: (t.taxonomy.categories || []).filter(inR).map((c) => ({ name: c.name, desc: c.description || "" })),
+            personas: (t.taxonomy.personas || []).filter(inR).map((p) => ({ name: p.name, desc: p.description || "" })),
+          }];
+        }),
+      ),
+    })),
     rows: rows.map((m) => ({
       tp: m.topic, r: m.region, c: m.country, p: m.persona, k: m.category_name, t: m.theme, s: m.severity,
       src: m.source, ch: m.channel, e: m.engagement, w: m.weight, d: m.date, q: m.quote,
@@ -198,6 +212,11 @@ a { color: var(--accent-ink); }
     <section class="card" id="pv2"></section>
   </div>
 
+  <section class="card" id="defs-card">
+    <div class="card-head"><div><h2 id="defs-title">What we track here</h2><p id="defs-sub"></p></div></div>
+    <div class="grid2" id="defs"></div>
+  </section>
+
   <section class="card">
     <div class="card-head"><div><h2>Where each pain point shows up</h2><p>Search = what people type into Google. Discussion = Reddit, YouTube, forums. Social = X. Review = complaint and review sites. Heavy on search but light on discussion usually means an information gap; the reverse means a service people are angry about.</p></div></div>
     <div class="legend" id="mixlegend"></div>
@@ -256,22 +275,34 @@ a { color: var(--accent-ink); }
   // ---------- filters
   const F = { tp: $("f-topic"), r: $("f-region"), p: $("f-persona"), k: $("f-category"), src: $("f-source"), ch: $("f-channel") };
   // Options are counted within the chosen topic, so each topic shows its own pain points and personas.
-  function fillSelect(sel, key, all, rows) {
+  function fillSelect(sel, key, all, rows, defined = []) {
     const keep = sel.value;
     const counts = {};
     for (const r of rows) counts[r[key]] = (counts[r[key]] || 0) + 1;
-    const vals = Object.keys(counts).sort((a, b) => counts[b] - counts[a]);
+    for (const d of defined) counts[d] ??= 0; // tracked but not seen yet
+    const vals = Object.keys(counts).sort((a, b) => counts[b] - counts[a] || a.localeCompare(b));
     sel.innerHTML = '<option value="">' + all + "</option>" + vals.map((v) => '<option value="' + esc(v) + '">' + esc(DIMS[key].fmt(v)) + " (" + counts[v] + ")</option>").join("");
     sel.value = vals.includes(keep) ? keep : "";
   }
+  // Pain points and personas are specific to each topic AND region, so both lists follow those two filters.
   function fillAll() {
     const inTopic = F.tp.value ? ROWS.filter((r) => r.tp === F.tp.value) : ROWS;
-    fillSelect(F.r, "r", "All regions", inTopic); fillSelect(F.p, "p", "All personas", inTopic); fillSelect(F.k, "k", "All pain points", inTopic);
+    fillSelect(F.r, "r", "All regions", inTopic);
+    const inScope = F.r.value ? inTopic.filter((r) => r.r === F.r.value) : inTopic;
+    const d = defsFor(F.tp.value, F.r.value);
+    fillSelect(F.p, "p", "All personas", inScope, d ? d.personas.map((x) => x.name) : []);
+    fillSelect(F.k, "k", "All pain points", inScope, d ? d.categories.map((x) => x.name) : []);
     fillSelect(F.src, "src", "All sources", inTopic); fillSelect(F.ch, "ch", "All channels", inTopic);
+  }
+  function defsFor(topic, region) {
+    const t = D.topics.find((x) => x.label === topic);
+    if (!t || !region || !t.defs[region]) return null;
+    return t.defs[region];
   }
   fillSelect(F.tp, "tp", "All topics", ROWS);
   fillAll();
   F.tp.addEventListener("input", fillAll);
+  F.r.addEventListener("input", fillAll);
   const controls = [...Object.values(F), $("f-sev"), $("f-q")];
   try { const saved = JSON.parse(store.get("filters") || "{}"); controls.forEach((c) => { if (c.id === "f-topic" && saved[c.id] != null && [...c.options].some((o) => o.value === saved[c.id])) { c.value = saved[c.id]; fillAll(); } }); controls.forEach((c) => { if (c.id !== "f-topic" && (saved[c.id] != null && [...(c.options || [])].some((o) => o.value === saved[c.id]) || c.id === "f-q" && saved[c.id])) c.value = saved[c.id]; }); } catch {}
   controls.forEach((c) => c.addEventListener("input", () => { page = 0; render(); }));
@@ -435,8 +466,29 @@ a { color: var(--accent-ink); }
 
   $("method").innerHTML = "<b>How the numbers work.</b> A mention is one document (post, comment, review or search query) raising one pain point; a document raising two pain points counts once in each. Weighted volume counts each mention as 1 + log10(1 + upvotes/likes + replies), so agreement matters but one viral thread cannot dominate. Google search queries carry their autocomplete rank as engagement. Volumes are in-sample: they depend on the queries in config/regions.json and each platform's API limits, so compare regions by share, not raw counts. Rows labelled by the keyword classifier (no API key) are less precise than Claude-labelled rows.";
 
+  function defsPanel(rows) {
+    const REGION_NAME = { india: "India", europe: "Europe", us: "United States" };
+    const d = defsFor(F.tp.value, F.r.value);
+    if (!d) {
+      $("defs-title").textContent = "What we track here";
+      $("defs-sub").textContent = "Pick a topic and a region to see the pain points and personas tracked for that market. Each region has its own list.";
+      $("defs").innerHTML = "";
+      return;
+    }
+    const inScope = ROWS.filter((r) => r.tp === F.tp.value && r.r === F.r.value);
+    const count = (key, name) => inScope.filter((r) => r[key] === name).length;
+    $("defs-title").textContent = F.tp.value + " · " + REGION_NAME[F.r.value];
+    $("defs-sub").textContent = "Pain points and personas specific to this market, with mentions found so far (before other filters). Zero means tracked but not yet seen in the collected data.";
+    const list = (items, key, title) => '<div><h3 class="eyebrow" style="margin:0 0 8px">' + title + '</h3><div class="log">' + items.map((x) => {
+      const n = count(key, x.name);
+      return '<div class="entry" style="grid-template-columns:56px 1fr;padding:10px 0"><div class="side"><span style="font-size:14px;color:var(--ink)">' + n + '</span></div><div class="body"><strong>' + esc(x.name) + '</strong><span class="full">' + esc(x.desc) + "</span></div></div>";
+    }).join("") + "</div></div>";
+    $("defs").innerHTML = list(d.categories, "k", "Pain points") + list(d.personas, "p", "Personas");
+  }
+
   function render() {
     const rows = filtered();
+    defsPanel(rows);
     store.set("filters", JSON.stringify(Object.fromEntries(controls.map((c) => [c.id, c.value]))));
     tiles(rows); bars(rows); PIVOTS.forEach((pv) => pivot(pv, rows)); mix(rows); log(rows);
   }

@@ -23,11 +23,15 @@
     "\\bapr\\b"
   ],
   "irrelevant_keywords": [
-    "martinez",
-    "football",
-    "arena",
+    "\\bcareers?\\b",
+    "\\bipo\\b",
+    "\\bshares?\\b",
+    "\\bstock\\b",
     "afterpay (arena|center|centre)",
-    "emi (martinez|stats)"
+    "arena",
+    "emi (martinez|stats)",
+    "football",
+    "martinez"
   ],
   "subreddit_query": "loan OR mortgage OR EMI OR \"credit score\" OR debt"
 }

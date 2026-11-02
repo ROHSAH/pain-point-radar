@@ -73,15 +73,22 @@ test("reports render", () => {
   assert.ok(csv.length > 5);
 });
 
-test("keyword classifier labels typical searches", async () => {
-  const { classifyByRules } = await import("../topics/recycling/rules.js");
-  const mk = (text, region_hint = "us") => ({ id: "t", source: "google_suggest", region_hint, text, title: "" });
-  assert.equal(classifyByRules(mk("where to recycle batteries near me")).pain_points[0].sub_issue, "nowhere to take it: batteries");
-  assert.equal(classifyByRules(mk("is recycling a scam")).pain_points[0].category, "trust_greenwashing");
-  assert.equal(classifyByRules(mk("kabadiwala scrap price per kg", "india")).persona, "scrap_seller");
-  assert.equal(classifyByRules(mk("recycling bin with lid")).relevant, false);
-  assert.equal(classifyByRules(mk("bin collection problems birmingham", "india")).region, "europe");
-  assert.equal(classifyByRules(mk("deposit protection scheme complaint", "europe")).pain_points.some((p) => p.category === "deposit_return"), false);
+test("pain points and personas are scoped to the document's region", async () => {
+  const { makeKeywordClassifier } = await import("../src/keywordClassifier.js");
+  const { buildTaxonomy } = await import("../src/newTopic.js");
+  const taxonomy = buildTaxonomy({
+    india: { categories: [{ id: "mudra", name: "Mudra hurdles", keywords: ["loan.*(rejected|delay)"] }], personas: [{ id: "kirana", name: "Kirana", keywords: ["shop"] }] },
+    us: { categories: [{ id: "sba", name: "SBA delays", keywords: ["loan.*(rejected|delay)"] }], personas: [{ id: "llc", name: "LLC owner", keywords: ["shop"] }] },
+  });
+  assert.deepEqual(taxonomy.categories.map((c) => c.id), ["in_mudra", "us_sba", "other"]);
+  const classify = makeKeywordClassifier({ context_keywords: ["loan"], regions: { india: {}, us: {} }, taxonomy });
+  const text = "my shop loan rejected again";
+  const inRow = classify({ id: "a", source: "reddit", region_hint: "india", text });
+  const usRow = classify({ id: "b", source: "reddit", region_hint: "us", text });
+  assert.deepEqual(inRow.pain_points.map((p) => p.category), ["in_mudra"]);
+  assert.equal(inRow.persona, "in_kirana");
+  assert.deepEqual(usRow.pain_points.map((p) => p.category), ["us_sba"]);
+  assert.equal(usRow.persona, "us_llc");
 });
 
 test("generic keyword classifier works from a topic's own config", async () => {

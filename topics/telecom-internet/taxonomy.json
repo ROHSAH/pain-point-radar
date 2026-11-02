@@ -1,92 +1,268 @@
 {
-  "_comment": "Topic-specific categories. Keyword patterns drive the no-key classifier (first 3 matches, in order).",
+  "_comment": "Region-specific pain points and personas (ids prefixed in_/eu_/us_). Keyword patterns drive the no-key classifier (first 3 matches, in order, within the document's region).",
   "categories": [
     {
-      "id": "poor_network",
-      "name": "No signal & call drops",
-      "description": "No coverage indoors, weak signal, dropped calls, no service.",
+      "id": "in_tariff_hikes",
+      "name": "Jio/Airtel/Vi tariff hikes",
+      "description": "Recharge prices rising across operators.",
       "keywords": [
-        "no signal|no network|weak signal|call drop|network (issue|problem|down)|no service|coverage|signal (issue|problem)"
+        "(jio|airtel|\\bvi\\b|vodafone idea|bsnl).{0,25}(price hike|tariff|recharge (price|hike)|plan (price|hike))|tariff hike|recharge price"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "slow_data",
-      "name": "Slow data & broadband speed",
-      "description": "Speeds below the plan, buffering, lag, high latency.",
+      "id": "in_call_drops_network",
+      "name": "Call drops & no network indoors",
+      "description": "Calls dropping, no signal in flats, VoLTE issues.",
       "keywords": [
-        "slow (internet|data|speed|wifi|broadband|net)|speed (test|issue)|buffering|\\blag\\b|\\bping\\b|latency|\\bmbps\\b"
+        "call drop|no network|no signal|network (problem|issue)|signal (problem|issue)|volte"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "outages",
+      "id": "in_data_speed_5g",
+      "name": "Slow data & 5G not working",
+      "description": "4G/5G speeds far below claims, 5G switching off.",
+      "keywords": [
+        "slow (internet|data|net)|5g (not working|slow|issue)|internet speed|data speed"
+      ],
+      "regions": [
+        "india"
+      ]
+    },
+    {
+      "id": "in_recharge_validity_28day",
+      "name": "28-day validity & data packs",
+      "description": "28-day 'monthly' packs, daily data caps, OTT bundles.",
+      "keywords": [
+        "28 days|validity|daily data|data (limit|over)|data pack|\\bott\\b"
+      ],
+      "regions": [
+        "india"
+      ]
+    },
+    {
+      "id": "in_fiber_install_outage",
+      "name": "Fiber installs & broadband outages",
+      "description": "Jio Fiber/Airfiber and Airtel Xstream installs delayed, outages.",
+      "keywords": [
+        "jio fiber|airfiber|airtel (xstream|fiber|broadband)|act fibernet|broadband (not working|down|install)|router|\\blos\\b"
+      ],
+      "regions": [
+        "india"
+      ]
+    },
+    {
+      "id": "in_sim_kyc_porting",
+      "name": "SIM, KYC & porting (MNP)",
+      "description": "Porting refused, UPC code problems, SIM replacement, KYC.",
+      "keywords": [
+        "\\bmnp\\b|port(ing)?|\\bupc\\b|sim (replacement|blocked|not working)|esim|kyc"
+      ],
+      "regions": [
+        "india"
+      ]
+    },
+    {
+      "id": "in_spam_calls_dnd",
+      "name": "Spam calls & DND",
+      "description": "Telemarketing and scam calls despite DND.",
+      "keywords": [
+        "spam|\\bdnd\\b|unwanted calls|fraud calls|promotional"
+      ],
+      "regions": [
+        "india"
+      ]
+    },
+    {
+      "id": "in_customer_care_appellate",
+      "name": "Customer care & appellate authority",
+      "description": "198/199 complaints ignored, TRAI and appellate escalation.",
+      "keywords": [
+        "customer care|\\b198\\b|\\b199\\b|appellate|trai|complain|complaint|not working|problem today"
+      ],
+      "regions": [
+        "india"
+      ]
+    },
+    {
+      "id": "eu_mid_contract_rises",
+      "name": "Mid-contract price rises (CPI + 3.9%)",
+      "description": "Annual April rises and pounds-and-pence increases.",
+      "keywords": [
+        "mid-?contract|price (rise|increase)|\\bcpi\\b|3\\.9%|april (price )?(rise|increase)"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_broadband_outages_speed",
+      "name": "Broadband outages & slow speeds (Openreach)",
+      "description": "Outages, speeds below guarantee, Openreach engineers.",
+      "keywords": [
+        "broadband (down|not working|slow|outage)|openreach|internet (down|slow)|no internet|speed (guarantee|test)|not working|problems? (today|in)"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_switching_exit_fees",
+      "name": "Switching, exit fees & One Touch Switch",
+      "description": "Early-termination fees, overlapping bills, switching hassles.",
+      "keywords": [
+        "exit fee|early termination|switch(ing)? (provider|broadband)|cancel(ling)? (contract|broadband)|one touch switch|notice period"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_rural_mobile_signal",
+      "name": "Rural mobile signal",
+      "description": "No signal in villages and homes; not-spots.",
+      "keywords": [
+        "no signal|signal (in|at) (home|my village)|not-?spot|rural (signal|coverage)|wifi calling"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_roaming_charges",
+      "name": "Roaming charges (post-Brexit)",
+      "description": "EU roaming fees reintroduced by UK networks.",
+      "keywords": [
+        "roaming"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_fibre_install_delays",
+      "name": "Full-fibre install delays",
+      "description": "Missed engineer appointments, altnet installs.",
+      "keywords": [
+        "fib(re|er) install|engineer (didn'?t|no show|appointment)|altnet|full fib(re|er)"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_digital_landline_switch",
+      "name": "Digital landline switchover",
+      "description": "PSTN switch-off worries for older people, alarms.",
+      "keywords": [
+        "digital (landline|voice)|pstn|landline switch|telecare|digital phone"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_customer_service",
+      "name": "Customer service & Ofcom/ombudsman",
+      "description": "Hours on hold, broken promises, Ombudsman Services.",
+      "keywords": [
+        "customer service|on hold|complain|complaint|ofcom|ombudsman"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "us_price_hikes_hidden_fees",
+      "name": "Price hikes & hidden fees",
+      "description": "Broadcast-TV fees, equipment fees, promo prices ending.",
+      "keywords": [
+        "price (increase|hike)|hidden fee|broadcast tv fee|equipment fee|promo (ended|ending)|bill went up"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_data_caps",
+      "name": "Data caps & overage charges",
+      "description": "Comcast and others capping home internet data.",
+      "keywords": [
+        "data cap|overage|1\\.2 ?tb|unlimited data"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_outages",
       "name": "Internet outages",
-      "description": "Broadband or mobile data down for hours or days.",
+      "description": "Frequent outages and slow restoration.",
       "keywords": [
-        "outage|internet (down|not working)|no internet|service down|wifi not working|router|los (red )?light|disconnect|not working|problem today|problems? (in|near)|\\bdown\\b"
+        "outage|internet (down|out|not working)|no internet|service down|not working|problems? today"
+      ],
+      "regions": [
+        "us"
       ]
     },
     {
-      "id": "price_hikes",
-      "name": "Recharge & plan price hikes",
-      "description": "Tariff hikes, mid-contract rises, plan cost increases.",
+      "id": "us_rural_speed",
+      "name": "Slow or no internet in rural areas",
+      "description": "Few options, DSL speeds, Starlink costs.",
       "keywords": [
-        "price (hike|increase|rise)|recharge (price|plan|cost|hike)|tariff|mid-?contract|plan (price|cost)"
+        "rural internet|no (internet )?options|only option|\\bdsl\\b|starlink|satellite internet"
+      ],
+      "regions": [
+        "us"
       ]
     },
     {
-      "id": "plans_data",
-      "name": "Confusing plans, data caps & validity",
-      "description": "Data caps, validity tricks, fair-usage limits, choosing a plan.",
+      "id": "us_cancellation_equipment",
+      "name": "Cancellation & equipment returns",
+      "description": "Retention runarounds, unreturned-equipment charges.",
       "keywords": [
-        "data (cap|limit|over|finished)|validity|unlimited|fair usage|best plan|which plan|\\bott\\b"
+        "cancel(ling|lation)?|return (equipment|modem|router)|unreturned equipment|retention"
+      ],
+      "regions": [
+        "us"
       ]
     },
     {
-      "id": "bills_charges",
-      "name": "Billing errors & hidden charges",
-      "description": "Wrong bills, extra charges, balance deducted, refunds.",
+      "id": "us_carrier_switching_unlock",
+      "name": "Carrier switching, unlocking & device payments",
+      "description": "Locked phones, device installment traps, porting.",
       "keywords": [
-        "\\bbill\\b|billing|overcharg|extra charge|hidden (charge|fee)|balance (deducted|cut)|refund"
+        "unlock|device payment|installment|port (my )?number|switch carriers|trade-?in"
+      ],
+      "regions": [
+        "us"
       ]
     },
     {
-      "id": "installation_repair",
-      "name": "Installation & repair visits",
-      "description": "Missed technician visits, delayed fibre installs, repair waits.",
+      "id": "us_cell_coverage",
+      "name": "Cell coverage & dropped calls",
+      "description": "Dead zones, poor indoor coverage.",
       "keywords": [
-        "install|installation|technician|engineer|repair|new connection|fib(er|re) (not|delay)"
+        "no (signal|service)|dead zone|dropped calls|coverage|sos only"
+      ],
+      "regions": [
+        "us"
       ]
     },
     {
-      "id": "porting_cancellation",
-      "name": "Porting, contracts & cancellation",
-      "description": "Porting refused or slow, lock-ins, early termination fees.",
+      "id": "us_customer_service",
+      "name": "Customer service",
+      "description": "Long waits, bots, FCC complaints.",
       "keywords": [
-        "\\bport\\b|porting|\\bmnp\\b|pac code|cancel|early termination|switch (provider|network)|lock-?in"
-      ]
-    },
-    {
-      "id": "sim_esim",
-      "name": "SIM, eSIM & KYC",
-      "description": "SIM blocked or not working, eSIM activation, KYC, SIM swap.",
-      "keywords": [
-        "\\bsim\\b|\\besim\\b|\\bkyc\\b|sim (blocked|not working|replacement)|sim swap"
-      ]
-    },
-    {
-      "id": "spam_calls",
-      "name": "Spam calls & SMS",
-      "description": "Telemarketing, scam calls and messages, DND not working.",
-      "keywords": [
-        "spam|unwanted calls|telemarket|\\bdnd\\b|robocall|scam calls|promotional"
-      ]
-    },
-    {
-      "id": "customer_care",
-      "name": "Customer care",
-      "description": "Unreachable or unhelpful support; complaints and appeals.",
-      "keywords": [
-        "customer (care|service|support)|complain|complaint|helpline|contact number|ombudsman|appellate|no response"
+        "customer service|complain|complaint|\\bfcc\\b|on hold"
+      ],
+      "regions": [
+        "us"
       ]
     },
     {
@@ -98,43 +274,135 @@
   ],
   "personas": [
     {
-      "id": "prepaid_mobile",
-      "name": "Prepaid mobile user",
-      "description": "Recharges a prepaid SIM.",
+      "id": "in_prepaid_user",
+      "name": "Prepaid user",
+      "description": "Recharges monthly.",
       "keywords": [
         "recharge|prepaid"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "broadband_household",
-      "name": "Broadband household",
-      "description": "Home fibre or broadband subscriber.",
+      "id": "in_wfh_fiber",
+      "name": "Work-from-home fiber user",
+      "description": "Depends on home broadband for work.",
       "keywords": [
-        "broadband|fib(er|re)|home (wifi|internet)|router"
+        "work from home|\\bwfh\\b|fiber|broadband"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "work_from_home",
-      "name": "Work-from-home user",
-      "description": "Depends on home internet for work.",
-      "keywords": [
-        "work from home|\\bwfh\\b|video calls|zoom|teams"
-      ]
-    },
-    {
-      "id": "gamer",
-      "name": "Gamer",
-      "description": "Sensitive to ping and lag.",
-      "keywords": [
-        "gaming|gamer|\\bping\\b|valorant|bgmi|xbox|playstation"
-      ]
-    },
-    {
-      "id": "rural_user",
+      "id": "in_rural_user",
       "name": "Rural / small-town user",
-      "description": "Patchy coverage outside cities.",
+      "description": "Patchy coverage.",
       "keywords": [
-        "village|rural|countryside|small town"
+        "village|rural|small town"
+      ],
+      "regions": [
+        "india"
+      ]
+    },
+    {
+      "id": "in_student",
+      "name": "Student",
+      "description": "Data-heavy, price-sensitive.",
+      "keywords": [
+        "student|college|hostel"
+      ],
+      "regions": [
+        "india"
+      ]
+    },
+    {
+      "id": "eu_broadband_household",
+      "name": "Broadband household",
+      "description": "Family relying on home broadband.",
+      "keywords": [
+        "broadband|wifi|router"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_rural_resident",
+      "name": "Rural resident",
+      "description": "Poor coverage areas.",
+      "keywords": [
+        "village|rural|countryside"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_wfh",
+      "name": "Remote worker",
+      "description": "Works from home.",
+      "keywords": [
+        "work from home|\\bwfh\\b|remote work|teams calls"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_older_landline_user",
+      "name": "Older landline user",
+      "description": "Relies on landline and telecare.",
+      "keywords": [
+        "elderly|my (mum|dad|nan|grandad)|landline|telecare"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "us_cord_cutter",
+      "name": "Cord cutter",
+      "description": "Dropped cable TV for streaming.",
+      "keywords": [
+        "cord cut|streaming|youtube tv|cable tv"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_rural",
+      "name": "Rural household",
+      "description": "Limited providers.",
+      "keywords": [
+        "rural|countryside|only option|starlink"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_gamer",
+      "name": "Gamer",
+      "description": "Latency-sensitive.",
+      "keywords": [
+        "gaming|gamer|\\bping\\b|latency"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_family_plan",
+      "name": "Family-plan payer",
+      "description": "Pays for several lines.",
+      "keywords": [
+        "family plan|lines|my kids"
+      ],
+      "regions": [
+        "us"
       ]
     },
     {

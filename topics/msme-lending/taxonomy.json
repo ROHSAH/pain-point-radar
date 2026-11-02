@@ -1,128 +1,348 @@
 {
-  "_comment": "Topic-specific categories. Keyword patterns drive the no-key classifier (first 3 matches, in order).",
+  "_comment": "Region-specific pain points and personas (ids prefixed in_/eu_/us_). Keyword patterns drive the no-key classifier (first 3 matches, in order, within the document's region).",
   "categories": [
     {
-      "id": "mca_predatory",
-      "name": "Merchant cash advances & predatory lenders",
-      "description": "Daily debits, factor rates, loan stacking, confessions of judgment, loan sharks.",
+      "id": "in_npa_sarfaesi",
+      "name": "NPA classification, SARFAESI & recovery",
+      "description": "Accounts turning NPA after a few missed EMIs, SARFAESI notices, OTS and restructuring.",
       "keywords": [
-        "merchant cash advance|\\bmca\\b|daily (payments|debits)|factor rate|stacking|predatory|confession of judgment|loan shark"
+        "\\bnpa\\b|sarfaesi|recovery|one time settlement|\\bots\\b|restructur|auction|drt\\b|default"
+      ],
+      "regions": [
+        "india"
+      ]
+    },
+    {
+      "id": "in_mudra_cgtmse_schemes",
+      "name": "Mudra, CGTMSE & PMEGP scheme hurdles",
+      "description": "Branches refusing or delaying Mudra/CGTMSE/PMEGP loans, subsidy delays, scheme charges.",
+      "keywords": [
+        "mudra|cgtmse|pmegp|stand ?up india|eclgs|psb ?loans|59 minutes|scheme"
       ],
       "require": [
-        "problem|issue|complain|grievance|reject|denied|declin|not (able|getting|approved|sanctioned|received|paid|eligible)|delay|stuck|pending|high|expensive|costs?\\b|fees?\\b|rates?\\b|charges|interest|trap|scam|fraud|hidden|reduc|\\bcut\\b|withdrawn|can.?t|unable|eligib|documents|collateral|security|guarantee|\\blaws?\\b|legal|lawsuit|default|npa|worth|vs\\b|alternative|without"
+        "problem|issue|complain|grievance|reject|denied|declin|refus|not (able|getting|approved|sanctioned|received|paid|eligible|working|credited)|delay|stuck|pending|high|expensive|costs?\\b|fees?\\b|rates?\\b|charges|interest|trap|scam|fraud|hidden|reduc|\\bcut\\b|withdrawn|can.?t|unable|eligib|documents|collateral|guarantee|\\blaws?\\b|legal|lawsuit|default|worth|\\bvs\\b|alternative|without|repay|forgiv|penalt|closed|frozen|blocked|why"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "recovery_npa",
-      "name": "Defaults, NPA & recovery pressure",
-      "description": "Accounts turning NPA, SARFAESI, recovery action, restructuring and settlements.",
+      "id": "in_collateral_despite_cgtmse",
+      "name": "Collateral & guarantor demands",
+      "description": "Banks asking for property papers or guarantors even when collateral-free cover should apply.",
       "keywords": [
-        "\\bnpa\\b|recovery|sarfaesi|default|restructur|moratorium|one time settlement|\\bots\\b|seized|auction|insolvency|\\bibc\\b"
+        "collateral|security|property papers|guarantor|without (security|collateral)|mortgage (property|house|flat)"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "collateral_guarantee",
-      "name": "Collateral & personal guarantee demands",
-      "description": "Lenders demanding property, FDs or personal guarantees even for small loans.",
+      "id": "in_gst_itr_cma_docs",
+      "name": "GST, ITR, CMA & project-report paperwork",
+      "description": "Repeated document demands: GST returns, ITRs, audited balance sheets, CMA data, Udyam.",
       "keywords": [
-        "collateral|security (required|demand)|(mortgage|pledge) (property|house|fd)|personal guarantee|unsecured|without (collateral|security)"
+        "\\bgst\\b|\\bitr\\b|\\bcma\\b|project report|udyam|balance sheet|audited|documents?|paperwork"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "rejection_eligibility",
-      "name": "Rejected or can't qualify",
-      "description": "Turned down over business vintage, turnover, credit history or sector.",
+      "id": "in_od_cc_limits",
+      "name": "OD/CC limit cuts, renewals & drawing power",
+      "description": "Cash-credit or overdraft limits reduced, renewal delays, stock statements, drawing power.",
       "keywords": [
-        "reject|denied|declined|not eligible|eligib|qualify|vintage|turnover (criteria|requirement)|minimum (turnover|revenue)|time in business|years in business"
-      ]
-    },
-    {
-      "id": "documentation",
-      "name": "Paperwork, GST/ITR & financials demands",
-      "description": "Endless documents: GST returns, ITRs, bank statements, audited financials, CMA data.",
-      "keywords": [
-        "documents?|paperwork|\\bitr\\b|gst (returns?|filing|data)|bank statements?|balance sheet|audited|udyam|project report|cma data|financial statements"
-      ]
-    },
-    {
-      "id": "slow_disbursal",
-      "name": "Slow sanction & disbursal",
-      "description": "Weeks or months from application to money in the account.",
-      "keywords": [
-        "(sanction|disburs|approval|processing|underwriting).{0,15}(delay|slow|time|taking|pending)|how long (does|to get)|still waiting"
-      ]
-    },
-    {
-      "id": "working_capital_limits",
-      "name": "Working capital, OD & CC limits",
-      "description": "Too-small, cut or hard-to-renew overdraft, cash-credit and credit lines.",
-      "keywords": [
-        "working capital|\\bod\\b|overdraft|cash credit|\\bcc (limit|account)\\b|line of credit|credit line|limit (reduced|cut|enhancement|renewal|increase)|drawing power"
+        "\\bod\\b|overdraft|cash credit|\\bcc (limit|account)\\b|drawing power|stock statement|limit (renewal|enhancement|reduced|cut)|working capital"
       ],
       "require": [
-        "problem|issue|complain|grievance|reject|denied|declin|not (able|getting|approved|sanctioned|received|paid|eligible)|delay|stuck|pending|high|expensive|costs?\\b|fees?\\b|rates?\\b|charges|interest|trap|scam|fraud|hidden|reduc|\\bcut\\b|withdrawn|can.?t|unable|eligib|documents|collateral|security|guarantee|\\blaws?\\b|legal|lawsuit|default|npa|worth|vs\\b|alternative|without"
+        "problem|issue|complain|grievance|reject|denied|declin|refus|not (able|getting|approved|sanctioned|received|paid|eligible|working|credited)|delay|stuck|pending|high|expensive|costs?\\b|fees?\\b|rates?\\b|charges|interest|trap|scam|fraud|hidden|reduc|\\bcut\\b|withdrawn|can.?t|unable|eligib|documents|collateral|guarantee|\\blaws?\\b|legal|lawsuit|default|worth|\\bvs\\b|alternative|without|repay|forgiv|penalt|closed|frozen|blocked|why"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "delayed_receivables",
-      "name": "Delayed customer payments & receivables",
-      "description": "Large buyers paying late, long payment terms starving cash flow.",
+      "id": "in_delayed_payments_43bh",
+      "name": "Buyers paying late (45-day rule, MSME Samadhaan)",
+      "description": "Large buyers and PSUs paying late; 45-day/43B(h) rule, MSME Samadhaan cases.",
       "keywords": [
-        "delayed payments?|late payments?|payment terms|receivables|invoices? (unpaid|overdue|not paid)|45 days|samadhaan|debtors|net ?(30|60|90)|cash ?flow"
+        "45 days|43b|samadhaan|delayed payments?|payment delay|buyer not paying|receivables?|outstanding payment|gem payment"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "invoice_supply_chain",
-      "name": "Invoice discounting, factoring & TReDS",
-      "description": "Getting invoices financed: discounting, factoring, TReDS and supply-chain finance.",
+      "id": "in_treds_invoice_discounting",
+      "name": "TReDS & invoice discounting access",
+      "description": "Buyers not onboarding to TReDS, high discount rates, invoice/bill discounting.",
       "keywords": [
-        "invoice (discount|financ|factor)|factoring|\\btreds\\b|supply chain financ|reverse factoring|bill discounting|receivables financ"
+        "treds|rxil|m1xchange|invoicemart|invoice discount|bill discount|supply chain financ"
       ],
       "require": [
-        "problem|issue|complain|grievance|reject|denied|declin|not (able|getting|approved|sanctioned|received|paid|eligible)|delay|stuck|pending|high|expensive|costs?\\b|fees?\\b|rates?\\b|charges|interest|trap|scam|fraud|hidden|reduc|\\bcut\\b|withdrawn|can.?t|unable|eligib|documents|collateral|security|guarantee|\\blaws?\\b|legal|lawsuit|default|npa|worth|vs\\b|alternative|without"
+        "problem|issue|complain|grievance|reject|denied|declin|refus|not (able|getting|approved|sanctioned|received|paid|eligible|working|credited)|delay|stuck|pending|high|expensive|costs?\\b|fees?\\b|rates?\\b|charges|interest|trap|scam|fraud|hidden|reduc|\\bcut\\b|withdrawn|can.?t|unable|eligib|documents|collateral|guarantee|\\blaws?\\b|legal|lawsuit|default|worth|\\bvs\\b|alternative|without|repay|forgiv|penalt|closed|frozen|blocked|why"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "govt_schemes",
-      "name": "Government schemes (Mudra, CGTMSE, SBA...)",
-      "description": "Hard to access or slow government-backed schemes and guarantees.",
+      "id": "in_nbfc_fintech_rates",
+      "name": "NBFC & fintech loan rates and charges",
+      "description": "High ROI and processing fees from NBFCs and lending apps; daily/weekly EMIs.",
       "keywords": [
-        "mudra|cgtmse|pmegp|stand ?up india|\\bsba\\b|7\\(a\\)|\\b504\\b|start ?up loan|british business bank|bounce ?back|eclgs|recovery loan scheme|subsid|scheme"
+        "\\bnbfc\\b|lendingkart|flexiloans|indifi|bajaj finance|tata capital|neogrowth|processing fee|rate of interest|\\broi\\b|interest rate|charges"
+      ],
+      "regions": [
+        "india"
+      ]
+    },
+    {
+      "id": "in_cibil_cmr",
+      "name": "CIBIL & CMR rank problems",
+      "description": "Low CMR rank or personal CIBIL blocking business credit; wrong bureau entries.",
+      "keywords": [
+        "cibil|\\bcmr\\b|credit (score|report|rank)|crif|experian"
       ],
       "require": [
-        "problem|issue|complain|grievance|reject|denied|declin|not (able|getting|approved|sanctioned|received|paid|eligible)|delay|stuck|pending|high|expensive|costs?\\b|fees?\\b|rates?\\b|charges|interest|trap|scam|fraud|hidden|reduc|\\bcut\\b|withdrawn|can.?t|unable|eligib|documents|collateral|security|guarantee|\\blaws?\\b|legal|lawsuit|default|npa|worth|vs\\b|alternative|without"
+        "low|down|drop|fell|wrong|error|incorrect|dispute|remove|improve|increase|raise|fix|bad|why|reject|denied|not (showing|updated)|settled|written off|negative"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "rates_fees",
-      "name": "High rates, processing & hidden fees",
-      "description": "High interest or factor rates, processing, prepayment and penal charges.",
+      "id": "in_branch_rm_support",
+      "name": "Branch delays & unresponsive managers",
+      "description": "Branch managers sitting on files, RM churn, complaints to banking ombudsman.",
       "keywords": [
-        "interest rate|rate of interest|\\broi\\b|\\bapr\\b|processing (fee|charge)|hidden (charges|fees)|prepayment|foreclos|penal (interest|charges)|expensive|charges"
+        "branch|manager|\\brm\\b|relationship manager|complain|complaint|ombudsman|sanction (delay|pending)|disburs"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "business_credit_score",
-      "name": "Business credit score & bureau issues",
-      "description": "Low or wrong commercial scores (CMR, Paydex), personal score dragging the business.",
+      "id": "eu_bbl_repayments",
+      "name": "Bounce Back Loan repayments & director liability",
+      "description": "Struggling with BBL/CBILS repayments, Pay As You Grow, fears over personal liability.",
       "keywords": [
-        "cibil (msme|rank|commercial)|\\bcmr\\b|business credit (score|report)|experian business|dun ?& ?bradstreet|paydex|credit score|cibil"
+        "bounce ?back|\\bbbl\\b|cbils|pay as you grow|recovery loan scheme|covid loan"
+      ],
+      "regions": [
+        "europe"
       ]
     },
     {
-      "id": "fintech_digital",
-      "name": "Fintech & digital lending experience",
-      "description": "Online lenders and apps: instant-loan promises, app issues, opaque decisions.",
+      "id": "eu_personal_guarantees",
+      "name": "Personal guarantees & director liability",
+      "description": "Lenders requiring directors' personal guarantees, debentures or charges over homes.",
       "keywords": [
-        "fintech|\\bapp\\b|online (loan|application|lender)|instant business loan|digital lending|lendingkart|flexiloans|indifi|kabbage|bluevine|fundbox|iwoca|funding circle|ondeck|\\bnbfc\\b"
+        "personal guarantee|director'?s? guarantee|debenture|charge over|security over|collateral"
+      ],
+      "regions": [
+        "europe"
       ]
     },
     {
-      "id": "lender_support",
-      "name": "Bank & NBFC relationship and support",
-      "description": "Unresponsive relationship managers, branches, complaints and ombudsman.",
+      "id": "eu_bank_declines_closures",
+      "name": "High-street banks declining or closing business accounts",
+      "description": "Barclays, HSBC, NatWest, Lloyds etc. turning down lending or closing accounts.",
       "keywords": [
-        "relationship manager|branch manager|customer (care|service|support)|complain|complaint|ombudsman|no response|banker"
+        "(barclays|hsbc|natwest|lloyds|santander|metro bank|tide|starling).{0,30}(declin|reject|clos|frozen|refus)|business account (closed|frozen)|turned down|declined"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_overdraft_withdrawn",
+      "name": "Overdrafts withdrawn or cut",
+      "description": "Facilities reduced or withdrawn at review, short notice.",
+      "keywords": [
+        "overdraft|facility (withdrawn|reduced|review)|credit line|revolving credit"
+      ],
+      "require": [
+        "problem|issue|complain|grievance|reject|denied|declin|refus|not (able|getting|approved|sanctioned|received|paid|eligible|working|credited)|delay|stuck|pending|high|expensive|costs?\\b|fees?\\b|rates?\\b|charges|interest|trap|scam|fraud|hidden|reduc|\\bcut\\b|withdrawn|can.?t|unable|eligib|documents|collateral|guarantee|\\blaws?\\b|legal|lawsuit|default|worth|\\bvs\\b|alternative|without|repay|forgiv|penalt|closed|frozen|blocked|why"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_late_payment_big_customers",
+      "name": "Late payment by large customers",
+      "description": "Big firms paying on 60–120 day terms or late; Late Payment Act claims.",
+      "keywords": [
+        "late payment|paid late|payment terms|(60|90|120) days|late payment (act|directive|interest)|invoice(s)? (overdue|unpaid)|debt recovery"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_invoice_finance_terms",
+      "name": "Invoice finance & factoring terms",
+      "description": "Hidden fees, long contracts and termination charges in invoice finance.",
+      "keywords": [
+        "invoice financ|factoring|invoice discounting|bibby|close brothers|marketfinance|aldermore"
+      ],
+      "require": [
+        "problem|issue|complain|grievance|reject|denied|declin|refus|not (able|getting|approved|sanctioned|received|paid|eligible|working|credited)|delay|stuck|pending|high|expensive|costs?\\b|fees?\\b|rates?\\b|charges|interest|trap|scam|fraud|hidden|reduc|\\bcut\\b|withdrawn|can.?t|unable|eligib|documents|collateral|guarantee|\\blaws?\\b|legal|lawsuit|default|worth|\\bvs\\b|alternative|without|repay|forgiv|penalt|closed|frozen|blocked|why"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_alt_lenders_mca",
+      "name": "Merchant cash advances & alternative lenders",
+      "description": "Costly revenue-based and MCA products from fintech lenders.",
+      "keywords": [
+        "merchant cash advance|\\bmca\\b|iwoca|funding circle|youlend|liberis|capital on tap|revenue based|alternative lender"
+      ],
+      "require": [
+        "problem|issue|complain|grievance|reject|denied|declin|refus|not (able|getting|approved|sanctioned|received|paid|eligible|working|credited)|delay|stuck|pending|high|expensive|costs?\\b|fees?\\b|rates?\\b|charges|interest|trap|scam|fraud|hidden|reduc|\\bcut\\b|withdrawn|can.?t|unable|eligib|documents|collateral|guarantee|\\blaws?\\b|legal|lawsuit|default|worth|\\bvs\\b|alternative|without|repay|forgiv|penalt|closed|frozen|blocked|why"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_government_schemes",
+      "name": "Government-backed schemes (British Business Bank, KfW, Bpifrance)",
+      "description": "Access to Start Up Loans, Growth Guarantee Scheme, KfW and other state-backed credit.",
+      "keywords": [
+        "british business bank|start ?up loans?|growth guarantee|kfw|bpifrance|\\bico\\b|scheme"
+      ],
+      "require": [
+        "problem|issue|complain|grievance|reject|denied|declin|refus|not (able|getting|approved|sanctioned|received|paid|eligible|working|credited)|delay|stuck|pending|high|expensive|costs?\\b|fees?\\b|rates?\\b|charges|interest|trap|scam|fraud|hidden|reduc|\\bcut\\b|withdrawn|can.?t|unable|eligib|documents|collateral|guarantee|\\blaws?\\b|legal|lawsuit|default|worth|\\bvs\\b|alternative|without|repay|forgiv|penalt|closed|frozen|blocked|why"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_rates_fees",
+      "name": "Rising rates, arrangement & exit fees",
+      "description": "Higher base rates, arrangement and early-repayment fees.",
+      "keywords": [
+        "interest rate|base rate|arrangement fee|exit fee|early repayment|\\bapr\\b|expensive|charges"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "us_mca_traps",
+      "name": "Merchant cash advance traps",
+      "description": "Daily debits, stacking, factor rates, confessions of judgment, reverse consolidation.",
+      "keywords": [
+        "merchant cash advance|\\bmca\\b|daily (debits?|payments?)|factor rate|stacking|confession of judgment|reverse consolidation"
+      ],
+      "require": [
+        "problem|issue|complain|grievance|reject|denied|declin|refus|not (able|getting|approved|sanctioned|received|paid|eligible|working|credited)|delay|stuck|pending|high|expensive|costs?\\b|fees?\\b|rates?\\b|charges|interest|trap|scam|fraud|hidden|reduc|\\bcut\\b|withdrawn|can.?t|unable|eligib|documents|collateral|guarantee|\\blaws?\\b|legal|lawsuit|default|worth|\\bvs\\b|alternative|without|repay|forgiv|penalt|closed|frozen|blocked|why"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_sba_delays_denials",
+      "name": "SBA 7(a)/504 delays & denials",
+      "description": "Slow or denied SBA loans, lender requirements, paperwork.",
+      "keywords": [
+        "\\bsba\\b|7\\(a\\)|\\b504\\b|microloan"
+      ],
+      "require": [
+        "problem|issue|complain|grievance|reject|denied|declin|refus|not (able|getting|approved|sanctioned|received|paid|eligible|working|credited)|delay|stuck|pending|high|expensive|costs?\\b|fees?\\b|rates?\\b|charges|interest|trap|scam|fraud|hidden|reduc|\\bcut\\b|withdrawn|can.?t|unable|eligib|documents|collateral|guarantee|\\blaws?\\b|legal|lawsuit|default|worth|\\bvs\\b|alternative|without|repay|forgiv|penalt|closed|frozen|blocked|why"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_eidl_ppp_repayment",
+      "name": "EIDL/PPP repayment & forgiveness",
+      "description": "EIDL hardship, Treasury offset, PPP forgiveness disputes.",
+      "keywords": [
+        "\\beidl\\b|\\bppp\\b|hardship accommodation|treasury offset|forgiveness"
+      ],
+      "require": [
+        "problem|issue|complain|grievance|reject|denied|declin|refus|not (able|getting|approved|sanctioned|received|paid|eligible|working|credited)|delay|stuck|pending|high|expensive|costs?\\b|fees?\\b|rates?\\b|charges|interest|trap|scam|fraud|hidden|reduc|\\bcut\\b|withdrawn|can.?t|unable|eligib|documents|collateral|guarantee|\\blaws?\\b|legal|lawsuit|default|worth|\\bvs\\b|alternative|without|repay|forgiv|penalt|closed|frozen|blocked|why"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_personal_guarantee_credit",
+      "name": "Personal guarantees & personal credit pulls",
+      "description": "Lenders requiring personal guarantees, hard pulls on personal credit.",
+      "keywords": [
+        "personal guarantee|personal credit|hard pull|without personal guarantee|ein only|collateral"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_loc_limits_freezes",
+      "name": "Line-of-credit approvals, limits & freezes",
+      "description": "Credit lines declined, cut or frozen by online lenders and banks.",
+      "keywords": [
+        "line of credit|credit line|\\bloc\\b|bluevine|fundbox|ondeck|kabbage|credit limit|frozen"
+      ],
+      "require": [
+        "problem|issue|complain|grievance|reject|denied|declin|refus|not (able|getting|approved|sanctioned|received|paid|eligible|working|credited)|delay|stuck|pending|high|expensive|costs?\\b|fees?\\b|rates?\\b|charges|interest|trap|scam|fraud|hidden|reduc|\\bcut\\b|withdrawn|can.?t|unable|eligib|documents|collateral|guarantee|\\blaws?\\b|legal|lawsuit|default|worth|\\bvs\\b|alternative|without|repay|forgiv|penalt|closed|frozen|blocked|why"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_business_credit_building",
+      "name": "Building business credit (Paydex, D&B)",
+      "description": "Hard to build a business credit file; Net-30 vendors, Paydex, Experian Business.",
+      "keywords": [
+        "paydex|dun ?& ?bradstreet|\\bd&b\\b|business credit|net ?30 vendors?|experian business|ein credit"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_factoring_receivables",
+      "name": "Factoring & slow-paying customers",
+      "description": "Customers on Net-60/90, factoring costs, collections.",
+      "keywords": [
+        "factoring|invoice financ|net ?(30|60|90)|slow pay|receivables|customer (won'?t|not|didn'?t) pay|collections"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_broker_scams",
+      "name": "Loan brokers, fake lenders & upfront-fee scams",
+      "description": "Brokers and fake lenders charging upfront fees or misrepresenting terms.",
+      "keywords": [
+        "broker|scam|fake lender|upfront fee|advance fee|fraud"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_apr_fees",
+      "name": "High APRs, origination & hidden fees",
+      "description": "Origination fees, high APRs, prepayment penalties.",
+      "keywords": [
+        "\\bapr\\b|interest rate|origination fee|hidden fee|prepayment|expensive|charges"
+      ],
+      "regions": [
+        "us"
       ]
     },
     {
@@ -134,59 +354,190 @@
   ],
   "personas": [
     {
-      "id": "trader_retailer",
-      "name": "Trader / retailer",
-      "description": "Shop, kirana, wholesaler or distributor.",
+      "id": "in_kirana_trader",
+      "name": "Trader, retailer or kirana owner",
+      "description": "Shop, wholesaler or distributor needing working capital for stock.",
       "keywords": [
-        "trader|retailer|\\bshop\\b|store|kirana|wholesale|distributor|dealer"
+        "trader|retailer|\\bshop\\b|kirana|wholesale|distributor|dealer|stockist"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "manufacturer",
-      "name": "Manufacturer",
-      "description": "Runs a factory or production unit.",
+      "id": "in_mse_manufacturer",
+      "name": "Small manufacturer (MSE unit)",
+      "description": "Factory or job-work unit buying machinery and raw material.",
       "keywords": [
-        "manufactur|factory|\\bplant\\b|machinery|raw material|production unit"
+        "manufactur|factory|\\bunit\\b|machinery|raw material|job work|msme unit"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "startup_founder",
+      "id": "in_govt_psu_supplier",
+      "name": "Supplier to PSUs / GeM / large corporates",
+      "description": "Sells to government or big buyers and waits months to be paid.",
+      "keywords": [
+        "\\bgem\\b|tender|\\bpsu\\b|government (order|contract)|vendor to|supplier to|corporate buyer"
+      ],
+      "regions": [
+        "india"
+      ]
+    },
+    {
+      "id": "in_exporter",
+      "name": "Exporter",
+      "description": "Needs packing credit and trade finance.",
+      "keywords": [
+        "export|packing credit|\\blc\\b|letter of credit|forex|\\bdgft\\b"
+      ],
+      "regions": [
+        "india"
+      ]
+    },
+    {
+      "id": "in_startup_founder",
       "name": "Startup founder",
       "description": "Early-stage company, often pre-profit.",
       "keywords": [
-        "startup|start-up|founder|saas|venture|pre-?revenue|runway"
+        "startup|start-up|founder|dpiit|pre-?revenue"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "service_business",
-      "name": "Service business",
-      "description": "Agency, consultancy, clinic, restaurant, salon.",
+      "id": "in_proprietor",
+      "name": "Sole proprietor",
+      "description": "Proprietorship, often with CA handling filings.",
       "keywords": [
-        "agency|consult|service business|clinic|restaurant|salon|cafe"
+        "proprietor|proprietorship|my ca\\b|self[- ]employed"
+      ],
+      "regions": [
+        "india"
       ]
     },
     {
-      "id": "exporter_importer",
-      "name": "Exporter / importer",
-      "description": "Trades across borders; needs trade finance.",
+      "id": "eu_sole_trader",
+      "name": "Sole trader",
+      "description": "Self-employed individual trading in their own name.",
       "keywords": [
-        "export|import|forex|\\blc\\b|letter of credit|packing credit"
+        "sole trader|self[- ]employed|freelanc|one[- ]man"
+      ],
+      "regions": [
+        "europe"
       ]
     },
     {
-      "id": "supplier_contractor",
-      "name": "Supplier / contractor to large buyers",
-      "description": "Sells to corporates or government and waits to be paid.",
+      "id": "eu_ltd_director",
+      "name": "Limited company director",
+      "description": "Runs a small limited company and is asked for personal guarantees.",
       "keywords": [
-        "supplier to|government (contract|tender)|tender|vendor|\\bpsu\\b|corporate client|gem portal"
+        "director|limited company|\\bltd\\b|my company"
+      ],
+      "regions": [
+        "europe"
       ]
     },
     {
-      "id": "sole_proprietor",
-      "name": "Sole proprietor / self-employed",
-      "description": "Very small business run by one person.",
+      "id": "eu_hospitality_retail",
+      "name": "Hospitality or retail SME",
+      "description": "Pub, restaurant, café or shop with seasonal cash flow.",
       "keywords": [
-        "sole proprietor|proprietorship|freelanc|self[- ]employed|1099|one[- ]man"
+        "pub|restaurant|cafe|café|bar\\b|shop|retail|salon"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_supplier_to_corporates",
+      "name": "Supplier to large firms",
+      "description": "Small supplier on long payment terms.",
+      "keywords": [
+        "supplier to|subcontract|contractor|payment terms|big clients?"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "eu_startup_founder",
+      "name": "Startup founder",
+      "description": "Early-stage founder.",
+      "keywords": [
+        "startup|start-up|founder|seis|eis"
+      ],
+      "regions": [
+        "europe"
+      ]
+    },
+    {
+      "id": "us_llc_owner",
+      "name": "Small LLC owner",
+      "description": "Owner-operator of a small LLC or S-corp.",
+      "keywords": [
+        "\\bllc\\b|s-?corp|my business|small business owner"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_sole_prop_1099",
+      "name": "Sole proprietor / 1099 contractor",
+      "description": "Self-employed, often with thin credit files.",
+      "keywords": [
+        "sole prop|1099|self[- ]employed|freelanc|gig"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_restaurant_owner",
+      "name": "Restaurant owner",
+      "description": "Restaurant or food business with tight margins.",
+      "keywords": [
+        "restaurant|food truck|cafe|bar\\b"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_contractor_trades",
+      "name": "Contractor / trades",
+      "description": "Construction or trades business waiting on payments.",
+      "keywords": [
+        "contractor|construction|plumb|electric(al|ian)|hvac|trucking|owner operator"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_ecommerce_seller",
+      "name": "E-commerce seller",
+      "description": "Online seller needing inventory finance.",
+      "keywords": [
+        "amazon seller|shopify|e-?commerce|etsy|inventory"
+      ],
+      "regions": [
+        "us"
+      ]
+    },
+    {
+      "id": "us_startup_founder",
+      "name": "Startup founder",
+      "description": "Early-stage founder.",
+      "keywords": [
+        "startup|founder|venture|pre-?revenue"
+      ],
+      "regions": [
+        "us"
       ]
     },
     {

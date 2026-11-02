@@ -24,8 +24,14 @@ const Result = z.object({
 const BatchSchema = z.object({ results: z.array(Result) });
 
 export function buildSystemPrompt(taxonomy, topic = {}) {
-  const cats = taxonomy.categories.map((c) => `- ${c.id}: ${c.name} - ${c.description}`).join("\n");
-  const personas = taxonomy.personas.map((c) => `- ${c.id}: ${c.name} - ${c.description}`).join("\n");
+  // Group region-scoped categories/personas under a heading per region; unscoped ones are listed as "all regions".
+  const byRegion = (items) => {
+    const groups = {};
+    for (const c of items) for (const r of c.regions?.length ? c.regions : ["all regions"]) (groups[r] ??= []).push(c);
+    return Object.entries(groups).map(([r, list]) => `[${r}]\n` + list.map((c) => `- ${c.id}: ${c.name} - ${c.description}`).join("\n")).join("\n\n");
+  };
+  const cats = byRegion(taxonomy.categories);
+  const personas = byRegion(taxonomy.personas);
   const label = topic.label || "this industry";
   return `You are a market-research analyst studying customer pain points in: ${label}. Scope: ${topic.description || label}. Markets: India, Europe and the United States.
 
@@ -35,7 +41,7 @@ Rules:
 - relevant=true only when the author (or searcher) is a customer or end user expressing an experience, need, frustration or question about ${label}. News headlines, ads, company PR, jokes with no substance, and unrelated uses of the same words are relevant=false with no pain_points.
 - Search queries (source google_suggest) are one-liners typed by many people. Count one as a pain point only when it implies difficulty, confusion, distrust, cost or an unmet need ("where can I...", "why is ... so expensive", "... not working", "is ... a scam"). Plain shopping or definition queries are not pain points.
 - A document may contain 0-3 distinct pain points; list each once. Do not invent pain points that are not in the text.
-- category must be exactly one of the ids below; use "other" only when nothing fits.
+- category must be exactly one of the ids below, taken from the list for the document's region (decide region first); use "other" only when nothing fits. Persona likewise comes from that region's list.
 - sub_issue: a concise, reusable English phrase naming the specific problem (not the whole story), so identical problems from different people get near-identical phrases.
 - region: india, europe (UK, EU, EEA, Switzerland), us, or other. Use evidence in the text (cities, currency, local brands and institutions); if there is none, use region_hint unless region_hint is "global", in which case use "other".
 - persona: who is speaking, from the persona ids below, inferred from what they say about themselves (their housing, job, business, family or motivation). Use general_citizen when it cannot be inferred - do not guess.

@@ -76,12 +76,29 @@ function validRegex(s) {
  * regions: { india|europe|us: { subreddits, queries, suggest_seeds, web_queries, x_queries, google_extra } },
  * categories / personas: topic-specific entries placed before the generic ones (first match wins).
  */
-export function buildTaxonomy(overrides) {
-  const categories = [...overrides.categories];
+const PREFIX = { india: "in", europe: "eu", us: "us" };
+
+/**
+ * Builds taxonomy.json from either a flat spec { categories, personas } or a per-region spec
+ * { india: { categories, personas }, europe: {...}, us: {...} }. Per-region entries get a region prefix
+ * on their id ("in_", "eu_", "us_") and a "regions" tag so each region keeps its own pain points.
+ */
+export function buildTaxonomy(spec) {
+  let categories = [];
+  let personas = [];
+  if (spec.categories) {
+    categories = [...spec.categories];
+    personas = [...(spec.personas || [])];
+  } else {
+    for (const [region, r] of Object.entries(spec)) {
+      const pre = PREFIX[region] || region;
+      categories.push(...r.categories.map((c) => ({ ...c, id: `${pre}_${c.id}`, regions: [region] })));
+      personas.push(...(r.personas || []).map((p) => ({ ...p, id: `${pre}_${p.id}`, regions: [region] })));
+    }
+  }
   if (!categories.some((c) => c.id === "other")) categories.push({ id: "other", name: "Other", description: "Clear customer pain point that does not fit any category above.", keywords: [] });
-  const personas = [...(overrides.personas || [])];
   if (!personas.some((p) => p.id === "general_citizen")) personas.push({ id: "general_citizen", name: "General customer", description: "Persona cannot be inferred.", keywords: [] });
-  return { _comment: "Topic-specific categories. Keyword patterns drive the no-key classifier (first 3 matches, in order).", categories, personas };
+  return { _comment: "Region-specific pain points and personas (ids prefixed in_/eu_/us_). Keyword patterns drive the no-key classifier (first 3 matches, in order, within the document's region).", categories, personas };
 }
 
 export async function createTopic({ id, label, description, useClaude, overrides = {} }) {
