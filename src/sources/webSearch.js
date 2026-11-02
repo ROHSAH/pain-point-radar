@@ -28,6 +28,17 @@ async function braveSearch(q, region, key, offset) {
   return res;
 }
 
+/**
+ * For "<brand> complaint site:<complaint site>" queries, the first word of the query (the brand or
+ * product) must appear in a result. Returns null for other queries, including Reddit searches.
+ */
+export function siteQueryTerm(q) {
+  const m = q.match(/^(.+?) complaint site:(?!reddit)/i);
+  if (!m) return null;
+  const word = m[1].trim().split(/\s+/)[0].replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  return new RegExp(`\\b${word}`, "i");
+}
+
 /** Reddit-targeted searches: the region's first few subreddits x its first few problem queries. */
 export function redditSearchQueries(region, { subs = 3, queries = 2 } = {}) {
   const out = [];
@@ -69,7 +80,10 @@ export async function collectWebSearch(region, regionId, opts) {
       }
       budget.done(cacheKey);
       const results = [...(res.web?.results || []), ...(res.discussions?.results || [])];
+      const mustMention = siteQueryTerm(q);
       for (const r of results) {
+        // Complaint sites return complaints about every company; keep only those about the brand searched for.
+        if (mustMention && !mustMention.test(`${r.title} ${r.description}`)) continue;
         const isReddit = /(^|\.)reddit\.com\//i.test(r.url.replace(/^https?:\/\//, ""));
         docs.push(
           makeDoc({

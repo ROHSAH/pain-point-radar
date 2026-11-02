@@ -1,45 +1,45 @@
 # MSME & B2B lending: customer pain points - India, Europe, US
 
-_Generated 2026-11-02 10:12 UTC_
+_Generated 2026-11-02 10:16 UTC_
 
 ## Coverage
 
 | Region | Documents classified | Relevant | Sources |
 |---|---:|---:|---|
-| All regions combined | 1696 | 579 | google_suggest 1056, web 545, reddit_search 95 |
-| India | 692 | 221 | google_suggest 458, web 202, reddit_search 32 |
-| Europe (UK + EU) | 450 | 114 | google_suggest 280, web 143, reddit_search 27 |
-| United States | 554 | 244 | google_suggest 318, web 200, reddit_search 36 |
+| All regions combined | 1537 | 547 | google_suggest 1056, web 386, reddit_search 95 |
+| India | 608 | 198 | google_suggest 458, web 118, reddit_search 32 |
+| Europe (UK + EU) | 407 | 113 | google_suggest 280, web 100, reddit_search 27 |
+| United States | 522 | 236 | google_suggest 318, web 168, reddit_search 36 |
 
 ## All regions combined - top 10 pain points
 
 | # | Pain point | Mentions | Weighted volume | % of relevant | Avg severity | Channel mix | Top themes |
 |---:|---|---:|---:|---:|---:|---|---|
-| 1 | **Mudra, CGTMSE & PMEGP scheme hurdles** | 93 | 133.07 | 16.1% | 1.9 | search 49, discussion 32, review 12 | mudra, cgtmse & pmegp scheme hurdles (93) |
-| 2 | **SBA 7(a)/504 delays & denials** | 99 | 117.51 | 17.1% | 2.7 | discussion 38, review 38, search 23 | sba 7(a)/504 delays & denials (99) |
-| 3 | **NBFC & fintech loan rates and charges** | 71 | 93.43 | 12.3% | 2.2 | search 29, review 27, discussion 15 | nbfc & fintech loan rates and charges (71) |
-| 4 | **Line-of-credit approvals, limits & freezes** | 76 | 91.36 | 13.1% | 2.7 | review 29, discussion 26, search 21 | line-of-credit approvals, limits & freezes (76) |
-| 5 | **Branch delays & unresponsive managers** | 73 | 89.59 | 12.6% | 2.6 | review 41, search 18, discussion 14 | branch delays & unresponsive managers (73) |
-| 6 | **Merchant cash advance traps** | 54 | 69.9 | 9.3% | 2.5 | discussion 36, search 18 | merchant cash advance traps (54) |
-| 7 | **OD/CC limit cuts, renewals & drawing power** | 40 | 58.63 | 6.9% | 1.7 | search 25, discussion 9, review 6 | od/cc limit cuts, renewals & drawing power (40) |
-| 8 | **GST, ITR, CMA & project-report paperwork** | 48 | 49.2 | 8.3% | 2.7 | discussion 33, review 12, search 3 | gst, itr, cma & project-report paperwork (48) |
-| 9 | **Factoring & slow-paying customers** | 32 | 48.46 | 5.5% | 2 | search 19, discussion 10, review 3 | factoring & slow-paying customers (32) |
-| 10 | **Government-backed schemes (British Business Bank, KfW, Bpifrance)** | 36 | 43.54 | 6.2% | 2.6 | discussion 21, search 8, review 7 | government-backed schemes (british business bank, kfw, bpifrance) (36) |
+| 1 | **Mudra, CGTMSE & PMEGP scheme hurdles** | 91 | 131.07 | 16.6% | 1.9 | search 49, discussion 32, review 10 | mudra, cgtmse & pmegp scheme hurdles (91) |
+| 2 | **SBA 7(a)/504 delays & denials** | 96 | 114.51 | 17.6% | 2.6 | discussion 38, review 35, search 23 | sba 7(a)/504 delays & denials (96) |
+| 3 | **Line-of-credit approvals, limits & freezes** | 70 | 85.36 | 12.8% | 2.6 | discussion 26, review 23, search 21 | line-of-credit approvals, limits & freezes (70) |
+| 4 | **NBFC & fintech loan rates and charges** | 53 | 75.43 | 9.7% | 1.8 | search 29, discussion 15, review 9 | nbfc & fintech loan rates and charges (53) |
+| 5 | **Branch delays & unresponsive managers** | 54 | 70.59 | 9.9% | 2.4 | review 22, search 18, discussion 14 | branch delays & unresponsive managers (54) |
+| 6 | **Merchant cash advance traps** | 54 | 69.9 | 9.9% | 2.5 | discussion 36, search 18 | merchant cash advance traps (54) |
+| 7 | **OD/CC limit cuts, renewals & drawing power** | 36 | 54.63 | 6.6% | 1.5 | search 25, discussion 9, review 2 | od/cc limit cuts, renewals & drawing power (36) |
+| 8 | **Factoring & slow-paying customers** | 32 | 48.46 | 5.9% | 2 | search 19, discussion 10, review 3 | factoring & slow-paying customers (32) |
+| 9 | **GST, ITR, CMA & project-report paperwork** | 43 | 44.2 | 7.9% | 2.6 | discussion 33, review 7, search 3 | gst, itr, cma & project-report paperwork (43) |
+| 10 | **Government-backed schemes (British Business Bank, KfW, Bpifrance)** | 36 | 43.54 | 6.6% | 2.6 | discussion 21, search 8, review 7 | government-backed schemes (british business bank, kfw, bpifrance) (36) |
 
 ## India - top 10 pain points
 
 | # | Pain point | Mentions | Weighted volume | % of relevant | Avg severity | Channel mix | Top themes |
 |---:|---|---:|---:|---:|---:|---|---|
-| 1 | **Mudra, CGTMSE & PMEGP scheme hurdles** | 93 | 133.07 | 42.1% | 1.9 | search 49, discussion 32, review 12 | mudra, cgtmse & pmegp scheme hurdles (93) |
-| 2 | **NBFC & fintech loan rates and charges** | 71 | 93.43 | 32.1% | 2.2 | search 29, review 27, discussion 15 | nbfc & fintech loan rates and charges (71) |
-| 3 | **Branch delays & unresponsive managers** | 73 | 89.59 | 33.0% | 2.6 | review 41, search 18, discussion 14 | branch delays & unresponsive managers (73) |
-| 4 | **OD/CC limit cuts, renewals & drawing power** | 40 | 58.63 | 18.1% | 1.7 | search 25, discussion 9, review 6 | od/cc limit cuts, renewals & drawing power (40) |
-| 5 | **GST, ITR, CMA & project-report paperwork** | 48 | 49.2 | 21.7% | 2.7 | discussion 33, review 12, search 3 | gst, itr, cma & project-report paperwork (48) |
-| 6 | **Collateral & guarantor demands** | 32 | 35.21 | 14.5% | 2.3 | discussion 26, search 4, review 2 | collateral & guarantor demands (32) |
-| 7 | **TReDS & invoice discounting access** | 10 | 16.48 | 4.5% | 1.4 | search 8, review 1, discussion 1 | treds & invoice discounting access (10) |
-| 8 | **NPA classification, SARFAESI & recovery** | 12 | 13.38 | 5.4% | 2.4 | discussion 7, search 3, review 2 | npa classification, sarfaesi & recovery (12) |
-| 9 | **CIBIL & CMR rank problems** | 9 | 9.85 | 4.1% | 2.6 | discussion 6, review 2, search 1 | cibil & cmr rank problems (9) |
-| 10 | **Buyers paying late (45-day rule, MSME Samadhaan)** | 7 | 7 | 3.2% | 2.3 | discussion 5, review 2 | buyers paying late (45-day rule, msme samadhaan) (7) |
+| 1 | **Mudra, CGTMSE & PMEGP scheme hurdles** | 91 | 131.07 | 46.0% | 1.9 | search 49, discussion 32, review 10 | mudra, cgtmse & pmegp scheme hurdles (91) |
+| 2 | **NBFC & fintech loan rates and charges** | 53 | 75.43 | 26.8% | 1.8 | search 29, discussion 15, review 9 | nbfc & fintech loan rates and charges (53) |
+| 3 | **Branch delays & unresponsive managers** | 54 | 70.59 | 27.3% | 2.4 | review 22, search 18, discussion 14 | branch delays & unresponsive managers (54) |
+| 4 | **OD/CC limit cuts, renewals & drawing power** | 36 | 54.63 | 18.2% | 1.5 | search 25, discussion 9, review 2 | od/cc limit cuts, renewals & drawing power (36) |
+| 5 | **GST, ITR, CMA & project-report paperwork** | 43 | 44.2 | 21.7% | 2.6 | discussion 33, review 7, search 3 | gst, itr, cma & project-report paperwork (43) |
+| 6 | **Collateral & guarantor demands** | 32 | 35.21 | 16.2% | 2.3 | discussion 26, search 4, review 2 | collateral & guarantor demands (32) |
+| 7 | **TReDS & invoice discounting access** | 10 | 16.48 | 5.1% | 1.4 | search 8, review 1, discussion 1 | treds & invoice discounting access (10) |
+| 8 | **NPA classification, SARFAESI & recovery** | 12 | 13.38 | 6.1% | 2.4 | discussion 7, search 3, review 2 | npa classification, sarfaesi & recovery (12) |
+| 9 | **CIBIL & CMR rank problems** | 7 | 7.85 | 3.5% | 2.4 | discussion 6, search 1 | cibil & cmr rank problems (7) |
+| 10 | **Buyers paying late (45-day rule, MSME Samadhaan)** | 7 | 7 | 3.5% | 2.3 | discussion 5, review 2 | buyers paying late (45-day rule, msme samadhaan) (7) |
 
 <details><summary>Voice of customer - example quotes</summary>
 
@@ -109,14 +109,14 @@ _Generated 2026-11-02 10:12 UTC_
 
 | # | Pain point | Mentions | Weighted volume | % of relevant | Avg severity | Channel mix | Top themes |
 |---:|---|---:|---:|---:|---:|---|---|
-| 1 | **Government-backed schemes (British Business Bank, KfW, Bpifrance)** | 36 | 43.54 | 31.6% | 2.6 | discussion 21, search 8, review 7 | government-backed schemes (british business bank, kfw, bpifrance) (36) |
-| 2 | **Merchant cash advances & alternative lenders** | 25 | 40.9 | 21.9% | 1.7 | search 18, discussion 7 | merchant cash advances & alternative lenders (25) |
-| 3 | **Invoice finance & factoring terms** | 28 | 35.17 | 24.6% | 2.4 | discussion 15, search 8, review 5 | invoice finance & factoring terms (28) |
-| 4 | **Bounce Back Loan repayments & director liability** | 28 | 28 | 24.6% | 2.9 | discussion 22, review 6 | bounce back loan repayments & director liability (28) |
-| 5 | **Overdrafts withdrawn or cut** | 14 | 22.3 | 12.3% | 1.4 | search 10, discussion 3, review 1 | overdrafts withdrawn or cut (14) |
-| 6 | **Rising rates, arrangement & exit fees** | 15 | 20.4 | 13.2% | 2.5 | discussion 7, search 6, review 2 | rising rates, arrangement & exit fees (15) |
-| 7 | **Personal guarantees & director liability** | 12 | 14.79 | 10.5% | 2.4 | discussion 7, search 3, review 2 | personal guarantees & director liability (12) |
-| 8 | **High-street banks declining or closing business accounts** | 13 | 13 | 11.4% | 2.9 | discussion 12, review 1 | high-street banks declining or closing business accounts (13) |
+| 1 | **Government-backed schemes (British Business Bank, KfW, Bpifrance)** | 36 | 43.54 | 31.9% | 2.6 | discussion 21, search 8, review 7 | government-backed schemes (british business bank, kfw, bpifrance) (36) |
+| 2 | **Merchant cash advances & alternative lenders** | 25 | 40.9 | 22.1% | 1.7 | search 18, discussion 7 | merchant cash advances & alternative lenders (25) |
+| 3 | **Invoice finance & factoring terms** | 28 | 35.17 | 24.8% | 2.4 | discussion 15, search 8, review 5 | invoice finance & factoring terms (28) |
+| 4 | **Bounce Back Loan repayments & director liability** | 28 | 28 | 24.8% | 2.9 | discussion 22, review 6 | bounce back loan repayments & director liability (28) |
+| 5 | **Overdrafts withdrawn or cut** | 14 | 22.3 | 12.4% | 1.4 | search 10, discussion 3, review 1 | overdrafts withdrawn or cut (14) |
+| 6 | **Rising rates, arrangement & exit fees** | 15 | 20.4 | 13.3% | 2.5 | discussion 7, search 6, review 2 | rising rates, arrangement & exit fees (15) |
+| 7 | **Personal guarantees & director liability** | 11 | 13.79 | 9.7% | 2.5 | discussion 7, search 3, review 1 | personal guarantees & director liability (11) |
+| 8 | **High-street banks declining or closing business accounts** | 13 | 13 | 11.5% | 2.9 | discussion 12, review 1 | high-street banks declining or closing business accounts (13) |
 | 9 | **Late payment by large customers** | 5 | 5 | 4.4% | 3.2 | discussion 5 | late payment by large customers (5) |
 
 <details><summary>Voice of customer - example quotes</summary>
@@ -181,15 +181,15 @@ _Generated 2026-11-02 10:12 UTC_
 
 | # | Pain point | Mentions | Weighted volume | % of relevant | Avg severity | Channel mix | Top themes |
 |---:|---|---:|---:|---:|---:|---|---|
-| 1 | **SBA 7(a)/504 delays & denials** | 99 | 117.51 | 40.6% | 2.7 | discussion 38, review 38, search 23 | sba 7(a)/504 delays & denials (99) |
-| 2 | **Line-of-credit approvals, limits & freezes** | 76 | 91.36 | 31.1% | 2.7 | review 29, discussion 26, search 21 | line-of-credit approvals, limits & freezes (76) |
-| 3 | **Merchant cash advance traps** | 54 | 69.9 | 22.1% | 2.5 | discussion 36, search 18 | merchant cash advance traps (54) |
-| 4 | **Factoring & slow-paying customers** | 32 | 48.46 | 13.1% | 2 | search 19, discussion 10, review 3 | factoring & slow-paying customers (32) |
-| 5 | **Loan brokers, fake lenders & upfront-fee scams** | 34 | 38.13 | 13.9% | 3.4 | review 19, discussion 10, search 5 | loan brokers, fake lenders & upfront-fee scams (34) |
-| 6 | **Personal guarantees & personal credit pulls** | 29 | 37.55 | 11.9% | 2.1 | discussion 15, search 11, review 3 | personal guarantees & personal credit pulls (29) |
-| 7 | **High APRs, origination & hidden fees** | 29 | 35.07 | 11.9% | 2.7 | discussion 13, search 8, review 8 | high aprs, origination & hidden fees (29) |
-| 8 | **EIDL/PPP repayment & forgiveness** | 15 | 15 | 6.1% | 3.5 | review 9, discussion 6 | eidl/ppp repayment & forgiveness (15) |
-| 9 | **Building business credit (Paydex, D&B)** | 8 | 8 | 3.3% | 3 | discussion 5, review 3 | building business credit (paydex, d&b) (8) |
+| 1 | **SBA 7(a)/504 delays & denials** | 96 | 114.51 | 40.7% | 2.6 | discussion 38, review 35, search 23 | sba 7(a)/504 delays & denials (96) |
+| 2 | **Line-of-credit approvals, limits & freezes** | 70 | 85.36 | 29.7% | 2.6 | discussion 26, review 23, search 21 | line-of-credit approvals, limits & freezes (70) |
+| 3 | **Merchant cash advance traps** | 54 | 69.9 | 22.9% | 2.5 | discussion 36, search 18 | merchant cash advance traps (54) |
+| 4 | **Factoring & slow-paying customers** | 32 | 48.46 | 13.6% | 2 | search 19, discussion 10, review 3 | factoring & slow-paying customers (32) |
+| 5 | **Personal guarantees & personal credit pulls** | 29 | 37.55 | 12.3% | 2.1 | discussion 15, search 11, review 3 | personal guarantees & personal credit pulls (29) |
+| 6 | **Loan brokers, fake lenders & upfront-fee scams** | 32 | 36.13 | 13.6% | 3.4 | review 17, discussion 10, search 5 | loan brokers, fake lenders & upfront-fee scams (32) |
+| 7 | **High APRs, origination & hidden fees** | 28 | 34.07 | 11.9% | 2.6 | discussion 13, search 8, review 7 | high aprs, origination & hidden fees (28) |
+| 8 | **EIDL/PPP repayment & forgiveness** | 14 | 14 | 5.9% | 3.4 | review 8, discussion 6 | eidl/ppp repayment & forgiveness (14) |
+| 9 | **Building business credit (Paydex, D&B)** | 8 | 8 | 3.4% | 3 | discussion 5, review 3 | building business credit (paydex, d&b) (8) |
 
 <details><summary>Voice of customer - example quotes</summary>
 
@@ -217,17 +217,17 @@ _Generated 2026-11-02 10:12 UTC_
 - "Merchant Cash Advance Defense: How to Fight Predatory ... Merchant Cash Advance Defense: How to Fight Predatory ... J. Singer Law Group represents business owners facing predatory merchant cash advances by challenging unlawful contracts, st" - [web](https://www.singerlawgroup.com/merchant-cash-advance-defense-how-to-fight-predatory-mca-contracts-and-collections)
 - "When is a Merchant Cash Advance a tool vs. a trap? When is a Merchant Cash Advance a tool vs. a trap? Ask questions about business financing: SBA, term loans, lines of credit, equipment, MCA, real estate, and factoring. Share offers and get" - [reddit_search](https://www.reddit.com/r/Businessloans/comments/1s2exzi/when_is_a_merchant_cash_advance_a_tool_vs_a_trap/)
 
-**5. Loan brokers, fake lenders & upfront-fee scams**
-
-- "Are Merchant Cash Advances a Scam? What to Know Are Merchant Cash Advances a Scam? What to Know Merchant cash advances may be considered a scam because of their ability to trap business owners in a debt cycle . Because of how expensive MCAs" - [web](https://attorney-newyork.com/mca-debt/are-merchant-cash-advances-a-scam/)
-- "Merchant Cash Advance fraud Merchant Cash Advance fraud Client's attorney? who are you dealing with a collection agency? you should talking directly to the client. the FTC websites have templates for the legal letter to send them informing " - [reddit_search](https://www.reddit.com/r/IdentityTheft/comments/193m1se/merchant_cash_advance_fraud/)
-- "search: "merchant cash advance fees"" - [google_suggest](https://www.google.com/search?q=merchant%20cash%20advance%20fees&gl=us&hl=en)
-
-**6. Personal guarantees & personal credit pulls**
+**5. Personal guarantees & personal credit pulls**
 
 - "search: "business line of credit no personal guarantee"" - [google_suggest](https://www.google.com/search?q=business%20line%20of%20credit%20no%20personal%20guarantee&gl=us&hl=en)
 - "SBA disaster loan denied: What to do next \| Swoop US SBA disaster loan denied: What to do next \| Swoop US Send the request for reconsideration to an SBA Disaster Assistance Processing and Disbursement Center (DAPDC). If you receive another " - [web](https://swoopfunding.com/us/sba-loans/sba-disaster-loan-denied/)
 - "Small business line of credit Small business line of credit because we technically never show a profit due to the reinvestment Why is it that folks think "reinvestment" means you are making a profit and one should overlook THESE ACTUAL, REA" - [reddit_search](https://www.reddit.com/r/smallbusiness/comments/15nlwom/small_business_line_of_credit/)
+
+**6. Loan brokers, fake lenders & upfront-fee scams**
+
+- "Are Merchant Cash Advances a Scam? What to Know Are Merchant Cash Advances a Scam? What to Know Merchant cash advances may be considered a scam because of their ability to trap business owners in a debt cycle . Because of how expensive MCAs" - [web](https://attorney-newyork.com/mca-debt/are-merchant-cash-advances-a-scam/)
+- "Merchant Cash Advance fraud Merchant Cash Advance fraud Client's attorney? who are you dealing with a collection agency? you should talking directly to the client. the FTC websites have templates for the legal letter to send them informing " - [reddit_search](https://www.reddit.com/r/IdentityTheft/comments/193m1se/merchant_cash_advance_fraud/)
+- "search: "merchant cash advance fees"" - [google_suggest](https://www.google.com/search?q=merchant%20cash%20advance%20fees&gl=us&hl=en)
 
 **7. High APRs, origination & hidden fees**
 

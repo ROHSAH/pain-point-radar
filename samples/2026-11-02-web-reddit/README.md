@@ -9,6 +9,8 @@ For **Small vendors & sellers** and **MSME & B2B lending**, this run adds Brave 
 - Reddit threads found through search (`site:reddit.com/r/...`), shown as "Reddit (via search)":
   post titles and snippets, not full threads or comments.
 - Lender marketing pages ("benefits, eligibility", "apply now", app-store listings) are filtered out.
+- Complaint-site results must name the searched brand in their title or description (sites list
+  complaints about every company), and ambiguous names are filtered.
 - Still labelled by the keyword classifier (no Claude key).
 
 `dashboard.html` here includes all 15 topics; each topic folder has `complaints.csv` with verbatim

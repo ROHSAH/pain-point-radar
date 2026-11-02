@@ -149,3 +149,11 @@ test("Brave budget enforces caps and skips repeats", async () => {
   b.done("test|unit-check|0");
   assert.equal(b.seenRecently("test|unit-check|0"), true);
 });
+
+test("complaint-site results must mention the searched brand", async () => {
+  const { siteQueryTerm } = await import("../src/sources/webSearch.js");
+  const re = siteQueryTerm("udaan complaint site:mouthshut.com");
+  assert.equal(re.test("Udaan app denied my refund"), true);
+  assert.equal(re.test("Wise US Inc. BBB complaints"), false);
+  assert.equal(siteQueryTerm("msme loan rejected site:reddit.com/r/IndianStartups"), null);
+});
