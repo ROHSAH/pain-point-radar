@@ -1,45 +1,45 @@
 # Small vendors & sellers: customer pain points - India, Europe, US
 
-_Generated 2026-11-02 10:12 UTC_
+_Generated 2026-11-02 10:15 UTC_
 
 ## Coverage
 
 | Region | Documents classified | Relevant | Sources |
 |---|---:|---:|---|
-| All regions combined | 1156 | 253 | google_suggest 871, web 226, reddit_search 59 |
-| India | 375 | 73 | google_suggest 265, web 83, reddit_search 27 |
-| Europe (UK + EU) | 361 | 74 | google_suggest 276, web 69, reddit_search 16 |
-| United States | 420 | 106 | google_suggest 330, web 74, reddit_search 16 |
+| All regions combined | 1430 | 316 | google_suggest 871, web 500, reddit_search 59 |
+| India | 471 | 107 | google_suggest 265, web 179, reddit_search 27 |
+| Europe (UK + EU) | 396 | 76 | google_suggest 276, web 104, reddit_search 16 |
+| United States | 563 | 133 | google_suggest 330, web 217, reddit_search 16 |
 
 ## All regions combined - top 10 pain points
 
 | # | Pain point | Mentions | Weighted volume | % of relevant | Avg severity | Channel mix | Top themes |
 |---:|---|---:|---:|---:|---:|---|---|
-| 1 | **B2B app ordering problems (Udaan, Jumbotail, JioMart Partner)** | 37 | 55.85 | 14.6% | 2.1 | search 19, discussion 10, review 8 | b2b app ordering problems (udaan, jumbotail, jiomart partner) (37) |
-| 2 | **Marketplace & wholesale-platform fees (Amazon, Etsy, eBay, Ankorstore, Faire)** | 37 | 54.27 | 14.6% | 1.8 | search 21, discussion 16 | marketplace & wholesale-platform fees (amazon, etsy, ebay, ankorstore, faire) (37) |
-| 3 | **Wholesale minimums & supplier terms** | 29 | 48.75 | 11.5% | 1.3 | search 25, discussion 4 | wholesale minimums & supplier terms (29) |
-| 4 | **Sourcing scams & quality (Alibaba, 1688, dropship suppliers)** | 38 | 43.59 | 15.0% | 3.5 | discussion 31, search 6, review 1 | sourcing scams & quality (alibaba, 1688, dropship suppliers) (38) |
-| 5 | **Marketplace fees & account suspensions (Amazon, Etsy, Walmart, Faire)** | 26 | 33.09 | 10.3% | 1.8 | discussion 16, search 10 | marketplace fees & account suspensions (amazon, etsy, walmart, faire) (26) |
-| 6 | **Wholesale minimums & Net-30 terms** | 16 | 29.19 | 6.3% | 1 | search 16 | wholesale minimums & net-30 terms (16) |
-| 7 | **Inventory financing & cash flow** | 15 | 27.79 | 5.9% | 1 | search 15 | inventory financing & cash flow (15) |
-| 8 | **Marketplace commissions, returns & payouts (Meesho, Flipkart, Amazon)** | 14 | 23.03 | 5.5% | 1.1 | search 12, discussion 2 | marketplace commissions, returns & payouts (meesho, flipkart, amazon) (14) |
-| 9 | **Tariffs & landed costs** | 16 | 16 | 6.3% | 3.4 | discussion 16 | tariffs & landed costs (16) |
-| 10 | **GST, input credit & e-way bills** | 11 | 15.95 | 4.3% | 2.1 | search 5, discussion 4, review 2 | gst, input credit & e-way bills (11) |
+| 1 | **B2B app ordering problems (Udaan, Jumbotail, JioMart Partner)** | 61 | 79.85 | 19.3% | 2.6 | review 32, search 19, discussion 10 | b2b app ordering problems (udaan, jumbotail, jiomart partner) (61) |
+| 2 | **Sourcing scams & quality (Alibaba, 1688, dropship suppliers)** | 60 | 65.59 | 19.0% | 3.6 | discussion 31, review 23, search 6 | sourcing scams & quality (alibaba, 1688, dropship suppliers) (60) |
+| 3 | **Marketplace & wholesale-platform fees (Amazon, Etsy, eBay, Ankorstore, Faire)** | 37 | 54.27 | 11.7% | 1.8 | search 21, discussion 16 | marketplace & wholesale-platform fees (amazon, etsy, ebay, ankorstore, faire) (37) |
+| 4 | **Wholesale minimums & supplier terms** | 29 | 48.75 | 9.2% | 1.3 | search 25, discussion 4 | wholesale minimums & supplier terms (29) |
+| 5 | **Marketplace fees & account suspensions (Amazon, Etsy, Walmart, Faire)** | 27 | 34.09 | 8.5% | 1.9 | discussion 16, search 10, review 1 | marketplace fees & account suspensions (amazon, etsy, walmart, faire) (27) |
+| 6 | **Wholesale minimums & Net-30 terms** | 17 | 30.19 | 5.4% | 1.1 | search 16, review 1 | wholesale minimums & net-30 terms (17) |
+| 7 | **Inventory financing & cash flow** | 15 | 27.79 | 4.7% | 1 | search 15 | inventory financing & cash flow (15) |
+| 8 | **Marketplace commissions, returns & payouts (Meesho, Flipkart, Amazon)** | 16 | 25.03 | 5.1% | 1.5 | search 12, discussion 2, review 2 | marketplace commissions, returns & payouts (meesho, flipkart, amazon) (16) |
+| 9 | **Tariffs & landed costs** | 19 | 19 | 6.0% | 3.5 | discussion 16, review 3 | tariffs & landed costs (19) |
+| 10 | **GST, input credit & e-way bills** | 11 | 15.95 | 3.5% | 2.1 | search 5, discussion 4, review 2 | gst, input credit & e-way bills (11) |
 
 ## India - top 10 pain points
 
 | # | Pain point | Mentions | Weighted volume | % of relevant | Avg severity | Channel mix | Top themes |
 |---:|---|---:|---:|---:|---:|---|---|
-| 1 | **B2B app ordering problems (Udaan, Jumbotail, JioMart Partner)** | 37 | 55.85 | 50.7% | 2.1 | search 19, discussion 10, review 8 | b2b app ordering problems (udaan, jumbotail, jiomart partner) (37) |
-| 2 | **Marketplace commissions, returns & payouts (Meesho, Flipkart, Amazon)** | 14 | 23.03 | 19.2% | 1.1 | search 12, discussion 2 | marketplace commissions, returns & payouts (meesho, flipkart, amazon) (14) |
-| 3 | **GST, input credit & e-way bills** | 11 | 15.95 | 15.1% | 2.1 | search 5, discussion 4, review 2 | gst, input credit & e-way bills (11) |
-| 4 | **Fake suppliers & poor-quality stock** | 8 | 8 | 11.0% | 3.8 | review 5, discussion 3 | fake suppliers & poor-quality stock (8) |
-| 5 | **Transport, freight & delivery costs** | 7 | 7 | 9.6% | 3.4 | discussion 5, review 2 | transport, freight & delivery costs (7) |
-| 6 | **Working capital stuck in stock** | 5 | 5 | 6.8% | 2.4 | discussion 5 | working capital stuck in stock (5) |
-| 7 | **Supplier credit & udhaar terms** | 4 | 4 | 5.5% | 2.5 | discussion 4 | supplier credit & udhaar terms (4) |
-| 8 | **Ordering from many suppliers by phone & WhatsApp** | 2 | 3.54 | 2.7% | 1 | search 2 | ordering from many suppliers by phone & whatsapp (2) |
-| 9 | **Thin margins & quick-commerce competition** | 3 | 3 | 4.1% | 3.3 | discussion 3 | thin margins & quick-commerce competition (3) |
-| 10 | **Tracking stock, expiry & reorders manually** | 1 | 1 | 1.4% | 2 | review 1 | tracking stock, expiry & reorders manually (1) |
+| 1 | **B2B app ordering problems (Udaan, Jumbotail, JioMart Partner)** | 61 | 79.85 | 57.0% | 2.6 | review 32, search 19, discussion 10 | b2b app ordering problems (udaan, jumbotail, jiomart partner) (61) |
+| 2 | **Marketplace commissions, returns & payouts (Meesho, Flipkart, Amazon)** | 16 | 25.03 | 15.0% | 1.5 | search 12, discussion 2, review 2 | marketplace commissions, returns & payouts (meesho, flipkart, amazon) (16) |
+| 3 | **GST, input credit & e-way bills** | 11 | 15.95 | 10.3% | 2.1 | search 5, discussion 4, review 2 | gst, input credit & e-way bills (11) |
+| 4 | **Fake suppliers & poor-quality stock** | 14 | 14 | 13.1% | 3.9 | review 11, discussion 3 | fake suppliers & poor-quality stock (14) |
+| 5 | **Transport, freight & delivery costs** | 13 | 13 | 12.1% | 3.4 | review 8, discussion 5 | transport, freight & delivery costs (13) |
+| 6 | **Supplier credit & udhaar terms** | 5 | 5 | 4.7% | 2.8 | discussion 4, review 1 | supplier credit & udhaar terms (5) |
+| 7 | **Working capital stuck in stock** | 5 | 5 | 4.7% | 2.4 | discussion 5 | working capital stuck in stock (5) |
+| 8 | **Ordering from many suppliers by phone & WhatsApp** | 2 | 3.54 | 1.9% | 1 | search 2 | ordering from many suppliers by phone & whatsapp (2) |
+| 9 | **Thin margins & quick-commerce competition** | 3 | 3 | 2.8% | 3.3 | discussion 3 | thin margins & quick-commerce competition (3) |
+| 10 | **Tracking stock, expiry & reorders manually** | 1 | 1 | 0.9% | 2 | review 1 | tracking stock, expiry & reorders manually (1) |
 
 <details><summary>Voice of customer - example quotes</summary>
 
@@ -73,17 +73,17 @@ _Generated 2026-11-02 10:12 UTC_
 - "r/tretinoin on Reddit: indiamart scam r/tretinoin on Reddit: indiamart scam 13 votes, 59 comments. did i get scammed? i bought tret and they first said they have to wait 3 days for the money to go through then they said india… Posted by u/P" - [reddit_search](https://www.reddit.com/r/tretinoin/comments/1vnx3oc/indiamart_scam/)
 - "Contact Us \| Udaan - B2B Buying for Retailers Contact Us \| Udaan - B2B Buying for Retailers Reach udaan support for order queries, account help, and questions about buying on the platform. udaan, India's largest eB2B platform operates acros" - [web](https://udaan.com/contact-us)
 
-**6. Working capital stuck in stock**
-
-- "Supplier credit checks: How to spot financial risk before it disrupts your business Supplier credit checks: How to spot financial risk before it disrupts your business Learn how supplier credit checks can help SMEs assess financial risk, pr" - [web](https://www.experian.co.uk/blogs/latest-thinking/small-business/supplier-credit-checks/)
-- "Apply for Suppliers Credit \| Axis Bank Apply for Suppliers Credit \| Axis Bank Enjoy quick turnaround of transactions from the bank. Facility of arranging funds for importers using Letter of Credit (LC). Click here to know more. Lodge a Comp" - [web](https://www.axis.bank.in/business-banking/solution-for-importers/suppliers-credit)
-- "Contact Us \| Udaan - B2B Buying for Retailers Contact Us \| Udaan - B2B Buying for Retailers Reach udaan support for order queries, account help, and questions about buying on the platform. udaan, India's largest eB2B platform operates acros" - [web](https://udaan.com/contact-us)
-
-**7. Supplier credit & udhaar terms**
+**6. Supplier credit & udhaar terms**
 
 - "Suppliers Credit - Payment Terms in Corporate Banking \| Axis Bank Suppliers Credit - Payment Terms in Corporate Banking \| Axis Bank Suppliers Credit is a facility where in Supplier and Buyer agree on payment terms. Visit us online at Axis B" - [web](https://www.axis.bank.in/corporate/trade-finance/suppliers-credit)
 - "r/indianstartups on Reddit: I'm building a tool to help Indian B2B suppliers check buyer payment history before extending credit — looking for 50 beta testers r/indianstartups on Reddit: I'm building a tool to help Indian B2B suppliers chec" - [reddit_search](https://www.reddit.com/r/indianstartups/comments/1swb47a/im_building_a_tool_to_help_indian_b2b_suppliers/)
 - "Apply for Suppliers Credit \| Axis Bank Apply for Suppliers Credit \| Axis Bank Enjoy quick turnaround of transactions from the bank. Facility of arranging funds for importers using Letter of Credit (LC). Click here to know more. Lodge a Comp" - [web](https://www.axis.bank.in/business-banking/solution-for-importers/suppliers-credit)
+
+**7. Working capital stuck in stock**
+
+- "Supplier credit checks: How to spot financial risk before it disrupts your business Supplier credit checks: How to spot financial risk before it disrupts your business Learn how supplier credit checks can help SMEs assess financial risk, pr" - [web](https://www.experian.co.uk/blogs/latest-thinking/small-business/supplier-credit-checks/)
+- "Apply for Suppliers Credit \| Axis Bank Apply for Suppliers Credit \| Axis Bank Enjoy quick turnaround of transactions from the bank. Facility of arranging funds for importers using Letter of Credit (LC). Click here to know more. Lodge a Comp" - [web](https://www.axis.bank.in/business-banking/solution-for-importers/suppliers-credit)
+- "Contact Us \| Udaan - B2B Buying for Retailers Contact Us \| Udaan - B2B Buying for Retailers Reach udaan support for order queries, account help, and questions about buying on the platform. udaan, India's largest eB2B platform operates acros" - [web](https://udaan.com/contact-us)
 
 **8. Ordering from many suppliers by phone & WhatsApp**
 
@@ -102,19 +102,20 @@ _Generated 2026-11-02 10:12 UTC_
 
 </details>
 
-## Europe (UK + EU) - top 9 pain points
+## Europe (UK + EU) - top 10 pain points
 
 | # | Pain point | Mentions | Weighted volume | % of relevant | Avg severity | Channel mix | Top themes |
 |---:|---|---:|---:|---:|---:|---|---|
-| 1 | **Marketplace & wholesale-platform fees (Amazon, Etsy, eBay, Ankorstore, Faire)** | 37 | 54.27 | 50.0% | 1.8 | search 21, discussion 16 | marketplace & wholesale-platform fees (amazon, etsy, ebay, ankorstore, faire) (37) |
-| 2 | **Wholesale minimums & supplier terms** | 29 | 48.75 | 39.2% | 1.3 | search 25, discussion 4 | wholesale minimums & supplier terms (29) |
-| 3 | **Shipping & courier costs** | 7 | 7.9 | 9.5% | 2.1 | discussion 6, search 1 | shipping & courier costs (7) |
-| 4 | **Imports, customs & post-Brexit VAT** | 7 | 7 | 9.5% | 2.6 | discussion 7 | imports, customs & post-brexit vat (7) |
-| 5 | **Cash flow & stock finance** | 2 | 2 | 2.7% | 3 | discussion 2 | cash flow & stock finance (2) |
-| 6 | **Reordering from many suppliers** | 1 | 1 | 1.4% | 2 | discussion 1 | reordering from many suppliers (1) |
-| 7 | **Unreliable suppliers & stock-outs** | 1 | 1 | 1.4% | 4 | review 1 | unreliable suppliers & stock-outs (1) |
-| 8 | **Payout holds & reserves (PayPal, Stripe, Amazon)** | 1 | 1 | 1.4% | 4 | discussion 1 | payout holds & reserves (paypal, stripe, amazon) (1) |
-| 9 | **Bookkeeping, invoices & Making Tax Digital** | 1 | 1 | 1.4% | 2 | discussion 1 | bookkeeping, invoices & making tax digital (1) |
+| 1 | **Marketplace & wholesale-platform fees (Amazon, Etsy, eBay, Ankorstore, Faire)** | 37 | 54.27 | 48.7% | 1.8 | search 21, discussion 16 | marketplace & wholesale-platform fees (amazon, etsy, ebay, ankorstore, faire) (37) |
+| 2 | **Wholesale minimums & supplier terms** | 29 | 48.75 | 38.2% | 1.3 | search 25, discussion 4 | wholesale minimums & supplier terms (29) |
+| 3 | **Shipping & courier costs** | 8 | 8.9 | 10.5% | 2.1 | discussion 6, search 1, review 1 | shipping & courier costs (8) |
+| 4 | **Imports, customs & post-Brexit VAT** | 7 | 7 | 9.2% | 2.6 | discussion 7 | imports, customs & post-brexit vat (7) |
+| 5 | **Cash flow & stock finance** | 2 | 2 | 2.6% | 3 | discussion 2 | cash flow & stock finance (2) |
+| 6 | **Reordering from many suppliers** | 1 | 1 | 1.3% | 2 | discussion 1 | reordering from many suppliers (1) |
+| 7 | **Unreliable suppliers & stock-outs** | 1 | 1 | 1.3% | 4 | review 1 | unreliable suppliers & stock-outs (1) |
+| 8 | **Payout holds & reserves (PayPal, Stripe, Amazon)** | 1 | 1 | 1.3% | 4 | discussion 1 | payout holds & reserves (paypal, stripe, amazon) (1) |
+| 9 | **Bookkeeping, invoices & Making Tax Digital** | 1 | 1 | 1.3% | 2 | discussion 1 | bookkeeping, invoices & making tax digital (1) |
+| 10 | **Rent, business rates & energy for shops** | 1 | 1 | 1.3% | 4 | review 1 | rent, business rates & energy for shops (1) |
 
 <details><summary>Voice of customer - example quotes</summary>
 
@@ -163,22 +164,26 @@ _Generated 2026-11-02 10:12 UTC_
 
 - "r/smallbusinessuk on Reddit: Accounting for online store making 1000+ sales per month r/smallbusinessuk on Reddit: Accounting for online store making 1000+ sales per month 10 votes, 36 comments. Hello everyone. I run a small manufacturing b" - [reddit_search](https://www.reddit.com/r/smallbusinessuk/comments/1qh3afz/accounting_for_online_store_making_1000_sales_per/)
 
+**10. Rent, business rates & energy for shops**
+
+- "How to complain about your electricity, gas or energy bill - Which? How to complain about your electricity, gas or energy bill - Which? In order to make a complaint you will need to be able to say why you think you've been charged the wrong" - [web](https://which.co.uk/consumer-rights/advice/how-to-complain-about-energy-price-rises)
+
 </details>
 
 ## United States - top 10 pain points
 
 | # | Pain point | Mentions | Weighted volume | % of relevant | Avg severity | Channel mix | Top themes |
 |---:|---|---:|---:|---:|---:|---|---|
-| 1 | **Sourcing scams & quality (Alibaba, 1688, dropship suppliers)** | 38 | 43.59 | 35.8% | 3.5 | discussion 31, search 6, review 1 | sourcing scams & quality (alibaba, 1688, dropship suppliers) (38) |
-| 2 | **Marketplace fees & account suspensions (Amazon, Etsy, Walmart, Faire)** | 26 | 33.09 | 24.5% | 1.8 | discussion 16, search 10 | marketplace fees & account suspensions (amazon, etsy, walmart, faire) (26) |
-| 3 | **Wholesale minimums & Net-30 terms** | 16 | 29.19 | 15.1% | 1 | search 16 | wholesale minimums & net-30 terms (16) |
-| 4 | **Inventory financing & cash flow** | 15 | 27.79 | 14.2% | 1 | search 15 | inventory financing & cash flow (15) |
-| 5 | **Tariffs & landed costs** | 16 | 16 | 15.1% | 3.4 | discussion 16 | tariffs & landed costs (16) |
-| 6 | **Shipping, 3PL & returns** | 5 | 5.9 | 4.7% | 2.2 | discussion 4, search 1 | shipping, 3pl & returns (5) |
-| 7 | **Purchase orders & supplier management** | 2 | 2 | 1.9% | 3 | discussion 2 | purchase orders & supplier management (2) |
-| 8 | **Bookkeeping, COGS & payout reconciliation** | 2 | 2 | 1.9% | 2 | discussion 2 | bookkeeping, cogs & payout reconciliation (2) |
-| 9 | **Inventory sync & forecasting across channels** | 1 | 1 | 0.9% | 2 | discussion 1 | inventory sync & forecasting across channels (1) |
-| 10 | **Payout holds & reserves (Stripe, PayPal, Shopify Payments)** | 1 | 1 | 0.9% | 2 | discussion 1 | payout holds & reserves (stripe, paypal, shopify payments) (1) |
+| 1 | **Sourcing scams & quality (Alibaba, 1688, dropship suppliers)** | 60 | 65.59 | 45.1% | 3.6 | discussion 31, review 23, search 6 | sourcing scams & quality (alibaba, 1688, dropship suppliers) (60) |
+| 2 | **Marketplace fees & account suspensions (Amazon, Etsy, Walmart, Faire)** | 27 | 34.09 | 20.3% | 1.9 | discussion 16, search 10, review 1 | marketplace fees & account suspensions (amazon, etsy, walmart, faire) (27) |
+| 3 | **Wholesale minimums & Net-30 terms** | 17 | 30.19 | 12.8% | 1.1 | search 16, review 1 | wholesale minimums & net-30 terms (17) |
+| 4 | **Inventory financing & cash flow** | 15 | 27.79 | 11.3% | 1 | search 15 | inventory financing & cash flow (15) |
+| 5 | **Tariffs & landed costs** | 19 | 19 | 14.3% | 3.5 | discussion 16, review 3 | tariffs & landed costs (19) |
+| 6 | **Shipping, 3PL & returns** | 7 | 7.9 | 5.3% | 2.7 | discussion 4, review 2, search 1 | shipping, 3pl & returns (7) |
+| 7 | **Purchase orders & supplier management** | 2 | 2 | 1.5% | 3 | discussion 2 | purchase orders & supplier management (2) |
+| 8 | **Bookkeeping, COGS & payout reconciliation** | 2 | 2 | 1.5% | 2 | discussion 2 | bookkeeping, cogs & payout reconciliation (2) |
+| 9 | **Inventory sync & forecasting across channels** | 1 | 1 | 0.8% | 2 | discussion 1 | inventory sync & forecasting across channels (1) |
+| 10 | **Payout holds & reserves (Stripe, PayPal, Shopify Payments)** | 1 | 1 | 0.8% | 2 | discussion 1 | payout holds & reserves (stripe, paypal, shopify payments) (1) |
 
 <details><summary>Voice of customer - example quotes</summary>
 
@@ -197,8 +202,8 @@ _Generated 2026-11-02 10:12 UTC_
 **3. Wholesale minimums & Net-30 terms**
 
 - "search: "net 30 vendors"" - [google_suggest](https://www.google.com/search?q=net%2030%20vendors&gl=us&hl=en)
+- "Faire \| BBB Complaints \| Better Business Bureau Faire \| BBB Complaints \| Better Business Bureau Faire's circular verification system is preventing a legitimate business from operating.I am requesting that Faire reinstate my retailer account" - [web](https://www.bbb.org/us/ca/san-francisco/profile/wholesale-general-merchandise/faire-wholesale-inc-1116-930351/complaints)
 - "search: "what is net 30 vendors"" - [google_suggest](https://www.google.com/search?q=what%20is%20net%2030%20vendors&gl=us&hl=en)
-- "search: "how to become a net 30 vendor"" - [google_suggest](https://www.google.com/search?q=how%20to%20become%20a%20net%2030%20vendor&gl=us&hl=en)
 
 **4. Inventory financing & cash flow**
 

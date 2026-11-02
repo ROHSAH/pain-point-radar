@@ -40,7 +40,13 @@
     "web_queries": [
       "supplier credit problem complaint",
       "udaan order problem complaint",
-      "indiamart supplier fraud complaint"
+      "indiamart supplier fraud complaint",
+      "udaan complaint site:consumercomplaints.in",
+      "udaan complaint site:mouthshut.com",
+      "udaan complaint site:voxya.com",
+      "indiamart supplier complaint site:consumercomplaints.in",
+      "indiamart supplier complaint site:mouthshut.com",
+      "indiamart supplier complaint site:voxya.com"
     ],
     "x_queries": [
       "(\"wholesale market\" OR \"udaan\" OR \"indiamart supplier\") (complaint OR problem OR worst OR scam) -is:retweet"
@@ -85,7 +91,13 @@
     "web_queries": [
       "supplier minimum order complaint",
       "ankorstore problems complaint",
-      "etsy fees increase complaint"
+      "etsy fees increase complaint",
+      "ankorstore complaint site:trustpilot.com",
+      "ankorstore complaint site:forums.moneysavingexpert.com",
+      "ankorstore complaint site:which.co.uk",
+      "faire wholesale complaint site:trustpilot.com",
+      "faire wholesale complaint site:forums.moneysavingexpert.com",
+      "faire wholesale complaint site:which.co.uk"
     ],
     "x_queries": [
       "(\"wholesale suppliers uk\" OR \"trade account\" OR \"ankorstore\") (complaint OR problem OR worst OR scam) -is:retweet"
@@ -130,7 +142,13 @@
     "web_queries": [
       "alibaba supplier scam complaint",
       "tariffs small business complaint",
-      "amazon fba fees complaint"
+      "amazon fba fees complaint",
+      "alibaba supplier complaint site:bbb.org",
+      "alibaba supplier complaint site:consumeraffairs.com",
+      "alibaba supplier complaint site:complaintsboard.com",
+      "faire wholesale complaint site:bbb.org",
+      "faire wholesale complaint site:consumeraffairs.com",
+      "faire wholesale complaint site:complaintsboard.com"
     ],
     "x_queries": [
       "(\"wholesale suppliers\" OR \"faire wholesale\" OR \"alibaba supplier\") (complaint OR problem OR worst OR scam) -is:retweet"

@@ -1,7 +1,7 @@
 # Snapshot: 2 Nov 2026, adds complaint sites and Reddit (via search)
 
 For **Small vendors & sellers** and **MSME & B2B lending**, this run adds Brave Search results
-(108 API calls) on top of the Google search data:
+(143 API calls) on top of the Google search data:
 
 - Complaint and review sites: consumercomplaints.in, MouthShut, Voxya (India); Trustpilot,
   MoneySavingExpert, Which?, Financial Ombudsman decisions (UK); BBB, ConsumerAffairs,
