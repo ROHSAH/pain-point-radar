@@ -1,11 +1,13 @@
-// Creates the starter topics in topics/ (skips any that already exist).
+// Creates the starter topics in topics/ and (re)writes every starter topic's taxonomy.json from
+// scripts/topic-taxonomies.js, where each topic has its own pain points and personas.
 //   node scripts/starter-topics.js
-// Each topic lists its own pain-point categories first (with keyword patterns for the no-key
-// classifier); the generic ones (price, support, refunds, app, trust...) are appended after them.
+// The `categories` in TOPICS below are superseded by topic-taxonomies.js.
 import fs from "node:fs";
 import path from "node:path";
-import { createTopic } from "../src/newTopic.js";
+import { createTopic, buildTaxonomy } from "../src/newTopic.js";
 import { TOPICS_DIR } from "../src/topic.js";
+import { writeJson } from "../src/util.js";
+import { TAXONOMIES } from "./topic-taxonomies.js";
 
 const cat = (id, name, description, ...keywords) => ({ id, name, description, keywords });
 const per = (id, name, description, ...keywords) => ({ id, name, description, keywords });
@@ -189,13 +191,18 @@ const TOPICS = [
 ];
 
 for (const t of TOPICS) {
-  if (fs.existsSync(path.join(TOPICS_DIR, t.id))) {
-    console.log(`skip ${t.id} (exists)`);
-    continue;
-  }
+  if (fs.existsSync(path.join(TOPICS_DIR, t.id))) continue;
   const regions = Object.fromEntries(
     Object.entries(t.regions).map(([rid, p]) => [rid, { ...p, web_queries: p.queries.slice(0, 3).map((q) => `${q} complaint`), x_queries: [`(${p.suggest_seeds.slice(0, 3).map((s) => `"${s}"`).join(" OR ")}) (complaint OR problem OR worst OR scam) -is:retweet`] }]),
   );
-  const dir = await createTopic({ id: t.id, label: t.label, description: t.description, useClaude: false, overrides: { context_keywords: t.context_keywords, subreddit_query: t.subreddit_query, categories: t.categories, personas: t.personas, regions } });
+  const tax = TAXONOMIES[t.id];
+  const dir = await createTopic({ id: t.id, label: t.label, description: t.description, useClaude: false, overrides: { context_keywords: t.context_keywords, subreddit_query: t.subreddit_query, categories: tax.categories, personas: tax.personas, regions } });
   console.log(`created ${dir}`);
+}
+
+for (const [id, tax] of Object.entries(TAXONOMIES)) {
+  const dir = path.join(TOPICS_DIR, id);
+  if (!fs.existsSync(dir)) continue;
+  writeJson(path.join(dir, "taxonomy.json"), buildTaxonomy(tax));
+  console.log(`taxonomy ${id}: ${tax.categories.length} pain points, ${tax.personas.length} personas`);
 }

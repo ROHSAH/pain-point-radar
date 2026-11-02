@@ -22,6 +22,8 @@
     "deductible",
     "copay"
   ],
-  "irrelevant_keywords": [],
+  "irrelevant_keywords": [
+    "insurance (agent job|course|exam)"
+  ],
   "subreddit_query": "insurance OR claim OR premium OR policy"
 }

@@ -1,116 +1,92 @@
 {
-  "_comment": "Topic-specific categories first, then generic ones. The keyword classifier uses the first matches.",
+  "_comment": "Topic-specific categories. Keyword patterns drive the no-key classifier (first 3 matches, in order).",
   "categories": [
     {
-      "id": "rejection_eligibility",
-      "name": "Loan rejected or hard to qualify",
-      "description": "Applications denied, unclear eligibility, slow approvals, too much paperwork.",
-      "keywords": [
-        "reject|denied|declined|eligib|approval|not approved|documents? required|qualify"
-      ]
-    },
-    {
-      "id": "interest_emi",
-      "name": "High interest, EMIs & charges",
-      "description": "High interest or APR, EMI burden, processing and prepayment fees, rate hikes.",
-      "keywords": [
-        "interest rate|\\bemi\\b|\\bapr\\b|processing fee|prepayment|foreclosure (charge|fee)|rate (hike|increase)|variable rate"
-      ]
-    },
-    {
       "id": "recovery_harassment",
-      "name": "Recovery harassment & debt collection",
-      "description": "Recovery agents, harassing calls, threats, debt collectors contacting family.",
+      "name": "Recovery agents & debt collection",
+      "description": "Harassing recovery agents and debt collectors, threats, calls to family and contacts.",
       "keywords": [
-        "recovery agent|harass|collection (agency|calls?)|threat|debt collector|calling my (family|contacts)"
-      ]
-    },
-    {
-      "id": "credit_score",
-      "name": "Credit score problems",
-      "description": "Low or wrong credit scores, report errors, hard to improve.",
-      "keywords": [
-        "cibil|credit score|credit report|experian|equifax|transunion|credit rating"
+        "recovery agent|harass|debt collect|collection (agency|agent|calls?)|threat|calling (my )?(family|contacts|relatives|office)|abus"
       ]
     },
     {
       "id": "loan_app_scams",
-      "name": "Loan app scams",
-      "description": "Fake instant-loan apps, illegal lenders, data misuse.",
+      "name": "Illegal loan apps & scams",
+      "description": "Fake instant-loan apps, illegal lenders, morphed photos, data misuse.",
       "keywords": [
-        "loan app|instant loan|fake loan|illegal (lender|loan)|loan scam"
+        "loan app|instant loan|fake loan|illegal (lender|loan)|loan scam|morphed|unregistered lender|predatory"
       ]
     },
     {
-      "id": "price_cost",
-      "name": "Price, fees & hidden charges",
-      "description": "Too expensive, price rises, surge pricing, hidden fees, not worth the money.",
+      "id": "loan_rejection",
+      "name": "Loan rejected or can't qualify",
+      "description": "Applications denied, unclear eligibility, income and paperwork hurdles.",
       "keywords": [
-        "\\b(price|prices|cost|costs|expensive|overpriced|fee|fees|charges?|surge|hidden|not worth|rip ?off)\\b"
+        "reject|denied|declined|not approved|eligib|qualify|turned down|approval"
       ]
     },
     {
-      "id": "quality_reliability",
-      "name": "Quality & reliability",
-      "description": "Product or service breaks, fails, is defective, inconsistent or does not work as promised.",
+      "id": "credit_score",
+      "name": "Credit score & report problems",
+      "description": "Low or wrong scores, report errors, scores dropping, hard to rebuild.",
       "keywords": [
-        "\\b(broken|not working|doesn'?t work|stopped working|fault|faulty|defect|failed|failure|keeps (crashing|failing)|poor quality|bad quality)\\b"
+        "cibil|credit score|credit report|experian|equifax|transunion|credit history|credit rating|score (drop|low)"
       ]
     },
     {
-      "id": "availability_access",
-      "name": "Availability & access",
-      "description": "Not available nearby, out of stock, no coverage, long distances, closed or full.",
+      "id": "interest_emi",
+      "name": "High interest, EMIs & rate hikes",
+      "description": "High interest/APR, EMI burden, floating-rate hikes, tenure extensions.",
       "keywords": [
-        "near me|where (to|can i)|\\b(not available|unavailable|out of stock|no (service|coverage|stations?|options?)|closed|full|sold out)\\b"
+        "interest rate|\\bemi\\b|\\bapr\\b|rate (hike|increase|rise)|variable rate|floating rate|repo rate|monthly payment|tenure"
       ]
     },
     {
-      "id": "speed_wait",
-      "name": "Delays & waiting",
-      "description": "Late delivery, long queues or wait times, slow service, missed appointments.",
+      "id": "hidden_fees",
+      "name": "Processing, prepayment & hidden fees",
+      "description": "Processing fees, foreclosure/prepayment penalties, forced insurance, late fees.",
       "keywords": [
-        "\\b(late|delay|delayed|waiting|wait time|queue|slow|took (hours|days|weeks)|never (arrived|came)|missed)\\b"
+        "processing fee|prepayment|foreclos|pre-?closure|hidden (charges|fees)|forced insurance|late fee|bounce charge|penalty"
       ]
     },
     {
-      "id": "customer_support",
-      "name": "Customer support",
-      "description": "Hard to reach support, complaints ignored, unhelpful agents, no accountability.",
+      "id": "bnpl",
+      "name": "Buy-now-pay-later traps",
+      "description": "BNPL late fees, overspending, collections, credit-score hits.",
       "keywords": [
-        "\\b(customer (service|care|support)|helpline|complain|complaint|no response|ignored|chatbot|contact number|phone number)\\b"
+        "\\bbnpl\\b|klarna|afterpay|affirm|clearpay|pay later|lazypay|simpl\\b|zip pay"
       ]
     },
     {
-      "id": "refunds_billing",
-      "name": "Refunds, billing & payments",
-      "description": "Refund refused or slow, double charges, payment failures, billing errors, cancellation trouble.",
+      "id": "student_loans",
+      "name": "Student loan repayment",
+      "description": "Servicer problems, repayment plans, forgiveness, interest growth.",
       "keywords": [
-        "\\b(refund|refunds|charged twice|double charged|overcharged|billing error|wrong bill|payment failed|cancel|cancellation|chargeback)\\b"
+        "student loan|education loan|\\bidr\\b|servicer|forgiveness|\\bslc\\b|repayment plan|mohela|nelnet|navient"
       ]
     },
     {
-      "id": "digital_experience",
-      "name": "App, website & digital",
-      "description": "App or website bugs, login problems, confusing UX, booking or tracking not working.",
+      "id": "mortgage_process",
+      "name": "Mortgage & home-loan process",
+      "description": "Slow sanction or disbursal, valuations, underwriting, closing delays.",
       "keywords": [
-        "\\b(app|website|login|log in|sign in|otp|update|tracking|booking|portal)\\b"
+        "(mortgage|home loan|housing loan).{0,25}(delay|process|approval|offer|application|documents|sanction|disburs|valuation|rejected|stuck)|underwriting|conveyancing|disburs|closing (costs|date)|escrow"
       ]
     },
     {
-      "id": "trust_safety",
-      "name": "Trust, scams & safety",
-      "description": "Fraud, scams, misleading claims, data or personal safety concerns.",
+      "id": "refinance_switching",
+      "name": "Refinancing & balance transfer",
+      "description": "Hard or costly to refinance, switch lenders or consolidate.",
       "keywords": [
-        "\\b(scam|fraud|fake|cheat|cheated|misleading|unsafe|danger|dangerous|safety|privacy|data leak)\\b"
+        "refinanc|balance transfer|switch (lender|bank)|top-?up loan|consolidat|rate switch"
       ]
     },
     {
-      "id": "information_rules",
-      "name": "How-to questions & confusing rules",
-      "description": "Unclear rules, eligibility, instructions or terms; people unsure how things work.",
+      "id": "debt_distress",
+      "name": "Debt stress & missed payments",
+      "description": "Can't keep up with payments, defaults, settlements, insolvency.",
       "keywords": [
-        "^(how (do|to|does|can)|can (i|you)|is it|what (is|are)|which)\\b|\\b(rules|eligib|terms|confus|explained)\\b"
+        "can'?t (pay|repay)|missed (payment|emi)|default|in debt|debt (trap|spiral|relief)|bankrupt|one time settlement|\\biva\\b|\\bccj\\b|written off"
       ]
     },
     {
@@ -122,51 +98,43 @@
   ],
   "personas": [
     {
+      "id": "salaried_borrower",
+      "name": "Salaried borrower",
+      "description": "Borrows against a regular salary.",
+      "keywords": [
+        "salary|salaried|my employer|payslip"
+      ]
+    },
+    {
+      "id": "self_employed",
+      "name": "Self-employed / freelancer",
+      "description": "Irregular income, harder to prove.",
+      "keywords": [
+        "self[- ]employed|freelanc|business owner|gig|contractor|1099"
+      ]
+    },
+    {
       "id": "student",
       "name": "Student borrower",
-      "description": "Student or education loan holder.",
+      "description": "Education or student loan.",
       "keywords": [
-        "student loan|education loan|college|university"
+        "student|education loan|college|university"
       ]
     },
     {
       "id": "first_home_buyer",
       "name": "First-time home buyer",
-      "description": "Buying their first home.",
+      "description": "Buying a first home.",
       "keywords": [
-        "first (home|house|time buyer)|ftb"
-      ]
-    },
-    {
-      "id": "first_time_user",
-      "name": "First-time / new user",
-      "description": "Trying the product or service for the first time; unfamiliar with how it works.",
-      "keywords": [
-        "\\b(first time|new to|beginner|just (bought|started|signed up))\\b"
-      ]
-    },
-    {
-      "id": "regular_user",
-      "name": "Regular user",
-      "description": "Uses it often and compares with past experience.",
-      "keywords": [
-        "\\b(every (day|week)|always use|regular|daily|for years)\\b"
-      ]
-    },
-    {
-      "id": "budget_conscious",
-      "name": "Budget-conscious customer",
-      "description": "Price-sensitive; talks mainly about cost and value.",
-      "keywords": [
-        "\\b(cheap|cheapest|budget|afford|save money|discount)\\b"
+        "first (home|house|time buyer|flat)|\\bftb\\b"
       ]
     },
     {
       "id": "small_business",
-      "name": "Small business / professional user",
-      "description": "Uses it for work or a business.",
+      "name": "Small business borrower",
+      "description": "Borrows for a business.",
       "keywords": [
-        "\\b(my (business|shop|store|restaurant|company|clients?)|for work|b2b|fleet)\\b"
+        "business loan|msme|working capital|my (shop|business)"
       ]
     },
     {

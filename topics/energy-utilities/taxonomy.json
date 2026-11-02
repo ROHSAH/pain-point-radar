@@ -1,108 +1,84 @@
 {
-  "_comment": "Topic-specific categories first, then generic ones. The keyword classifier uses the first matches.",
+  "_comment": "Topic-specific categories. Keyword patterns drive the no-key classifier (first 3 matches, in order).",
   "categories": [
     {
-      "id": "high_wrong_bills",
-      "name": "High or wrong bills",
-      "description": "Unexpectedly high, estimated or incorrect bills; tariff increases.",
-      "keywords": [
-        "\\bbill\\b|billing|overcharg|estimated|too high|tariff|unit rate|price cap|per unit"
-      ]
-    },
-    {
-      "id": "outages",
+      "id": "power_cuts",
       "name": "Power cuts & outages",
-      "description": "Frequent or long power cuts, blackouts, load shedding, slow restoration.",
+      "description": "Frequent or long cuts, blackouts, load shedding, voltage fluctuation, slow restoration.",
       "keywords": [
-        "power cut|outage|blackout|load shedding|no (electricity|power)|power (gone|went)"
+        "power cut|outage|blackout|load ?shedding|no (electricity|power|current)|power (gone|went|failure)|voltage|tripping|light (gone|nahi)"
       ]
     },
     {
-      "id": "smart_meter",
-      "name": "Smart & prepaid meter problems",
-      "description": "Smart meters not reading, prepaid meter top-ups, wrong readings.",
+      "id": "high_bills",
+      "name": "Bills too high or wrong",
+      "description": "Unexpectedly high, estimated or incorrect bills; bill shock.",
       "keywords": [
-        "smart meter|prepaid meter|meter reading|meter (fast|faulty|not working)"
+        "bill (too high|doubled|high|wrong|shock|increased)|high (bill|electricity bill)|overcharg|estimated (bill|reading)|bill(ing)? (error|mistake)|why is my .*bill"
       ]
     },
     {
-      "id": "solar_switching",
-      "name": "Solar & switching hassles",
-      "description": "Rooftop solar approvals, net metering, subsidies, switching supplier.",
+      "id": "smart_prepaid_meters",
+      "name": "Smart & prepaid meters",
+      "description": "Smart meters not communicating, prepaid top-ups, faulty or fast meters.",
       "keywords": [
-        "solar|net meter|switch(ing)? (supplier|provider)|subsid"
+        "smart meter|prepaid meter|meter reading|meter (fast|faulty|not working|running)|top ?up|in-?home display"
       ]
     },
     {
-      "id": "price_cost",
-      "name": "Price, fees & hidden charges",
-      "description": "Too expensive, price rises, surge pricing, hidden fees, not worth the money.",
+      "id": "tariff_price",
+      "name": "Tariff & unit-rate rises",
+      "description": "Unit-rate and standing-charge rises, price cap changes, slab rates.",
       "keywords": [
-        "\\b(price|prices|cost|costs|expensive|overpriced|fee|fees|charges?|surge|hidden|not worth|rip ?off)\\b"
+        "tariff|unit rate|per (unit|kwh)|price cap|price (rise|increase|hike)|standing charge|slab|rate per unit"
       ]
     },
     {
-      "id": "quality_reliability",
-      "name": "Quality & reliability",
-      "description": "Product or service breaks, fails, is defective, inconsistent or does not work as promised.",
+      "id": "solar_net_metering",
+      "name": "Solar & net metering",
+      "description": "Rooftop solar approvals, net-meter delays, export rates, subsidy hassles.",
       "keywords": [
-        "\\b(broken|not working|doesn'?t work|stopped working|fault|faulty|defect|failed|failure|keeps (crashing|failing)|poor quality|bad quality)\\b"
+        "solar|net meter|rooftop|feed-?in|export (rate|tariff)|surya ghar|subsid"
       ]
     },
     {
-      "id": "availability_access",
-      "name": "Availability & access",
-      "description": "Not available nearby, out of stock, no coverage, long distances, closed or full.",
+      "id": "new_connection",
+      "name": "New connections & load changes",
+      "description": "Slow new connections, load enhancement, name transfers.",
       "keywords": [
-        "near me|where (to|can i)|\\b(not available|unavailable|out of stock|no (service|coverage|stations?|options?)|closed|full|sold out)\\b"
+        "new connection|load (increase|extension|enhancement)|transfer (of )?(name|connection)|name change|connection (delay|pending)"
       ]
     },
     {
-      "id": "speed_wait",
-      "name": "Delays & waiting",
-      "description": "Late delivery, long queues or wait times, slow service, missed appointments.",
+      "id": "switching_supplier",
+      "name": "Switching supplier & contracts",
+      "description": "Switching problems, fixed deals, exit fees, supplier failures.",
       "keywords": [
-        "\\b(late|delay|delayed|waiting|wait time|queue|slow|took (hours|days|weeks)|never (arrived|came)|missed)\\b"
+        "switch(ing)? (supplier|provider|energy|to)|fixed (tariff|deal)|exit fee|contract|cheapest (energy|electricity)"
       ]
     },
     {
-      "id": "customer_support",
-      "name": "Customer support",
-      "description": "Hard to reach support, complaints ignored, unhelpful agents, no accountability.",
+      "id": "payments_disconnection",
+      "name": "Payments, arrears & disconnection",
+      "description": "Disconnection threats, arrears, direct-debit hikes, refunds of credit.",
       "keywords": [
-        "\\b(customer (service|care|support)|helpline|complain|complaint|no response|ignored|chatbot|contact number|phone number)\\b"
+        "disconnect|arrears|debt|direct debit|payment (failed|plan)|late payment|credit balance|refund"
       ]
     },
     {
-      "id": "refunds_billing",
-      "name": "Refunds, billing & payments",
-      "description": "Refund refused or slow, double charges, payment failures, billing errors, cancellation trouble.",
+      "id": "heating_gas",
+      "name": "Gas, heating & LPG costs",
+      "description": "Gas bills, heating costs, boiler and heat-pump running costs, LPG cylinders.",
       "keywords": [
-        "\\b(refund|refunds|charged twice|double charged|overcharged|billing error|wrong bill|payment failed|cancel|cancellation|chargeback)\\b"
+        "gas (bill|price|supply)|heating|boiler|heat pump|\\blpg\\b|cylinder"
       ]
     },
     {
-      "id": "digital_experience",
-      "name": "App, website & digital",
-      "description": "App or website bugs, login problems, confusing UX, booking or tracking not working.",
+      "id": "supplier_support",
+      "name": "Supplier & discom support",
+      "description": "Unreachable suppliers/discoms, ignored complaints, ombudsman.",
       "keywords": [
-        "\\b(app|website|login|log in|sign in|otp|update|tracking|booking|portal)\\b"
-      ]
-    },
-    {
-      "id": "trust_safety",
-      "name": "Trust, scams & safety",
-      "description": "Fraud, scams, misleading claims, data or personal safety concerns.",
-      "keywords": [
-        "\\b(scam|fraud|fake|cheat|cheated|misleading|unsafe|danger|dangerous|safety|privacy|data leak)\\b"
-      ]
-    },
-    {
-      "id": "information_rules",
-      "name": "How-to questions & confusing rules",
-      "description": "Unclear rules, eligibility, instructions or terms; people unsure how things work.",
-      "keywords": [
-        "^(how (do|to|does|can)|can (i|you)|is it|what (is|are)|which)\\b|\\b(rules|eligib|terms|confus|explained)\\b"
+        "customer (service|care|support)|complain|complaint|ombudsman|helpline|contact number|no response|call (center|centre)|toll free|\\b1912\\b|problems? today|not working|back ?billing|bill download"
       ]
     },
     {
@@ -114,35 +90,43 @@
   ],
   "personas": [
     {
-      "id": "first_time_user",
-      "name": "First-time / new user",
-      "description": "Trying the product or service for the first time; unfamiliar with how it works.",
+      "id": "homeowner",
+      "name": "Homeowner",
+      "description": "Owns their home; pays bills directly.",
       "keywords": [
-        "\\b(first time|new to|beginner|just (bought|started|signed up))\\b"
+        "my house|homeowner|our house|own home"
       ]
     },
     {
-      "id": "regular_user",
-      "name": "Regular user",
-      "description": "Uses it often and compares with past experience.",
+      "id": "renter",
+      "name": "Renter",
+      "description": "Rents; landlord controls meter or supplier.",
       "keywords": [
-        "\\b(every (day|week)|always use|regular|daily|for years)\\b"
+        "renting|tenant|landlord|rented flat"
       ]
     },
     {
-      "id": "budget_conscious",
-      "name": "Budget-conscious customer",
-      "description": "Price-sensitive; talks mainly about cost and value.",
+      "id": "solar_adopter",
+      "name": "Solar adopter",
+      "description": "Has or wants rooftop solar.",
       "keywords": [
-        "\\b(cheap|cheapest|budget|afford|save money|discount)\\b"
+        "solar|rooftop|net meter"
       ]
     },
     {
       "id": "small_business",
-      "name": "Small business / professional user",
-      "description": "Uses it for work or a business.",
+      "name": "Small business",
+      "description": "Pays commercial energy bills.",
       "keywords": [
-        "\\b(my (business|shop|store|restaurant|company|clients?)|for work|b2b|fleet)\\b"
+        "my (shop|business|restaurant|office)|commercial (connection|meter)"
+      ]
+    },
+    {
+      "id": "prepaid_low_income",
+      "name": "Prepaid / low-income household",
+      "description": "Pays as you go, sensitive to price rises.",
+      "keywords": [
+        "prepaid|pay as you go|can'?t afford|struggling to pay|benefits"
       ]
     },
     {

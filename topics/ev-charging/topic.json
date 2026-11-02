@@ -18,6 +18,10 @@
     "laadpaal",
     "borne"
   ],
-  "irrelevant_keywords": [],
+  "irrelevant_keywords": [
+    "phone charg",
+    "laptop charg",
+    "iphone charg"
+  ],
   "subreddit_query": "EV charging OR charger OR charging station OR supercharger"
 }

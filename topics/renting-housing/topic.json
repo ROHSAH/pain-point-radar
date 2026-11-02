@@ -22,6 +22,10 @@
     "mould|mold",
     "damp"
   ],
-  "irrelevant_keywords": [],
+  "irrelevant_keywords": [
+    "rent (a car|car|movie)",
+    "rental car",
+    "rent the runway"
+  ],
   "subreddit_query": "landlord OR rent OR tenant OR deposit OR lease"
 }

@@ -21,6 +21,9 @@
     "practo",
     "urgent care"
   ],
-  "irrelevant_keywords": [],
+  "irrelevant_keywords": [
+    "healthy (eating|recipes)",
+    "grey'?s anatomy"
+  ],
   "subreddit_query": "hospital OR doctor OR appointment OR \"medical bill\" OR NHS"
 }

@@ -34,9 +34,11 @@ open out/dashboard.html               # all topics, with a Topic dropdown
 | Everyday services | Mobile & internet (`telecom-internet`), Online shopping (`ecommerce`), Food delivery (`food-delivery`), Ride-hailing & taxis (`ride-hailing`) |
 | Life & home | Healthcare & hospitals (`healthcare`), Renting & housing (`renting-housing`), Air travel (`air-travel`) |
 
-Most were created by `scripts/starter-topics.js`. Each has industry-specific pain points first
-(e.g. lending: loan rejections, interest and EMI charges, recovery-agent harassment, credit score,
-loan-app scams), then generic ones (price, support, refunds, app, trust).
+Each topic has its **own** pain points and personas, written for that industry (see
+`scripts/topic-taxonomies.js`). For example, lending tracks recovery-agent harassment, illegal loan
+apps, credit-score problems, BNPL traps, EMI and rate hikes; energy tracks power cuts, smart and
+prepaid meters, net metering and discom support; ride-hailing tracks drivers demanding extra cash,
+cancellations and surge. `node scripts/starter-topics.js` rewrites the taxonomies from that file.
 
 Each topic is a folder in `topics/<id>/`:
 
@@ -55,10 +57,9 @@ node src/cli.js new-topic banking --label "Retail banking" \
 node src/cli.js run --topic banking
 ```
 
-With an Anthropic API key, Claude drafts the subreddits, queries, categories and personas for the
-new topic. Without one, you get a working template with categories that fit most industries (price,
-quality, availability, delays, support, refunds, app problems, trust/safety, confusing rules).
-Review the files before a big run.
+With an Anthropic API key, Claude drafts topic-specific subreddits, queries, pain points and personas.
+Without one, you get a placeholder template with generic categories; replace them with the
+industry's own before relying on the results.
 
 ## Sources
 

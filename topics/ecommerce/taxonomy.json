@@ -1,100 +1,84 @@
 {
-  "_comment": "Topic-specific categories first, then generic ones. The keyword classifier uses the first matches.",
+  "_comment": "Topic-specific categories. Keyword patterns drive the no-key classifier (first 3 matches, in order).",
   "categories": [
     {
-      "id": "returns_replacement",
-      "name": "Returns & replacements",
-      "description": "Return refused, pickup not arranged, replacement denied.",
+      "id": "not_delivered",
+      "name": "Not delivered or marked delivered",
+      "description": "Orders never arrive or show delivered but missing.",
       "keywords": [
-        "return|replacement|exchange|pickup (not|cancel)"
+        "not delivered|marked (as )?delivered|delivered but|never (arrived|received)|lost (parcel|package|order)|missing (package|parcel)"
       ]
     },
     {
-      "id": "fake_wrong_products",
-      "name": "Fake, wrong or damaged products",
-      "description": "Counterfeit items, wrong item or empty box delivered, damaged goods.",
+      "id": "fake_counterfeit",
+      "name": "Fake & counterfeit products",
+      "description": "Counterfeit or duplicate products from sellers.",
       "keywords": [
-        "fake|counterfeit|wrong (item|product)|damaged|used product|empty box|duplicate"
+        "fake|counterfeit|duplicate|replica|not original|authentic"
       ]
     },
     {
-      "id": "delivery_problems",
-      "name": "Delivery problems",
-      "description": "Not delivered, marked delivered but missing, lost parcels, late delivery.",
+      "id": "wrong_damaged",
+      "name": "Wrong, damaged or used items",
+      "description": "Wrong item/size, damaged goods, used items, empty boxes.",
       "keywords": [
-        "not delivered|delivered but|marked (as )?delivered|lost (parcel|package)|late delivery|tracking|never arrived"
+        "wrong (item|product|size|colou?r)|damaged|broken|used product|empty box|missing (item|part)"
       ]
     },
     {
-      "id": "price_cost",
-      "name": "Price, fees & hidden charges",
-      "description": "Too expensive, price rises, surge pricing, hidden fees, not worth the money.",
+      "id": "returns_refused",
+      "name": "Returns refused or difficult",
+      "description": "Return rejected, pickup not arranged, non-returnable items.",
       "keywords": [
-        "\\b(price|prices|cost|costs|expensive|overpriced|fee|fees|charges?|surge|hidden|not worth|rip ?off)\\b"
+        "return (rejected|refused|denied|window|policy|pickup|request)|can'?t return|non-?returnable|how to return"
       ]
     },
     {
-      "id": "quality_reliability",
-      "name": "Quality & reliability",
-      "description": "Product or service breaks, fails, is defective, inconsistent or does not work as promised.",
+      "id": "refunds",
+      "name": "Refunds slow or missing",
+      "description": "Refunds pending for weeks or never credited.",
       "keywords": [
-        "\\b(broken|not working|doesn'?t work|stopped working|fault|faulty|defect|failed|failure|keeps (crashing|failing)|poor quality|bad quality)\\b"
+        "refund"
       ]
     },
     {
-      "id": "availability_access",
-      "name": "Availability & access",
-      "description": "Not available nearby, out of stock, no coverage, long distances, closed or full.",
+      "id": "late_tracking",
+      "name": "Late delivery & tracking",
+      "description": "Delivery dates slip, tracking stuck, no updates.",
       "keywords": [
-        "near me|where (to|can i)|\\b(not available|unavailable|out of stock|no (service|coverage|stations?|options?)|closed|full|sold out)\\b"
+        "\\blate\\b|delay|tracking|where is my (order|parcel|package)|out for delivery|stuck in transit|expected delivery"
       ]
     },
     {
-      "id": "speed_wait",
-      "name": "Delays & waiting",
-      "description": "Late delivery, long queues or wait times, slow service, missed appointments.",
+      "id": "order_cancelled",
+      "name": "Orders cancelled by seller",
+      "description": "Orders auto-cancelled or cancelled after a price change.",
       "keywords": [
-        "\\b(late|delay|delayed|waiting|wait time|queue|slow|took (hours|days|weeks)|never (arrived|came)|missed)\\b"
+        "order cancel|cancelled (my )?order|seller cancel|auto cancel"
+      ]
+    },
+    {
+      "id": "seller_scams",
+      "name": "Seller & marketplace scams",
+      "description": "Fake sellers, fake reviews, third-party seller fraud.",
+      "keywords": [
+        "scam|fraud|fake seller|third party seller|seller (not responding|scam)|fake reviews"
+      ]
+    },
+    {
+      "id": "payment_cod",
+      "name": "Payment & cash-on-delivery problems",
+      "description": "Payment debited but order failed, COD refused, double charges.",
+      "keywords": [
+        "payment (failed|deducted|pending)|\\bcod\\b|cash on delivery|charged twice|gift card"
       ]
     },
     {
       "id": "customer_support",
       "name": "Customer support",
-      "description": "Hard to reach support, complaints ignored, unhelpful agents, no accountability.",
+      "description": "Bots, unhelpful agents, no escalation path.",
       "keywords": [
-        "\\b(customer (service|care|support)|helpline|complain|complaint|no response|ignored|chatbot|contact number|phone number)\\b"
-      ]
-    },
-    {
-      "id": "refunds_billing",
-      "name": "Refunds, billing & payments",
-      "description": "Refund refused or slow, double charges, payment failures, billing errors, cancellation trouble.",
-      "keywords": [
-        "\\b(refund|refunds|charged twice|double charged|overcharged|billing error|wrong bill|payment failed|cancel|cancellation|chargeback)\\b"
-      ]
-    },
-    {
-      "id": "digital_experience",
-      "name": "App, website & digital",
-      "description": "App or website bugs, login problems, confusing UX, booking or tracking not working.",
-      "keywords": [
-        "\\b(app|website|login|log in|sign in|otp|update|tracking|booking|portal)\\b"
-      ]
-    },
-    {
-      "id": "trust_safety",
-      "name": "Trust, scams & safety",
-      "description": "Fraud, scams, misleading claims, data or personal safety concerns.",
-      "keywords": [
-        "\\b(scam|fraud|fake|cheat|cheated|misleading|unsafe|danger|dangerous|safety|privacy|data leak)\\b"
-      ]
-    },
-    {
-      "id": "information_rules",
-      "name": "How-to questions & confusing rules",
-      "description": "Unclear rules, eligibility, instructions or terms; people unsure how things work.",
-      "keywords": [
-        "^(how (do|to|does|can)|can (i|you)|is it|what (is|are)|which)\\b|\\b(rules|eligib|terms|confus|explained)\\b"
+        "customer (care|service|support)|complain|complaint|chat (support|bot)|contact number|no response|escalat|\\bproblem\\b|\\bissue\\b|not working|account (locked|blocked|suspended)"
       ]
     },
     {
@@ -106,35 +90,35 @@
   ],
   "personas": [
     {
-      "id": "first_time_user",
-      "name": "First-time / new user",
-      "description": "Trying the product or service for the first time; unfamiliar with how it works.",
+      "id": "frequent_shopper",
+      "name": "Frequent shopper",
+      "description": "Orders often, Prime/Plus member.",
       "keywords": [
-        "\\b(first time|new to|beginner|just (bought|started|signed up))\\b"
+        "prime|plus member|order (every|regularly)|always order"
       ]
     },
     {
-      "id": "regular_user",
-      "name": "Regular user",
-      "description": "Uses it often and compares with past experience.",
+      "id": "budget_shopper",
+      "name": "Budget shopper",
+      "description": "Hunts deals, cheap marketplaces.",
       "keywords": [
-        "\\b(every (day|week)|always use|regular|daily|for years)\\b"
+        "cheap|sale|deal|discount|temu|meesho|shein"
       ]
     },
     {
-      "id": "budget_conscious",
-      "name": "Budget-conscious customer",
-      "description": "Price-sensitive; talks mainly about cost and value.",
+      "id": "seller",
+      "name": "Seller",
+      "description": "Sells on the marketplace.",
       "keywords": [
-        "\\b(cheap|cheapest|budget|afford|save money|discount)\\b"
+        "as a seller|my (listing|store|customers)|seller account|fba"
       ]
     },
     {
-      "id": "small_business",
-      "name": "Small business / professional user",
-      "description": "Uses it for work or a business.",
+      "id": "gift_buyer",
+      "name": "Gift buyer",
+      "description": "Buying for someone else; deadlines matter.",
       "keywords": [
-        "\\b(my (business|shop|store|restaurant|company|clients?)|for work|b2b|fleet)\\b"
+        "gift|birthday|for my (mom|dad|wife|husband)"
       ]
     },
     {

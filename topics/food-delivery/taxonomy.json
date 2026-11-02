@@ -1,76 +1,84 @@
 {
-  "_comment": "Generic categories - rename or add topic-specific ones.",
+  "_comment": "Topic-specific categories. Keyword patterns drive the no-key classifier (first 3 matches, in order).",
   "categories": [
     {
-      "id": "price_cost",
-      "name": "Price, fees & hidden charges",
-      "description": "Too expensive, price rises, surge pricing, hidden fees, not worth the money.",
+      "id": "missing_wrong_items",
+      "name": "Missing or wrong items",
+      "description": "Items missing, wrong order delivered, order never arrived.",
       "keywords": [
-        "\\b(price|prices|cost|costs|expensive|overpriced|fee|fees|charges?|surge|hidden|not worth|rip ?off)\\b"
+        "missing (item|items)|wrong (order|item|food)|incomplete|never (arrived|came)|didn'?t receive|not delivered"
       ]
     },
     {
-      "id": "quality_reliability",
-      "name": "Quality & reliability",
-      "description": "Product or service breaks, fails, is defective, inconsistent or does not work as promised.",
+      "id": "late_delivery",
+      "name": "Late deliveries",
+      "description": "Orders much later than promised, stuck orders.",
       "keywords": [
-        "\\b(broken|not working|doesn'?t work|stopped working|fault|faulty|defect|failed|failure|keeps (crashing|failing)|poor quality|bad quality)\\b"
+        "\\blate\\b|delay|taking (long|forever)|still not (here|delivered)|\\beta\\b|stuck|waiting"
       ]
     },
     {
-      "id": "availability_access",
-      "name": "Availability & access",
-      "description": "Not available nearby, out of stock, no coverage, long distances, closed or full.",
+      "id": "food_quality",
+      "name": "Cold, spilled or bad food",
+      "description": "Cold or spilled food, stale, wrong quantity, food safety.",
       "keywords": [
-        "near me|where (to|can i)|\\b(not available|unavailable|out of stock|no (service|coverage|stations?|options?)|closed|full|sold out)\\b"
+        "\\bcold\\b|spilled|stale|bad (food|quality)|undercooked|hair|insect|food poisoning|quantity|portion"
       ]
     },
     {
-      "id": "speed_wait",
-      "name": "Delays & waiting",
-      "description": "Late delivery, long queues or wait times, slow service, missed appointments.",
+      "id": "fees_markups",
+      "name": "Delivery fees, platform fees & markups",
+      "description": "Delivery, platform, packaging and small-order fees; menu prices above the restaurant.",
       "keywords": [
-        "\\b(late|delay|delayed|waiting|wait time|queue|slow|took (hours|days|weeks)|never (arrived|came)|missed)\\b"
+        "delivery (fee|charge)|platform fee|service fee|surge|packaging charge|small order fee|markup|price (higher|difference)|expensive"
       ]
     },
     {
-      "id": "customer_support",
-      "name": "Customer support",
-      "description": "Hard to reach support, complaints ignored, unhelpful agents, no accountability.",
+      "id": "refunds",
+      "name": "Refunds refused",
+      "description": "Refunds denied or only partial for bad orders.",
       "keywords": [
-        "\\b(customer (service|care|support)|helpline|complain|complaint|no response|ignored|chatbot|contact number|phone number)\\b"
+        "refund"
       ]
     },
     {
-      "id": "refunds_billing",
-      "name": "Refunds, billing & payments",
-      "description": "Refund refused or slow, double charges, payment failures, billing errors, cancellation trouble.",
+      "id": "cancellations",
+      "name": "Order cancellations",
+      "description": "Orders cancelled by restaurant or app, cancellation charges.",
       "keywords": [
-        "\\b(refund|refunds|charged twice|double charged|overcharged|billing error|wrong bill|payment failed|cancel|cancellation|chargeback)\\b"
+        "cancel"
       ]
     },
     {
-      "id": "digital_experience",
-      "name": "App, website & digital",
-      "description": "App or website bugs, login problems, confusing UX, booking or tracking not working.",
+      "id": "subscriptions_offers",
+      "name": "Memberships, coupons & offers",
+      "description": "Paid memberships not delivering value, coupons that don't apply.",
       "keywords": [
-        "\\b(app|website|login|log in|sign in|otp|update|tracking|booking|portal)\\b"
+        "zomato gold|swiggy one|dashpass|uber one|deliveroo plus|subscription|membership|coupon|promo code|\\boffer\\b"
       ]
     },
     {
-      "id": "trust_safety",
-      "name": "Trust, scams & safety",
-      "description": "Fraud, scams, misleading claims, data or personal safety concerns.",
+      "id": "rider_issues",
+      "name": "Rider behaviour",
+      "description": "Delivery partners being rude, asking for tips or cash, not finding the address.",
       "keywords": [
-        "\\b(scam|fraud|fake|cheat|cheated|misleading|unsafe|danger|dangerous|safety|privacy|data leak)\\b"
+        "\\brider\\b|delivery (boy|partner|driver|guy)|dasher|courier|rude|asked (for )?(cash|tip)"
       ]
     },
     {
-      "id": "information_rules",
-      "name": "How-to questions & confusing rules",
-      "description": "Unclear rules, eligibility, instructions or terms; people unsure how things work.",
+      "id": "support_bots",
+      "name": "Support & chatbots",
+      "description": "Chatbots that loop, no human agent, complaints ignored.",
       "keywords": [
-        "^(how (do|to|does|can)|can (i|you)|is it|what (is|are)|which)\\b|\\b(rules|eligib|terms|confus|explained)\\b"
+        "customer (care|service|support)|support|complain|complaint|\\bchat\\b|\\bbot\\b|contact number|helpline|escalat|\\bproblem\\b|\\bissue\\b|not working"
+      ]
+    },
+    {
+      "id": "account_bans",
+      "name": "Account bans & fraud flags",
+      "description": "Accounts blocked for too many refund requests.",
+      "keywords": [
+        "account (blocked|banned|suspended|deactivated)|\\bban(ned)?\\b|flagged"
       ]
     },
     {
@@ -82,35 +90,43 @@
   ],
   "personas": [
     {
-      "id": "first_time_user",
-      "name": "First-time / new user",
-      "description": "Trying the product or service for the first time; unfamiliar with how it works.",
+      "id": "regular_orderer",
+      "name": "Regular orderer",
+      "description": "Orders most days or weeks.",
       "keywords": [
-        "\\b(first time|new to|beginner|just (bought|started|signed up))\\b"
+        "order (every|daily|often)|regular|always order"
       ]
     },
     {
-      "id": "regular_user",
-      "name": "Regular user",
-      "description": "Uses it often and compares with past experience.",
+      "id": "student",
+      "name": "Student",
+      "description": "Price-sensitive, late-night orders.",
       "keywords": [
-        "\\b(every (day|week)|always use|regular|daily|for years)\\b"
+        "student|hostel|college|dorm"
       ]
     },
     {
-      "id": "budget_conscious",
-      "name": "Budget-conscious customer",
-      "description": "Price-sensitive; talks mainly about cost and value.",
+      "id": "family",
+      "name": "Family",
+      "description": "Orders for the household.",
       "keywords": [
-        "\\b(cheap|cheapest|budget|afford|save money|discount)\\b"
+        "for (my )?(family|kids|parents)"
       ]
     },
     {
-      "id": "small_business",
-      "name": "Small business / professional user",
-      "description": "Uses it for work or a business.",
+      "id": "restaurant_owner",
+      "name": "Restaurant owner",
+      "description": "Lists a restaurant on the apps.",
       "keywords": [
-        "\\b(my (business|shop|store|restaurant|company|clients?)|for work|b2b|fleet)\\b"
+        "my restaurant|restaurant owner|commission|cloud kitchen"
+      ]
+    },
+    {
+      "id": "delivery_rider",
+      "name": "Delivery rider",
+      "description": "Delivers for the platform.",
+      "keywords": [
+        "i('m| am) a (rider|dasher|delivery)|as a (rider|dasher|courier)|delivery partner earnings"
       ]
     },
     {

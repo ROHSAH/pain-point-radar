@@ -31,6 +31,11 @@
     "tariff",
     "load shedding"
   ],
-  "irrelevant_keywords": [],
+  "irrelevant_keywords": [
+    "power (rangers|bi|ranking|of attorney|point|bank)",
+    "energy drink",
+    "solar system (planets|model)",
+    "electric (guitar|toothbrush)"
+  ],
   "subreddit_query": "electricity OR \"power cut\" OR \"energy bill\" OR \"smart meter\" OR solar"
 }

@@ -1,263 +1,211 @@
 # Online shopping: customer pain points - India, Europe, US
 
-_Generated 2026-11-01 16:03 UTC_
+_Generated 2026-11-02 06:20 UTC_
 
 ## Coverage
 
 | Region | Documents classified | Relevant | Sources |
 |---|---:|---:|---|
-| All regions combined | 1527 | 1078 | google_suggest 1527 |
-| India | 487 | 387 | google_suggest 487 |
-| Europe (UK + EU) | 536 | 359 | google_suggest 536 |
-| United States | 504 | 332 | google_suggest 504 |
+| All regions combined | 1527 | 512 | google_suggest 1527 |
+| India | 487 | 238 | google_suggest 487 |
+| Europe (UK + EU) | 536 | 135 | google_suggest 536 |
+| United States | 504 | 139 | google_suggest 504 |
 
 ## All regions combined - top 10 pain points
 
 | # | Pain point | Mentions | Weighted volume | % of relevant | Avg severity | Channel mix | Top themes |
 |---:|---|---:|---:|---:|---:|---|---|
-| 1 | **How-to questions & confusing rules** | 436 | 775.02 | 40.4% | 1.1 | search 436 | how-to questions & confusing rules (436) |
-| 2 | **Customer support** | 186 | 328.76 | 17.3% | 1.3 | search 186 | customer support (186) |
-| 3 | **Price, fees & hidden charges** | 162 | 285.51 | 15.0% | 1.1 | search 162 | price, fees & hidden charges (162) |
-| 4 | **Returns & replacements** | 139 | 242.16 | 12.9% | 1 | search 139 | returns & replacements (139) |
-| 5 | **Availability & access** | 135 | 237.77 | 12.5% | 1.2 | search 135 | availability & access (135) |
-| 6 | **Refunds, billing & payments** | 122 | 216.99 | 11.3% | 2.8 | search 122 | refunds, billing & payments (122) |
-| 7 | **App, website & digital** | 53 | 94.44 | 4.9% | 1 | search 53 | app, website & digital (53) |
-| 8 | **Quality & reliability** | 47 | 84.26 | 4.4% | 1.1 | search 47 | quality & reliability (47) |
-| 9 | **Delivery problems** | 34 | 61.61 | 3.2% | 1.1 | search 34 | delivery problems (34) |
-| 10 | **Delays & waiting** | 14 | 24.85 | 1.3% | 1.9 | search 14 | delays & waiting (14) |
+| 1 | **Customer support** | 336 | 599.35 | 65.6% | 1.2 | search 336 | customer support (336) |
+| 2 | **Refunds slow or missing** | 113 | 198.77 | 22.1% | 3 | search 113 | refunds slow or missing (113) |
+| 3 | **Payment & cash-on-delivery problems** | 33 | 58.77 | 6.4% | 1.2 | search 33 | payment & cash-on-delivery problems (33) |
+| 4 | **Late delivery & tracking** | 28 | 50.41 | 5.5% | 1.4 | search 28 | late delivery & tracking (28) |
+| 5 | **Returns refused or difficult** | 23 | 38.49 | 4.5% | 1 | search 23 | returns refused or difficult (23) |
+| 6 | **Not delivered or marked delivered** | 19 | 34.37 | 3.7% | 1.1 | search 19 | not delivered or marked delivered (19) |
+| 7 | **Orders cancelled by seller** | 9 | 17.27 | 1.8% | 1.4 | search 9 | orders cancelled by seller (9) |
+| 8 | **Seller & marketplace scams** | 2 | 3.8 | 0.4% | 3 | search 2 | seller & marketplace scams (2) |
+| 9 | **Fake & counterfeit products** | 2 | 2.9 | 0.4% | 1 | search 2 | fake & counterfeit products (2) |
+| 10 | **Wrong, damaged or used items** | 1 | 1.78 | 0.2% | 1 | search 1 | wrong, damaged or used items (1) |
 
-## India - top 10 pain points
+## India - top 8 pain points
 
 | # | Pain point | Mentions | Weighted volume | % of relevant | Avg severity | Channel mix | Top themes |
 |---:|---|---:|---:|---:|---:|---|---|
-| 1 | **How-to questions & confusing rules** | 132 | 236.12 | 34.1% | 1.3 | search 132 | how-to questions & confusing rules (132) |
-| 2 | **Refunds, billing & payments** | 108 | 192.06 | 27.9% | 2.9 | search 108 | refunds, billing & payments (108) |
-| 3 | **Returns & replacements** | 82 | 144.16 | 21.2% | 1.1 | search 82 | returns & replacements (82) |
-| 4 | **Customer support** | 66 | 118.48 | 17.1% | 1.7 | search 66 | customer support (66) |
-| 5 | **Price, fees & hidden charges** | 46 | 81.83 | 11.9% | 1.5 | search 46 | price, fees & hidden charges (46) |
-| 6 | **Availability & access** | 43 | 75.78 | 11.1% | 1.4 | search 43 | availability & access (43) |
-| 7 | **Quality & reliability** | 21 | 37.22 | 5.4% | 1.2 | search 21 | quality & reliability (21) |
-| 8 | **Delivery problems** | 15 | 26.8 | 3.9% | 1.3 | search 15 | delivery problems (15) |
-| 9 | **App, website & digital** | 15 | 25.69 | 3.9% | 1 | search 15 | app, website & digital (15) |
-| 10 | **Delays & waiting** | 9 | 15.78 | 2.3% | 2.3 | search 9 | delays & waiting (9) |
+| 1 | **Customer support** | 118 | 212.71 | 49.6% | 1.5 | search 118 | customer support (118) |
+| 2 | **Refunds slow or missing** | 103 | 182.75 | 43.3% | 3 | search 103 | refunds slow or missing (103) |
+| 3 | **Returns refused or difficult** | 22 | 37.01 | 9.2% | 1 | search 22 | returns refused or difficult (22) |
+| 4 | **Late delivery & tracking** | 16 | 28.93 | 6.7% | 1.6 | search 16 | late delivery & tracking (16) |
+| 5 | **Payment & cash-on-delivery problems** | 15 | 26.2 | 6.3% | 1.4 | search 15 | payment & cash-on-delivery problems (15) |
+| 6 | **Orders cancelled by seller** | 6 | 11.19 | 2.5% | 1.7 | search 6 | orders cancelled by seller (6) |
+| 7 | **Not delivered or marked delivered** | 6 | 10.39 | 2.5% | 1.3 | search 6 | not delivered or marked delivered (6) |
+| 8 | **Wrong, damaged or used items** | 1 | 1.78 | 0.4% | 1 | search 1 | wrong, damaged or used items (1) |
 
 <details><summary>Voice of customer - example quotes</summary>
 
-**1. How-to questions & confusing rules**
-
-- "search: "how to amazon order cancel"" - [google_suggest](https://www.google.com/search?q=how%20to%20amazon%20order%20cancel&gl=in&hl=en)
-- "search: "can i amazon order to a hotel"" - [google_suggest](https://www.google.com/search?q=can%20i%20amazon%20order%20to%20a%20hotel&gl=in&hl=en)
-- "search: "amazon pre order rules"" - [google_suggest](https://www.google.com/search?q=amazon%20pre%20order%20rules&gl=in&hl=en)
-
-**2. Refunds, billing & payments**
-
-- "search: "how to amazon order cancel"" - [google_suggest](https://www.google.com/search?q=how%20to%20amazon%20order%20cancel&gl=in&hl=en)
-- "search: "how to flipkart order cancel"" - [google_suggest](https://www.google.com/search?q=how%20to%20flipkart%20order%20cancel&gl=in&hl=en)
-- "search: "amazon refund customer care number"" - [google_suggest](https://www.google.com/search?q=amazon%20refund%20customer%20care%20number&gl=in&hl=en)
-
-**3. Returns & replacements**
-
-- "search: "myntra return policy"" - [google_suggest](https://www.google.com/search?q=myntra%20return%20policy&gl=in&hl=en)
-- "search: "why myntra return is not working"" - [google_suggest](https://www.google.com/search?q=why%20myntra%20return%20is%20not%20working&gl=in&hl=en)
-- "search: "how to return myntra product"" - [google_suggest](https://www.google.com/search?q=how%20to%20return%20myntra%20product&gl=in&hl=en)
-
-**4. Customer support**
+**1. Customer support**
 
 - "search: "amazon order problem phone number"" - [google_suggest](https://www.google.com/search?q=amazon%20order%20problem%20phone%20number&gl=in&hl=en)
 - "search: "amazon order complaint number"" - [google_suggest](https://www.google.com/search?q=amazon%20order%20complaint%20number&gl=in&hl=en)
-- "search: "can i call flipkart customer care"" - [google_suggest](https://www.google.com/search?q=can%20i%20call%20flipkart%20customer%20care&gl=in&hl=en)
-
-**5. Price, fees & hidden charges**
-
-- "search: "amazon order cost"" - [google_suggest](https://www.google.com/search?q=amazon%20order%20cost&gl=in&hl=en)
-- "search: "flipkart cost calculator"" - [google_suggest](https://www.google.com/search?q=flipkart%20cost%20calculator&gl=in&hl=en)
-- "search: "meesho cost calculator"" - [google_suggest](https://www.google.com/search?q=meesho%20cost%20calculator&gl=in&hl=en)
-
-**6. Availability & access**
-
-- "search: "where to order amazon fresh"" - [google_suggest](https://www.google.com/search?q=where%20to%20order%20amazon%20fresh&gl=in&hl=en)
-- "search: "where to find flipkart wallet"" - [google_suggest](https://www.google.com/search?q=where%20to%20find%20flipkart%20wallet&gl=in&hl=en)
-- "search: "where to buy meesho packing material"" - [google_suggest](https://www.google.com/search?q=where%20to%20buy%20meesho%20packing%20material&gl=in&hl=en)
-
-**7. Quality & reliability**
-
 - "search: "why flipkart is not working"" - [google_suggest](https://www.google.com/search?q=why%20flipkart%20is%20not%20working&gl=in&hl=en)
-- "search: "meesho not working"" - [google_suggest](https://www.google.com/search?q=meesho%20not%20working&gl=in&hl=en)
-- "search: "why myntra return is not working"" - [google_suggest](https://www.google.com/search?q=why%20myntra%20return%20is%20not%20working&gl=in&hl=en)
 
-**8. Delivery problems**
+**2. Refunds slow or missing**
+
+- "search: "amazon refund customer care number"" - [google_suggest](https://www.google.com/search?q=amazon%20refund%20customer%20care%20number&gl=in&hl=en)
+- "search: "why amazon refund take so long"" - [google_suggest](https://www.google.com/search?q=why%20amazon%20refund%20take%20so%20long&gl=in&hl=en)
+- "search: "how to amazon refund money"" - [google_suggest](https://www.google.com/search?q=how%20to%20amazon%20refund%20money&gl=in&hl=en)
+
+**3. Returns refused or difficult**
+
+- "search: "myntra return policy"" - [google_suggest](https://www.google.com/search?q=myntra%20return%20policy&gl=in&hl=en)
+- "search: "how to return myntra product"" - [google_suggest](https://www.google.com/search?q=how%20to%20return%20myntra%20product&gl=in&hl=en)
+- "search: "how to return myntra order after delivery"" - [google_suggest](https://www.google.com/search?q=how%20to%20return%20myntra%20order%20after%20delivery&gl=in&hl=en)
+
+**4. Late delivery & tracking**
 
 - "search: "amazon order tracking"" - [google_suggest](https://www.google.com/search?q=amazon%20order%20tracking&gl=in&hl=en)
-- "search: "amazon order not delivered"" - [google_suggest](https://www.google.com/search?q=amazon%20order%20not%20delivered&gl=in&hl=en)
-- "search: "how to amazon order tracking"" - [google_suggest](https://www.google.com/search?q=how%20to%20amazon%20order%20tracking&gl=in&hl=en)
-
-**9. App, website & digital**
-
-- "search: "amazon order tracking"" - [google_suggest](https://www.google.com/search?q=amazon%20order%20tracking&gl=in&hl=en)
-- "search: "how to amazon order tracking"" - [google_suggest](https://www.google.com/search?q=how%20to%20amazon%20order%20tracking&gl=in&hl=en)
-- "search: "meesho app"" - [google_suggest](https://www.google.com/search?q=meesho%20app&gl=in&hl=en)
-
-**10. Delays & waiting**
-
 - "search: "why amazon orders are delayed"" - [google_suggest](https://www.google.com/search?q=why%20amazon%20orders%20are%20delayed&gl=in&hl=en)
-- "search: "why amazon refund is delayed"" - [google_suggest](https://www.google.com/search?q=why%20amazon%20refund%20is%20delayed&gl=in&hl=en)
-- "search: "amazon refund policy for late delivery"" - [google_suggest](https://www.google.com/search?q=amazon%20refund%20policy%20for%20late%20delivery&gl=in&hl=en)
+- "search: "how to amazon order tracking"" - [google_suggest](https://www.google.com/search?q=how%20to%20amazon%20order%20tracking&gl=in&hl=en)
+
+**5. Payment & cash-on-delivery problems**
+
+- "search: "where to buy flipkart gift card"" - [google_suggest](https://www.google.com/search?q=where%20to%20buy%20flipkart%20gift%20card&gl=in&hl=en)
+- "search: "can i refund amazon gift card"" - [google_suggest](https://www.google.com/search?q=can%20i%20refund%20amazon%20gift%20card&gl=in&hl=en)
+- "search: "where to order amazon gift card"" - [google_suggest](https://www.google.com/search?q=where%20to%20order%20amazon%20gift%20card&gl=in&hl=en)
+
+**6. Orders cancelled by seller**
+
+- "search: "how to amazon order cancel"" - [google_suggest](https://www.google.com/search?q=how%20to%20amazon%20order%20cancel&gl=in&hl=en)
+- "search: "how to flipkart order cancel"" - [google_suggest](https://www.google.com/search?q=how%20to%20flipkart%20order%20cancel&gl=in&hl=en)
+- "search: "why amazon order cancelled"" - [google_suggest](https://www.google.com/search?q=why%20amazon%20order%20cancelled&gl=in&hl=en)
+
+**7. Not delivered or marked delivered**
+
+- "search: "amazon order not delivered"" - [google_suggest](https://www.google.com/search?q=amazon%20order%20not%20delivered&gl=in&hl=en)
+- "search: "amazon order not delivered but showing delivered"" - [google_suggest](https://www.google.com/search?q=amazon%20order%20not%20delivered%20but%20showing%20delivered&gl=in&hl=en)
+- "search: "amazon order not delivered customer service"" - [google_suggest](https://www.google.com/search?q=amazon%20order%20not%20delivered%20customer%20service&gl=in&hl=en)
+
+**8. Wrong, damaged or used items**
+
+- "search: "how to return myntra product if seal is broken"" - [google_suggest](https://www.google.com/search?q=how%20to%20return%20myntra%20product%20if%20seal%20is%20broken&gl=in&hl=en)
 
 </details>
 
-## Europe (UK + EU) - top 10 pain points
+## Europe (UK + EU) - top 8 pain points
 
 | # | Pain point | Mentions | Weighted volume | % of relevant | Avg severity | Channel mix | Top themes |
 |---:|---|---:|---:|---:|---:|---|---|
-| 1 | **How-to questions & confusing rules** | 162 | 287.65 | 45.1% | 1 | search 162 | how-to questions & confusing rules (162) |
-| 2 | **Price, fees & hidden charges** | 60 | 105.62 | 16.7% | 1 | search 60 | price, fees & hidden charges (60) |
-| 3 | **Customer support** | 59 | 103.13 | 16.4% | 1 | search 59 | customer support (59) |
-| 4 | **Availability & access** | 46 | 81.43 | 12.8% | 1 | search 46 | availability & access (46) |
-| 5 | **Returns & replacements** | 30 | 51.5 | 8.4% | 1 | search 30 | returns & replacements (30) |
-| 6 | **App, website & digital** | 23 | 40.42 | 6.4% | 1 | search 23 | app, website & digital (23) |
-| 7 | **Quality & reliability** | 17 | 30.4 | 4.7% | 1 | search 17 | quality & reliability (17) |
-| 8 | **Delivery problems** | 10 | 17.41 | 2.8% | 1 | search 10 | delivery problems (10) |
-| 9 | **Refunds, billing & payments** | 6 | 10.9 | 1.7% | 1.7 | search 6 | refunds, billing & payments (6) |
-| 10 | **Trust, scams & safety** | 1 | 1.95 | 0.3% | 3 | search 1 | trust, scams & safety (1) |
+| 1 | **Customer support** | 112 | 198.85 | 83.0% | 1 | search 112 | customer support (112) |
+| 2 | **Payment & cash-on-delivery problems** | 9 | 16.74 | 6.7% | 1 | search 9 | payment & cash-on-delivery problems (9) |
+| 3 | **Not delivered or marked delivered** | 8 | 14.09 | 5.9% | 1 | search 8 | not delivered or marked delivered (8) |
+| 4 | **Refunds slow or missing** | 4 | 6.78 | 3.0% | 3 | search 4 | refunds slow or missing (4) |
+| 5 | **Late delivery & tracking** | 4 | 6.28 | 3.0% | 1 | search 4 | late delivery & tracking (4) |
+| 6 | **Seller & marketplace scams** | 1 | 1.95 | 0.7% | 3 | search 1 | seller & marketplace scams (1) |
+| 7 | **Returns refused or difficult** | 1 | 1.48 | 0.7% | 1 | search 1 | returns refused or difficult (1) |
+| 8 | **Fake & counterfeit products** | 1 | 1.3 | 0.7% | 1 | search 1 | fake & counterfeit products (1) |
 
 <details><summary>Voice of customer - example quotes</summary>
 
-**1. How-to questions & confusing rules**
+**1. Customer support**
 
-- "search: "how to amazon uk"" - [google_suggest](https://www.google.com/search?q=how%20to%20amazon%20uk&gl=gb&hl=en)
-- "search: "can i use amazon uk gift card in ireland"" - [google_suggest](https://www.google.com/search?q=can%20i%20use%20amazon%20uk%20gift%20card%20in%20ireland&gl=gb&hl=en)
-- "search: "is it worth selling on amazon uk"" - [google_suggest](https://www.google.com/search?q=is%20it%20worth%20selling%20on%20amazon%20uk&gl=gb&hl=en)
-
-**2. Price, fees & hidden charges**
-
-- "search: "amazon uk cost"" - [google_suggest](https://www.google.com/search?q=amazon%20uk%20cost&gl=gb&hl=en)
-- "search: "why ebay shipping so expensive"" - [google_suggest](https://www.google.com/search?q=why%20ebay%20shipping%20so%20expensive&gl=gb&hl=en)
-- "search: "ebay cost calculator"" - [google_suggest](https://www.google.com/search?q=ebay%20cost%20calculator&gl=gb&hl=en)
-
-**3. Customer support**
-
+- "search: "amazon uk problem with order"" - [google_suggest](https://www.google.com/search?q=amazon%20uk%20problem%20with%20order&gl=gb&hl=en)
 - "search: "amazon uk complaint email address"" - [google_suggest](https://www.google.com/search?q=amazon%20uk%20complaint%20email%20address&gl=gb&hl=en)
-- "search: "ebay complaint department"" - [google_suggest](https://www.google.com/search?q=ebay%20complaint%20department&gl=gb&hl=en)
-- "search: "temu complaint department"" - [google_suggest](https://www.google.com/search?q=temu%20complaint%20department&gl=gb&hl=en)
+- "search: "ebay problem with order"" - [google_suggest](https://www.google.com/search?q=ebay%20problem%20with%20order&gl=gb&hl=en)
 
-**4. Availability & access**
+**2. Payment & cash-on-delivery problems**
 
 - "search: "where to buy amazon uk gift card"" - [google_suggest](https://www.google.com/search?q=where%20to%20buy%20amazon%20uk%20gift%20card&gl=gb&hl=en)
+- "search: "can i use amazon uk gift card in ireland"" - [google_suggest](https://www.google.com/search?q=can%20i%20use%20amazon%20uk%20gift%20card%20in%20ireland&gl=gb&hl=en)
 - "search: "where to ebay gift cards"" - [google_suggest](https://www.google.com/search?q=where%20to%20ebay%20gift%20cards&gl=gb&hl=en)
-- "search: "where to temu products come from"" - [google_suggest](https://www.google.com/search?q=where%20to%20temu%20products%20come%20from&gl=gb&hl=en)
 
-**5. Returns & replacements**
-
-- "search: "how to shein return"" - [google_suggest](https://www.google.com/search?q=how%20to%20shein%20return&gl=gb&hl=en)
-- "search: "where to shein returns"" - [google_suggest](https://www.google.com/search?q=where%20to%20shein%20returns&gl=gb&hl=en)
-- "search: "where to return temu items near me"" - [google_suggest](https://www.google.com/search?q=where%20to%20return%20temu%20items%20near%20me&gl=gb&hl=en)
-
-**6. App, website & digital**
-
-- "search: "amazon uk not app"" - [google_suggest](https://www.google.com/search?q=amazon%20uk%20not%20app&gl=gb&hl=en)
-- "search: "temu not app"" - [google_suggest](https://www.google.com/search?q=temu%20not%20app&gl=gb&hl=en)
-- "search: "amazon uk login"" - [google_suggest](https://www.google.com/search?q=amazon%20uk%20login&gl=gb&hl=en)
-
-**7. Quality & reliability**
-
-- "search: "ebay not working"" - [google_suggest](https://www.google.com/search?q=ebay%20not%20working&gl=gb&hl=en)
-- "search: "shein not working"" - [google_suggest](https://www.google.com/search?q=shein%20not%20working&gl=gb&hl=en)
-- "search: "amazon uk not working"" - [google_suggest](https://www.google.com/search?q=amazon%20uk%20not%20working&gl=gb&hl=en)
-
-**8. Delivery problems**
+**3. Not delivered or marked delivered**
 
 - "search: "royal mail parcel not delivered"" - [google_suggest](https://www.google.com/search?q=royal%20mail%20parcel%20not%20delivered&gl=gb&hl=en)
 - "search: "royal mail parcel not delivered contact number"" - [google_suggest](https://www.google.com/search?q=royal%20mail%20parcel%20not%20delivered%20contact%20number&gl=gb&hl=en)
 - "search: "amazon uk not delivered"" - [google_suggest](https://www.google.com/search?q=amazon%20uk%20not%20delivered&gl=gb&hl=en)
 
-**9. Refunds, billing & payments**
+**4. Refunds slow or missing**
 
-- "search: "can i cancel ebay order"" - [google_suggest](https://www.google.com/search?q=can%20i%20cancel%20ebay%20order&gl=gb&hl=en)
-- "search: "can i cancel temu order"" - [google_suggest](https://www.google.com/search?q=can%20i%20cancel%20temu%20order&gl=gb&hl=en)
-- "search: "can i cancel ebay offer"" - [google_suggest](https://www.google.com/search?q=can%20i%20cancel%20ebay%20offer&gl=gb&hl=en)
+- "search: "shein not refunding full amount"" - [google_suggest](https://www.google.com/search?q=shein%20not%20refunding%20full%20amount&gl=gb&hl=en)
+- "search: "ebay rules on refunds"" - [google_suggest](https://www.google.com/search?q=ebay%20rules%20on%20refunds&gl=gb&hl=en)
+- "search: "shein refund rules"" - [google_suggest](https://www.google.com/search?q=shein%20refund%20rules&gl=gb&hl=en)
 
-**10. Trust, scams & safety**
+**5. Late delivery & tracking**
+
+- "search: "royal mail parcel tracking"" - [google_suggest](https://www.google.com/search?q=royal%20mail%20parcel%20tracking&gl=gb&hl=en)
+- "search: "royal mail parcel tracking problems"" - [google_suggest](https://www.google.com/search?q=royal%20mail%20parcel%20tracking%20problems&gl=gb&hl=en)
+- "search: "why is royal mail parcel late"" - [google_suggest](https://www.google.com/search?q=why%20is%20royal%20mail%20parcel%20late&gl=gb&hl=en)
+
+**6. Seller & marketplace scams**
 
 - "search: "is royal mail parcel a scam"" - [google_suggest](https://www.google.com/search?q=is%20royal%20mail%20parcel%20a%20scam&gl=gb&hl=en)
 
+**7. Returns refused or difficult**
+
+- "search: "how to return royal mail parcel"" - [google_suggest](https://www.google.com/search?q=how%20to%20return%20royal%20mail%20parcel&gl=gb&hl=en)
+
+**8. Fake & counterfeit products**
+
+- "search: "how to ebay authenticity guarantee"" - [google_suggest](https://www.google.com/search?q=how%20to%20ebay%20authenticity%20guarantee&gl=gb&hl=en)
+
 </details>
 
-## United States - top 10 pain points
+## United States - top 8 pain points
 
 | # | Pain point | Mentions | Weighted volume | % of relevant | Avg severity | Channel mix | Top themes |
 |---:|---|---:|---:|---:|---:|---|---|
-| 1 | **How-to questions & confusing rules** | 142 | 251.26 | 42.8% | 1 | search 142 | how-to questions & confusing rules (142) |
-| 2 | **Customer support** | 61 | 107.15 | 18.4% | 1 | search 61 | customer support (61) |
-| 3 | **Price, fees & hidden charges** | 56 | 98.05 | 16.9% | 1 | search 56 | price, fees & hidden charges (56) |
-| 4 | **Availability & access** | 46 | 80.56 | 13.9% | 1.1 | search 46 | availability & access (46) |
-| 5 | **Returns & replacements** | 27 | 46.51 | 8.1% | 1 | search 27 | returns & replacements (27) |
-| 6 | **App, website & digital** | 15 | 28.33 | 4.5% | 1 | search 15 | app, website & digital (15) |
-| 7 | **Delivery problems** | 9 | 17.39 | 2.7% | 1 | search 9 | delivery problems (9) |
-| 8 | **Quality & reliability** | 9 | 16.64 | 2.7% | 1 | search 9 | quality & reliability (9) |
-| 9 | **Refunds, billing & payments** | 8 | 14.02 | 2.4% | 1.5 | search 8 | refunds, billing & payments (8) |
-| 10 | **Delays & waiting** | 4 | 7.6 | 1.2% | 1 | search 4 | delays & waiting (4) |
+| 1 | **Customer support** | 106 | 187.79 | 76.3% | 1 | search 106 | customer support (106) |
+| 2 | **Payment & cash-on-delivery problems** | 9 | 15.84 | 6.5% | 1 | search 9 | payment & cash-on-delivery problems (9) |
+| 3 | **Late delivery & tracking** | 8 | 15.2 | 5.8% | 1 | search 8 | late delivery & tracking (8) |
+| 4 | **Not delivered or marked delivered** | 5 | 9.89 | 3.6% | 1 | search 5 | not delivered or marked delivered (5) |
+| 5 | **Refunds slow or missing** | 6 | 9.24 | 4.3% | 3 | search 6 | refunds slow or missing (6) |
+| 6 | **Orders cancelled by seller** | 3 | 6.08 | 2.2% | 1 | search 3 | orders cancelled by seller (3) |
+| 7 | **Seller & marketplace scams** | 1 | 1.85 | 0.7% | 3 | search 1 | seller & marketplace scams (1) |
+| 8 | **Fake & counterfeit products** | 1 | 1.6 | 0.7% | 1 | search 1 | fake & counterfeit products (1) |
 
 <details><summary>Voice of customer - example quotes</summary>
 
-**1. How-to questions & confusing rules**
-
-- "search: "how to amazon order cancel"" - [google_suggest](https://www.google.com/search?q=how%20to%20amazon%20order%20cancel&gl=us&hl=en)
-- "search: "can i amazon order to a hotel"" - [google_suggest](https://www.google.com/search?q=can%20i%20amazon%20order%20to%20a%20hotel&gl=us&hl=en)
-- "search: "amazon pre order rules"" - [google_suggest](https://www.google.com/search?q=amazon%20pre%20order%20rules&gl=us&hl=en)
-
-**2. Customer support**
+**1. Customer support**
 
 - "search: "amazon order problem phone number"" - [google_suggest](https://www.google.com/search?q=amazon%20order%20problem%20phone%20number&gl=us&hl=en)
 - "search: "amazon order complaint number"" - [google_suggest](https://www.google.com/search?q=amazon%20order%20complaint%20number&gl=us&hl=en)
 - "search: "walmart order problem phone number"" - [google_suggest](https://www.google.com/search?q=walmart%20order%20problem%20phone%20number&gl=us&hl=en)
 
-**3. Price, fees & hidden charges**
+**2. Payment & cash-on-delivery problems**
 
-- "search: "amazon order cost"" - [google_suggest](https://www.google.com/search?q=amazon%20order%20cost&gl=us&hl=en)
-- "search: "walmart order cost"" - [google_suggest](https://www.google.com/search?q=walmart%20order%20cost&gl=us&hl=en)
-- "search: "temu cost"" - [google_suggest](https://www.google.com/search?q=temu%20cost&gl=us&hl=en)
+- "search: "where to ebay gift cards"" - [google_suggest](https://www.google.com/search?q=where%20to%20ebay%20gift%20cards&gl=us&hl=en)
+- "search: "where to order amazon gift card"" - [google_suggest](https://www.google.com/search?q=where%20to%20order%20amazon%20gift%20card&gl=us&hl=en)
+- "search: "where to buy ebay gift cards"" - [google_suggest](https://www.google.com/search?q=where%20to%20buy%20ebay%20gift%20cards&gl=us&hl=en)
 
-**4. Availability & access**
+**3. Late delivery & tracking**
 
-- "search: "where to order amazon fresh"" - [google_suggest](https://www.google.com/search?q=where%20to%20order%20amazon%20fresh&gl=us&hl=en)
-- "search: "where to order walmart"" - [google_suggest](https://www.google.com/search?q=where%20to%20order%20walmart&gl=us&hl=en)
-- "search: "where to temu products come from"" - [google_suggest](https://www.google.com/search?q=where%20to%20temu%20products%20come%20from&gl=us&hl=en)
-
-**5. Returns & replacements**
-
-- "search: "where to shein returns"" - [google_suggest](https://www.google.com/search?q=where%20to%20shein%20returns&gl=us&hl=en)
-- "search: "how to temu return"" - [google_suggest](https://www.google.com/search?q=how%20to%20temu%20return&gl=us&hl=en)
-- "search: "where to return temu items near me"" - [google_suggest](https://www.google.com/search?q=where%20to%20return%20temu%20items%20near%20me&gl=us&hl=en)
-
-**6. App, website & digital**
-
+- "search: "why walmart order delayed"" - [google_suggest](https://www.google.com/search?q=why%20walmart%20order%20delayed&gl=us&hl=en)
 - "search: "amazon order tracking"" - [google_suggest](https://www.google.com/search?q=amazon%20order%20tracking&gl=us&hl=en)
-- "search: "how to amazon order tracking"" - [google_suggest](https://www.google.com/search?q=how%20to%20amazon%20order%20tracking&gl=us&hl=en)
-- "search: "temu app"" - [google_suggest](https://www.google.com/search?q=temu%20app&gl=us&hl=en)
+- "search: "why amazon orders are delayed"" - [google_suggest](https://www.google.com/search?q=why%20amazon%20orders%20are%20delayed&gl=us&hl=en)
 
-**7. Delivery problems**
+**4. Not delivered or marked delivered**
 
 - "search: "amazon order not delivered"" - [google_suggest](https://www.google.com/search?q=amazon%20order%20not%20delivered&gl=us&hl=en)
 - "search: "walmart order not delivered"" - [google_suggest](https://www.google.com/search?q=walmart%20order%20not%20delivered&gl=us&hl=en)
-- "search: "amazon order tracking"" - [google_suggest](https://www.google.com/search?q=amazon%20order%20tracking&gl=us&hl=en)
+- "search: "shein not delivered"" - [google_suggest](https://www.google.com/search?q=shein%20not%20delivered&gl=us&hl=en)
 
-**8. Quality & reliability**
+**5. Refunds slow or missing**
 
-- "search: "shein not working"" - [google_suggest](https://www.google.com/search?q=shein%20not%20working&gl=us&hl=en)
-- "search: "ebay not working"" - [google_suggest](https://www.google.com/search?q=ebay%20not%20working&gl=us&hl=en)
-- "search: "why ebay not working"" - [google_suggest](https://www.google.com/search?q=why%20ebay%20not%20working&gl=us&hl=en)
+- "search: "shein not refunding full amount"" - [google_suggest](https://www.google.com/search?q=shein%20not%20refunding%20full%20amount&gl=us&hl=en)
+- "search: "temu not refunding"" - [google_suggest](https://www.google.com/search?q=temu%20not%20refunding&gl=us&hl=en)
+- "search: "shein refund rules"" - [google_suggest](https://www.google.com/search?q=shein%20refund%20rules&gl=us&hl=en)
 
-**9. Refunds, billing & payments**
+**6. Orders cancelled by seller**
 
+- "search: "why amazon order cancelled"" - [google_suggest](https://www.google.com/search?q=why%20amazon%20order%20cancelled&gl=us&hl=en)
 - "search: "how to amazon order cancel"" - [google_suggest](https://www.google.com/search?q=how%20to%20amazon%20order%20cancel&gl=us&hl=en)
-- "search: "can i cancel temu order"" - [google_suggest](https://www.google.com/search?q=can%20i%20cancel%20temu%20order&gl=us&hl=en)
-- "search: "can i cancel ebay order"" - [google_suggest](https://www.google.com/search?q=can%20i%20cancel%20ebay%20order&gl=us&hl=en)
+- "search: "why walmart order cancelled"" - [google_suggest](https://www.google.com/search?q=why%20walmart%20order%20cancelled&gl=us&hl=en)
 
-**10. Delays & waiting**
+**7. Seller & marketplace scams**
 
-- "search: "why walmart order delayed"" - [google_suggest](https://www.google.com/search?q=why%20walmart%20order%20delayed&gl=us&hl=en)
-- "search: "why amazon orders are delayed"" - [google_suggest](https://www.google.com/search?q=why%20amazon%20orders%20are%20delayed&gl=us&hl=en)
-- "search: "why did walmart delayed my order"" - [google_suggest](https://www.google.com/search?q=why%20did%20walmart%20delayed%20my%20order&gl=us&hl=en)
+- "search: "walmart order verification scam"" - [google_suggest](https://www.google.com/search?q=walmart%20order%20verification%20scam&gl=us&hl=en)
+
+**8. Fake & counterfeit products**
+
+- "search: "how to ebay authenticity guarantee"" - [google_suggest](https://www.google.com/search?q=how%20to%20ebay%20authenticity%20guarantee&gl=us&hl=en)
 
 </details>
 

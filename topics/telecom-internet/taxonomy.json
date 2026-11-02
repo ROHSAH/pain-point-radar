@@ -1,100 +1,92 @@
 {
-  "_comment": "Topic-specific categories first, then generic ones. The keyword classifier uses the first matches.",
+  "_comment": "Topic-specific categories. Keyword patterns drive the no-key classifier (first 3 matches, in order).",
   "categories": [
     {
-      "id": "network_speed",
-      "name": "Poor network, signal & speed",
-      "description": "No signal, call drops, slow mobile data or broadband speed.",
+      "id": "poor_network",
+      "name": "No signal & call drops",
+      "description": "No coverage indoors, weak signal, dropped calls, no service.",
       "keywords": [
-        "no signal|network (issue|problem)|slow (internet|speed|data)|speed|call drop|weak signal|no network"
+        "no signal|no network|weak signal|call drop|network (issue|problem|down)|no service|coverage|signal (issue|problem)"
       ]
     },
     {
-      "id": "outage_downtime",
-      "name": "Outages & downtime",
-      "description": "Internet or network down for hours or days.",
+      "id": "slow_data",
+      "name": "Slow data & broadband speed",
+      "description": "Speeds below the plan, buffering, lag, high latency.",
       "keywords": [
-        "\\bdown\\b|outage|not working|no internet|disconnect"
+        "slow (internet|data|speed|wifi|broadband|net)|speed (test|issue)|buffering|\\blag\\b|\\bping\\b|latency|\\bmbps\\b"
       ]
     },
     {
-      "id": "plans_prices",
-      "name": "Plan prices & recharge hikes",
-      "description": "Tariff hikes, confusing plans, data caps, mid-contract price rises.",
+      "id": "outages",
+      "name": "Internet outages",
+      "description": "Broadband or mobile data down for hours or days.",
       "keywords": [
-        "recharge|\\bplan\\b|price (hike|increase|rise)|tariff|data (cap|limit)|mid-?contract"
+        "outage|internet (down|not working)|no internet|service down|wifi not working|router|los (red )?light|disconnect|not working|problem today|problems? (in|near)|\\bdown\\b"
       ]
     },
     {
-      "id": "price_cost",
-      "name": "Price, fees & hidden charges",
-      "description": "Too expensive, price rises, surge pricing, hidden fees, not worth the money.",
+      "id": "price_hikes",
+      "name": "Recharge & plan price hikes",
+      "description": "Tariff hikes, mid-contract rises, plan cost increases.",
       "keywords": [
-        "\\b(price|prices|cost|costs|expensive|overpriced|fee|fees|charges?|surge|hidden|not worth|rip ?off)\\b"
+        "price (hike|increase|rise)|recharge (price|plan|cost|hike)|tariff|mid-?contract|plan (price|cost)"
       ]
     },
     {
-      "id": "quality_reliability",
-      "name": "Quality & reliability",
-      "description": "Product or service breaks, fails, is defective, inconsistent or does not work as promised.",
+      "id": "plans_data",
+      "name": "Confusing plans, data caps & validity",
+      "description": "Data caps, validity tricks, fair-usage limits, choosing a plan.",
       "keywords": [
-        "\\b(broken|not working|doesn'?t work|stopped working|fault|faulty|defect|failed|failure|keeps (crashing|failing)|poor quality|bad quality)\\b"
+        "data (cap|limit|over|finished)|validity|unlimited|fair usage|best plan|which plan|\\bott\\b"
       ]
     },
     {
-      "id": "availability_access",
-      "name": "Availability & access",
-      "description": "Not available nearby, out of stock, no coverage, long distances, closed or full.",
+      "id": "bills_charges",
+      "name": "Billing errors & hidden charges",
+      "description": "Wrong bills, extra charges, balance deducted, refunds.",
       "keywords": [
-        "near me|where (to|can i)|\\b(not available|unavailable|out of stock|no (service|coverage|stations?|options?)|closed|full|sold out)\\b"
+        "\\bbill\\b|billing|overcharg|extra charge|hidden (charge|fee)|balance (deducted|cut)|refund"
       ]
     },
     {
-      "id": "speed_wait",
-      "name": "Delays & waiting",
-      "description": "Late delivery, long queues or wait times, slow service, missed appointments.",
+      "id": "installation_repair",
+      "name": "Installation & repair visits",
+      "description": "Missed technician visits, delayed fibre installs, repair waits.",
       "keywords": [
-        "\\b(late|delay|delayed|waiting|wait time|queue|slow|took (hours|days|weeks)|never (arrived|came)|missed)\\b"
+        "install|installation|technician|engineer|repair|new connection|fib(er|re) (not|delay)"
       ]
     },
     {
-      "id": "customer_support",
-      "name": "Customer support",
-      "description": "Hard to reach support, complaints ignored, unhelpful agents, no accountability.",
+      "id": "porting_cancellation",
+      "name": "Porting, contracts & cancellation",
+      "description": "Porting refused or slow, lock-ins, early termination fees.",
       "keywords": [
-        "\\b(customer (service|care|support)|helpline|complain|complaint|no response|ignored|chatbot|contact number|phone number)\\b"
+        "\\bport\\b|porting|\\bmnp\\b|pac code|cancel|early termination|switch (provider|network)|lock-?in"
       ]
     },
     {
-      "id": "refunds_billing",
-      "name": "Refunds, billing & payments",
-      "description": "Refund refused or slow, double charges, payment failures, billing errors, cancellation trouble.",
+      "id": "sim_esim",
+      "name": "SIM, eSIM & KYC",
+      "description": "SIM blocked or not working, eSIM activation, KYC, SIM swap.",
       "keywords": [
-        "\\b(refund|refunds|charged twice|double charged|overcharged|billing error|wrong bill|payment failed|cancel|cancellation|chargeback)\\b"
+        "\\bsim\\b|\\besim\\b|\\bkyc\\b|sim (blocked|not working|replacement)|sim swap"
       ]
     },
     {
-      "id": "digital_experience",
-      "name": "App, website & digital",
-      "description": "App or website bugs, login problems, confusing UX, booking or tracking not working.",
+      "id": "spam_calls",
+      "name": "Spam calls & SMS",
+      "description": "Telemarketing, scam calls and messages, DND not working.",
       "keywords": [
-        "\\b(app|website|login|log in|sign in|otp|update|tracking|booking|portal)\\b"
+        "spam|unwanted calls|telemarket|\\bdnd\\b|robocall|scam calls|promotional"
       ]
     },
     {
-      "id": "trust_safety",
-      "name": "Trust, scams & safety",
-      "description": "Fraud, scams, misleading claims, data or personal safety concerns.",
+      "id": "customer_care",
+      "name": "Customer care",
+      "description": "Unreachable or unhelpful support; complaints and appeals.",
       "keywords": [
-        "\\b(scam|fraud|fake|cheat|cheated|misleading|unsafe|danger|dangerous|safety|privacy|data leak)\\b"
-      ]
-    },
-    {
-      "id": "information_rules",
-      "name": "How-to questions & confusing rules",
-      "description": "Unclear rules, eligibility, instructions or terms; people unsure how things work.",
-      "keywords": [
-        "^(how (do|to|does|can)|can (i|you)|is it|what (is|are)|which)\\b|\\b(rules|eligib|terms|confus|explained)\\b"
+        "customer (care|service|support)|complain|complaint|helpline|contact number|ombudsman|appellate|no response"
       ]
     },
     {
@@ -106,35 +98,43 @@
   ],
   "personas": [
     {
-      "id": "first_time_user",
-      "name": "First-time / new user",
-      "description": "Trying the product or service for the first time; unfamiliar with how it works.",
+      "id": "prepaid_mobile",
+      "name": "Prepaid mobile user",
+      "description": "Recharges a prepaid SIM.",
       "keywords": [
-        "\\b(first time|new to|beginner|just (bought|started|signed up))\\b"
+        "recharge|prepaid"
       ]
     },
     {
-      "id": "regular_user",
-      "name": "Regular user",
-      "description": "Uses it often and compares with past experience.",
+      "id": "broadband_household",
+      "name": "Broadband household",
+      "description": "Home fibre or broadband subscriber.",
       "keywords": [
-        "\\b(every (day|week)|always use|regular|daily|for years)\\b"
+        "broadband|fib(er|re)|home (wifi|internet)|router"
       ]
     },
     {
-      "id": "budget_conscious",
-      "name": "Budget-conscious customer",
-      "description": "Price-sensitive; talks mainly about cost and value.",
+      "id": "work_from_home",
+      "name": "Work-from-home user",
+      "description": "Depends on home internet for work.",
       "keywords": [
-        "\\b(cheap|cheapest|budget|afford|save money|discount)\\b"
+        "work from home|\\bwfh\\b|video calls|zoom|teams"
       ]
     },
     {
-      "id": "small_business",
-      "name": "Small business / professional user",
-      "description": "Uses it for work or a business.",
+      "id": "gamer",
+      "name": "Gamer",
+      "description": "Sensitive to ping and lag.",
       "keywords": [
-        "\\b(my (business|shop|store|restaurant|company|clients?)|for work|b2b|fleet)\\b"
+        "gaming|gamer|\\bping\\b|valorant|bgmi|xbox|playstation"
+      ]
+    },
+    {
+      "id": "rural_user",
+      "name": "Rural / small-town user",
+      "description": "Patchy coverage outside cities.",
+      "keywords": [
+        "village|rural|countryside|small town"
       ]
     },
     {

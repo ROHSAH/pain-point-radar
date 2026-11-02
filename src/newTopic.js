@@ -76,6 +76,14 @@ function validRegex(s) {
  * regions: { india|europe|us: { subreddits, queries, suggest_seeds, web_queries, x_queries, google_extra } },
  * categories / personas: topic-specific entries placed before the generic ones (first match wins).
  */
+export function buildTaxonomy(overrides) {
+  const categories = [...overrides.categories];
+  if (!categories.some((c) => c.id === "other")) categories.push({ id: "other", name: "Other", description: "Clear customer pain point that does not fit any category above.", keywords: [] });
+  const personas = [...(overrides.personas || [])];
+  if (!personas.some((p) => p.id === "general_citizen")) personas.push({ id: "general_citizen", name: "General customer", description: "Persona cannot be inferred.", keywords: [] });
+  return { _comment: "Topic-specific categories. Keyword patterns drive the no-key classifier (first 3 matches, in order).", categories, personas };
+}
+
 export async function createTopic({ id, label, description, useClaude, overrides = {} }) {
   const dir = path.join(TOPICS_DIR, id);
   if (fs.existsSync(dir)) throw new Error(`${dir} already exists - edit its files instead`);
@@ -117,17 +125,18 @@ export async function createTopic({ id, label, description, useClaude, overrides
   let categories = draft?.categories?.length
     ? draft.categories.map((c) => ({ ...c, keywords: c.keywords.filter(validRegex) }))
     : GENERIC_CATEGORIES.map(([cid, name, desc, keywords]) => ({ id: cid, name, description: desc, keywords }));
-  if (overrides.categories) categories = [...overrides.categories, ...categories.filter((c) => !overrides.categories.some((o) => o.id === c.id))];
+  // Hand-written topics supply their own complete category list; generic categories are only a fallback.
+  if (overrides.categories) categories = overrides.categories;
   if (!categories.some((c) => c.id === "other")) categories.push({ id: "other", name: "Other", description: "Clear customer pain point that does not fit any category above.", keywords: [] });
   let personas = draft?.personas?.length
     ? draft.personas.map((p) => ({ ...p, keywords: p.keywords.filter(validRegex) }))
     : GENERIC_PERSONAS.map(([pid, name, desc, keywords]) => ({ id: pid, name, description: desc, keywords }));
-  if (overrides.personas) personas = [...overrides.personas, ...personas.filter((p) => !overrides.personas.some((o) => o.id === p.id))];
+  if (overrides.personas) personas = overrides.personas;
   if (!personas.some((p) => p.id === "general_citizen")) personas.push({ id: "general_citizen", name: "General customer", description: "Persona cannot be inferred.", keywords: [] });
 
   fs.mkdirSync(dir, { recursive: true });
   writeJson(path.join(dir, "topic.json"), topic);
   writeJson(path.join(dir, "regions.json"), regions);
-  writeJson(path.join(dir, "taxonomy.json"), { _comment: draft ? "Drafted by Claude." : overrides.categories ? "Topic-specific categories first, then generic ones. The keyword classifier uses the first matches." : "Generic categories - rename or add topic-specific ones.", categories, personas });
+  writeJson(path.join(dir, "taxonomy.json"), { _comment: draft ? "Drafted by Claude." : overrides.categories ? "Topic-specific categories. Keyword patterns drive the no-key classifier (first 3 matches, in order)." : "Generic categories - rename or add topic-specific ones.", categories, personas });
   return dir;
 }

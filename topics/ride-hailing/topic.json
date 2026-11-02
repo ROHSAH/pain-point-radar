@@ -16,6 +16,9 @@
     "\\bauto\\b",
     "waymo"
   ],
-  "irrelevant_keywords": [],
+  "irrelevant_keywords": [
+    "uber eats",
+    "auto (insurance|parts|loan)"
+  ],
   "subreddit_query": "uber OR ola OR rapido OR lyft OR cab OR taxi"
 }

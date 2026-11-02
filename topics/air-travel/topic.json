@@ -23,6 +23,9 @@
     "boarding",
     "check-?in"
   ],
-  "irrelevant_keywords": [],
+  "irrelevant_keywords": [
+    "flight simulator|flight (radar|tracker)",
+    "delta (variant|airlines stock)"
+  ],
   "subreddit_query": "flight OR airline OR airport OR baggage"
 }

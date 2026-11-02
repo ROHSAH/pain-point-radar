@@ -1,108 +1,84 @@
 {
-  "_comment": "Topic-specific categories first, then generic ones. The keyword classifier uses the first matches.",
+  "_comment": "Topic-specific categories. Keyword patterns drive the no-key classifier (first 3 matches, in order).",
   "categories": [
     {
       "id": "deposit_disputes",
-      "name": "Deposit disputes",
-      "description": "Deposits withheld, unfair deductions, deposit not protected.",
+      "name": "Deposit withheld or deducted",
+      "description": "Deposits withheld, unfair deductions, deposits not protected.",
       "keywords": [
         "deposit|deduction"
       ]
     },
     {
-      "id": "repairs_maintenance",
-      "name": "Repairs, mould & maintenance",
-      "description": "Landlord ignores repairs, damp and mould, broken appliances.",
+      "id": "repairs_mould",
+      "name": "Repairs, damp & mould ignored",
+      "description": "Landlords ignoring repairs, damp, mould, leaks, pests, heating.",
       "keywords": [
-        "repair|mou?ld|leak|maintenance|damp|broken (boiler|heater|ac)|pest"
+        "repair|mou?ld|damp|leak|maintenance|broken (boiler|heater|ac|appliance)|pest|cockroach|rats|heating"
       ]
     },
     {
-      "id": "rent_increases_fees",
-      "name": "Rent hikes, brokerage & fees",
-      "description": "Rent increases, broker or agent fees, bidding wars.",
+      "id": "rent_increases",
+      "name": "Rent increases",
+      "description": "Steep or frequent rent rises.",
       "keywords": [
-        "rent (increase|hike|rise)|brokerage|broker fee|agent fee|letting fee|bidding war"
+        "rent (increase|hike|rise|going up)|raise (the )?rent|rent review|rent control|rent cap"
       ]
     },
     {
-      "id": "eviction_rights",
-      "name": "Eviction & tenant rights",
-      "description": "Evictions, notices, unclear tenant rights.",
+      "id": "brokerage_fees",
+      "name": "Broker, agent & application fees",
+      "description": "Brokerage, letting/agent fees, holding deposits, application fees.",
       "keywords": [
-        "evict|notice period|section 21|tenant rights|kicked out"
+        "broker|brokerage|agent fee|letting fee|application fee|holding deposit|admin fee"
       ]
     },
     {
-      "id": "price_cost",
-      "name": "Price, fees & hidden charges",
-      "description": "Too expensive, price rises, surge pricing, hidden fees, not worth the money.",
+      "id": "eviction_notice",
+      "name": "Eviction & notice to leave",
+      "description": "Evictions, no-fault notices, sudden demands to vacate.",
       "keywords": [
-        "\\b(price|prices|cost|costs|expensive|overpriced|fee|fees|charges?|surge|hidden|not worth|rip ?off)\\b"
+        "evict|notice (period|to leave|to vacate)|section 21|kicked out|vacate"
       ]
     },
     {
-      "id": "quality_reliability",
-      "name": "Quality & reliability",
-      "description": "Product or service breaks, fails, is defective, inconsistent or does not work as promised.",
+      "id": "finding_rentals",
+      "name": "Finding a place & competition",
+      "description": "Few listings, bidding wars, fake listings, viewing scrambles.",
       "keywords": [
-        "\\b(broken|not working|doesn'?t work|stopped working|fault|faulty|defect|failed|failure|keeps (crashing|failing)|poor quality|bad quality)\\b"
+        "find(ing)? (a )?(flat|apartment|house|room|pg)|viewing|bidding war|competition|fake listing|nobroker|rightmove|zillow|spareroom"
       ]
     },
     {
-      "id": "availability_access",
-      "name": "Availability & access",
-      "description": "Not available nearby, out of stock, no coverage, long distances, closed or full.",
+      "id": "restrictive_rules",
+      "name": "Restrictive rules & discrimination",
+      "description": "No bachelors, pets, food or religion rules, guarantor and income checks.",
       "keywords": [
-        "near me|where (to|can i)|\\b(not available|unavailable|out of stock|no (service|coverage|stations?|options?)|closed|full|sold out)\\b"
+        "bachelor|no pets|\\bpets?\\b|vegetarian only|family only|discriminat|guarantor|credit check|income requirement"
       ]
     },
     {
-      "id": "speed_wait",
-      "name": "Delays & waiting",
-      "description": "Late delivery, long queues or wait times, slow service, missed appointments.",
+      "id": "landlord_behaviour",
+      "name": "Landlord harassment & entry",
+      "description": "Landlords entering without notice, threats, lock-outs.",
       "keywords": [
-        "\\b(late|delay|delayed|waiting|wait time|queue|slow|took (hours|days|weeks)|never (arrived|came)|missed)\\b"
+        "landlord (harass|enter|threat|refus|won'?t)|harass|entering without|privacy|lock(ed)? out"
       ]
     },
     {
-      "id": "customer_support",
-      "name": "Customer support",
-      "description": "Hard to reach support, complaints ignored, unhelpful agents, no accountability.",
+      "id": "lease_agreements",
+      "name": "Lease & rental agreements",
+      "description": "Agreement terms, registration, break clauses, renewals.",
       "keywords": [
-        "\\b(customer (service|care|support)|helpline|complain|complaint|no response|ignored|chatbot|contact number|phone number)\\b"
+        "\\blease\\b|rental agreement|rent agreement|tenancy agreement|stamp duty|break clause|renewal"
       ]
     },
     {
-      "id": "refunds_billing",
-      "name": "Refunds, billing & payments",
-      "description": "Refund refused or slow, double charges, payment failures, billing errors, cancellation trouble.",
+      "id": "utilities_society",
+      "name": "Utilities & society/service charges",
+      "description": "Maintenance and society fees, utility bills, water supply.",
       "keywords": [
-        "\\b(refund|refunds|charged twice|double charged|overcharged|billing error|wrong bill|payment failed|cancel|cancellation|chargeback)\\b"
-      ]
-    },
-    {
-      "id": "digital_experience",
-      "name": "App, website & digital",
-      "description": "App or website bugs, login problems, confusing UX, booking or tracking not working.",
-      "keywords": [
-        "\\b(app|website|login|log in|sign in|otp|update|tracking|booking|portal)\\b"
-      ]
-    },
-    {
-      "id": "trust_safety",
-      "name": "Trust, scams & safety",
-      "description": "Fraud, scams, misleading claims, data or personal safety concerns.",
-      "keywords": [
-        "\\b(scam|fraud|fake|cheat|cheated|misleading|unsafe|danger|dangerous|safety|privacy|data leak)\\b"
-      ]
-    },
-    {
-      "id": "information_rules",
-      "name": "How-to questions & confusing rules",
-      "description": "Unclear rules, eligibility, instructions or terms; people unsure how things work.",
-      "keywords": [
-        "^(how (do|to|does|can)|can (i|you)|is it|what (is|are)|which)\\b|\\b(rules|eligib|terms|confus|explained)\\b"
+        "maintenance charges|society (charges|fees)|electricity (bill|meter)|water (bill|supply)|utilities|service charge"
       ]
     },
     {
@@ -114,35 +90,43 @@
   ],
   "personas": [
     {
-      "id": "first_time_user",
-      "name": "First-time / new user",
-      "description": "Trying the product or service for the first time; unfamiliar with how it works.",
+      "id": "student_renter",
+      "name": "Student renter",
+      "description": "Student housing or shared rooms.",
       "keywords": [
-        "\\b(first time|new to|beginner|just (bought|started|signed up))\\b"
+        "student|university|college|hostel|\\bpg\\b"
       ]
     },
     {
-      "id": "regular_user",
-      "name": "Regular user",
-      "description": "Uses it often and compares with past experience.",
+      "id": "young_professional",
+      "name": "Young professional",
+      "description": "Moved city for work.",
       "keywords": [
-        "\\b(every (day|week)|always use|regular|daily|for years)\\b"
+        "moved (to|for) (work|job)|new job|working professional"
       ]
     },
     {
-      "id": "budget_conscious",
-      "name": "Budget-conscious customer",
-      "description": "Price-sensitive; talks mainly about cost and value.",
+      "id": "family_renter",
+      "name": "Family renter",
+      "description": "Rents with partner or children.",
       "keywords": [
-        "\\b(cheap|cheapest|budget|afford|save money|discount)\\b"
+        "my (wife|husband|kids|children|family)"
       ]
     },
     {
-      "id": "small_business",
-      "name": "Small business / professional user",
-      "description": "Uses it for work or a business.",
+      "id": "bachelor",
+      "name": "Bachelor / single tenant",
+      "description": "Single tenant facing restrictions.",
       "keywords": [
-        "\\b(my (business|shop|store|restaurant|company|clients?)|for work|b2b|fleet)\\b"
+        "bachelor|single (man|woman|guy|girl)"
+      ]
+    },
+    {
+      "id": "landlord",
+      "name": "Landlord",
+      "description": "Rents out property.",
+      "keywords": [
+        "my tenant|as a landlord|i('m| am) a landlord"
       ]
     },
     {

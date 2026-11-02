@@ -18,6 +18,9 @@
     "rider",
     "dasher"
   ],
-  "irrelevant_keywords": [],
+  "irrelevant_keywords": [
+    "(courier|parcel) delivery",
+    "amazon delivery"
+  ],
   "subreddit_query": "delivery OR swiggy OR zomato OR deliveroo OR doordash OR \"uber eats\""
 }

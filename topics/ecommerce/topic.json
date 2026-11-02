@@ -22,6 +22,9 @@
     "parcel",
     "package"
   ],
-  "irrelevant_keywords": [],
+  "irrelevant_keywords": [
+    "amazon (rainforest|river|stock|share|jobs|careers)",
+    "prime video"
+  ],
   "subreddit_query": "order OR delivery OR return OR refund OR seller"
 }

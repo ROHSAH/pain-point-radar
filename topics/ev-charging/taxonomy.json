@@ -1,76 +1,84 @@
 {
-  "_comment": "Generic categories - rename or add topic-specific ones.",
+  "_comment": "Topic-specific categories. Keyword patterns drive the no-key classifier (first 3 matches, in order).",
   "categories": [
     {
-      "id": "price_cost",
-      "name": "Price, fees & hidden charges",
-      "description": "Too expensive, price rises, surge pricing, hidden fees, not worth the money.",
+      "id": "broken_chargers",
+      "name": "Broken or faulty chargers",
+      "description": "Chargers out of order, errors, sessions failing to start or stopping.",
       "keywords": [
-        "\\b(price|prices|cost|costs|expensive|overpriced|fee|fees|charges?|surge|hidden|not worth|rip ?off)\\b"
+        "broken|not working|faulty|out of order|error|won'?t (charge|start)|failed to (charge|start)|offline|stopped charging"
       ]
     },
     {
-      "id": "quality_reliability",
-      "name": "Quality & reliability",
-      "description": "Product or service breaks, fails, is defective, inconsistent or does not work as promised.",
+      "id": "finding_chargers",
+      "name": "Finding chargers & coverage gaps",
+      "description": "Too few chargers, charging deserts, highway gaps, range anxiety.",
       "keywords": [
-        "\\b(broken|not working|doesn'?t work|stopped working|fault|faulty|defect|failed|failure|keeps (crashing|failing)|poor quality|bad quality)\\b"
+        "near me|where (to|can)|find (a )?charger|no chargers|charging (desert|station near)|range anxiety|highway"
       ]
     },
     {
-      "id": "availability_access",
-      "name": "Availability & access",
-      "description": "Not available nearby, out of stock, no coverage, long distances, closed or full.",
+      "id": "occupied_queues",
+      "name": "Occupied chargers & queues",
+      "description": "Bays taken by EVs or petrol cars, queues at popular sites.",
       "keywords": [
-        "near me|where (to|can i)|\\b(not available|unavailable|out of stock|no (service|coverage|stations?|options?)|closed|full|sold out)\\b"
+        "occupied|queue|waiting|\\biced?\\b|blocked by|parked in|busy|line at"
       ]
     },
     {
-      "id": "speed_wait",
-      "name": "Delays & waiting",
-      "description": "Late delivery, long queues or wait times, slow service, missed appointments.",
+      "id": "charging_cost",
+      "name": "Charging cost & pricing",
+      "description": "Price per kWh, idle fees, home vs public cost, subscriptions.",
       "keywords": [
-        "\\b(late|delay|delayed|waiting|wait time|queue|slow|took (hours|days|weeks)|never (arrived|came)|missed)\\b"
+        "\\bcost\\b|price|per (kwh|unit)|expensive|cheap|tariff|idle fee|overstay|subscription|how much"
       ]
     },
     {
-      "id": "customer_support",
-      "name": "Customer support",
-      "description": "Hard to reach support, complaints ignored, unhelpful agents, no accountability.",
+      "id": "slow_charging",
+      "name": "Slow charging speed",
+      "description": "Chargers delivering far below rated kW, long charging times.",
       "keywords": [
-        "\\b(customer (service|care|support)|helpline|complain|complaint|no response|ignored|chatbot|contact number|phone number)\\b"
+        "\\bslow\\b|speed|\\bkw\\b|taking (long|hours)|how long|charging time|throttl"
       ]
     },
     {
-      "id": "refunds_billing",
-      "name": "Refunds, billing & payments",
-      "description": "Refund refused or slow, double charges, payment failures, billing errors, cancellation trouble.",
+      "id": "apps_payment",
+      "name": "Apps, RFID cards & payment hassles",
+      "description": "Too many apps, failed payments, accounts and RFID cards.",
       "keywords": [
-        "\\b(refund|refunds|charged twice|double charged|overcharged|billing error|wrong bill|payment failed|cancel|cancellation|chargeback)\\b"
+        "\\bapp\\b|rfid|payment|account|too many apps|wallet|tap to pay|plug and charge"
       ]
     },
     {
-      "id": "digital_experience",
-      "name": "App, website & digital",
-      "description": "App or website bugs, login problems, confusing UX, booking or tracking not working.",
+      "id": "home_charging",
+      "name": "Home charger installation",
+      "description": "Installing a home or apartment charger, society/landlord permission, electricians.",
       "keywords": [
-        "\\b(app|website|login|log in|sign in|otp|update|tracking|booking|portal)\\b"
+        "home charger|wallbox|install|installation|electrician|apartment charging|society (permission|noc)|ohme|pod point|level 2"
       ]
     },
     {
-      "id": "trust_safety",
-      "name": "Trust, scams & safety",
-      "description": "Fraud, scams, misleading claims, data or personal safety concerns.",
+      "id": "battery_range",
+      "name": "Battery, range & winter loss",
+      "description": "Range drops, degradation, cold-weather charging.",
       "keywords": [
-        "\\b(scam|fraud|fake|cheat|cheated|misleading|unsafe|danger|dangerous|safety|privacy|data leak)\\b"
+        "battery|range|degradation|winter|cold|\\bsoc\\b|80%"
       ]
     },
     {
-      "id": "information_rules",
-      "name": "How-to questions & confusing rules",
-      "description": "Unclear rules, eligibility, instructions or terms; people unsure how things work.",
+      "id": "compatibility",
+      "name": "Plug & vehicle compatibility",
+      "description": "Connector types, adapters, Tesla/NACS access.",
       "keywords": [
-        "^(how (do|to|does|can)|can (i|you)|is it|what (is|are)|which)\\b|\\b(rules|eligib|terms|confus|explained)\\b"
+        "\\bccs\\b|chademo|type 2|\\bnacs\\b|adapter|compatib|bharat (ac|dc)|connector"
+      ]
+    },
+    {
+      "id": "network_support",
+      "name": "Charging network support & refunds",
+      "description": "No help on site, refunds for failed sessions, double charges.",
+      "keywords": [
+        "customer (care|service|support)|support|complain|complaint|refund|charged (twice|wrong)|helpline"
       ]
     },
     {
@@ -82,35 +90,51 @@
   ],
   "personas": [
     {
-      "id": "first_time_user",
-      "name": "First-time / new user",
-      "description": "Trying the product or service for the first time; unfamiliar with how it works.",
+      "id": "ev_car_owner",
+      "name": "EV car owner",
+      "description": "Owns an electric car.",
       "keywords": [
-        "\\b(first time|new to|beginner|just (bought|started|signed up))\\b"
+        "my (ev|car|tesla|nexon|model 3|model y|ioniq|bolt|mach-e|id\\.4)"
       ]
     },
     {
-      "id": "regular_user",
-      "name": "Regular user",
-      "description": "Uses it often and compares with past experience.",
+      "id": "e_scooter_owner",
+      "name": "Electric scooter/bike owner",
+      "description": "Owns an electric two-wheeler.",
       "keywords": [
-        "\\b(every (day|week)|always use|regular|daily|for years)\\b"
+        "scooter|ather|ola s1|e-?bike|two wheeler|chetak|iqube"
       ]
     },
     {
-      "id": "budget_conscious",
-      "name": "Budget-conscious customer",
-      "description": "Price-sensitive; talks mainly about cost and value.",
+      "id": "apartment_dweller",
+      "name": "Apartment dweller",
+      "description": "No private parking or charger at home.",
       "keywords": [
-        "\\b(cheap|cheapest|budget|afford|save money|discount)\\b"
+        "apartment|flat|society|condo|no driveway|street parking"
       ]
     },
     {
-      "id": "small_business",
-      "name": "Small business / professional user",
-      "description": "Uses it for work or a business.",
+      "id": "fleet_operator",
+      "name": "Fleet / taxi operator",
+      "description": "Runs EVs commercially.",
       "keywords": [
-        "\\b(my (business|shop|store|restaurant|company|clients?)|for work|b2b|fleet)\\b"
+        "fleet|taxi|uber driver|cab|commercial"
+      ]
+    },
+    {
+      "id": "road_tripper",
+      "name": "Road tripper",
+      "description": "Long-distance driving.",
+      "keywords": [
+        "road trip|highway|long drive|long distance"
+      ]
+    },
+    {
+      "id": "prospective_buyer",
+      "name": "Prospective EV buyer",
+      "description": "Considering an EV.",
+      "keywords": [
+        "should i (buy|get)|thinking of buying|worth (buying|it)|considering an ev"
       ]
     },
     {

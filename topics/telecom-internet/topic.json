@@ -30,6 +30,11 @@
     "starlink",
     "fiber|fibre"
   ],
-  "irrelevant_keywords": [],
+  "irrelevant_keywords": [
+    "jio (cinema|hotstar)",
+    "airtel (stock|share)",
+    "\\bsky (news|sports)\\b",
+    "\\bee\\b (cummings)"
+  ],
   "subreddit_query": "network OR internet OR broadband OR signal OR recharge"
 }

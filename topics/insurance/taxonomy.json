@@ -1,100 +1,84 @@
 {
-  "_comment": "Topic-specific categories first, then generic ones. The keyword classifier uses the first matches.",
+  "_comment": "Topic-specific categories. Keyword patterns drive the no-key classifier (first 3 matches, in order).",
   "categories": [
     {
       "id": "claim_rejected",
-      "name": "Claims rejected or delayed",
-      "description": "Claims denied, partly paid, or stuck for weeks; cashless refused.",
+      "name": "Claims rejected or underpaid",
+      "description": "Claims denied, repudiated or only partly paid.",
       "keywords": [
-        "claim (rejected|denied|delayed|pending|not settled)|reject|denied|settlement|cashless (denied|refused)"
+        "claim (rejected|denied|declined|repudiat)|reject|denied|partial(ly)? (paid|settle)|underpaid|deduct"
+      ]
+    },
+    {
+      "id": "cashless_hospital",
+      "name": "Cashless & hospital authorisation",
+      "description": "Cashless denied, slow pre-authorisation, TPA problems, reimbursement waits.",
+      "keywords": [
+        "cashless|pre-?auth|\\btpa\\b|network hospital|reimbursement"
+      ]
+    },
+    {
+      "id": "claim_delays",
+      "name": "Slow claims & settlement",
+      "description": "Claims stuck for weeks or months, endless documents.",
+      "keywords": [
+        "claim (delay|pending|taking|stuck|status|process)|settlement (delay|time)|how long .*claim|waiting for (payout|claim)"
+      ]
+    },
+    {
+      "id": "exclusions_fine_print",
+      "name": "Exclusions, waiting periods & fine print",
+      "description": "Pre-existing exclusions, waiting periods, room-rent caps, co-pays, deductibles.",
+      "keywords": [
+        "exclusion|waiting period|pre-?existing|not covered|fine print|sub-?limit|room rent|co-?pay|deductible"
       ]
     },
     {
       "id": "premium_hikes",
       "name": "Premium hikes at renewal",
-      "description": "Premiums rising sharply, renewal quotes, loyalty penalty.",
+      "description": "Premiums rising sharply at renewal or with age; loyalty penalty.",
       "keywords": [
-        "premium|renewal|increase|hike|went up|quote"
+        "premium (increase|hike|went up|rise)|renewal (price|quote)|why (is|did) my (insurance|premium)|loyalty penalty|went up"
       ]
     },
     {
       "id": "mis_selling",
-      "name": "Mis-selling & fine print",
-      "description": "Hidden exclusions, waiting periods, policies sold under false pretences.",
+      "name": "Mis-selling & pushy agents",
+      "description": "Policies sold under false pretences, bundled or forced insurance.",
       "keywords": [
-        "mis-?sold|hidden|fine print|exclusion|waiting period|not covered|pre-?existing"
+        "mis-?sold|mis-?selling|agent (lied|cheated)|forced (to buy|insurance)|bundled|ulip|endowment"
       ]
     },
     {
-      "id": "price_cost",
-      "name": "Price, fees & hidden charges",
-      "description": "Too expensive, price rises, surge pricing, hidden fees, not worth the money.",
+      "id": "motor_claims",
+      "name": "Car & motor claims",
+      "description": "Accident claims, write-offs, garage disputes, no-claim bonus.",
       "keywords": [
-        "\\b(price|prices|cost|costs|expensive|overpriced|fee|fees|charges?|surge|hidden|not worth|rip ?off)\\b"
+        "(car|motor|bike|auto|vehicle) insurance.{0,20}(claim|accident|garage|repair|write|total)|accident claim|write-?off|garage|no claim bonus|\\bncb\\b|\\bidv\\b|total loss|not at fault"
       ]
     },
     {
-      "id": "quality_reliability",
-      "name": "Quality & reliability",
-      "description": "Product or service breaks, fails, is defective, inconsistent or does not work as promised.",
+      "id": "health_coverage",
+      "name": "Health cover gaps",
+      "description": "Out-of-network care, prior authorisation, high deductibles.",
       "keywords": [
-        "\\b(broken|not working|doesn'?t work|stopped working|fault|faulty|defect|failed|failure|keeps (crashing|failing)|poor quality|bad quality)\\b"
+        "out of network|prior authori[sz]ation|\\bhmo\\b|\\bppo\\b|(health|medical) insurance.{0,20}(not cover|doesn.t cover|deductible|copay|denied|rejected|network)|travel insurance.{0,20}(not|medical)"
       ]
     },
     {
-      "id": "availability_access",
-      "name": "Availability & access",
-      "description": "Not available nearby, out of stock, no coverage, long distances, closed or full.",
+      "id": "cancellation_refund",
+      "name": "Cancellation, lapse & surrender",
+      "description": "Hard to cancel, surrender losses, lapsed policies, refunds.",
       "keywords": [
-        "near me|where (to|can i)|\\b(not available|unavailable|out of stock|no (service|coverage|stations?|options?)|closed|full|sold out)\\b"
+        "cancel|free look|surrender|lapse|revive|refund"
       ]
     },
     {
-      "id": "speed_wait",
-      "name": "Delays & waiting",
-      "description": "Late delivery, long queues or wait times, slow service, missed appointments.",
+      "id": "support_grievance",
+      "name": "Support & grievance escalation",
+      "description": "Unresponsive insurers, ombudsman and regulator complaints.",
       "keywords": [
-        "\\b(late|delay|delayed|waiting|wait time|queue|slow|took (hours|days|weeks)|never (arrived|came)|missed)\\b"
-      ]
-    },
-    {
-      "id": "customer_support",
-      "name": "Customer support",
-      "description": "Hard to reach support, complaints ignored, unhelpful agents, no accountability.",
-      "keywords": [
-        "\\b(customer (service|care|support)|helpline|complain|complaint|no response|ignored|chatbot|contact number|phone number)\\b"
-      ]
-    },
-    {
-      "id": "refunds_billing",
-      "name": "Refunds, billing & payments",
-      "description": "Refund refused or slow, double charges, payment failures, billing errors, cancellation trouble.",
-      "keywords": [
-        "\\b(refund|refunds|charged twice|double charged|overcharged|billing error|wrong bill|payment failed|cancel|cancellation|chargeback)\\b"
-      ]
-    },
-    {
-      "id": "digital_experience",
-      "name": "App, website & digital",
-      "description": "App or website bugs, login problems, confusing UX, booking or tracking not working.",
-      "keywords": [
-        "\\b(app|website|login|log in|sign in|otp|update|tracking|booking|portal)\\b"
-      ]
-    },
-    {
-      "id": "trust_safety",
-      "name": "Trust, scams & safety",
-      "description": "Fraud, scams, misleading claims, data or personal safety concerns.",
-      "keywords": [
-        "\\b(scam|fraud|fake|cheat|cheated|misleading|unsafe|danger|dangerous|safety|privacy|data leak)\\b"
-      ]
-    },
-    {
-      "id": "information_rules",
-      "name": "How-to questions & confusing rules",
-      "description": "Unclear rules, eligibility, instructions or terms; people unsure how things work.",
-      "keywords": [
-        "^(how (do|to|does|can)|can (i|you)|is it|what (is|are)|which)\\b|\\b(rules|eligib|terms|confus|explained)\\b"
+        "customer (care|service)|complain|complaint|ombudsman|grievance|igms|bima bharosa|contact number|no response"
       ]
     },
     {
@@ -106,35 +90,35 @@
   ],
   "personas": [
     {
-      "id": "first_time_user",
-      "name": "First-time / new user",
-      "description": "Trying the product or service for the first time; unfamiliar with how it works.",
+      "id": "family_policyholder",
+      "name": "Family policyholder",
+      "description": "Insures a family's health or home.",
       "keywords": [
-        "\\b(first time|new to|beginner|just (bought|started|signed up))\\b"
+        "family floater|my (wife|husband|kids|family|parents)"
       ]
     },
     {
-      "id": "regular_user",
-      "name": "Regular user",
-      "description": "Uses it often and compares with past experience.",
+      "id": "car_owner",
+      "name": "Car owner",
+      "description": "Motor insurance customer.",
       "keywords": [
-        "\\b(every (day|week)|always use|regular|daily|for years)\\b"
+        "my car|car insurance|bike insurance|vehicle"
       ]
     },
     {
-      "id": "budget_conscious",
-      "name": "Budget-conscious customer",
-      "description": "Price-sensitive; talks mainly about cost and value.",
+      "id": "senior_citizen",
+      "name": "Senior citizen",
+      "description": "Older policyholder or buying for parents.",
       "keywords": [
-        "\\b(cheap|cheapest|budget|afford|save money|discount)\\b"
+        "senior citizen|my (father|mother|parents)|age 6|retired"
       ]
     },
     {
-      "id": "small_business",
-      "name": "Small business / professional user",
-      "description": "Uses it for work or a business.",
+      "id": "self_employed",
+      "name": "Self-employed / gig worker",
+      "description": "Buys cover without an employer.",
       "keywords": [
-        "\\b(my (business|shop|store|restaurant|company|clients?)|for work|b2b|fleet)\\b"
+        "self[- ]employed|freelanc|gig|no employer"
       ]
     },
     {

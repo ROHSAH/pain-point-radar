@@ -1,92 +1,92 @@
 {
-  "_comment": "Topic-specific categories first, then generic ones. The keyword classifier uses the first matches.",
+  "_comment": "Topic-specific categories. Keyword patterns drive the no-key classifier (first 3 matches, in order).",
   "categories": [
     {
-      "id": "cancellations_no_shows",
+      "id": "driver_cancellations",
       "name": "Driver cancellations & no-shows",
-      "description": "Drivers cancel, refuse destinations, don't turn up, ask to pay cash.",
+      "description": "Drivers cancel, don't move, refuse destinations or no-show.",
       "keywords": [
-        "cancel|no show|didn'?t (come|show)|refus|asking (for )?cash|won'?t go"
+        "cancel|no show|didn'?t (come|show|arrive)|not (coming|moving)|refus|won'?t go|keeps cancelling"
       ]
     },
     {
-      "id": "surge_fares",
-      "name": "Surge pricing & fare disputes",
-      "description": "Surge prices, fare higher than quoted, extra charges.",
+      "id": "extra_cash_demands",
+      "name": "Drivers demanding extra cash",
+      "description": "Asking for extra money, AC charges, cash only, off-app fares.",
       "keywords": [
-        "surge|fare|overcharg|extra charge|price (higher|changed)|more than (shown|quoted)"
+        "extra (money|cash|charge)|asking (for )?(extra|cash|more)|\\bac\\b (charge|extra)|cash only|online payment|turn off ac"
       ]
     },
     {
-      "id": "price_cost",
-      "name": "Price, fees & hidden charges",
-      "description": "Too expensive, price rises, surge pricing, hidden fees, not worth the money.",
+      "id": "fare_surge",
+      "name": "Surge & fares higher than shown",
+      "description": "Surge pricing, final fare above estimate, high prices.",
       "keywords": [
-        "\\b(price|prices|cost|costs|expensive|overpriced|fee|fees|charges?|surge|hidden|not worth|rip ?off)\\b"
+        "surge|fare|price (high|higher|changed|increase)|more than (shown|quoted)|expensive|cost (of|per)"
       ]
     },
     {
-      "id": "quality_reliability",
-      "name": "Quality & reliability",
-      "description": "Product or service breaks, fails, is defective, inconsistent or does not work as promised.",
+      "id": "safety",
+      "name": "Safety & harassment",
+      "description": "Rash or drunk driving, harassment, unsafe late-night rides.",
       "keywords": [
-        "\\b(broken|not working|doesn'?t work|stopped working|fault|faulty|defect|failed|failure|keeps (crashing|failing)|poor quality|bad quality)\\b"
+        "safety|unsafe|harass|assault|rash driving|drunk|women safety|\\bsos\\b|night"
       ]
     },
     {
-      "id": "availability_access",
-      "name": "Availability & access",
-      "description": "Not available nearby, out of stock, no coverage, long distances, closed or full.",
+      "id": "availability_waits",
+      "name": "No cabs & long waits",
+      "description": "No drivers available, long ETAs at peak hours.",
       "keywords": [
-        "near me|where (to|can i)|\\b(not available|unavailable|out of stock|no (service|coverage|stations?|options?)|closed|full|sold out)\\b"
+        "no (cabs|drivers|rides|autos) available|waiting|long wait|\\beta\\b|not available|peak hours"
       ]
     },
     {
-      "id": "speed_wait",
-      "name": "Delays & waiting",
-      "description": "Late delivery, long queues or wait times, slow service, missed appointments.",
+      "id": "payments_fees",
+      "name": "Cancellation fees, payments & refunds",
+      "description": "Unfair cancellation fees, wrong charges, refunds.",
       "keywords": [
-        "\\b(late|delay|delayed|waiting|wait time|queue|slow|took (hours|days|weeks)|never (arrived|came)|missed)\\b"
+        "cancellation fee|refund|charged (twice|wrong)|payment|wallet|deduct"
       ]
     },
     {
-      "id": "customer_support",
-      "name": "Customer support",
-      "description": "Hard to reach support, complaints ignored, unhelpful agents, no accountability.",
+      "id": "lost_items",
+      "name": "Lost items",
+      "description": "Things left in the car and hard to recover.",
       "keywords": [
-        "\\b(customer (service|care|support)|helpline|complain|complaint|no response|ignored|chatbot|contact number|phone number)\\b"
+        "lost (item|phone|bag|wallet)|left (my|in)|forgot (my|in)"
       ]
     },
     {
-      "id": "refunds_billing",
-      "name": "Refunds, billing & payments",
-      "description": "Refund refused or slow, double charges, payment failures, billing errors, cancellation trouble.",
+      "id": "app_glitches",
+      "name": "App & booking glitches",
+      "description": "App crashes, booking failures, GPS and map problems.",
       "keywords": [
-        "\\b(refund|refunds|charged twice|double charged|overcharged|billing error|wrong bill|payment failed|cancel|cancellation|chargeback)\\b"
+        "\\bapp\\b|not working|problem today|server|booking (failed|not)|gps|location|map"
       ]
     },
     {
-      "id": "digital_experience",
-      "name": "App, website & digital",
-      "description": "App or website bugs, login problems, confusing UX, booking or tracking not working.",
+      "id": "account_bans",
+      "name": "Account bans & blocks",
+      "description": "Rider accounts blocked or banned, often without explanation.",
       "keywords": [
-        "\\b(app|website|login|log in|sign in|otp|update|tracking|booking|portal)\\b"
+        "account (blocked|banned|suspended|deactivated)|\\bbanned\\b"
       ]
     },
     {
-      "id": "trust_safety",
-      "name": "Trust, scams & safety",
-      "description": "Fraud, scams, misleading claims, data or personal safety concerns.",
+      "id": "complaints_support",
+      "name": "Complaints & customer support",
+      "description": "No human support, hard to complain or escalate.",
       "keywords": [
-        "\\b(scam|fraud|fake|cheat|cheated|misleading|unsafe|danger|dangerous|safety|privacy|data leak)\\b"
+        "support|complaint|complain|customer (care|service)|\\bhelp(line)?\\b|contact number|grievance|\\bproblem\\b"
       ]
     },
     {
-      "id": "information_rules",
-      "name": "How-to questions & confusing rules",
-      "description": "Unclear rules, eligibility, instructions or terms; people unsure how things work.",
+      "id": "driver_earnings",
+      "name": "Driver earnings & commissions",
+      "description": "Drivers' side: commissions, incentives, deactivations.",
       "keywords": [
-        "^(how (do|to|does|can)|can (i|you)|is it|what (is|are)|which)\\b|\\b(rules|eligib|terms|confus|explained)\\b"
+        "driver (earnings|pay|income)|commission|incentive|captain|deactivat"
       ]
     },
     {
@@ -98,35 +98,43 @@
   ],
   "personas": [
     {
-      "id": "first_time_user",
-      "name": "First-time / new user",
-      "description": "Trying the product or service for the first time; unfamiliar with how it works.",
+      "id": "daily_commuter",
+      "name": "Daily commuter",
+      "description": "Uses rides to get to work.",
       "keywords": [
-        "\\b(first time|new to|beginner|just (bought|started|signed up))\\b"
+        "office|commute|work every day|daily"
       ]
     },
     {
-      "id": "regular_user",
-      "name": "Regular user",
-      "description": "Uses it often and compares with past experience.",
+      "id": "woman_rider",
+      "name": "Woman rider",
+      "description": "Safety is a major concern.",
       "keywords": [
-        "\\b(every (day|week)|always use|regular|daily|for years)\\b"
+        "as a (woman|girl|female)|women safety"
       ]
     },
     {
-      "id": "budget_conscious",
-      "name": "Budget-conscious customer",
-      "description": "Price-sensitive; talks mainly about cost and value.",
+      "id": "airport_traveller",
+      "name": "Airport traveller",
+      "description": "Rides to and from airports.",
       "keywords": [
-        "\\b(cheap|cheapest|budget|afford|save money|discount)\\b"
+        "airport|flight"
       ]
     },
     {
-      "id": "small_business",
-      "name": "Small business / professional user",
-      "description": "Uses it for work or a business.",
+      "id": "driver",
+      "name": "Driver / captain",
+      "description": "Drives for the platform.",
       "keywords": [
-        "\\b(my (business|shop|store|restaurant|company|clients?)|for work|b2b|fleet)\\b"
+        "i('m| am) a driver|as a driver|captain|my rating as driver|drive for"
+      ]
+    },
+    {
+      "id": "tourist",
+      "name": "Tourist",
+      "description": "Visiting a new city.",
+      "keywords": [
+        "tourist|visiting|first time in|trip to"
       ]
     },
     {

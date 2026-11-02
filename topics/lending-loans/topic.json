@@ -22,6 +22,12 @@
     "debt",
     "\\bapr\\b"
   ],
-  "irrelevant_keywords": [],
+  "irrelevant_keywords": [
+    "martinez",
+    "football",
+    "arena",
+    "afterpay (arena|center|centre)",
+    "emi (martinez|stats)"
+  ],
   "subreddit_query": "loan OR mortgage OR EMI OR \"credit score\" OR debt"
 }

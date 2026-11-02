@@ -190,6 +190,7 @@ a { color: var(--accent-ink); }
         <select id="m-bars"><option value="w">Weighted volume</option><option value="n">Mentions</option></select></div>
     </div>
     <div class="bars" id="bars"></div>
+    <p class="note" id="bars-note"></p>
   </section>
 
   <div class="grid2">
@@ -317,8 +318,10 @@ a { color: var(--accent-ink); }
   // ---------- ranked bars
   function bars(rows) {
     const m = $("m-bars").value;
-    const g = group(rows, "k").sort((a, b) => b[m] - a[m]);
+    const all = group(rows, "k").sort((a, b) => b[m] - a[m]);
+    const g = all.slice(0, 20);
     const max = Math.max(1, ...g.map((x) => x[m]));
+    $("bars-note").textContent = all.length > g.length ? "Showing the top 20 of " + all.length + " pain points. Pick a topic to see all of its own." : "";
     $("bars").innerHTML = g.length ? g.map((x) =>
       '<div class="bar' + (F.k.value === x.key ? " active" : "") + '" tabindex="0" role="button" data-k="' + esc(x.key) + '" data-tip="' + esc("<b>" + esc(x.key) + "</b><br>" + x.n + " mentions · weighted " + fmtN(x.w) + "<br>avg severity " + (x.s / x.n).toFixed(1)) + '">' +
       '<span class="name">' + esc(x.key) + '</span><span class="track"><span class="fill" style="width:' + ((x[m] / max) * 100).toFixed(2) + '%"></span></span><span class="num">' + (m === "w" ? fmtN(x.w) : x.n) + "</span></div>").join("")
@@ -380,7 +383,7 @@ a { color: var(--accent-ink); }
   const CH_ORDER = ["search", "discussion", "social", "review"];
   $("mixlegend").innerHTML = CH_ORDER.map((c, i) => '<span><i style="background:var(--s' + (i + 1) + ')"></i>' + CHANNEL[c] + "</span>").join("");
   function mix(rows) {
-    const g = group(rows, "k").sort((a, b) => b.n - a.n);
+    const g = group(rows, "k").sort((a, b) => b.n - a.n).slice(0, 20);
     $("mix").innerHTML = g.length ? g.map((x) => {
       const sub = rows.filter((r) => r.k === x.key);
       const parts = CH_ORDER.map((c, i) => ({ c, i, n: sub.filter((r) => r.ch === c).length })).filter((p) => p.n);

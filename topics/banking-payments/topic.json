@@ -25,6 +25,10 @@
     "zelle",
     "cash app"
   ],
-  "irrelevant_keywords": [],
+  "irrelevant_keywords": [
+    "\\bbanking (exam|job|course)\\b",
+    "river bank",
+    "bankers? (salary|job)"
+  ],
   "subreddit_query": "bank OR UPI OR \"credit card\" OR payment OR transfer"
 }

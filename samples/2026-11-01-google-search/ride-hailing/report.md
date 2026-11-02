@@ -1,225 +1,204 @@
 # Ride-hailing & taxis: customer pain points - India, Europe, US
 
-_Generated 2026-11-01 16:03 UTC_
+_Generated 2026-11-02 06:20 UTC_
 
 ## Coverage
 
 | Region | Documents classified | Relevant | Sources |
 |---|---:|---:|---|
-| All regions combined | 1320 | 848 | google_suggest 1320 |
-| India | 461 | 312 | google_suggest 461 |
-| Europe (UK + EU) | 384 | 219 | google_suggest 384 |
-| United States | 475 | 317 | google_suggest 475 |
+| All regions combined | 1320 | 411 | google_suggest 1320 |
+| India | 461 | 168 | google_suggest 461 |
+| Europe (UK + EU) | 384 | 93 | google_suggest 384 |
+| United States | 475 | 150 | google_suggest 475 |
 
-## All regions combined - top 10 pain points
-
-| # | Pain point | Mentions | Weighted volume | % of relevant | Avg severity | Channel mix | Top themes |
-|---:|---|---:|---:|---:|---:|---|---|
-| 1 | **How-to questions & confusing rules** | 390 | 694.8 | 46.0% | 1 | search 390 | how-to questions & confusing rules (390) |
-| 2 | **Price, fees & hidden charges** | 150 | 265.84 | 17.7% | 1 | search 150 | price, fees & hidden charges (150) |
-| 3 | **Customer support** | 143 | 253.67 | 16.9% | 1 | search 143 | customer support (143) |
-| 4 | **Availability & access** | 82 | 146.05 | 9.7% | 1 | search 82 | availability & access (82) |
-| 5 | **App, website & digital** | 53 | 92.15 | 6.3% | 1 | search 53 | app, website & digital (53) |
-| 6 | **Quality & reliability** | 45 | 81.5 | 5.3% | 1 | search 45 | quality & reliability (45) |
-| 7 | **Surge pricing & fare disputes** | 19 | 34.39 | 2.2% | 1 | search 19 | surge pricing & fare disputes (19) |
-| 8 | **Refunds, billing & payments** | 7 | 13.04 | 0.8% | 1.3 | search 7 | refunds, billing & payments (7) |
-| 9 | **Driver cancellations & no-shows** | 7 | 12.49 | 0.8% | 1 | search 7 | driver cancellations & no-shows (7) |
-| 10 | **Delays & waiting** | 1 | 1.7 | 0.1% | 1 | search 1 | delays & waiting (1) |
-
-## India - top 9 pain points
+## All regions combined - top 9 pain points
 
 | # | Pain point | Mentions | Weighted volume | % of relevant | Avg severity | Channel mix | Top themes |
 |---:|---|---:|---:|---:|---:|---|---|
-| 1 | **How-to questions & confusing rules** | 126 | 224.94 | 40.4% | 1 | search 126 | how-to questions & confusing rules (126) |
-| 2 | **Customer support** | 61 | 107.87 | 19.6% | 1 | search 61 | customer support (61) |
-| 3 | **Price, fees & hidden charges** | 53 | 91.62 | 17.0% | 1 | search 53 | price, fees & hidden charges (53) |
-| 4 | **App, website & digital** | 31 | 54.19 | 9.9% | 1 | search 31 | app, website & digital (31) |
-| 5 | **Quality & reliability** | 29 | 53.44 | 9.3% | 1 | search 29 | quality & reliability (29) |
-| 6 | **Availability & access** | 27 | 47.66 | 8.7% | 1 | search 27 | availability & access (27) |
-| 7 | **Refunds, billing & payments** | 5 | 9.13 | 1.6% | 1.4 | search 5 | refunds, billing & payments (5) |
-| 8 | **Driver cancellations & no-shows** | 4 | 7.28 | 1.3% | 1 | search 4 | driver cancellations & no-shows (4) |
-| 9 | **Surge pricing & fare disputes** | 1 | 1.85 | 0.3% | 1 | search 1 | surge pricing & fare disputes (1) |
+| 1 | **Complaints & customer support** | 235 | 416.73 | 57.2% | 1 | search 235 | complaints & customer support (235) |
+| 2 | **App & booking glitches** | 78 | 140.86 | 19.0% | 1 | search 78 | app & booking glitches (78) |
+| 3 | **Surge & fares higher than shown** | 60 | 108.69 | 14.6% | 1 | search 60 | surge & fares higher than shown (60) |
+| 4 | **Driver cancellations & no-shows** | 22 | 39.56 | 5.4% | 1 | search 22 | driver cancellations & no-shows (22) |
+| 5 | **Cancellation fees, payments & refunds** | 11 | 20.28 | 2.7% | 1.2 | search 11 | cancellation fees, payments & refunds (11) |
+| 6 | **Account bans & blocks** | 11 | 19.88 | 2.7% | 1 | search 11 | account bans & blocks (11) |
+| 7 | **No cabs & long waits** | 8 | 14.18 | 1.9% | 1 | search 8 | no cabs & long waits (8) |
+| 8 | **Driver earnings & commissions** | 5 | 8.59 | 1.2% | 1 | search 5 | driver earnings & commissions (5) |
+| 9 | **Lost items** | 1 | 1.9 | 0.2% | 1 | search 1 | lost items (1) |
+
+## India - top 8 pain points
+
+| # | Pain point | Mentions | Weighted volume | % of relevant | Avg severity | Channel mix | Top themes |
+|---:|---|---:|---:|---:|---:|---|---|
+| 1 | **Complaints & customer support** | 94 | 166.53 | 56.0% | 1 | search 94 | complaints & customer support (94) |
+| 2 | **App & booking glitches** | 38 | 69.35 | 22.6% | 1 | search 38 | app & booking glitches (38) |
+| 3 | **Surge & fares higher than shown** | 12 | 21.86 | 7.1% | 1 | search 12 | surge & fares higher than shown (12) |
+| 4 | **Account bans & blocks** | 9 | 15.99 | 5.4% | 1 | search 9 | account bans & blocks (9) |
+| 5 | **Cancellation fees, payments & refunds** | 8 | 14.69 | 4.8% | 1.3 | search 8 | cancellation fees, payments & refunds (8) |
+| 6 | **Driver cancellations & no-shows** | 6 | 10.91 | 3.6% | 1 | search 6 | driver cancellations & no-shows (6) |
+| 7 | **No cabs & long waits** | 5 | 9.25 | 3.0% | 1 | search 5 | no cabs & long waits (5) |
+| 8 | **Driver earnings & commissions** | 4 | 6.69 | 2.4% | 1 | search 4 | driver earnings & commissions (4) |
 
 <details><summary>Voice of customer - example quotes</summary>
 
-**1. How-to questions & confusing rules**
+**1. Complaints & customer support**
 
-- "search: "how to uber booking"" - [google_suggest](https://www.google.com/search?q=how%20to%20uber%20booking&gl=in&hl=en)
-- "search: "can i uber with my bike"" - [google_suggest](https://www.google.com/search?q=can%20i%20uber%20with%20my%20bike&gl=in&hl=en)
-- "search: "is it worth uber eats driving"" - [google_suggest](https://www.google.com/search?q=is%20it%20worth%20uber%20eats%20driving&gl=in&hl=en)
-
-**2. Customer support**
-
+- "search: "uber problem statement"" - [google_suggest](https://www.google.com/search?q=uber%20problem%20statement&gl=in&hl=en)
 - "search: "uber complaint number"" - [google_suggest](https://www.google.com/search?q=uber%20complaint%20number&gl=in&hl=en)
-- "search: "ola complaint number"" - [google_suggest](https://www.google.com/search?q=ola%20complaint%20number&gl=in&hl=en)
-- "search: "rapido complaint number"" - [google_suggest](https://www.google.com/search?q=rapido%20complaint%20number&gl=in&hl=en)
+- "search: "ola problem today"" - [google_suggest](https://www.google.com/search?q=ola%20problem%20today&gl=in&hl=en)
 
-**3. Price, fees & hidden charges**
+**2. App & booking glitches**
+
+- "search: "uber not working"" - [google_suggest](https://www.google.com/search?q=uber%20not%20working&gl=in&hl=en)
+- "search: "ola problem today"" - [google_suggest](https://www.google.com/search?q=ola%20problem%20today&gl=in&hl=en)
+- "search: "why rapido is not working"" - [google_suggest](https://www.google.com/search?q=why%20rapido%20is%20not%20working&gl=in&hl=en)
+
+**3. Surge & fares higher than shown**
 
 - "search: "uber cost per km"" - [google_suggest](https://www.google.com/search?q=uber%20cost%20per%20km&gl=in&hl=en)
 - "search: "ola cost per km"" - [google_suggest](https://www.google.com/search?q=ola%20cost%20per%20km&gl=in&hl=en)
 - "search: "rapido cost per km"" - [google_suggest](https://www.google.com/search?q=rapido%20cost%20per%20km&gl=in&hl=en)
 
-**4. App, website & digital**
+**4. Account bans & blocks**
 
-- "search: "how to uber booking"" - [google_suggest](https://www.google.com/search?q=how%20to%20uber%20booking&gl=in&hl=en)
-- "search: "how to rapido booking"" - [google_suggest](https://www.google.com/search?q=how%20to%20rapido%20booking&gl=in&hl=en)
-- "search: "how to ola cab booking"" - [google_suggest](https://www.google.com/search?q=how%20to%20ola%20cab%20booking&gl=in&hl=en)
+- "search: "why uber banned in chandigarh"" - [google_suggest](https://www.google.com/search?q=why%20uber%20banned%20in%20chandigarh&gl=in&hl=en)
+- "search: "why ola uber banned in chandigarh"" - [google_suggest](https://www.google.com/search?q=why%20ola%20uber%20banned%20in%20chandigarh&gl=in&hl=en)
+- "search: "why uber and rapido is banned in chandigarh"" - [google_suggest](https://www.google.com/search?q=why%20uber%20and%20rapido%20is%20banned%20in%20chandigarh&gl=in&hl=en)
 
-**5. Quality & reliability**
+**5. Cancellation fees, payments & refunds**
 
-- "search: "uber not working"" - [google_suggest](https://www.google.com/search?q=uber%20not%20working&gl=in&hl=en)
-- "search: "why rapido is not working"" - [google_suggest](https://www.google.com/search?q=why%20rapido%20is%20not%20working&gl=in&hl=en)
-- "search: "rapido not working"" - [google_suggest](https://www.google.com/search?q=rapido%20not%20working&gl=in&hl=en)
+- "search: "where to use rapido wallet money"" - [google_suggest](https://www.google.com/search?q=where%20to%20use%20rapido%20wallet%20money&gl=in&hl=en)
+- "search: "where to use rapido wallet"" - [google_suggest](https://www.google.com/search?q=where%20to%20use%20rapido%20wallet&gl=in&hl=en)
+- "search: "where to find rapido wallet"" - [google_suggest](https://www.google.com/search?q=where%20to%20find%20rapido%20wallet&gl=in&hl=en)
 
-**6. Availability & access**
+**6. Driver cancellations & no-shows**
 
-- "search: "where to uber for outside lands"" - [google_suggest](https://www.google.com/search?q=where%20to%20uber%20for%20outside%20lands&gl=in&hl=en)
-- "search: "where to find rapido referral code"" - [google_suggest](https://www.google.com/search?q=where%20to%20find%20rapido%20referral%20code&gl=in&hl=en)
+- "search: "how to cancel ola cab booking"" - [google_suggest](https://www.google.com/search?q=how%20to%20cancel%20ola%20cab%20booking&gl=in&hl=en)
+- "search: "how to cancel ola cab"" - [google_suggest](https://www.google.com/search?q=how%20to%20cancel%20ola%20cab&gl=in&hl=en)
+- "search: "uber car not moving on map"" - [google_suggest](https://www.google.com/search?q=uber%20car%20not%20moving%20on%20map&gl=in&hl=en)
+
+**7. No cabs & long waits**
+
 - "search: "ola cabs not available today"" - [google_suggest](https://www.google.com/search?q=ola%20cabs%20not%20available%20today&gl=in&hl=en)
+- "search: "why ola cabs are not available today"" - [google_suggest](https://www.google.com/search?q=why%20ola%20cabs%20are%20not%20available%20today&gl=in&hl=en)
+- "search: "ola cabs not available"" - [google_suggest](https://www.google.com/search?q=ola%20cabs%20not%20available&gl=in&hl=en)
 
-**7. Refunds, billing & payments**
+**8. Driver earnings & commissions**
 
-- "search: "how to cancel ola cab booking"" - [google_suggest](https://www.google.com/search?q=how%20to%20cancel%20ola%20cab%20booking&gl=in&hl=en)
-- "search: "how to cancel ola cab"" - [google_suggest](https://www.google.com/search?q=how%20to%20cancel%20ola%20cab&gl=in&hl=en)
-- "search: "ola cab refund not received"" - [google_suggest](https://www.google.com/search?q=ola%20cab%20refund%20not%20received&gl=in&hl=en)
-
-**8. Driver cancellations & no-shows**
-
-- "search: "how to cancel ola cab booking"" - [google_suggest](https://www.google.com/search?q=how%20to%20cancel%20ola%20cab%20booking&gl=in&hl=en)
-- "search: "how to cancel ola cab"" - [google_suggest](https://www.google.com/search?q=how%20to%20cancel%20ola%20cab&gl=in&hl=en)
-- "search: "where to cancel rapido ride"" - [google_suggest](https://www.google.com/search?q=where%20to%20cancel%20rapido%20ride&gl=in&hl=en)
-
-**9. Surge pricing & fare disputes**
-
-- "search: "uber auto fare"" - [google_suggest](https://www.google.com/search?q=uber%20auto%20fare&gl=in&hl=en)
+- "search: "rapido captain"" - [google_suggest](https://www.google.com/search?q=rapido%20captain&gl=in&hl=en)
+- "search: "is rapido captain worth it"" - [google_suggest](https://www.google.com/search?q=is%20rapido%20captain%20worth%20it&gl=in&hl=en)
+- "search: "can i use rapido captain in iphone"" - [google_suggest](https://www.google.com/search?q=can%20i%20use%20rapido%20captain%20in%20iphone&gl=in&hl=en)
 
 </details>
 
-## Europe (UK + EU) - top 6 pain points
+## Europe (UK + EU) - top 7 pain points
 
 | # | Pain point | Mentions | Weighted volume | % of relevant | Avg severity | Channel mix | Top themes |
 |---:|---|---:|---:|---:|---:|---|---|
-| 1 | **How-to questions & confusing rules** | 117 | 208.6 | 53.4% | 1 | search 117 | how-to questions & confusing rules (117) |
-| 2 | **Price, fees & hidden charges** | 39 | 70.12 | 17.8% | 1 | search 39 | price, fees & hidden charges (39) |
-| 3 | **Customer support** | 34 | 60.37 | 15.5% | 1 | search 34 | customer support (34) |
-| 4 | **Availability & access** | 16 | 29.04 | 7.3% | 1 | search 16 | availability & access (16) |
-| 5 | **App, website & digital** | 10 | 17.76 | 4.6% | 1 | search 10 | app, website & digital (10) |
-| 6 | **Quality & reliability** | 8 | 14.08 | 3.7% | 1 | search 8 | quality & reliability (8) |
+| 1 | **Complaints & customer support** | 57 | 101.57 | 61.3% | 1 | search 57 | complaints & customer support (57) |
+| 2 | **App & booking glitches** | 18 | 32.53 | 19.4% | 1 | search 18 | app & booking glitches (18) |
+| 3 | **Surge & fares higher than shown** | 13 | 23.18 | 14.0% | 1 | search 13 | surge & fares higher than shown (13) |
+| 4 | **Driver cancellations & no-shows** | 3 | 5.18 | 3.2% | 1 | search 3 | driver cancellations & no-shows (3) |
+| 5 | **Account bans & blocks** | 2 | 3.89 | 2.2% | 1 | search 2 | account bans & blocks (2) |
+| 6 | **No cabs & long waits** | 2 | 3.45 | 2.2% | 1 | search 2 | no cabs & long waits (2) |
+| 7 | **Cancellation fees, payments & refunds** | 1 | 1.78 | 1.1% | 1 | search 1 | cancellation fees, payments & refunds (1) |
 
 <details><summary>Voice of customer - example quotes</summary>
 
-**1. How-to questions & confusing rules**
+**1. Complaints & customer support**
 
-- "search: "how to uber"" - [google_suggest](https://www.google.com/search?q=how%20to%20uber&gl=gb&hl=en)
-- "search: "can i uber with a baby"" - [google_suggest](https://www.google.com/search?q=can%20i%20uber%20with%20a%20baby&gl=gb&hl=en)
-- "search: "is it worth uber eats driving"" - [google_suggest](https://www.google.com/search?q=is%20it%20worth%20uber%20eats%20driving&gl=gb&hl=en)
-
-**2. Price, fees & hidden charges**
-
-- "search: "uber cost estimate"" - [google_suggest](https://www.google.com/search?q=uber%20cost%20estimate&gl=gb&hl=en)
-- "search: "bolt cost of mounjaro"" - [google_suggest](https://www.google.com/search?q=bolt%20cost%20of%20mounjaro&gl=gb&hl=en)
-- "search: "free now cost calculator"" - [google_suggest](https://www.google.com/search?q=free%20now%20cost%20calculator&gl=gb&hl=en)
-
-**3. Customer support**
-
+- "search: "uber problem completing request"" - [google_suggest](https://www.google.com/search?q=uber%20problem%20completing%20request&gl=gb&hl=en)
 - "search: "uber complaint number"" - [google_suggest](https://www.google.com/search?q=uber%20complaint%20number&gl=gb&hl=en)
-- "search: "bolt complaint number"" - [google_suggest](https://www.google.com/search?q=bolt%20complaint%20number&gl=gb&hl=en)
-- "search: "free now complaint email"" - [google_suggest](https://www.google.com/search?q=free%20now%20complaint%20email&gl=gb&hl=en)
+- "search: "bolt problem"" - [google_suggest](https://www.google.com/search?q=bolt%20problem&gl=gb&hl=en)
 
-**4. Availability & access**
-
-- "search: "where to uber for outside lands"" - [google_suggest](https://www.google.com/search?q=where%20to%20uber%20for%20outside%20lands&gl=gb&hl=en)
-- "search: "where to bolt down a safe"" - [google_suggest](https://www.google.com/search?q=where%20to%20bolt%20down%20a%20safe&gl=gb&hl=en)
-- "search: "where to uber to acl"" - [google_suggest](https://www.google.com/search?q=where%20to%20uber%20to%20acl&gl=gb&hl=en)
-
-**5. App, website & digital**
-
-- "search: "what is free now app"" - [google_suggest](https://www.google.com/search?q=what%20is%20free%20now%20app&gl=gb&hl=en)
-- "search: "free now app problem"" - [google_suggest](https://www.google.com/search?q=free%20now%20app%20problem&gl=gb&hl=en)
-- "search: "uber app"" - [google_suggest](https://www.google.com/search?q=uber%20app&gl=gb&hl=en)
-
-**6. Quality & reliability**
+**2. App & booking glitches**
 
 - "search: "uber not working"" - [google_suggest](https://www.google.com/search?q=uber%20not%20working&gl=gb&hl=en)
 - "search: "bolt not working"" - [google_suggest](https://www.google.com/search?q=bolt%20not%20working&gl=gb&hl=en)
 - "search: "uber not working today"" - [google_suggest](https://www.google.com/search?q=uber%20not%20working%20today&gl=gb&hl=en)
 
+**3. Surge & fares higher than shown**
+
+- "search: "bolt cost of mounjaro"" - [google_suggest](https://www.google.com/search?q=bolt%20cost%20of%20mounjaro&gl=gb&hl=en)
+- "search: "why uber is so expensive today"" - [google_suggest](https://www.google.com/search?q=why%20uber%20is%20so%20expensive%20today&gl=gb&hl=en)
+- "search: "uber cost per mile"" - [google_suggest](https://www.google.com/search?q=uber%20cost%20per%20mile&gl=gb&hl=en)
+
+**4. Driver cancellations & no-shows**
+
+- "search: "bolt not coming out"" - [google_suggest](https://www.google.com/search?q=bolt%20not%20coming%20out&gl=gb&hl=en)
+- "search: "uber not moving"" - [google_suggest](https://www.google.com/search?q=uber%20not%20moving&gl=gb&hl=en)
+- "search: "free now driver not moving"" - [google_suggest](https://www.google.com/search?q=free%20now%20driver%20not%20moving&gl=gb&hl=en)
+
+**5. Account bans & blocks**
+
+- "search: "why uber banned in chandigarh"" - [google_suggest](https://www.google.com/search?q=why%20uber%20banned%20in%20chandigarh&gl=gb&hl=en)
+- "search: "why uber and rapido is banned in chandigarh"" - [google_suggest](https://www.google.com/search?q=why%20uber%20and%20rapido%20is%20banned%20in%20chandigarh&gl=gb&hl=en)
+
+**6. No cabs & long waits**
+
+- "search: "bolt not available"" - [google_suggest](https://www.google.com/search?q=bolt%20not%20available&gl=gb&hl=en)
+- "search: "free now invoice not available"" - [google_suggest](https://www.google.com/search?q=free%20now%20invoice%20not%20available&gl=gb&hl=en)
+
+**7. Cancellation fees, payments & refunds**
+
+- "search: "uber problem with payment method"" - [google_suggest](https://www.google.com/search?q=uber%20problem%20with%20payment%20method&gl=gb&hl=en)
+
 </details>
 
-## United States - top 10 pain points
+## United States - top 8 pain points
 
 | # | Pain point | Mentions | Weighted volume | % of relevant | Avg severity | Channel mix | Top themes |
 |---:|---|---:|---:|---:|---:|---|---|
-| 1 | **How-to questions & confusing rules** | 147 | 261.25 | 46.4% | 1 | search 147 | how-to questions & confusing rules (147) |
-| 2 | **Price, fees & hidden charges** | 58 | 104.1 | 18.3% | 1 | search 58 | price, fees & hidden charges (58) |
-| 3 | **Customer support** | 48 | 85.43 | 15.1% | 1 | search 48 | customer support (48) |
-| 4 | **Availability & access** | 39 | 69.35 | 12.3% | 1 | search 39 | availability & access (39) |
-| 5 | **Surge pricing & fare disputes** | 18 | 32.54 | 5.7% | 1 | search 18 | surge pricing & fare disputes (18) |
-| 6 | **App, website & digital** | 12 | 20.2 | 3.8% | 1 | search 12 | app, website & digital (12) |
-| 7 | **Quality & reliability** | 8 | 13.97 | 2.5% | 1 | search 8 | quality & reliability (8) |
-| 8 | **Driver cancellations & no-shows** | 3 | 5.21 | 0.9% | 1 | search 3 | driver cancellations & no-shows (3) |
-| 9 | **Refunds, billing & payments** | 2 | 3.91 | 0.6% | 1 | search 2 | refunds, billing & payments (2) |
-| 10 | **Delays & waiting** | 1 | 1.7 | 0.3% | 1 | search 1 | delays & waiting (1) |
+| 1 | **Complaints & customer support** | 84 | 148.63 | 56.0% | 1 | search 84 | complaints & customer support (84) |
+| 2 | **Surge & fares higher than shown** | 35 | 63.64 | 23.3% | 1 | search 35 | surge & fares higher than shown (35) |
+| 3 | **App & booking glitches** | 22 | 38.98 | 14.7% | 1 | search 22 | app & booking glitches (22) |
+| 4 | **Driver cancellations & no-shows** | 13 | 23.48 | 8.7% | 1 | search 13 | driver cancellations & no-shows (13) |
+| 5 | **Cancellation fees, payments & refunds** | 2 | 3.81 | 1.3% | 1 | search 2 | cancellation fees, payments & refunds (2) |
+| 6 | **Driver earnings & commissions** | 1 | 1.9 | 0.7% | 1 | search 1 | driver earnings & commissions (1) |
+| 7 | **Lost items** | 1 | 1.9 | 0.7% | 1 | search 1 | lost items (1) |
+| 8 | **No cabs & long waits** | 1 | 1.48 | 0.7% | 1 | search 1 | no cabs & long waits (1) |
 
 <details><summary>Voice of customer - example quotes</summary>
 
-**1. How-to questions & confusing rules**
+**1. Complaints & customer support**
 
-- "search: "how to uber"" - [google_suggest](https://www.google.com/search?q=how%20to%20uber&gl=us&hl=en)
-- "search: "can i uber with a baby"" - [google_suggest](https://www.google.com/search?q=can%20i%20uber%20with%20a%20baby&gl=us&hl=en)
-- "search: "is it worth uber eats driving"" - [google_suggest](https://www.google.com/search?q=is%20it%20worth%20uber%20eats%20driving&gl=us&hl=en)
+- "search: "uber problem completing request"" - [google_suggest](https://www.google.com/search?q=uber%20problem%20completing%20request&gl=us&hl=en)
+- "search: "uber complaint number"" - [google_suggest](https://www.google.com/search?q=uber%20complaint%20number&gl=us&hl=en)
+- "search: "lyft problem with zip code"" - [google_suggest](https://www.google.com/search?q=lyft%20problem%20with%20zip%20code&gl=us&hl=en)
 
-**2. Price, fees & hidden charges**
+**2. Surge & fares higher than shown**
 
 - "search: "why uber is so expensive today"" - [google_suggest](https://www.google.com/search?q=why%20uber%20is%20so%20expensive%20today&gl=us&hl=en)
-- "search: "uber cost estimate"" - [google_suggest](https://www.google.com/search?q=uber%20cost%20estimate&gl=us&hl=en)
-- "search: "lyft cost estimate"" - [google_suggest](https://www.google.com/search?q=lyft%20cost%20estimate&gl=us&hl=en)
-
-**3. Customer support**
-
-- "search: "uber complaint number"" - [google_suggest](https://www.google.com/search?q=uber%20complaint%20number&gl=us&hl=en)
-- "search: "lyft complaint number"" - [google_suggest](https://www.google.com/search?q=lyft%20complaint%20number&gl=us&hl=en)
-- "search: "uber driver complaint number"" - [google_suggest](https://www.google.com/search?q=uber%20driver%20complaint%20number&gl=us&hl=en)
-
-**4. Availability & access**
-
-- "search: "where to uber for outside lands"" - [google_suggest](https://www.google.com/search?q=where%20to%20uber%20for%20outside%20lands&gl=us&hl=en)
-- "search: "where to buy lyft gift cards"" - [google_suggest](https://www.google.com/search?q=where%20to%20buy%20lyft%20gift%20cards&gl=us&hl=en)
-- "search: "where to taxi driver"" - [google_suggest](https://www.google.com/search?q=where%20to%20taxi%20driver&gl=us&hl=en)
-
-**5. Surge pricing & fare disputes**
-
+- "search: "uber driver cost per mile"" - [google_suggest](https://www.google.com/search?q=uber%20driver%20cost%20per%20mile&gl=us&hl=en)
 - "search: "lyft fare estimate"" - [google_suggest](https://www.google.com/search?q=lyft%20fare%20estimate&gl=us&hl=en)
-- "search: "how to split lyft fare"" - [google_suggest](https://www.google.com/search?q=how%20to%20split%20lyft%20fare&gl=us&hl=en)
-- "search: "lyft fare cost"" - [google_suggest](https://www.google.com/search?q=lyft%20fare%20cost&gl=us&hl=en)
 
-**6. App, website & digital**
-
-- "search: "uber driver login"" - [google_suggest](https://www.google.com/search?q=uber%20driver%20login&gl=us&hl=en)
-- "search: "uber driver app"" - [google_suggest](https://www.google.com/search?q=uber%20driver%20app&gl=us&hl=en)
-- "search: "how to uber driver app"" - [google_suggest](https://www.google.com/search?q=how%20to%20uber%20driver%20app&gl=us&hl=en)
-
-**7. Quality & reliability**
+**3. App & booking glitches**
 
 - "search: "uber not working"" - [google_suggest](https://www.google.com/search?q=uber%20not%20working&gl=us&hl=en)
 - "search: "lyft not working"" - [google_suggest](https://www.google.com/search?q=lyft%20not%20working&gl=us&hl=en)
-- "search: "uber driver not working"" - [google_suggest](https://www.google.com/search?q=uber%20driver%20not%20working&gl=us&hl=en)
+- "search: "lyft problem connecting to server"" - [google_suggest](https://www.google.com/search?q=lyft%20problem%20connecting%20to%20server&gl=us&hl=en)
 
-**8. Driver cancellations & no-shows**
+**4. Driver cancellations & no-shows**
 
-- "search: "why lyft drivers cancel rides"" - [google_suggest](https://www.google.com/search?q=why%20lyft%20drivers%20cancel%20rides&gl=us&hl=en)
-- "search: "why uber drivers cancel rides"" - [google_suggest](https://www.google.com/search?q=why%20uber%20drivers%20cancel%20rides&gl=us&hl=en)
-- "search: "uber driver not cancelling ride"" - [google_suggest](https://www.google.com/search?q=uber%20driver%20not%20cancelling%20ride&gl=us&hl=en)
-
-**9. Refunds, billing & payments**
-
+- "search: "uber driver not moving"" - [google_suggest](https://www.google.com/search?q=uber%20driver%20not%20moving&gl=us&hl=en)
 - "search: "why lyft drivers cancel rides"" - [google_suggest](https://www.google.com/search?q=why%20lyft%20drivers%20cancel%20rides&gl=us&hl=en)
 - "search: "why uber drivers cancel rides"" - [google_suggest](https://www.google.com/search?q=why%20uber%20drivers%20cancel%20rides&gl=us&hl=en)
 
-**10. Delays & waiting**
+**5. Cancellation fees, payments & refunds**
 
-- "search: "why uber drivers drive so slow"" - [google_suggest](https://www.google.com/search?q=why%20uber%20drivers%20drive%20so%20slow&gl=us&hl=en)
+- "search: "uber problem with payment method"" - [google_suggest](https://www.google.com/search?q=uber%20problem%20with%20payment%20method&gl=us&hl=en)
+- "search: "lyft problem with payment method"" - [google_suggest](https://www.google.com/search?q=lyft%20problem%20with%20payment%20method&gl=us&hl=en)
+
+**6. Driver earnings & commissions**
+
+- "search: "why uber driver pay so low"" - [google_suggest](https://www.google.com/search?q=why%20uber%20driver%20pay%20so%20low&gl=us&hl=en)
+
+**7. Lost items**
+
+- "search: "uber driver not responding to lost item"" - [google_suggest](https://www.google.com/search?q=uber%20driver%20not%20responding%20to%20lost%20item&gl=us&hl=en)
+
+**8. No cabs & long waits**
+
+- "search: "lyft ride not available"" - [google_suggest](https://www.google.com/search?q=lyft%20ride%20not%20available&gl=us&hl=en)
 
 </details>
 

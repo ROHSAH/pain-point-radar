@@ -1,92 +1,84 @@
 {
-  "_comment": "Topic-specific categories first, then generic ones. The keyword classifier uses the first matches.",
+  "_comment": "Topic-specific categories. Keyword patterns drive the no-key classifier (first 3 matches, in order).",
   "categories": [
     {
-      "id": "appointments_access",
-      "name": "Getting appointments & referrals",
-      "description": "Can't get a GP or specialist appointment, long waiting lists, referrals.",
+      "id": "appointment_access",
+      "name": "Can't get an appointment",
+      "description": "No GP/doctor slots, 8am scramble, long booking lead times.",
       "keywords": [
-        "appointment|\\bgp\\b|waiting list|referral|specialist|8am|dentist"
+        "appointment|\\bgp\\b|8am|can'?t (get|book)|walk-?in|registration"
+      ]
+    },
+    {
+      "id": "waiting_lists",
+      "name": "Waiting lists & ER waits",
+      "description": "Long waits for specialists, surgery, A&E/ER.",
+      "keywords": [
+        "waiting (list|time)|wait (times|for)|a&e|\\ber\\b|emergency (wait|room)|backlog|referral"
       ]
     },
     {
       "id": "medical_bills",
-      "name": "Medical bills & surprise costs",
-      "description": "High or surprise bills, out-of-network charges, hospital overcharging.",
+      "name": "Medical bills & surprise charges",
+      "description": "Surprise bills, out-of-network charges, unclear costs.",
       "keywords": [
-        "medical bill|hospital bill|surprise bill|out of network|itemi[sz]ed|overcharg|cost of"
+        "medical bill|hospital bill|surprise bill|itemi[sz]ed|out of network|balance billing|cost of (surgery|delivery|treatment|mri|scan)"
       ]
     },
     {
-      "id": "price_cost",
-      "name": "Price, fees & hidden charges",
-      "description": "Too expensive, price rises, surge pricing, hidden fees, not worth the money.",
+      "id": "hospital_overcharging",
+      "name": "Hospital overcharging & deposits",
+      "description": "Private hospitals overcharging, package rates, advance deposits.",
       "keywords": [
-        "\\b(price|prices|cost|costs|expensive|overpriced|fee|fees|charges?|surge|hidden|not worth|rip ?off)\\b"
+        "overcharg|package (rate|cost)|hidden charges|private hospital|deposit (before|for) admission"
       ]
     },
     {
-      "id": "quality_reliability",
-      "name": "Quality & reliability",
-      "description": "Product or service breaks, fails, is defective, inconsistent or does not work as promised.",
+      "id": "insurance_schemes",
+      "name": "Insurance & public scheme coverage",
+      "description": "Coverage denials and scheme confusion (Ayushman, CGHS, Medicare, Medicaid).",
       "keywords": [
-        "\\b(broken|not working|doesn'?t work|stopped working|fault|faulty|defect|failed|failure|keeps (crashing|failing)|poor quality|bad quality)\\b"
+        "insurance|coverage|prior auth|\\bcghs\\b|ayushman|medicare|medicaid"
       ]
     },
     {
-      "id": "availability_access",
-      "name": "Availability & access",
-      "description": "Not available nearby, out of stock, no coverage, long distances, closed or full.",
+      "id": "medicines_pharmacy",
+      "name": "Medicines, prescriptions & shortages",
+      "description": "Drug prices, shortages, refills, pharmacy problems.",
       "keywords": [
-        "near me|where (to|can i)|\\b(not available|unavailable|out of stock|no (service|coverage|stations?|options?)|closed|full|sold out)\\b"
+        "prescription|pharmacy|chemist|medicine (price|cost|shortage)|drug (price|cost)|refill|generic|out of stock|shortage"
       ]
     },
     {
-      "id": "speed_wait",
-      "name": "Delays & waiting",
-      "description": "Late delivery, long queues or wait times, slow service, missed appointments.",
+      "id": "dental",
+      "name": "Dental care access & cost",
+      "description": "Can't find a dentist, high dental costs.",
       "keywords": [
-        "\\b(late|delay|delayed|waiting|wait time|queue|slow|took (hours|days|weeks)|never (arrived|came)|missed)\\b"
+        "dentist|dental|braces|root canal|implant"
       ]
     },
     {
-      "id": "customer_support",
-      "name": "Customer support",
-      "description": "Hard to reach support, complaints ignored, unhelpful agents, no accountability.",
+      "id": "quality_negligence",
+      "name": "Quality of care & negligence",
+      "description": "Misdiagnosis, negligence, rude staff, poor care.",
       "keywords": [
-        "\\b(customer (service|care|support)|helpline|complain|complaint|no response|ignored|chatbot|contact number|phone number)\\b"
+        "negligence|misdiagnos|wrong (diagnosis|treatment)|rude (doctor|nurse|staff)|malpractice|careless|bad (doctor|hospital)"
       ]
     },
     {
-      "id": "refunds_billing",
-      "name": "Refunds, billing & payments",
-      "description": "Refund refused or slow, double charges, payment failures, billing errors, cancellation trouble.",
+      "id": "mental_health",
+      "name": "Mental health access",
+      "description": "Long waits and costs for therapy and psychiatry.",
       "keywords": [
-        "\\b(refund|refunds|charged twice|double charged|overcharged|billing error|wrong bill|payment failed|cancel|cancellation|chargeback)\\b"
+        "mental health|therapist|therapy|psychiatrist|counsell?ing|anxiety|depression"
       ]
     },
     {
-      "id": "digital_experience",
-      "name": "App, website & digital",
-      "description": "App or website bugs, login problems, confusing UX, booking or tracking not working.",
+      "id": "records_admin",
+      "name": "Reports, records & admin",
+      "description": "Test results, records, certificates and discharge paperwork.",
       "keywords": [
-        "\\b(app|website|login|log in|sign in|otp|update|tracking|booking|portal)\\b"
-      ]
-    },
-    {
-      "id": "trust_safety",
-      "name": "Trust, scams & safety",
-      "description": "Fraud, scams, misleading claims, data or personal safety concerns.",
-      "keywords": [
-        "\\b(scam|fraud|fake|cheat|cheated|misleading|unsafe|danger|dangerous|safety|privacy|data leak)\\b"
-      ]
-    },
-    {
-      "id": "information_rules",
-      "name": "How-to questions & confusing rules",
-      "description": "Unclear rules, eligibility, instructions or terms; people unsure how things work.",
-      "keywords": [
-        "^(how (do|to|does|can)|can (i|you)|is it|what (is|are)|which)\\b|\\b(rules|eligib|terms|confus|explained)\\b"
+        "medical records|test results|\\breport\\b|discharge|certificate|referral letter"
       ]
     },
     {
@@ -98,35 +90,35 @@
   ],
   "personas": [
     {
-      "id": "first_time_user",
-      "name": "First-time / new user",
-      "description": "Trying the product or service for the first time; unfamiliar with how it works.",
+      "id": "caregiver",
+      "name": "Parent or caregiver",
+      "description": "Seeks care for a child or relative.",
       "keywords": [
-        "\\b(first time|new to|beginner|just (bought|started|signed up))\\b"
+        "my (son|daughter|baby|child|mother|father|mom|dad|parents)"
       ]
     },
     {
-      "id": "regular_user",
-      "name": "Regular user",
-      "description": "Uses it often and compares with past experience.",
+      "id": "senior",
+      "name": "Senior patient",
+      "description": "Older patient.",
       "keywords": [
-        "\\b(every (day|week)|always use|regular|daily|for years)\\b"
+        "senior|elderly|retired|pension"
       ]
     },
     {
-      "id": "budget_conscious",
-      "name": "Budget-conscious customer",
-      "description": "Price-sensitive; talks mainly about cost and value.",
+      "id": "chronic_patient",
+      "name": "Chronic condition patient",
+      "description": "Ongoing condition, frequent visits.",
       "keywords": [
-        "\\b(cheap|cheapest|budget|afford|save money|discount)\\b"
+        "diabet|chronic|cancer|kidney|dialysis|thyroid|asthma"
       ]
     },
     {
-      "id": "small_business",
-      "name": "Small business / professional user",
-      "description": "Uses it for work or a business.",
+      "id": "uninsured",
+      "name": "Uninsured / self-pay",
+      "description": "Pays out of pocket.",
       "keywords": [
-        "\\b(my (business|shop|store|restaurant|company|clients?)|for work|b2b|fleet)\\b"
+        "uninsured|no insurance|self[- ]pay|out of pocket"
       ]
     },
     {

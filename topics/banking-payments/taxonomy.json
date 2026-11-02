@@ -1,100 +1,84 @@
 {
-  "_comment": "Topic-specific categories first, then generic ones. The keyword classifier uses the first matches.",
+  "_comment": "Topic-specific categories. Keyword patterns drive the no-key classifier (first 3 matches, in order).",
   "categories": [
     {
-      "id": "fraud_unauthorized",
-      "name": "Fraud & unauthorized transactions",
-      "description": "Money stolen, unauthorized debits, phishing, hacked accounts, SIM-swap.",
+      "id": "upi_payment_failures",
+      "name": "UPI & payment failures",
+      "description": "Payments fail or stay pending while money is debited; receiver not credited.",
       "keywords": [
-        "fraud|unauthori[sz]ed|phishing|hacked|stolen|money (deducted|debited) without|sim swap"
+        "(upi|payment|transaction|transfer).{0,20}(fail|pending|stuck|declined)|money (debited|deducted) (but|not)|not (received|credited)|debited but"
       ]
     },
     {
-      "id": "failed_transactions",
-      "name": "Failed or stuck transactions",
-      "description": "Payments failed but money debited, transfers pending, declined cards.",
+      "id": "fraud_scams",
+      "name": "Fraud, scams & unauthorized debits",
+      "description": "Money stolen through fraud, phishing, fake calls, OTP or SIM-swap scams.",
       "keywords": [
-        "failed|pending|stuck|not (received|credited)|debited but|declined|reversal"
+        "fraud|scam|unauthori[sz]ed|phishing|hacked|stolen|otp (fraud|scam)|sim swap|deducted without|vishing"
       ]
     },
     {
-      "id": "blocked_frozen",
-      "name": "Blocked or frozen accounts & cards",
-      "description": "Accounts frozen, cards blocked, KYC holds, sudden closures.",
+      "id": "account_frozen",
+      "name": "Frozen, blocked or closed accounts",
+      "description": "Accounts frozen or debit-frozen, liens, sudden closures, holds on funds.",
       "keywords": [
-        "blocked|frozen|freeze|suspended|closed my account|\\bkyc\\b|account (locked|restricted)"
+        "frozen|freeze|blocked|suspended|closed (my )?account|account (locked|restricted|closed|on hold)|\\blien\\b|debit freeze"
       ]
     },
     {
-      "id": "price_cost",
-      "name": "Price, fees & hidden charges",
-      "description": "Too expensive, price rises, surge pricing, hidden fees, not worth the money.",
+      "id": "kyc_documents",
+      "name": "KYC, verification & paperwork",
+      "description": "Repeated KYC, re-verification, document demands, ID checks blocking access.",
       "keywords": [
-        "\\b(price|prices|cost|costs|expensive|overpriced|fee|fees|charges?|surge|hidden|not worth|rip ?off)\\b"
+        "\\bkyc\\b|re-?kyc|verification|aadhaar|\\bpan\\b|proof of (address|income)|id verification|documents? (required|needed)"
       ]
     },
     {
-      "id": "quality_reliability",
-      "name": "Quality & reliability",
-      "description": "Product or service breaks, fails, is defective, inconsistent or does not work as promised.",
+      "id": "fees_minimum_balance",
+      "name": "Fees, charges & minimum balance",
+      "description": "Minimum-balance penalties, overdraft, maintenance, SMS and transaction charges.",
       "keywords": [
-        "\\b(broken|not working|doesn'?t work|stopped working|fault|faulty|defect|failed|failure|keeps (crashing|failing)|poor quality|bad quality)\\b"
+        "minimum balance|overdraft|maintenance (fee|charge)|penalty|annual fee|sms charges|(bank|account|atm|transaction) (charges?|fees?)"
       ]
     },
     {
-      "id": "availability_access",
-      "name": "Availability & access",
-      "description": "Not available nearby, out of stock, no coverage, long distances, closed or full.",
+      "id": "cards",
+      "name": "Debit & credit card problems",
+      "description": "Cards declined, blocked, not delivered, limits, chargebacks, card replacement.",
       "keywords": [
-        "near me|where (to|can i)|\\b(not available|unavailable|out of stock|no (service|coverage|stations?|options?)|closed|full|sold out)\\b"
+        "(debit|credit) card|card (declined|blocked|not working|limit|not received|delivery)|cvv|chargeback|card replacement"
       ]
     },
     {
-      "id": "speed_wait",
-      "name": "Delays & waiting",
-      "description": "Late delivery, long queues or wait times, slow service, missed appointments.",
+      "id": "transfers_limits",
+      "name": "Transfers, limits & delays",
+      "description": "Slow or capped transfers, international transfers, NEFT/IMPS/SEPA/wire delays.",
       "keywords": [
-        "\\b(late|delay|delayed|waiting|wait time|queue|slow|took (hours|days|weeks)|never (arrived|came)|missed)\\b"
+        "\\b(neft|imps|rtgs|sepa|swift|wire|zelle|ach)\\b|transfer limit|daily limit|how long .*transfer|international transfer|takes (days|long)"
       ]
     },
     {
-      "id": "customer_support",
-      "name": "Customer support",
-      "description": "Hard to reach support, complaints ignored, unhelpful agents, no accountability.",
+      "id": "app_netbanking",
+      "name": "App & net-banking glitches",
+      "description": "App crashes, login and OTP failures, server downtime, forced updates.",
       "keywords": [
-        "\\b(customer (service|care|support)|helpline|complain|complaint|no response|ignored|chatbot|contact number|phone number)\\b"
+        "\\bapp\\b|net ?banking|online banking|mobile banking|login|log in|otp not|server (down|error)|technical (issue|error)|not working|\\bdown\\b|problem today"
       ]
     },
     {
-      "id": "refunds_billing",
-      "name": "Refunds, billing & payments",
-      "description": "Refund refused or slow, double charges, payment failures, billing errors, cancellation trouble.",
+      "id": "branch_support",
+      "name": "Branch & customer support",
+      "description": "Unhelpful branches, unreachable helplines, complaints ignored, ombudsman escalations.",
       "keywords": [
-        "\\b(refund|refunds|charged twice|double charged|overcharged|billing error|wrong bill|payment failed|cancel|cancellation|chargeback)\\b"
+        "customer (care|service|support)|helpline|branch|complain|complaint|ombudsman|no response|contact number|phone number|relationship manager"
       ]
     },
     {
-      "id": "digital_experience",
-      "name": "App, website & digital",
-      "description": "App or website bugs, login problems, confusing UX, booking or tracking not working.",
+      "id": "interest_savings",
+      "name": "Savings interest & deposit returns",
+      "description": "Low savings interest, FD/term-deposit rates, rate cuts.",
       "keywords": [
-        "\\b(app|website|login|log in|sign in|otp|update|tracking|booking|portal)\\b"
-      ]
-    },
-    {
-      "id": "trust_safety",
-      "name": "Trust, scams & safety",
-      "description": "Fraud, scams, misleading claims, data or personal safety concerns.",
-      "keywords": [
-        "\\b(scam|fraud|fake|cheat|cheated|misleading|unsafe|danger|dangerous|safety|privacy|data leak)\\b"
-      ]
-    },
-    {
-      "id": "information_rules",
-      "name": "How-to questions & confusing rules",
-      "description": "Unclear rules, eligibility, instructions or terms; people unsure how things work.",
-      "keywords": [
-        "^(how (do|to|does|can)|can (i|you)|is it|what (is|are)|which)\\b|\\b(rules|eligib|terms|confus|explained)\\b"
+        "interest (rate|on savings)|savings (rate|interest)|\\bfd\\b|fixed deposit|term deposit|\\bapy\\b|\\baer\\b"
       ]
     },
     {
@@ -106,35 +90,43 @@
   ],
   "personas": [
     {
-      "id": "first_time_user",
-      "name": "First-time / new user",
-      "description": "Trying the product or service for the first time; unfamiliar with how it works.",
+      "id": "salaried",
+      "name": "Salaried account holder",
+      "description": "Uses a salary account for everyday banking.",
       "keywords": [
-        "\\b(first time|new to|beginner|just (bought|started|signed up))\\b"
+        "salary|salaried|payroll|my employer"
       ]
     },
     {
-      "id": "regular_user",
-      "name": "Regular user",
-      "description": "Uses it often and compares with past experience.",
+      "id": "merchant",
+      "name": "Small business / merchant",
+      "description": "Takes payments as a shop or small business.",
       "keywords": [
-        "\\b(every (day|week)|always use|regular|daily|for years)\\b"
+        "my (shop|store|business|customers)|merchant|qr code|soundbox|current account|gst"
       ]
     },
     {
-      "id": "budget_conscious",
-      "name": "Budget-conscious customer",
-      "description": "Price-sensitive; talks mainly about cost and value.",
+      "id": "student",
+      "name": "Student",
+      "description": "Student or first-time account holder.",
       "keywords": [
-        "\\b(cheap|cheapest|budget|afford|save money|discount)\\b"
+        "student|college|university|first account"
       ]
     },
     {
-      "id": "small_business",
-      "name": "Small business / professional user",
-      "description": "Uses it for work or a business.",
+      "id": "senior_citizen",
+      "name": "Senior citizen",
+      "description": "Older customer, often less comfortable with apps.",
       "keywords": [
-        "\\b(my (business|shop|store|restaurant|company|clients?)|for work|b2b|fleet)\\b"
+        "senior citizen|pension|pensioner|my (parents|father|mother|grandfather|grandmother)|elderly"
+      ]
+    },
+    {
+      "id": "expat_nri",
+      "name": "Expat / NRI",
+      "description": "Banks across countries, sends money home.",
+      "keywords": [
+        "\\bnri\\b|expat|abroad|overseas|remittance|nre|nro"
       ]
     },
     {

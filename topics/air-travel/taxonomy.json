@@ -1,100 +1,92 @@
 {
-  "_comment": "Topic-specific categories first, then generic ones. The keyword classifier uses the first matches.",
+  "_comment": "Topic-specific categories. Keyword patterns drive the no-key classifier (first 3 matches, in order).",
   "categories": [
     {
-      "id": "delays_cancellations",
-      "name": "Delays & cancellations",
-      "description": "Flights delayed or cancelled, missed connections, rebooking.",
+      "id": "cancellations",
+      "name": "Cancellations & rebooking",
+      "description": "Flights cancelled, schedule changes, missed connections.",
       "keywords": [
-        "delay|cancel|rescheduled|missed connection|rebook"
+        "cancel|rebook|rescheduled|missed connection|schedule change"
       ]
     },
     {
-      "id": "baggage",
-      "name": "Lost or damaged baggage",
-      "description": "Lost, delayed or damaged bags; baggage fees.",
+      "id": "delays",
+      "name": "Flight delays",
+      "description": "Long delays, tarmac waits, gate waits.",
       "keywords": [
-        "baggage|luggage|\\bbags?\\b (lost|damaged|delayed)|lost bag"
+        "delay|delayed|\\blate\\b|stuck on (tarmac|plane)|waiting at (airport|gate)"
       ]
     },
     {
-      "id": "compensation_refunds",
-      "name": "Compensation & refunds",
-      "description": "Refunds or delay compensation refused or slow.",
+      "id": "refunds_compensation",
+      "name": "Refunds & compensation refused",
+      "description": "Refunds or EU261/DGCA compensation refused or slow; vouchers instead of cash.",
       "keywords": [
-        "compensation|refund|eu261|uk261|voucher"
+        "refund|compensation|eu ?261|uk ?261|voucher|credit shell|reimburse|\\bdgca\\b"
       ]
     },
     {
-      "id": "price_cost",
-      "name": "Price, fees & hidden charges",
-      "description": "Too expensive, price rises, surge pricing, hidden fees, not worth the money.",
+      "id": "baggage_lost",
+      "name": "Lost, delayed or damaged baggage",
+      "description": "Bags lost, delayed or damaged.",
       "keywords": [
-        "\\b(price|prices|cost|costs|expensive|overpriced|fee|fees|charges?|surge|hidden|not worth|rip ?off)\\b"
+        "lost (bag|luggage|baggage)|(bag|luggage|baggage|suitcase) (lost|damaged|delayed|missing)|\\bpir\\b"
       ]
     },
     {
-      "id": "quality_reliability",
-      "name": "Quality & reliability",
-      "description": "Product or service breaks, fails, is defective, inconsistent or does not work as promised.",
+      "id": "baggage_seat_fees",
+      "name": "Baggage, seat & add-on fees",
+      "description": "Bag fees, seat selection fees, hidden add-ons.",
       "keywords": [
-        "\\b(broken|not working|doesn'?t work|stopped working|fault|faulty|defect|failed|failure|keeps (crashing|failing)|poor quality|bad quality)\\b"
+        "baggage (fee|allowance|charge)|carry-?on|cabin bag|seat (selection|fee)|excess baggage|add-?on|hidden fee"
       ]
     },
     {
-      "id": "availability_access",
-      "name": "Availability & access",
-      "description": "Not available nearby, out of stock, no coverage, long distances, closed or full.",
+      "id": "overbooking",
+      "name": "Overbooking & denied boarding",
+      "description": "Bumped or offloaded passengers.",
       "keywords": [
-        "near me|where (to|can i)|\\b(not available|unavailable|out of stock|no (service|coverage|stations?|options?)|closed|full|sold out)\\b"
+        "overbook|denied boarding|bumped|offloaded"
       ]
     },
     {
-      "id": "speed_wait",
-      "name": "Delays & waiting",
-      "description": "Late delivery, long queues or wait times, slow service, missed appointments.",
+      "id": "airport_queues",
+      "name": "Airport queues & security",
+      "description": "Long check-in, security and immigration lines.",
       "keywords": [
-        "\\b(late|delay|delayed|waiting|wait time|queue|slow|took (hours|days|weeks)|never (arrived|came)|missed)\\b"
+        "queue|security (line|check|wait)|immigration|check-?in (line|queue)|digiyatra|\\btsa\\b|long lines"
       ]
     },
     {
-      "id": "customer_support",
-      "name": "Customer support",
-      "description": "Hard to reach support, complaints ignored, unhelpful agents, no accountability.",
+      "id": "fares_pricing",
+      "name": "Ticket prices & fare jumps",
+      "description": "High fares, sudden price jumps, dynamic pricing.",
       "keywords": [
-        "\\b(customer (service|care|support)|helpline|complain|complaint|no response|ignored|chatbot|contact number|phone number)\\b"
+        "(ticket|fare|flight) (price|prices|cost)|expensive|price (increase|jump|hike)|cheap flights|dynamic pricing"
       ]
     },
     {
-      "id": "refunds_billing",
-      "name": "Refunds, billing & payments",
-      "description": "Refund refused or slow, double charges, payment failures, billing errors, cancellation trouble.",
+      "id": "booking_checkin",
+      "name": "Booking changes & check-in",
+      "description": "Name changes, date changes, web check-in and booking errors.",
       "keywords": [
-        "\\b(refund|refunds|charged twice|double charged|overcharged|billing error|wrong bill|payment failed|cancel|cancellation|chargeback)\\b"
+        "name change|change (flight|date)|web check-?in|boarding pass|booking (error|problem)|\\bpnr\\b|travel agent"
       ]
     },
     {
-      "id": "digital_experience",
-      "name": "App, website & digital",
-      "description": "App or website bugs, login problems, confusing UX, booking or tracking not working.",
+      "id": "accessibility",
+      "name": "Accessibility & special assistance",
+      "description": "Wheelchair, elderly, infant and special-assistance failures.",
       "keywords": [
-        "\\b(app|website|login|log in|sign in|otp|update|tracking|booking|portal)\\b"
+        "wheelchair|special assistance|disab|elderly|infant|unaccompanied minor"
       ]
     },
     {
-      "id": "trust_safety",
-      "name": "Trust, scams & safety",
-      "description": "Fraud, scams, misleading claims, data or personal safety concerns.",
+      "id": "airline_service",
+      "name": "Airline customer service",
+      "description": "Unreachable support, rude staff, no answers.",
       "keywords": [
-        "\\b(scam|fraud|fake|cheat|cheated|misleading|unsafe|danger|dangerous|safety|privacy|data leak)\\b"
-      ]
-    },
-    {
-      "id": "information_rules",
-      "name": "How-to questions & confusing rules",
-      "description": "Unclear rules, eligibility, instructions or terms; people unsure how things work.",
-      "keywords": [
-        "^(how (do|to|does|can)|can (i|you)|is it|what (is|are)|which)\\b|\\b(rules|eligib|terms|confus|explained)\\b"
+        "customer (care|service|support)|complain|complaint|rude (staff|crew)|no response|contact number|helpline"
       ]
     },
     {
@@ -106,35 +98,43 @@
   ],
   "personas": [
     {
-      "id": "first_time_user",
-      "name": "First-time / new user",
-      "description": "Trying the product or service for the first time; unfamiliar with how it works.",
+      "id": "business_traveller",
+      "name": "Business traveller",
+      "description": "Flies for work.",
       "keywords": [
-        "\\b(first time|new to|beginner|just (bought|started|signed up))\\b"
+        "business trip|for work|meeting|conference"
       ]
     },
     {
-      "id": "regular_user",
-      "name": "Regular user",
-      "description": "Uses it often and compares with past experience.",
+      "id": "family_traveller",
+      "name": "Family traveller",
+      "description": "Flies with kids or parents.",
       "keywords": [
-        "\\b(every (day|week)|always use|regular|daily|for years)\\b"
+        "with (my )?(kids|children|baby|infant|family|parents)"
       ]
     },
     {
-      "id": "budget_conscious",
-      "name": "Budget-conscious customer",
-      "description": "Price-sensitive; talks mainly about cost and value.",
+      "id": "budget_flyer",
+      "name": "Budget flyer",
+      "description": "Uses low-cost carriers.",
       "keywords": [
-        "\\b(cheap|cheapest|budget|afford|save money|discount)\\b"
+        "ryanair|easyjet|spirit|frontier|indigo|cheap flight|budget airline"
       ]
     },
     {
-      "id": "small_business",
-      "name": "Small business / professional user",
-      "description": "Uses it for work or a business.",
+      "id": "frequent_flyer",
+      "name": "Frequent flyer",
+      "description": "Status or miles holder.",
       "keywords": [
-        "\\b(my (business|shop|store|restaurant|company|clients?)|for work|b2b|fleet)\\b"
+        "status|miles|frequent flyer|gold member|platinum"
+      ]
+    },
+    {
+      "id": "migrant_traveller",
+      "name": "NRI / migrant traveller",
+      "description": "Flies home internationally.",
+      "keywords": [
+        "\\bnri\\b|going home|visiting family abroad|gulf"
       ]
     },
     {
